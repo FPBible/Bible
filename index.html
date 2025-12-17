@@ -16,30 +16,43 @@
 
   <style>
     body {
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height: 1.6;
       margin: 1.5em;
+      max-width: 900px;
     }
     h1, h2 {
       margin-top: 1.4em;
       margin-bottom: 0.6em;
     }
+    p { max-width: 70ch; }
     ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 0;
       columns: 2;
-      max-width: 600px;
+      column-gap: 2.5rem;
+      max-width: 650px;
     }
     li {
-      margin: 0.4em 0;
+      margin: 0.45em 0;
+      break-inside: avoid;
     }
     a {
       text-decoration: underline;
+    }
+    .muted {
+      color: #777;
+      font-size: 0.95em;
     }
     footer {
       margin-top: 2em;
       font-size: 0.9em;
       color: #555;
+      max-width: 70ch;
+    }
+    .kofi {
+      margin-top: 1em;
+      display: inline-block;
     }
   </style>
 </head>
@@ -49,35 +62,36 @@
   <h2>New Creation Paraphrase</h2>
 
   <p>
-    This project presents the books of Scripture as testimony to
-    the completed work of Christ and the present reality of the New Creation.
-    Each book is paraphrased with fulfilled context and pastoral clarity.
+    This project presents the books of Scripture as testimony to the completed work of Christ
+    and the present reality of the New Creation. Each book is paraphrased with fulfilled context
+    and pastoral clarity.
   </p>
 
   <h2>New Testament</h2>
 
   <ul>
-    <ul>
-  <li><a href="Colossians/">Colossians</a></li>
-  <li><a href="John/index.html">John</a></li>
-  <li><a href="Hebrews/index.html">Hebrews</a></li>
-  <li><a href="Ephesians/">Ephesians</a> <span style="color:#777;">(Coming Soon)</span></li>
-  <li><a href="Audio/index.html>Audio</a></li>
-</ul>
-<footer>
+    <li><a href="Colossians/">Colossians</a></li>
+    <li><a href="John/index.html">John</a></li>
+    <li><a href="Hebrews/index.html">Hebrews</a></li>
+    <li><a href="Ephesians/">Ephesians</a> <span class="muted">(Coming Soon)</span></li>
+    <!-- Audio folder is /Bible/Audio/ with index.html inside -->
+    <li><a href="Audio/">Audio</a></li>
+  </ul>
+
+  <footer>
     <p>
       Scripture quotations are paraphrased for interpretive clarity.
       External Bible links are provided for reference purposes.
     </p>
-  </footer>
 
-  <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-    <img
-      height="36"
-      style="border:0px;height:36px;"
-      src="https://storage.ko-fi.com/cdn/kofi5.png?v=6"
-      alt="Buy Me a Coffee at ko-fi.com"
-    />
-  </a>
+    <a class="kofi" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+      <img
+        height="36"
+        style="border:0px;height:36px;"
+        src="https://storage.ko-fi.com/cdn/kofi5.png?v=6"
+        alt="Buy Me a Coffee at ko-fi.com"
+      />
+    </a>
+  </footer>
 </body>
 </html>
