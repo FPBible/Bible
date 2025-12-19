@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christmas: Life Is Here</title>
+  <meta name="description" content="A plain-language Christmas reflection: presence, meaning, and life—written for non-religious readers." />
+
+  <style>
+    :root{
+      --maxw: 900px;
+      --pad: 18px;
+      --radius: 14px;
+      --bg: #0b0f14;
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.12);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --soft: rgba(255,255,255,0.08);
+    }
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,0.08), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,0.06), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.25); }
+    a:hover{ text-decoration-color: rgba(255,255,255,0.6); }
+
+    header{
+      padding: 28px var(--pad) 14px;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 var(--pad) 40px;
+    }
+    .topbar{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+    }
+    .brand{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+    .pill{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+    }
+    main{
+      margin-top: 18px;
+    }
+    .hero{
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius: var(--radius);
+      padding: 26px 22px;
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    .subtitle{
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 72ch;
+    }
+    .card{
+      margin-top: 16px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px 18px;
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+    }
+    p{ margin: 10px 0; }
+    ul{
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: var(--text);
+    }
+    .quote{
+      margin: 12px 0;
+      padding: 12px 14px;
+      border-left: 3px solid rgba(255,255,255,0.28);
+      background: rgba(0,0,0,0.18);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+    .bigline{
+      margin: 12px 0 0;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      font-weight: 650;
+      letter-spacing: 0.2px;
+    }
+    .footer{
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .print{
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      text-decoration: none;
+    }
+    .print:hover{ background: rgba(255,255,255,0.06); }
+
+    @media print{
+      body{ background: #fff; color:#000; }
+      .topbar, .print{ display:none !important; }
+      .hero, .card, .footer{ background: #fff; border-color: #ccc; }
+      a{ text-decoration: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span>Christmas Reflection</span>
+        <span class="pill">Plain-language</span>
+      </div>
+      <a class="print" href="#" onclick="window.print(); return false;">Print</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-label="Page introduction">
+      <h1>Christmas: Life Is Here</h1>
+      <p class="subtitle">
+        A Christmas reflection for real life — written for people who don’t do church-talk,
+        but still know there’s more to life than survival.
+      </p>
+      <div class="bigline">
+        Christmas makes a simple claim: human life is no longer separate from God.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>God Did Not Stay Distant</h2>
+      <p>
+        The Christmas story doesn’t say humanity had to climb higher, behave better, or become more religious.
+        It says God came into ordinary life — into bodies, limits, fear, joy, work, and relationships.
+      </p>
+      <p class="quote">
+        Not to observe us from a distance. Not to judge us from above. But to share life with us.
+      </p>
+      <ul>
+        <li>Into human weakness — without shame.</li>
+        <li>Into human time — without impatience.</li>
+        <li>Into human complexity — without disgust.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>This Changed What It Means to Be Human</h2>
+      <p>
+        Christmas isn’t “try harder and maybe you’ll be accepted.”
+        It’s the announcement that life itself is carrying meaning from within — that you are not empty by default.
+      </p>
+      <div class="bigline">
+        You are not abandoned. You are not waiting for meaning to arrive later.
+      </div>
+      <p>
+        That doesn’t mean life is easy. It means life is not pointless.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>You Are Not Living in a Broken Story</h2>
+      <p>
+        A lot of people feel like the world is unfinished — like something essential is missing.
+        Christmas says the repair has already begun at the deepest level: separation is over.
+      </p>
+      <p class="quote">
+        Not “escape the world.”<br />
+        But “the world is not empty.”
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What Christmas Means Now</h2>
+      <p>
+        Christmas is not about escaping earth. It’s about discovering that real things are real:
+      </p>
+      <ul>
+        <li>Love matters.</li>
+        <li>Kindness is power.</li>
+        <li>Forgiveness is possible.</li>
+        <li>Peace isn’t imaginary.</li>
+      </ul>
+      <p>
+        Because life is no longer disconnected from its source.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>You Don’t Have to Become Religious</h2>
+      <p>
+        Christmas does not require you to join an institution, adopt religious language, perform rituals,
+        or pretend you have it all together.
+      </p>
+      <div class="bigline">
+        Life is not empty. You are not alone. Presence is already here.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Christmas Is Not a Promise for Later</h2>
+      <p>
+        It’s a declaration for now.
+      </p>
+      <p class="quote">
+        Not: “One day things will matter.”<br />
+        But: “They already do.”
+      </p>
+      <p>
+        Merry Christmas — not because everything is perfect,
+        but because life itself has been filled with meaning — and remains so.
+      </p>
+    </section>
+
+    <section class="footer">
+      <strong>Optional footer:</strong> Add your name, website, and contact here if you want this as a handout page.
+      <br />
+      Example: Manny Sabljak · allset.au · allset@live.com.au
+    </section>
+  </main>
+</body>
+</html>
