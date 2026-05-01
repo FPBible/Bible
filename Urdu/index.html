@@ -3,109 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Path of Sonship | FPBible Discipleship</title>
+    <title>The Path of Sonship | FPBible Curriculum</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #2c3e50; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        header { text-align: center; padding: 50px 20px; background: #2c3e50; color: white; border-radius: 8px; margin-bottom: 30px; }
-        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 1px; }
-        .subtitle { font-style: italic; color: #bdc3c7; margin-top: 10px; }
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            background-color: var(--bg); 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { opacity: 0.8; font-style: italic; margin-top: 10px; }
+
+        .container { 
+            max-width: 1000px; 
+            margin: -40px auto 50px; 
+            padding: 0 20px; 
+        }
+
+        .intro-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .curriculum-grid { display: grid; gap: 30px; }
+
+        .part-section { 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: var(--shadow); 
+            overflow: hidden; 
+            border-top: 4px solid var(--primary);
+        }
+
+        .part-header { 
+            background: #f1f4f7; 
+            padding: 15px 25px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .part-header h2 { margin: 0; font-size: 1.25rem; color: var(--primary); }
+        .part-urdu { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.1rem; color: #7f8c8d; }
+
+        .session-list { list-style: none; padding: 0; margin: 0; }
         
-        .curriculum-section { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 5px solid #3498db; }
-        h2 { color: #2980b9; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        h2 span { font-size: 0.8em; color: #7f8c8d; display: block; }
+        .session-item { 
+            display: flex; 
+            align-items: center; 
+            padding: 15px 25px; 
+            border-bottom: 1px solid #f9f9f9; 
+            transition: background 0.2s;
+        }
 
-        .session-list { list-style: none; padding: 0; }
-        .session-item { display: flex; align-items: baseline; padding: 10px 0; border-bottom: 1px thin #f9f9f9; transition: transform 0.2s; }
-        .session-item:hover { transform: translateX(5px); }
-        .session-number { font-weight: bold; color: #34495e; min-width: 100px; }
-        .session-title { text-decoration: none; color: #2c3e50; font-weight: 500; flex-grow: 1; }
-        .session-title:hover { color: #3498db; }
-        .urdu-title { color: #7f8c8d; font-size: 0.95em; margin-left: 10px; font-family: 'Urdu Typesetting', 'Noto Nastaliq Urdu', serif; }
+        .session-item:hover { background: #fcfdfe; }
+        .session-item:last-child { border-bottom: none; }
 
-        .status-tag { font-size: 0.7em; padding: 2px 8px; border-radius: 10px; background: #e1e1e1; color: #7f8c8d; margin-left: 10px; text-transform: uppercase; }
-        .status-active { background: #d4edda; color: #155724; }
+        .session-num { 
+            font-weight: bold; 
+            color: var(--accent); 
+            width: 40px; 
+            flex-shrink: 0; 
+        }
 
-        footer { text-align: center; padding: 40px; color: #95a5a6; font-size: 0.9em; }
+        .session-link { 
+            text-decoration: none; 
+            color: var(--text); 
+            font-weight: 500; 
+            flex-grow: 1; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .session-link:hover { color: var(--accent); }
+        
+        .urdu-inline { 
+            font-family: 'Noto Nastaliq Urdu', serif; 
+            font-size: 0.95rem; 
+            color: #95a5a6; 
+            margin-left: 15px;
+            direction: rtl;
+        }
+
+        .status-badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background: #eee;
+            color: #999;
+            margin-left: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .status-live { background: #d4edda; color: #155724; }
+
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            color: #7f8c8d; 
+            font-size: 0.9rem; 
+        }
+
+        @media (max-width: 600px) {
+            .session-item { flex-direction: column; align-items: flex-start; }
+            .urdu-inline { margin-left: 0; margin-top: 5px; }
+            header h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>The Path of Sonship</h1>
-    <div class="subtitle">بیٹے ہونے کا سفر — From Slavery to the New Creation Reality</div>
+    <p>A 24-Session Journey into the New Creation Reality</p>
 </header>
 
-<div class="curriculum-section">
-    <h2>Part 1: The Reality of a Disciple <span>شاگرد کی حقیقت</span></h2>
-    <ul class="session-list">
-        <li class="session-item">
-            <span class="session-number">Session 1</span>
-            <a href="Urdu/urdu-session-1.html" class="session-title">From Slavery to Sonship <span class="urdu-title">(غلامی سے بیٹے ہونے تک)</span></a>
-            <span class="status-tag status-active">Live</span>
-        </li>
-        <li class="session-item">
-            <span class="session-number">Session 2</span>
-            <span class="session-title">The Finished Work of Christ <span class="urdu-title">(مسیح کا مکمل کام)</span></span>
-            <span class="status-tag">Coming Soon</span>
-        </li>
-        <li class="session-item">
-            <span class="session-number">Session 3</span>
-            <span class="session-title">Making Disciples in the Present Kingdom</span>
-        </li>
-        <li class="session-item">
-            <span class="session-number">Session 4</span>
-            <span class="session-title">The Cost and Joy of Following Jesus</span>
-        </li>
-    </ul>
-</div>
+<div class="container">
+    <div class="intro-card">
+        <p>Exploring biblical discipleship through the lens of Covenantal Fulfillment (Full Preterism). From the shadows of the Old Covenant to the substance of the Reigning Kingdom.</p>
+    </div>
 
-<div class="curriculum-section">
-    <h2>Part 2: Life in the New Creation <span>نئی تخلیق میں زندگی</span></h2>
-    <ul class="session-list">
-        <li class="session-item"><span class="session-number">Session 5</span><span class="session-title">The Church as the New Temple</span></li>
-        <li class="session-item"><span class="session-number">Session 6</span><span class="session-title">Fellowship and the Covenant Community</span></li>
-        <li class="session-item"><span class="session-number">Session 7</span><span class="session-title">Prayer: Accessing the Father</span></li>
-        <li class="session-item"><span class="session-number">Session 8</span><span class="session-title">Walking in the Spirit</span></li>
-    </ul>
-</div>
+    <div class="curriculum-grid">
+        
+        <section class="part-section">
+            <div class="part-header">
+                <h2>Part 1: The Reality of a Disciple</h2>
+                <span class="part-urdu">شاگرد کی حقیقت</span>
+            </div>
+            <ul class="session-list">
+                <li class="session-item">
+                    <span class="session-num">01</span>
+                    <a href="Urdu/urdu-session-1.html" class="session-link">
+                        From Slavery to Sonship <span class="urdu-inline">غلامی سے بیٹے ہونے تک</span>
+                    </a>
+                    <span class="status-badge status-live">Live</span>
+                </li>
+                <li class="session-item">
+                    <span class="session-num">02</span>
+                    <span class="session-link">The Finished Work of Christ (Resting in Grace) <span class="urdu-inline">مسیح کا مکمل کام</span></span>
+                    <span class="status-badge">Next</span>
+                </li>
+                <li class="session-item">
+                    <span class="session-num">03</span>
+                    <span class="session-link">Making Disciples in the Present Kingdom</span>
+                </li>
+                <li class="session-item">
+                    <span class="session-num">04</span>
+                    <span class="session-link">The Cost and Joy of Following Jesus</span>
+                </li>
+            </ul>
+        </section>
 
-<div class="curriculum-section" style="border-left-color: #e67e22;">
-    <h2>Part 3: Hearing God's Voice <span>خدا کی آواز سننا</span></h2>
-    <ul class="session-list">
-        <li class="session-item"><span class="session-number">Session 9</span><span class="session-title">How to Read the Bible Contextually</span></li>
-        <li class="session-item"><span class="session-number">Session 10</span><span class="session-title">Understanding Audience Relevance and History</span></li>
-        <li class="session-item"><span class="session-number">Session 11</span><span class="session-title">Prophetic Language and Hebrew Idioms</span></li>
-        <li class="session-item"><span class="session-number">Session 12</span><span class="session-title">Applying Scripture to Modern Life</span></li>
-    </ul>
-</div>
+        <section class="part-section">
+            <div class="part-header">
+                <h2>Part 2: Life in the New Creation</h2>
+                <span class="part-urdu">نئی تخلیق میں زندگی</span>
+            </div>
+            <ul class="session-list">
+                <li class="session-item"><span class="session-num">05</span><span class="session-link">The Church as the New Temple</span></li>
+                <li class="session-item"><span class="session-num">06</span><span class="session-link">Fellowship and the Covenant Community</span></li>
+                <li class="session-item"><span class="session-num">07</span><span class="session-link">Prayer: Accessing the Father</span></li>
+                <li class="session-item"><span class="session-num">08</span><span class="session-link">Walking in the Spirit (Overcoming the Flesh)</span></li>
+            </ul>
+        </section>
 
-<div class="curriculum-section" style="border-left-color: #9b59b6;">
-    <h2>Part 4: The Old Covenant Shadows <span>پرانے عہد کے سائے</span></h2>
-    <ul class="session-list">
-        <li class="session-item"><span class="session-number">Session 13</span><span class="session-title">Creation, Fall, and the Promise of Redemption</span></li>
-        <li class="session-item"><span class="session-number">Session 14</span><span class="session-title">Abraham and the Covenant Family</span></li>
-        <li class="session-item"><span class="session-number">Session 15</span><span class="session-title">Moses, the Law, and the Purpose of the Old Covenant</span></li>
-        <li class="session-item"><span class="session-number">Session 16</span><span class="session-title">Kings, Prophets, and the Anticipation of the King</span></li>
-    </ul>
-</div>
+        <section class="part-section">
+            <div class="part-header">
+                <h2>Part 3: Hearing God's Voice</h2>
+                <span class="part-urdu">خدا کی آواز سننا</span>
+            </div>
+            <ul class="session-list">
+                <li class="session-item"><span class="session-num">09</span><span class="session-link">How to Read the Bible Contextually</span></li>
+                <li class="session-item"><span class="session-num">10</span><span class="session-link">Understanding Audience Relevance and History</span></li>
+                <li class="session-item"><span class="session-num">11</span><span class="session-link">Prophetic Language and Hebrew Idioms</span></li>
+                <li class="session-item"><span class="session-num">12</span><span class="session-link">Applying Scripture to Modern Life</span></li>
+            </ul>
+        </section>
 
-<div class="curriculum-section" style="border-left-color: #27ae60;">
-    <h2>Part 5: The New Covenant Fulfillment <span>نئے عہد کی تکمیل</span></h2>
-    <ul class="session-list">
-        <li class="session-item"><span class="session-number">Session 17</span><span class="session-title">Jesus the Messiah: Bringing the Kingdom</span></li>
-        <li class="session-item"><span class="session-number">Session 18</span><span class="session-title">The Cross and the Defeat of Sin and Death</span></li>
-        <li class="session-item"><span class="session-number">Session 19</span><span class="session-title">Resurrection and Ascension: Christ on the Throne</span></li>
-        <li class="session-item"><span class="session-number">Session 20</span><span class="session-title">The Holy Spirit and the Birth of the New Community</span></li>
-        <li class="session-item"><span class="session-number">Session 21</span><span class="session-title">The Epistles: Living Out the New Covenant</span></li>
-        <li class="session-item"><span class="session-number">Session 22</span><span class="session-title">The Transition of the Ages (AD 70)</span></li>
-        <li class="session-item"><span class="session-number">Session 23</span><span class="session-title">The Consummation of the Kingdom</span></li>
-        <li class="session-item"><span class="session-number">Session 24</span><span class="session-title">Our Mission in the Reigning Kingdom</span></li>
-    </ul>
+        <section class="part-section">
+            <div class="part-header">
+                <h2>Part 4: The Old Covenant Shadows</h2>
+                <span class="part-urdu">پرانے عہد کے سائے</span>
+            </div>
+            <ul class="session-list">
+                <li class="session-item"><span class="session-num">13</span><span class="session-link">Creation, Fall, and the Promise of Redemption</span></li>
+                <li class="session-item"><span class="session-num">14</span><span class="session-link">Abraham and the Covenant Family</span></li>
+                <li class="session-item"><span class="session-num">15</span><span class="session-link">Moses, the Law, and the Purpose of the Old Covenant</span></li>
+                <li class="session-item"><span class="session-num">16</span><span class="session-link">Kings, Prophets, and the Anticipation of the King</span></li>
+            </ul>
+        </section>
+
+        <section class="part-section" style="border-top-color: #27ae60;">
+            <div class="part-header">
+                <h2>Part 5: The New Covenant Fulfillment</h2>
+                <span class="part-urdu">نئے عہد کی تکمیل</span>
+            </div>
+            <ul class="session-list">
+                <li class="session-item"><span class="session-num">17</span><span class="session-link">Jesus the Messiah: Bringing the Kingdom</span></li>
+                <li class="session-item"><span class="session-num">18</span><span class="session-link">The Cross and the Defeat of Sin and Death</span></li>
+                <li class="session-item"><span class="session-num">19</span><span class="session-link">Resurrection and Ascension: Christ on the Throne</span></li>
+                <li class="session-item"><span class="session-num">20</span><span class="session-link">The Holy Spirit and the Birth of the New Community</span></li>
+                <li class="session-item"><span class="session-num">21</span><span class="session-link">The Epistles: Living Out the New Covenant</span></li>
+                <li class="session-item"><span class="session-num">22</span><span class="session-link">The Transition of the Ages (AD 70)</span></li>
+                <li class="session-item"><span class="session-num">23</span><span class="session-link">The Consummation of the Kingdom</span></li>
+                <li class="session-item"><span class="session-num">24</span><span class="session-link">Our Mission in the Reigning Kingdom</span></li>
+            </ul>
+        </section>
+
+    </div>
 </div>
 
 <footer>
-    <p>Focused on the Eighth Day Reality and the Finished Work of Christ.</p>
-    <p>&copy; 2026 FPBible Resources</p>
+    <p>&copy; 2026 FPBible Resources | Dedicated to the New Creation Reality</p>
 </footer>
 
 </body>
