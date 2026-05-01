@@ -5,16 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Session 1: From Slavery to Sonship</title>
 <style>
-  /* Navigation Bar Styling */
+  /* Consistent Navigation Styling */
   .top-nav {
     background-color: #2c3e50;
-    padding: 10px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
-
   .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -23,7 +22,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .nav-link {
     color: white;
     text-decoration: none;
@@ -32,20 +30,12 @@
     padding: 8px 15px;
     border-radius: 4px;
     transition: background 0.3s;
+    margin-left: 10px;
   }
+  .nav-link:hover { background-color: #34495e; color: #3498db; }
+  .nav-brand { color: #3498db; font-weight: 800; text-decoration: none; letter-spacing: 1px; }
 
-  .nav-link:hover {
-    background-color: #34495e;
-  }
-
-  .nav-brand {
-    color: #3498db;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
-
-  /* Core layout for bilingual text */
+  /* Body Layout */
   .session-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -54,7 +44,6 @@
     line-height: 1.6;
     color: #333;
   }
-  
   .session-title {
     text-align: center;
     border-bottom: 2px solid #2c3e50;
@@ -62,78 +51,42 @@
     margin-bottom: 30px;
     margin-top: 20px;
   }
-
-  .bilingual-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
+  .bilingual-grid { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px; }
   .lang-column {
     flex: 1;
-    min-width: 300px; 
+    min-width: 300px;
     background: #fdfdfd;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
-
-  /* Specific styling for Urdu */
   .urdu-content {
     direction: rtl;
     text-align: right;
-    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', Tahoma, Arial, sans-serif;
+    font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
     font-size: 1.3em;
-    line-height: 1.8;
+    line-height: 1.9;
   }
-
   .scripture-quote {
     font-style: italic;
     background: #f0f7fa;
     padding: 15px;
     border-left: 4px solid #3498db;
     margin: 15px 0;
-    border-radius: 0 4px 4px 0;
   }
-
-  .urdu-quote {
-    border-left: none;
-    border-right: 4px solid #3498db;
-    border-radius: 4px 0 0 4px;
-  }
-
-  .discussion-section {
-    background: #ecf0f1;
-    padding: 25px;
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-
-  .discussion-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 30px;
-    color: #7f8c8d;
-    font-size: 0.8em;
-    border-top: 1px solid #eee;
-  }
+  .urdu-quote { border-left: none; border-right: 4px solid #3498db; }
+  .discussion-section { background: #ecf0f1; padding: 25px; border-radius: 8px; margin-bottom: 50px; }
+  footer { text-align: center; padding: 30px; color: #7f8c8d; border-top: 1px solid #eee; }
 </style>
 </head>
 <body>
 
 <nav class="top-nav">
   <div class="nav-container">
-    <a href="../index.html" class="nav-brand">FPBIBLE</a>
+    <a href="index.html" class="nav-brand">FPBIBLE | URDU</a>
     <div>
-      <a href="../index.html" class="nav-link">← Main Index</a>
-      <a href="urdu.html" class="nav-link">Urdu Bible</a>
+      <a href="index.html" class="nav-link">← Curriculum Index</a>
+      <a href="../index.html" class="nav-link">Site Home</a>
     </div>
   </div>
 </nav>
@@ -142,69 +95,46 @@
   
   <div class="session-title">
     <h1>Session 1: From Slavery to Sonship</h1>
-    <h2 class="urdu-content" style="text-align: center; border:none; padding:0;">پہلا سبق: غلامی سے بیٹے ہونے تک</h2>
+    <h2 class="urdu-content" style="text-align: center; border:none;">پہلا سبق: غلامی سے بیٹے ہونے تک</h2>
   </div>
 
   <div class="bilingual-grid">
-    
     <div class="lang-column">
       <h3>What is a Disciple?</h3>
-      <p>What does it mean to be a disciple of Jesus? Many people view discipleship merely as keeping a set of rules or trying hard to be a good person. But true discipleship begins with a fundamental change in identity: stepping out of slavery and into sonship.</p>
-      
-      <p>Under the old systems of law and human effort, humanity was enslaved to sin and death. We were bound to a master that demanded perfection but offered no power to achieve it. Jesus entered history to legally sever those bonds. Through His finished work on the cross and His resurrection, He completely defeated the old order.</p>
-      
-      <p>To be a disciple means you have accepted this new reality. You are no longer a slave striving to earn God’s favor; you are a deeply loved child living in the New Creation. Romans 8:15 reminds us:</p>
-      
+      <p>True discipleship begins with a fundamental change in identity: stepping out of slavery and into sonship. Under the old systems of law, humanity was enslaved to sin and death. Jesus entered history to legally sever those bonds.</p>
       <div class="scripture-quote">
         "For you didn't receive the spirit of bondage again to fear, but you received the Spirit of adoption, by whom we cry, 'Abba! Father!'" (Romans 8:15, WEB)
       </div>
-      
-      <p>A disciple follows Jesus not out of fear of punishment, but out of the profound joy and security of knowing the Father. Discipleship is simply learning how to live every day in the reality of the present Kingdom of God.</p>
     </div>
 
     <div class="lang-column urdu-content" lang="ur" dir="rtl">
       <h3>شاگرد کیا ہے؟</h3>
-      <p>یسوع مسیح کا شاگرد ہونے کا کیا مطلب ہے؟ بہت سے لوگ شاگردیت کو محض کچھ اصولوں کی پابندی یا ایک اچھا انسان بننے کی کوشش سمجھتے ہیں۔ لیکن سچی شاگردیت کا آغاز شناخت کی ایک بنیادی تبدیلی سے ہوتا ہے: غلامی سے نکل کر بیٹے (یا بیٹی) ہونے کے درجے میں داخل ہونا۔</p>
-      
-      <p>شریعت اور انسانی کوششوں کے پرانے نظام کے تحت، انسانیت گناہ اور موت کی غلام تھی۔ ہم ایک ایسے آقا کے پابند تھے جو کامل ہونے کا مطالبہ کرتا تھا لیکن اسے حاصل کرنے کی کوئی طاقت نہیں دیتا تھا۔ یسوع نے ان بندھنوں کو قانونی طور پر توڑنے کے لیے تاریخ میں قدم رکھا۔ صلیب پر اپنے مکمل کام اور اپنے جی اٹھنے کے ذریعے، اس نے پرانے نظام کو مکمل طور پر شکست دی۔</p>
-      
-      <p>شاگرد ہونے کا مطلب یہ ہے کہ آپ نے اس نئی حقیقت کو قبول کر لیا ہے۔ آپ اب خدا کی خوشنودی حاصل کرنے کی کوشش کرنے والے غلام نہیں ہیں؛ آپ نئی تخلیق میں رہنے والے ایک بے حد پیارے بچے ہیں۔ رومیوں 8:15 ہمیں یاد دلاتا ہے:</p>
-      
+      <p>سچی شاگردیت کا آغاز شناخت کی ایک بنیادی تبدیلی سے ہوتا ہے: غلامی سے نکل کر بیٹے ہونے کے درجے میں داخل ہونا۔ شریعت کے پرانے نظام کے تحت، انسانیت گناہ اور موت کی غلام تھی۔ یسوع نے ان بندھنوں کو قانونی طور پر توڑنے کے لیے تاریخ میں قدم رکھا۔</p>
       <div class="scripture-quote urdu-quote">
         "کیونکہ تم کو غلامی کی روح نہیں ملی کہ پھر ڈرو، بلکہ لے پالک ہونے کی روح ملی، جس کے وسیلے سے ہم ابّا، یعنی اے باپ کہہ کر پکارتے ہیں۔"
       </div>
-      
-      <p>ایک شاگرد سزا کے خوف سے نہیں، بلکہ باپ کو جاننے کی گہری خوشی اور تحفظ کے احساس سے یسوع کی پیروی کرتا ہے۔ شاگردیت کا مطلب محض یہ سیکھنا ہے کہ خدا کی موجودہ بادشاہی کی حقیقت میں ہر روز کیسے جینا ہے۔</p>
     </div>
-
   </div>
 
   <div class="discussion-section">
-    <h3 style="text-align: center; margin-top: 0;">Discussion / بحث کے سوالات</h3>
-    
-    <div class="discussion-grid">
-      <div class="lang-column" style="background: transparent; box-shadow: none; padding: 0;">
-        <ol>
-          <li>How does viewing yourself as a "son/daughter" rather than a "slave" change the way you approach your daily relationship with God?</li>
-          <li>What are some "old systems" or rules you have tried to rely on to earn God's approval in the past?</li>
-          <li>How can we demonstrate the present reality of God's Kingdom in our local communities?</li>
-        </ol>
-      </div>
-
-      <div class="lang-column urdu-content" lang="ur" dir="rtl" style="background: transparent; box-shadow: none; padding: 0;">
-        <ol>
-          <li>اپنے آپ کو "غلام" کی بجائے "بیٹا/بیٹی" سمجھنے سے خدا کے ساتھ آپ کے روزمرہ کے رشتے میں کیا تبدیلی آتی ہے؟</li>
-          <li>وہ کون سے "پرانے نظام" یا اصول ہیں جن پر آپ ماضی میں خدا کی منظوری حاصل کرنے کے لیے انحصار کرنے کی کوشش کرتے رہے ہیں؟</li>
-          <li>ہم اپنی مقامی کمیونٹیز میں خدا کی بادشاہی کی موجودہ حقیقت کو کیسے ظاہر کر سکتے ہیں؟</li>
-        </ol>
-      </div>
+    <h3 style="text-align: center;">Discussion Questions / بحث کے سوالات</h3>
+    <div class="bilingual-grid">
+        <div class="lang-column" style="background:transparent; box-shadow:none;">
+            <ol>
+                <li>How does viewing yourself as a "son" rather than a "slave" change your prayer life?</li>
+            </ol>
+        </div>
+        <div class="lang-column urdu-content" style="background:transparent; box-shadow:none;">
+            <ol>
+                <li>اپنے آپ کو "غلام" کی بجائے "بیٹا" سمجھنے سے آپ کی دعائیہ زندگی میں کیا تبدیلی آتی ہے؟</li>
+            </ol>
+        </div>
     </div>
   </div>
 
   <footer>
-    &copy; 2026 FPBible - Discipleship Series: The Path of Sonship
+    &copy; 2026 FPBible | The Path of Sonship Curriculum
   </footer>
-
 </div>
 
 </body>
