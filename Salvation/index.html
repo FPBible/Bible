@@ -3,53 +3,231 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Salvation — Life Restored — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Full Preterist study edition using the WEB translation." />
+  <title>From Slave to Mature Heir — The Fulfilled Prophecy Bible Project</title>
+  <meta name="description" content="Salvation is not a system of behavioural management or childhood compliance. It is the graduation into spiritual maturity—living as trusted, mature heirs." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "From Slave to Mature Heir",
+    "description": "Salvation is not a system of behavioural management or childhood compliance. It is the graduation into spiritual maturity—living as trusted, mature heirs.",
+    "author": { "@type": "Organization", "name": "The Fulfilled Prophecy Bible Project" }
+  }
+  </script>
 
   <style>
-    body{
-      font-family: system-ui, sans-serif;
+    :root {
+      --accent: #2a6496;
+      --accent-light: #e8f1f8;
+      --text: #1a1a1a;
+      --muted: #555;
+      --line: rgba(0,0,0,0.11);
+      --soft: rgba(0,0,0,0.04);
+      --radius: 14px;
+      --maxw: 860px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.75;
+      margin: 0;
+      color: var(--text);
+      background: #fff;
+      font-size: 1.04rem;
+    }
+
+    /* Sticky top nav */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+      font-size: 0.875rem;
+      padding: 10px 16px;
+      color: var(--muted);
+    }
+    .topnav a { color: var(--accent); text-decoration: none; padding: 0 5px; }
+    .topnav a:hover { text-decoration: underline; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 40px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 40px 20px 32px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 36px;
+    }
+    .hero .label {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
       line-height: 1.6;
-      margin: 1.5em;
-      max-width: 900px;
     }
-    h1, h2, h3{
-      margin-top: 1.6em;
-      margin-bottom: 0.4em;
+
+    /* Sections */
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 2.2em 0 0.5em;
+      color: var(--text);
     }
-    p{ margin: 0.6em 0; }
-    ul{ margin: 0.6em 0 1.1em 1.2em; }
-    li{ margin: 0.35em 0; }
-    a{ text-decoration: underline; }
-    nav{
-      margin: 1em 0;
-      font-size: 0.95em;
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.6em 0 0.4em;
+      color: var(--accent);
     }
-    nav a{ margin-right: 0.6em; }
-    hr{ margin: 2.5em 0; }
-    .divider{
+    p { margin: 0 0 1.1em; }
+    ul { margin: 0.6em 0 1.1em 1.2em; }
+    li { margin: 0.35em 0; }
+
+    hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    .divider {
       margin: 3em 0 1.5em 0;
       padding-top: 1.5em;
       border-top: 2px solid #ddd;
     }
-      footer{
-      margin-top: 2.2em;
+
+    /* Pull quote */
+    .pullquote {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-light);
+      padding: 18px 22px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2em 0;
+      font-size: 1.08rem;
+      color: var(--text);
+      font-style: italic;
+    }
+    .pullquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.87rem;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* Highlight box */
+    .highlight {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+      padding: 20px 24px;
+      margin: 2em 0;
+    }
+    .highlight h3 { margin-top: 0; }
+
+    /* Reflection box */
+    .reflection {
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 2.5em 0;
+      background: var(--accent-light);
+    }
+    .reflection h3 { margin-top: 0; color: var(--accent); }
+
+    /* Share */
+    .share-row {
+      text-align: center;
+      margin: 36px 0 20px;
+    }
+    .share-row .label-sm {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text);
+      background: #fff;
+      font-size: 0.9rem;
+      margin: 0 4px;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--soft); }
+
+    /* Bottom nav */
+    nav.bottom {
+      text-align: center;
+      font-size: 0.88rem;
+      margin: 28px 0 16px;
+      color: var(--muted);
+    }
+    nav.bottom a { color: var(--accent); text-decoration: none; padding: 0 5px; }
+    nav.bottom a:hover { text-decoration: underline; }
+
+    /* Ko-fi wrap styles matching core layout */
+    .quick {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      background: var(--soft);
+    }
+    .kofi {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+      text-decoration: none;
+    }
+    .kofi span {
+      text-decoration: underline;
+      font-size: 0.95em;
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 2.5em;
       padding-top: 1.2em;
       border-top: 1px solid var(--line);
       color: var(--muted);
-      font-size: 0.96em;
+      font-size: 0.88rem;
+      text-align: center;
     }
-    footer .row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-      justify-content: space-between;
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.25rem; }
     }
-  
-    /* Hide specific UI elements */
     .hide-element { display: none; }
   </style>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,169 +236,121 @@
 
     gtag('config', 'G-Q22N178LJ8');
   </script>
+</head>
 
-  </head>
 <body>
-
 <a id="top"></a>
 
-<nav>
-  <a href="/Bible/index.html">Bible Index</a> |
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-  <a href="/Bible/About/index.html">About</a> |
-  <a href="#top">Top</a>
-</nav>
-
-<h1>Salvation</h1>
-<h2>Life Restored</h2>
-
-<p>
-Salvation isn’t about escaping the world or earning God’s approval.
-It’s about being brought back into life.
-</p>
-
-<p>
-In the Bible, salvation means rescue from what traps and crushes people —
-fear, guilt, shame, division, and the sense that life is broken or pointless.
-</p>
-
-<h3>Salvation Is Not</h3>
-<ul>
-  <li>Trying harder to be “good enough”</li>
-  <li>Joining a religious system to get accepted</li>
-  <li>Living under fear of judgment</li>
-  <li>Waiting until you die to finally have peace</li>
-</ul>
-
-<h3>Salvation Is</h3>
-<ul>
-  <li>Being freely welcomed, not evaluated</li>
-  <li>Being forgiven, not managed</li>
-  <li>Being set free from condemnation</li>
-  <li>Being made whole from the inside</li>
-  <li>Being invited into a new way of living now</li>
-</ul>
-
-<p>
-Jesus described this as <strong>life</strong> — not later, but now.
-</p>
-
-<h3>A Simple Way to Say It</h3>
-<p>
-<strong>Salvation is God restoring people to life — starting now.</strong>
-</p>
-
-<p>
-No countdown. No fear. No pressure.  
-Just life — opened, shared, and real.
-</p>
-
-<!-- ================= SECOND SECTION ================= -->
-
-<div class="divider"></div>
-
-<h2>Salvation — A Deeper Explanation</h2>
-<h3>(For readers who want the biblical framework)</h3>
-
-<p>
-In Scripture, salvation is not primarily about leaving the world.
-It is about being delivered from a world defined by separation, condemnation,
-and death — and being brought into life with God.
-</p>
-
-<p>
-Salvation is covenantal.
-It marks the transition from the Old Covenant world —
-defined by law, exile, sacrifice, and accusation —
-into the New Covenant reality revealed in Christ.
-</p>
-
-<p>
-Under the old order, humanity lived under:
-</p>
-
-<ul>
-  <li>condemnation through the law</li>
-  <li>separation expressed through temple barriers</li>
-  <li>death as a governing power</li>
-</ul>
-
-<p>
-Jesus enters that world, bears its judgment,
-and brings it to completion.
-In His death and resurrection,
-the old system reaches its end
-and a new reality begins.
-</p>
-
-<p>
-Salvation, then, is:
-</p>
-
-<ul>
-  <li>release from condemnation</li>
-  <li>freedom from law-based identity</li>
-  <li>reconciliation with God</li>
-  <li>participation in New Creation life</li>
-</ul>
-
-<p>
-This is why the New Testament speaks of salvation
-as something already received,
-already active,
-already shaping life.
-</p>
-
-<p>
-Salvation is not postponed.
-It is lived.
-</p>
-
-<p>
-Those who are “saved” are described as:
-</p>
-
-<ul>
-  <li>raised with Christ</li>
-  <li>made alive by the Spirit</li>
-  <li>brought near</li>
-  <li>no longer under condemnation</li>
-</ul>
-
-<p>
-This does not mean history stops
-or that growth ends.
-It means the decisive rescue has already occurred,
-and life is now lived from that reality.
-</p>
-
-<p>
-Salvation is not about fear of the future.
-It is about freedom in the present.
-</p>
-
-<hr />
-
-<nav>
-  <a href="/Bible/index.html">Bible Index</a> |
+<nav class="topnav">
+  <a href="/Bible/index.html">Home</a> |
   <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
   <a href="#top">Top</a>
 </nav>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="label">Soteriology &amp; Identity</span>
+    <h1>From Slave to Mature Heir</h1>
+    <p class="sub">Salvation is not an ongoing performance review or an exercise in behavior management. It is the graduation of humanity into full spiritual maturity—trusted to live out of the Father's own heart.</p>
+  </div>
+
+  <p>For those raised within the church framework, the terminology of salvation is second nature. We define grace on demand and articulate the theological mechanics of the cross. Yet beneath the fluent theology, a quiet fatigue often persists—a nagging anxiety that we are always slightly underperforming, falling short in our spiritual life, or failing to meet an unwritten standard of performance.</p>
+
+  <p>We say we are saved by grace, but we frequently live as if we are managed by external conditions. We treat our relationship with God like an active probation period, constantly micromanaging our internal metrics. Without realising it, we slip backward into an old identity framework where we view ourselves as perpetual servants or hired staff, constantly waiting for a word of correction or conditional approval.</p>
+
+  <p>The Apostle Paul encountered this exact regression in the early church. He didn't tell them to try harder; he reminded them that salvation fundamentally marked the end of spiritual minority. It was a definitive relocation of identity from a <strong>bondservant</strong> to a <strong>fully mature heir</strong>.</p>
+
+  <hr />
+
+  <h2>The Mindset of Minority vs. Full Maturity</h2>
+
+  <p>In the ancient world, an underage child (a legal minor) had no functional difference from a servant regarding the family property. They were kept under guardians and curators, told exactly how to navigate their day, and held under tight restriction. They operated under external supervision because they were not yet legally recognised as of age to manage the estate. Paul uses this imagery to describe life under the law:</p>
+
+  <ul>
+    <li><strong>The Legal Minor Framework:</strong> Driven by basic rules, constant oversight, and a system of external boundaries. Actions are heavily supervised, and the individual operates under a constant sense of restriction rather than intrinsic wisdom.</li>
+    <li><strong>The Servant Framework:</strong> Driven by contract, duty, and output. Security is tied directly to performance. If focus dips, the servant's confidence regarding their standing in the house feels immediately threatened.</li>
+  </ul>
+
+  <p>When these old frameworks hijack our understanding of salvation, our spiritual lives become performative and self-protective. We begin walking on eggshells around a seemingly strict administration. We read Scripture to fulfil a duty, pray to maintain a standing, and treat our position in the family as something that must be constantly defended and earned.</p>
+
+  <div class="pullquote">
+    "Now I say that as long as the heir is a child, he is no different from a bondservant, though he is lord of all... even so we, when we were children, were held in bondage... But when the fullness of the time came, God sent out his Son... that we might receive the adoption as sons." 
+    <cite>— Galatians 4:1-5</cite>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>The Reality of Realised Inheritance</h2>
+
+  <p>The Good News is not that God became a more lenient manager who overlooks your behavioural slips. The Good News is that Christ completely brought the era of institutional rules and servant dynamics to an absolute finish. Through His finished work, the curtain was torn, the guardians were dismissed, and humanity was declared of age.</p>
+
+  <p>Salvation is your official graduation into full sonship and daughterhood. You are no longer treated like an unproven outsider or an employee; you are a trusted, mature partner in the lineage.</p>
+
+  <p>This realisation changes everything about how we operate:</p>
+
+  <p><strong>Shared Character over Regulation:</strong> A mature, adult child doesn’t need a list of strict house rules posted on the wall to know how to honour the family or manage the estate. They understand the Father’s heart. They don't operate out of forced compliance; they operate out of a shared nature, internal wisdom, and mutual respect.</p>
+
+  <p><strong>Absolute Unshakeable Security:</strong> A mature heir doesn’t panic that they will be disowned if they make a mistake. Their status is anchored in their lineage, not their performance. Your standing with God was completely settled at the cross—the legal case is closed, and your position is final.</p>
+
+  <p><strong>Living From the Inheritance, Not For It:</strong> You aren't striving to eventually qualify for peace, righteousness, or divine acceptance in some distant future. In the New Creation reality, the inheritance has already been handed over. You live out of the fullness of what Christ has already achieved, right now.</p>
+
+  <div class="highlight">
+    <h3>The Return to Trust</h3>
+    <p>We are not servants working for a wage, nor are we minors waiting to come of age. We are the mature temple of the living God, indwelt by His Spirit. True transformation happens when we stop looking for an external checklist of behavior management and instead trust the New Creation nature that has already been established inside us.</p>
+  </div>
+
+  <hr />
+
+  <h2>Living as an Heir of the New Creation</h2>
+
+  <p>For the worn-out believer, reclaiming salvation means resting entirely in your maturity in Christ. If your spiritual life is driven by a constant sense of calculation and fatigue, you are likely treating the New Covenant like the Old Covenant—putting yourself back under structural systems that Christ already dismissed.</p>
+
+  <p>When you stop viewing yourself through the lens of a servant or a minor, your entire spiritual posture shifts:</p>
+
+  <ul>
+    <li><strong>Prayer:</strong> Shifting from an anxious plea for a distant authority figure to change His mind, to a mature, confident collaboration with a Father who has already seated you with Him in heavenly places.</li>
+    <li><strong>Life and Choice:</strong> Moving away from the fear-based question of *“Am I allowed to do this?”* and into the wise, mature reality of *“Does this reflect the heart of the Father and align with His character?”*</li>
+    <li><strong>Your Record:</strong> Realising that your evaluation is completely over. There is no pending court date, no ticking clock of ultimate judgement, and no hidden evaluation. You are an heir. The house is yours.</li>
+  </ul>
+
+  <hr />
+
+  <div class="reflection">
+    <h3>A Question Worth Sitting With</h3>
+    <p>Look honestly at the motivation behind your spiritual posture: <em>Are you still operating like a restricted minor waiting to be told exactly how to move, or like a mature heir who understands the Father’s heart and is trusted to live out of it?</em> If the guardians have been dismissed and you have truly been brought to maturity, what would it look like to step out of servant-hearted anxiety and walk in the absolute freedom of an heir today?</p>
+  </div>
+
+  <hr />
+
+  <div class="quick">
+    <p style="margin-top: 0.5em; text-align: center;">
+      <a class="kofi" href="https://ko-fi.com/fpbible" target="_blank" rel="noopener noreferrer">
+        <img height="36" style="border:0;height:36px;" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Ko-fi" />
+        <span>Support on Ko-fi</span>
+      </a>
+    </p>
+  </div>
+
+  <hr />
+
+  <div class="share-row">
+    <span class="label-sm">Share this study:</span>
+    <a class="btn" href="#" onclick="window.open('https://twitter.com/intent/tweet?text=From Slave to Mature Heir: Stepping out of spiritual minority — From The Fulfilled Prophecy Bible:&url=' + encodeURIComponent(window.location.href)); return false;">𝕏 Twitter</a>
+    <a class="btn" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">Facebook</a>
+  </div>
+
+  <nav class="bottom">
+    <a href="/Bible/index.html">Home</a> |
+    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
+    <a href="#top">Top</a>
+  </nav>
 
   <footer>
-    <div class="row">
-      <div>
-        <strong>The Fulfilled Prophecy Bible</strong> — Text based on the <strong>World English Bible (WEB)</strong> with Fulfilled Prophecy Study Commentary
-      </div>
-      <div>
-        <a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a> · <a href="#top">Back to top</a>
-      </div>
-    </div>
-    <p class="note">
-      Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-    </p>
+    <p><strong>The Fulfilled Prophecy Bible Project</strong> — Scripture: WEB</p>
+    <p>Restoring audience relevance and the finished work of Christ to the message of life.</p>
   </footer>
 
-
+</div>
 </body>
 </html>
