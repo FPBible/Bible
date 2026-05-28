@@ -39,6 +39,7 @@
       font-size: 1.04rem;
     }
 
+    /* Sticky top nav */
     .topnav {
       position: sticky;
       top: 0;
@@ -56,6 +57,7 @@
 
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 40px; }
 
+    /* Hero */
     .hero {
       text-align: center;
       padding: 40px 20px 32px;
@@ -74,14 +76,38 @@
       border-radius: 999px;
       margin-bottom: 16px;
     }
-    .hero h1 { font-size: 2.4rem; font-weight: 700; margin: 0 0 14px; line-height: 1.2; }
-    .hero .sub { font-size: 1.1rem; color: var(--muted); max-width: 620px; margin: 0 auto; line-height: 1.6; }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
-    h2 { font-size: 1.45rem; font-weight: 700; margin: 2.2em 0 0.5em; color: var(--text); }
-    h3 { font-size: 1.15rem; font-weight: 600; margin: 1.6em 0 0.4em; color: var(--accent); }
+    /* Sections */
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 2.2em 0 0.5em;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 1.6em 0 0.4em;
+      color: var(--accent);
+    }
     p { margin: 0 0 1.1em; }
+
     hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
 
+    /* Pull quote */
     .pullquote {
       border-left: 4px solid var(--accent);
       background: var(--accent-light);
@@ -92,78 +118,207 @@
       color: var(--text);
       font-style: italic;
     }
-    .pullquote cite { display: block; margin-top: 8px; font-size: 0.87rem; color: var(--muted); font-style: normal; }
+    .pullquote cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.87rem;
+      color: var(--muted);
+      font-style: normal;
+    }
 
-    .highlight { border: 1px solid var(--line); border-radius: var(--radius); background: var(--soft); padding: 20px 24px; margin: 2em 0; }
+    /* Highlight box */
+    .highlight {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+      padding: 20px 24px;
+      margin: 2em 0;
+    }
     .highlight h3 { margin-top: 0; }
 
-    .reflection { border: 2px solid var(--accent); border-radius: var(--radius); padding: 24px 28px; margin: 2.5em 0; background: var(--accent-light); }
+    /* Reflection box */
+    .reflection {
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 2.5em 0;
+      background: var(--accent-light);
+    }
     .reflection h3 { margin-top: 0; color: var(--accent); }
 
-    .share-row { text-align: center; margin: 36px 0 20px; }
-    .btn { display: inline-block; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--text); background: #fff; font-size: 0.9rem; margin: 0 4px; }
+    /* Share */
+    .share-row {
+      text-align: center;
+      margin: 36px 0 20px;
+    }
+    .share-row .label-sm {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text);
+      background: #fff;
+      font-size: 0.9rem;
+      margin: 0 4px;
+      transition: background 0.15s;
+    }
     .btn:hover { background: var(--soft); }
 
-    footer { margin-top: 2.5em; padding-top: 1.2em; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; text-align: center; }
+    /* Bottom nav */
+    nav.bottom {
+      text-align: center;
+      font-size: 0.88rem;
+      margin: 28px 0 16px;
+      color: var(--muted);
+    }
+    nav.bottom a { color: var(--accent); text-decoration: none; padding: 0 5px; }
+    nav.bottom a:hover { text-decoration: underline; }
 
-    @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } h2 { font-size: 1.25rem; } }
+    footer {
+      margin-top: 2.5em;
+      padding-top: 1.2em;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.25rem; }
+    }
   </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q22N178LJ8');
+  </script>
 </head>
 
 <body>
 <a id="top"></a>
+
 <nav class="topnav">
-  <a href="/Bible/index.html">Home</a> | <a href="/Bible/About/index.html">About</a> | <a href="#top">Top</a>
+  <a href="/Bible/index.html">Home</a> |
+  <a href="/Bible/About/index.html">About</a> |
+  <a href="#top">Top</a>
 </nav>
 
 <div class="wrap">
+
   <div class="hero">
     <span class="label">Understanding Jesus</span>
     <h1>What Is the Good News?</h1>
-    <p class="sub">The Gospel is an announcement of life restored, not a system of performance.</p>
+    <p class="sub">Not a religious system, a threat of judgment, or a reward for your performance. The word "Gospel" simply means Good News—and it is an announcement of life restored.</p>
   </div>
 
-  <p>The word "religion" often evokes images of rigid rules and the pressure to perform. It frames spiritual life as a transaction where acceptance is earned through behavior, pushing peace into an uncertain future.</p>
+  <p>The word "religion" carries a lot of baggage. For many, it brings up memories of rules, rigid systems, and the underlying pressure to perform. It often sounds like a heavy obligation: if you modify your behavior, believe the right concepts, and attend the right meetings, you might eventually be accepted by God. It turns spiritual life into a stressful transaction where peace is always pushed off into a distant, uncertain future.</p>
 
-  <p>The <strong>Gospel</strong>—literally "good news"—stands in direct contrast. It is not a list of demands, but a historical announcement of what God has already done to rescue humanity from the patterns of brokenness that separate us from Him.</p>
+  <p>But the message of Jesus stands in direct contrast to this performance system. It is called the <strong>Gospel</strong>, which literally translates to "good news." It isn't a high-pressure sales pitch or a list of demands. It is a historical announcement about what God has already done to rescue humanity from the broken patterns that trap us and to welcome us back into true, vibrant life.</p>
 
-  <figure style="margin: 2em 0; text-align: center;">
-    <img src="
-Drag additional files here to add them to your repository
-Or No file chosen
-Life_Restored__The_Gospel_Message.png" alt="Life Restored: The Message of the Gospel" style="max-width: 100%; height: auto; border-radius: var(--radius);">
-  </figure>
+  <p>To understand why this message is so life-changing, we have to look at the complete story: where we started, what went wrong, and the radical way God stepped in to restore it.</p>
+
+  <hr />
 
   <h2>1. Designed for Connection</h2>
-  <p>Humanity was not created to exist on a hamster wheel of performance. We were designed for genuine peace, lasting purpose, and unconditional connection with our Creator.</p>
 
-  <h2>2. The Fracture Within</h2>
-  <p>The Bible uses the term <strong>sin</strong> to describe the declaration of independence from God. This choice resulted in spiritual fragmentation—evidenced by fear, shame, and isolation—creating a gap that human effort cannot bridge.</p>
+  <p>You were not an accident, and you weren't created to just survive, manage stress, and run on a continuous hamster wheel of performance. The biblical story begins with a profound declaration: you were intentionally designed by a loving Creator for deep connection, genuine peace, and lasting purpose.</p>
+
+  <p>Humanity was made to live in perfect harmony with God, in meaningful connection with one another, and in alignment within our own hearts. We were built to experience life from a secure foundation of unconditional belonging.</p>
+
+  <hr />
+
+  <h2>2. The Fracture Within Us</h2>
+
+  <p>It doesn't take long to look around our world—or look honestly inside ourselves—to realize that things are not the way they were meant to be. We handle anxiety, carry hidden layers of shame, navigate broken relationships, and fight an underlying sense of emptiness or isolation.</p>
+
+  <p>The Bible uses the word <strong>sin</strong> to describe the root cause of this condition. Strip away the religious misuse of the word, and sin simply means a declaration of independence from God. It is humanity choosing to walk away from the Source of life to try to be our own gods, write our own rules, and establish our own worth. This independence fractured our spiritual connection, bringing a reality of fear, guilt, and spiritual death into human experience. We became trapped in a cycle of brokenness we couldn't fix on our own.</p>
 
   <div class="pullquote">
-    Our human efforts can manage the outward symptoms of brokenness, but they cannot heal the deep spiritual separation within.
+    We couldn't build a bridge of good deeds or religious rituals to span the gap back to God. Our human efforts could only manage the outward symptoms of our brokenness; they could never heal the deep separation inside.
   </div>
+
+  <hr />
 
   <h2>3. The Rescue Operation</h2>
-  <p>God bridged the gap. In the person of Jesus, God entered our history to absorb the weight of human failure. His life, death, and resurrection constitute the finished work of salvation.</p>
+
+  <p>Because we could not build a bridge to God, God built a bridge to us. This is the heart of the Good News. Out of absolute love, God stepped directly into our broken history in the person of Jesus.</p>
+
+  <p>Jesus didn't come to look down on us or condemn us. He lived the life of perfect love and connection that we failed to live. Then, He willingly went to the cross. On that cross, Jesus took the entire collective weight of human failure, sin, and isolation upon Himself. He absorbed the judgment and paid the ultimate price for our independence so that we would never have to carry it. When He rose from the dead, He completely shattered the power of death and shame, proving that His rescue operation was a definitive success.</p>
 
   <div class="highlight">
-    <h3>"It is Finished"</h3>
-    <p>Jesus' final words signify that the debt is paid and the barrier is removed. The door to God is wide open, requiring no further religious climbing.</p>
+    <h3>The Work is Completely Finished</h3>
+    <p>When Jesus was on the cross, His final words were, <em>"It is finished."</em> This means the debt has been paid, the separation has been canceled, and the barrier between humanity and God has been completely leveled. There is no spiritual ladder left to climb. The door to God is wide open.</p>
   </div>
 
-  <h2>4. A Gift, Not a Wage</h2>
-  <p>Salvation is received through trust, not earned through merit. It is an invitation to inhabit a restored life right now, characterized by security in God's grace rather than fear of judgment.</p>
+  <hr />
+
+  <h2>4. The Unconditional Gift</h2>
+
+  <p>Because of what Jesus did, salvation—which means rescue, wholeness, and restoration—is given to us as a completely free gift. It cannot be earned, bought, or deserved through moral behavior, family heritage, or religious achievement. It is entirely based on grace.</p>
+
+  <p>This alters the entire landscape of how we live:</p>
+
+  <ul>
+    <li><strong>You don't clean up your life to come to God:</strong> He welcomes you exactly as you are, right in the middle of your mess, and transforms you from the inside out.</li>
+    <li><strong>You are completely secure:</strong> Through Jesus, you are fully forgiven, accepted, and loved. You no longer have to live under the shadow of fear, anxiety, or condemnation.</li>
+    <li><strong>It is for the present moment:</strong> Salvation isn't a delayed insurance policy for when you die. It is an invitation to inhabit a restored, purposeful life with God right now.</li>
+  </ul>
+
+  <hr />
+
+  <h2>How Do I Respond?</h2>
+
+  <p>A gift is only yours if you open your hands to receive it. God never forces Himself into your life; instead, He extends a personal invitation to you. Responding to this Good News is not about joining a religious organization; it involves two simple shifts of the heart:</p>
+
+  <p><strong>Trust (Faith):</strong> Shifting your confidence away from your own efforts, goodness, or ability to be "good enough," and putting your total trust in what Jesus did for you on the cross.</p>
+
+  <p><strong>Surrender:</strong> Turning away from living independently from your Creator, and inviting Him into your life to guide you, restore you, and teach you a completely new way to be human.</p>
+
+  <div class="pullquote">
+    "For God so loved the world, that he gave his uniquely born Son, that whoever believes in him should not perish, but have eternal life." 
+    <cite>— John 3:16</cite>
+  </div>
+
+  <p>You don't need a special religious vocabulary, a church background, or a perfect tracking record to talk to God. You can reach out to Him right now, from exactly where you are sitting, using your own words to express your desire to trust Him, receive His free forgiveness, and step into the restored life He has waiting for you.</p>
+
+  <hr />
 
   <div class="reflection">
-    <h3>A Question for Reflection</h3>
-    <p>If the work is truly finished, what would it look like today to cease your striving and live from the reality of your acceptance in Christ?</p>
+    <h3>A Question Worth Sitting With</h3>
+    <p>Is the peace, worth, and acceptance you are looking for something you are constantly exhausting yourself to work <em>toward</em>, or is it something that has already been freely <em>given</em> to you through Jesus? If the door is already open and the work is finished, what would it look like for you to stop striving and simply live as though it were true?</p>
   </div>
 
+  <hr />
+
+  <div class="share-row">
+    <span class="label-sm">Share this message:</span>
+    <a class="btn" href="#" onclick="window.open('https://twitter.com/intent/tweet?text=What is the Good News? An introduction to life restored:&url=' + encodeURIComponent(window.location.href)); return false;">𝕏 Twitter</a>
+    <a class="btn" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">Facebook</a>
+  </div>
+
+  <nav class="bottom">
+    <a href="/Bible/index.html">Home</a> |
+    <a href="/Bible/About/index.html">About</a> |
+    <a href="#top">Top</a>
+  </nav>
+
   <footer>
-    <p><strong>Life Restored Project</strong></p>
+    <p><strong>Life Restored Project</strong> — Scripture text based on the World English Bible (WEB)</p>
     <p>A clear, uncompromised presentation of the unconditional message of Jesus.</p>
   </footer>
+
 </div>
 </body>
 </html>
