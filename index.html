@@ -192,6 +192,46 @@
     }
     .pathway h3{ font-size: 1.15rem; }
 
+    /* Book Promotion Panel Styles */
+    .book-promo {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: linear-gradient(135deg, var(--soft) 0%, var(--soft2) 100%);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 2em 0;
+    }
+    @media(min-width: 600px) {
+      .book-promo { flex-direction: row; align-items: center; }
+    }
+    .book-promo .book-text { flex: 1; }
+    .book-promo h2 { margin-top: 0; margin-bottom: 8px; }
+    .book-promo .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .book-promo .amazon-btn {
+      display: inline-block;
+      background: #ff9900;
+      color: #111;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .book-promo .amazon-btn.alt-lang {
+      background: #e2e8f0;
+      border: 1px solid var(--line2);
+    }
+    .book-promo .amazon-btn:hover { opacity: 0.95; }
+
     .featured{
       background: var(--soft2);
       border-radius: var(--radius);
@@ -378,7 +418,7 @@
 
     <div class="grid grid-3">
       <div class="card pathway">
-        <h3>🎯 Start with the Foundations</h3>
+        <h3>🎯 Foundational Tracks</h3>
         <p>Select the entry point that fits your background:</p>
         <ol style="margin: 0.8em 0 1em 1.2em; padding: 0;">
           <li><a href="/Bible/Studies/good-news.html"><strong>What Is the Good News?</strong></a> <br><span class="note">Clear message for the unchurched.</span></li>
@@ -404,6 +444,17 @@
         <h3>🔍 Explore a Topic</h3>
         <p>Deep dives into key concepts: coming, wrath, fire, resurrection, heaven &amp; earth, judgment, death, parousia, and more.</p>
         <p style="margin-top: 1em;"><a href="#resources"><strong>View Resources →</strong></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book-featured" class="book-promo">
+    <div class="book-text">
+      <h2>Featured Release Available Now</h2>
+      <p><strong>The Eighth Day Reality: From Slavery to Sonship</strong> — Step out of performance-based metrics and discover your completed inheritance inside the finished work of the New Creation framework.</p>
+      <div class="btn-group">
+        <a href="https://www.amazon.com/dp/B0GX3BBHFX" target="_blank" rel="noopener noreferrer" class="amazon-btn">English Edition on Amazon →</a>
+        <a href="https://a.co/d/07nwNMoU" target="_blank" rel="noopener noreferrer" class="amazon-btn alt-lang">Chinese Edition (中文版) →</a>
       </div>
     </div>
   </section>
@@ -665,7 +716,7 @@ const FINISHED_BOOKS = [
     title: "2 Thessalonians",
     pill: "Epistle",
     desc: "Panic corrected, lawlessness exposed, steady New Creation life restored.",
-    links: [["/Bible/22Thessalonians/index.html","Book Index"]]
+    links: [["/Bible/2Thessalonians/index.html","Book Index"]]
   },
   {
     title: "Hebrews",
