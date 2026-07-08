@@ -3,202 +3,173 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Salvation from a Fulfilled Perspective — The Fulfilled Prophecy Bible Project</title>
-  <meta name="description" content="An in-depth covenantal analysis of salvation as a completed historical rescue mission and a present reality in the New Creation." />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Salvation from a Fulfilled Perspective",
-    "description": "Understanding salvation not as a future escape, but as the completed transition from the Old Covenant to the New Creation state in AD 70.",
-    "author": { "@type": "Organization", "name": "The Fulfilled Prophecy Bible Project" }
-  }
-  </script>
+  <title>Sin, Judgment, and Consequences in the New Creation — FPBible</title>
+  <meta name="description" content="A strict covenantal-fulfillment exploration of the vital distinction between corporate Adamic Sin and individual moral failure after AD 70." />
 
   <style>
-    :root {
-      --accent: #2a6496;
-      --accent-light: #e8f1f8;
-      --text: #1a1a1a;
-      --muted: #555;
-      --line: rgba(0,0,0,0.11);
-      --soft: rgba(0,0,0,0.04);
+    :root{
+      --maxw: 800px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
       --radius: 14px;
-      --maxw: 860px;
+      --accent: #2a6496;
+      --accent-hover: #1e4b72;
     }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    body {
+    body{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.75;
       margin: 0;
-      color: var(--text);
+      color: #111;
       background: #fff;
-      font-size: 1.04rem;
+      font-size: 1.05rem;
     }
-
-    /* Sticky top nav */
-    .topnav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 18px 18px 40px; }
+    
+    nav.top, nav.bottom{ 
       text-align: center;
-      font-size: 0.875rem;
-      padding: 10px 16px;
+      font-size: 0.9rem;
+      margin: 15px 0 30px;
       color: var(--muted);
     }
-    .topnav a { color: var(--accent); text-decoration: none; padding: 0 5px; }
-    .topnav a:hover { text-decoration: underline; }
-
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 40px; }
-
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 40px 20px 32px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 36px;
-    }
-    .hero .label {
-      display: inline-block;
-      background: var(--accent-light);
+    nav.top a, nav.bottom a{
       color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 16px;
+      text-decoration: none;
+      padding: 0 8px;
+      font-weight: 500;
     }
-    .hero h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin: 0 0 14px;
-      line-height: 1.2;
-    }
-    .hero .sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto;
-      line-height: 1.6;
+    nav.top a:hover, nav.bottom a:hover{ text-decoration: underline; }
+
+    h1{ margin: 0.5em 0 0.4em; font-size: 2.2rem; line-height: 1.2; letter-spacing: -0.5px; }
+    h2{ margin: 1.8em 0 0.5em; font-size: 1.5rem; color: #111; border-bottom: 2px solid var(--soft); padding-bottom: 5px; }
+    h3{ margin: 1.4em 0 0.4em; font-size: 1.2rem; color: #222; }
+    
+    p{ margin: 0 0 1.2em; }
+    hr{ border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    
+    .muted{ color: var(--muted); font-size: 0.95rem; }
+    strong{ font-weight: 600; color: #000; }
+    
+    ul, ol { margin: 0 0 1.5em 1.2em; padding: 0; }
+    li { margin: 0.5em 0; }
+    
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
 
-    /* Sections */
-    h2 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      margin: 2.2em 0 0.5em;
-      color: var(--text);
-    }
-    h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin: 1.6em 0 0.4em;
-      color: var(--accent);
-    }
-    p { margin: 0 0 1.1em; }
-    ul { margin: 0 0 1.2em; padding-left: 20px; }
-    li { margin-bottom: 0.4em; }
-
-    hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
-
-    /* Pull quote */
-    .pullquote {
+    .scripture-block {
       border-left: 4px solid var(--accent);
-      background: var(--accent-light);
-      padding: 18px 22px;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      margin: 2em 0;
-      font-size: 1.08rem;
-      color: var(--text);
+      background: var(--soft2);
+      padding: 16px 20px;
+      margin: 1.5em 0;
+      border-radius: 0 8px 8px 0;
       font-style: italic;
+      color: #333;
     }
-    .pullquote cite {
+    .scripture-ref {
       display: block;
       margin-top: 8px;
-      font-size: 0.87rem;
-      color: var(--muted);
       font-style: normal;
-    }
-
-    /* Highlight box */
-    .highlight {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--soft);
-      padding: 20px 24px;
-      margin: 2em 0;
-    }
-    .highlight h3 { margin-top: 0; }
-
-    /* Reflection box */
-    .reflection {
-      border: 2px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      margin: 2.5em 0;
-      background: var(--accent-light);
-    }
-    .reflection h3 { margin-top: 0; color: var(--accent); }
-
-    /* Share */
-    .share-row {
-      text-align: center;
-      margin: 36px 0 20px;
-    }
-    .share-row .label-sm {
-      display: block;
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin-bottom: 10px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      text-decoration: none;
-      color: var(--text);
-      background: #fff;
+      font-weight: 600;
       font-size: 0.9rem;
-      margin: 0 4px;
-      transition: background 0.15s;
+      color: var(--accent);
     }
-    .btn:hover { background: var(--soft); }
 
-    /* Bottom nav */
-    nav.bottom {
-      text-align: center;
-      font-size: 0.88rem;
-      margin: 28px 0 16px;
+    /* --- Gemini AI Assistant UI Styles --- */
+    #ai-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.2s, background-color 0.2s;
+      border: none;
+    }
+    #ai-fab:hover {
+      transform: scale(1.05);
+      background-color: var(--accent-hover);
+    }
+    
+    #ai-chat-window {
+      position: fixed;
+      bottom: 90px;
+      right: 24px;
+      width: 380px;
+      max-width: calc(100vw - 48px);
+      height: 500px;
+      max-height: calc(100vh - 120px);
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      overflow: hidden;
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      border: 1px solid var(--line);
+    }
+    #ai-chat-window.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #ai-chat-header {
+      background: var(--soft2);
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #ai-close-btn {
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
       color: var(--muted);
     }
-    nav.bottom a { color: var(--accent); text-decoration: none; padding: 0 5px; }
-    nav.bottom a:hover { text-decoration: underline; }
-
-    /* Ko-fi */
-    .kofi-wrap { text-align: center; margin: 20px 0; }
-
-    footer {
-      margin-top: 2.5em;
-      padding-top: 1.2em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.88rem;
-      text-align: center;
+    #ai-chat-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.95rem;
     }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.25rem; }
-    }
+    .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; line-height: 1.4; }
+    .chat-msg.user { align-self: flex-end; background: var(--accent); color: white; border-bottom-right-radius: 4px; }
+    .chat-msg.ai { align-self: flex-start; background: var(--soft); color: #111; border-bottom-left-radius: 4px; }
+    .chat-msg.error { background: #fee2e2; color: #991b1b; align-self: center; font-size: 0.85rem; }
+    #ai-chat-input-container { padding: 12px; border-top: 1px solid var(--line); display: flex; gap: 8px; }
+    #ai-chat-input { flex: 1; padding: 10px 12px; border: 1px solid var(--line); border-radius: 20px; outline: none; }
+    #ai-chat-input:focus { border-color: var(--accent); }
+    #ai-send-btn { background: var(--accent); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    .typing-indicator { display: flex; gap: 4px; padding: 8px 12px; background: var(--soft); border-radius: 12px; align-self: flex-start; border-bottom-left-radius: 4px; display: none; }
+    .typing-dot { width: 6px; height: 6px; background: var(--muted); border-radius: 50%; animation: typing 1.4s infinite ease-in-out both; }
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
   </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
@@ -211,120 +182,245 @@
 </head>
 
 <body>
-<a id="top"></a>
+  <a id="top"></a>
+  <div class="wrap">
 
-<nav class="topnav">
-  <a href="/Bible/index.html">Home</a> |
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-  <a href="#top">Top</a>
-</nav>
+    <nav class="top">
+      <a href="/Bible/index.html">Main Index</a> |
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
+      <a href="/Bible/Studies/index.html">Studies</a>
+    </nav>
 
-<div class="wrap">
+    <div class="card" id="article-content">
+      <h1>Sin and Its Consequences in the New Creation</h1>
+      <p class="muted">Distinguishing corporate covenantal condemnation from individual moral mechanics on the other side of AD 70.</p>
+      
+      <hr style="margin: 20px 0 30px;" />
 
-  <div class="hero">
-    <span class="label">Foundational Outline</span>
-    <h1>Salvation: A Fulfilled Perspective</h1>
-    <p class="sub">Not a future escape plan, but a completed historical reality and an open doorway into present New Creation life.</p>
-  </div>
+      <p>Outside the heavenly city, consequences are defined not by a legal courtroom verdict of condemnation, but by the natural, brutal reality of existential exile, spiritual starvation, and relational friction. Because Christ completely dismantled the corporate legal system of sin and death in AD 70, the consequences for those outside the gates today are not an appointment with an angry judge tallying up a ledger. Instead, they are the immediate, organic results of choosing to live disconnected from the Source of Life.</p>
 
-  <p>From a fulfilled covenant perspective, salvation is not a future escape hatch designed to rescue human beings from a physically destroyed planet. It is not a transaction maintained by ongoing religious performance or managed by institutional gatekeepers. Salvation is a <strong>completed historical event</strong> and a <strong>present structural reality</strong>: it is the total restoration of human life in the New Creation, achieved when the transition out of the Old Covenant age concluded in AD 70.</p>
-
-  <p>To understand the depth of this reality, we must look past modern assumptions and analyze the structural timeline, historical dynamics, and legal conclusions of the biblical narrative.</p>
-
-  <hr />
-
-  <h2>1. The Real Problem: Covenantal Death</h2>
-  <p>To discover what salvation actually accomplished, we must first correctly diagnose what humanity was being saved <em>from</em>. In traditional frameworks, the problem is treated as biological cessation or a spatial hell. In the covenantal framework, the crisis is far more structural:</p>
-
-  <ul>
-    <li><strong>The Death of Adam:</strong> When God warned Adam, <em>"in the day that you eat of it you will surely die"</em> (Genesis 2:17), Adam did not drop dead biologically on that day. He died <strong>covenantally</strong>. He experienced immediate relational banishment, alienation, and a loss of direct access to the presence of God.</li>
-    <li><strong>The Institutionalization of Distance:</strong> The Old Covenant under the Mosaic Law did not cure this spiritual alienation; it managed and visually highlighted it. The entire Temple structure stood as a physical monument to human exclusion:
+      <h2>1. The Reality Outside the Gates</h2>
+      <p>Here is how this displacement manifests on the ground today in the fully realized New Creation era:</p>
+      
       <ul>
-        <li>An intricate network of dividing walls kept Gentiles, women, and ordinary Judeans at a distance.</li>
-        <li>A thick, structural inner veil completely blocked the entrance to the Holy of Holies.</li>
-        <li>Only one man—the High Priest—could pass that veil, on only one day of the year, with a blood offering.</li>
+        <li><strong>Inherent Friction and Disintegration (Missing the Design):</strong> God’s design for human life is righteousness, peace, and joy in the Holy Spirit. When people live outside the city, they operate outside the manufacturer’s specifications for humanity. Actions dominated by deceit, greed, or malice naturally tear down families, destroy mental peace, and breed bitterness. This is the self-inflicted consequence of swimming against the current of the New Creation. They experience the "wrath" of God organically—which Paul describes in Romans 1 as God simply "giving them over" to the natural corruption of their own choices.</li>
+        <li><strong>Spiritual Famine and Deception:</strong> Inside the city resides the River of Life and the Tree of Life, representing a constant supply of divine truth, security, and spiritual fulfillment. Outside the gates, people are left to feed on the husks of human philosophy, material consumerism, and temporary distractions to fill a void that only the New Creation can satisfy. Revelation describes those outside as "loving and practicing a lie"—living a life built entirely on illusions.</li>
+        <li><strong>Separation from Covenant Fellowship:</strong> The New Jerusalem is the dwelling place of God with man—a community characterized by love, forgiveness, and mutual upbuilding under the headship of Christ. To stay outside is to be alienated from this covenant family, existing in a dog-eat-dog environment where survival, ego, and self-preservation rule, completely vulnerable to the crushing weight of shame and isolation.</li>
+        <li><strong>Biological Death Without Hope:</strong> Because the corporate prison of Sheol was destroyed, physical death for a believer is an uninterrupted transition into the full, unclouded presence of God. For someone refusing to receive Resurrection Life, physical death is met with blindness and uncertainty. Having spent their days blind to the light of Christ, they face the end of physical life completely devoid of covenant assurance.</li>
       </ul>
-    </li>
-    <li><strong>The Confession of Insufficiency:</strong> Every repeating animal sacrifice and every annual Day of Atonement was a structural confession that the ultimate solution to human alienation had not yet arrived. The old system managed guilt; it could not remove it.</li>
-  </ul>
 
-  <hr />
+      <p>In short, the consequence of being outside the city is simply getting what you chose. It is the tragedy of a man starving to death on the doorstep of a free banquet because he refuses to acknowledge the Host or walk through the open door.</p>
 
-  <h2>2. The Transitional Rescue Mission (AD 30–70)</h2>
-  <p>When the New Testament epistles speak of salvation being "near," "at hand," or something the first-century assembly was "eagerly awaiting," they are describing an active, 40-year covenantal migration running from the Cross to the fall of Jerusalem.</p>
+      <h2>2. The Vocabulary of the New Creation: Blind vs. Dead</h2>
+      <p>In a strict covenantal-fulfillment framework, using the word "dead" to describe an unbeliever today muddies the waters. Because the corporate, Adamic curse of spiritual death was swallowed up in AD 70, a person outside the city today is better described as <strong>blind, starving, or in self-imposed exile</strong>:</p>
+      
+      <ul>
+        <li><strong>"Blind" Rather Than "Dead":</strong> If a room is flooded with brilliant sunlight, but a person keeps their eyes tightly shut, the problem isn't a lack of light—it's a lack of sight. The light of Christ's finished work is an objective cosmic reality today; unbelievers are simply blind to the reality they already inhabit (2 Corinthians 4:4).</li>
+        <li><strong>"Starving at a Banquet" Rather Than "In a Grave":</strong> The Kingdom is an open wedding feast. An unbeliever today is like a person standing on the doorstep, starving by choice. They aren't locked in a subterranean tomb (Sheol), because Christ broke the gates wide open. They are simply refusing to participate in the feast.</li>
+      </ul>
 
-  <ul>
-    <li><strong>The Legal Authorization (The Cross):</strong> Through His blood, Christ legally canceled the debt of sin and nailed the "ministry of condemnation" to the cross. When the veil split from top to bottom, it signaled that God had legally checked out of the physical house.</li>
-    <li><strong>The High-Stakes Overlap:</strong> Between AD 30 and AD 70, two ages ran parallel. The New Covenant was legally ratified, but the Old Covenant Temple structure was still physically standing. Believers possessed the legal title deed to life, but an obsolete religious system continued to claim jurisdiction. First-century salvation was the process of actively migrating out of that physical system.</li>
-    <li><strong>The Execution of Finality (AD 70):</strong> When the Roman armies leveled the Temple and burned Jerusalem, the physical house of separation crashed down. The Levitical priesthood, the daily animal sacrifices, and the political world of the Old Covenant vanished. With its destruction, the corporate state of covenantal death was shattered, and the way into the true Holy Place was made permanently manifest.</li>
-  </ul>
+      <h2>3. The Internal Reality: An Illusory Conscience</h2>
+      <p>One of the most profound shifts in the fully established New Creation concerns the human conscience. Under the Old Covenant administration, the repeating cycles of animal sacrifices served as a constant, structural reminder of sin, meaning the law could never completely perfect the conscience of the worshiper (Hebrews 10:1-2).</p>
 
-  <div class="pullquote">
-    "The Holy Spirit indicating this, that the way into the Holy Place wasn't yet revealed while the first tabernacle was still standing."
-    <cite>— Hebrews 9:8</cite>
+      <p>In the fully realized Kingdom, Christ has once and for all cleansed the structural realm. The legal ledger of corporate condemnation was buried in the rubble of AD 70. This changes the internal mechanics of those living outside the gates today:</p>
+
+      <ul>
+        <li><strong>Before AD 70:</strong> Guilt and spiritual alienation were objective, legal realities enforced by a functioning covenantal law of condemnation.</li>
+        <li><strong>After AD 70:</strong> Objective legal condemnation has been completely dismantled. Therefore, a person living outside the gates today who is overwhelmed by existential guilt, shame, and the fear of divine wrath is suffering from an <em>illusory conscience</em>.</li>
+      </ul>
+
+      <p>They are not carrying an objective spiritual black mark placed on them by an angry Judge; rather, they are experiencing the psychological and spiritual sickness of choosing to live like a condemned criminal in a world where a universal amnesty has already been declared. Their torment is real, but it is entirely self-generated, born out of blindness to the triumphant, finished work of the King.</p>
+
+      <h2>4. Objective Inclusion vs. Subjective Reception</h2>
+      <p>This dynamic cleanly separates covenantal fulfillment from modern universalism. Legally and covenantally, Christ acted as the corporate head of a new humanity, dragging the world structurally out of the Adamic system and altering the objective status of the cosmos. However, an open door must still be walked through.</p>
+      
+      <p>Think of it like a royal decree of amnesty at the end of a long war: The king issues a universal pardon to an entire province of rebels. Legally, the war is officially over, and the objective status of the land has changed. However, individual rebels living out in the hills must still hear the news, lay down their weapons, and receive the amnesty. If a rebel refuses to believe the war is over and dies fighting in the woods, they never personally experience the benefit of the pardon, even though they were legally included in its scope. The provision is universal because the old structure is gone, but participation requires reception.</p>
+
+      <h2>5. The Sovereign Key: Clean Robes and Authorized Access</h2>
+      <p>Because the gates of the New Jerusalem stand perpetually open, many falsely assume entry is automatic, unconditional, or based on self-willed effort. But the prophetic text provides a strict, unwavering metric for who has the jurisdictional right to cross from the outside wild into the life of the Kingdom:</p>
+
+      <div class="scripture-block">
+        "Blessed are those who wash their robes, that they may have the right to the tree of life, and may enter in by the gates into the city."
+        <span class="scripture-ref">— Revelation 22:14 (WEB)</span>
+      </div>
+
+      <p>Access is exclusively granted through robes made clean by the finished work of Christ. Washing one's robes is the subjective appropriation of the amnesty—it is the complete surrender of self-righteousness, legal performance, and autonomy, exchanging them for the unspotted identity of the Son. The city cannot be entered in the soiled garments of the dark wild. While the call of the Spirit and the Bride is universal ("Come!"), actual citizenship and access to the Tree of Life belong solely to those who have been legally and spiritually purified by the Host of the Feast.</p>
+
+      <h2>6. The Crucial Distinction: "The Sin" vs. "sins"</h2>
+      <p>This dynamic requires a very precise distinction between corporate/covenantal Sin and individual moral failures within a fulfilled eschatological framework.</p>
+
+      <h3>The Removal of "The Sin" (Corporate)</h3>
+      <p>In the New Testament, when the word "sin" is used with a definite article (<em>the sin</em>—Greek: <em>hē hamartia</em>), it almost always refers to a corporate, legal power associated with Adam and the Old Covenant law.</p>
+
+      <div class="scripture-block">
+        "Through one man the sin entered the world, and death through the sin."
+        <span class="scripture-ref">— Romans 5:12</span>
+      </div>
+
+      <p>The Old System was a legal state of corporate separation and condemnation holding humanity captive, magnified by the Law of Moses. However, Christ came to <em>“put away sin by the sacrifice of himself”</em> (Hebrews 9:26) and to <em>“make an end of sins”</em> (Daniel 9:24). When the temple fell in AD 70, the legal platform sustaining corporate "Sin" was completely abolished. Therefore, The Sin—as a cosmic, ruling judicial power that condemned humanity to Sheol—no longer exists. It was buried forever in the rubble of the Old Covenant world.</p>
+
+      <h3>The Persistence of "sins" (Individual/Moral)</h3>
+      <p>Does this mean people today can lie, steal, or murder without it being called sin? No. Even in the fully realized New Creation, the text explicitly shows that missing the mark of God's design (individual sins) remains possible outside the gates.</p>
+
+      <div class="scripture-block">
+        "But outside are the dogs and sorcerers and sexually immoral and murderers and idolaters, and whoever loves and practices a lie."
+        <span class="scripture-ref">— Revelation 22:15</span>
+      </div>
+
+      <p>The massive shift for us today is that an individual's moral failures are <strong>no longer backed by a corporate legal curse</strong>. Before AD 70, individual sins were symptoms of an inescapable corporate death sentence (Adam). After AD 70, individual sins are simply a person choosing to act like a citizen of the lawless wild outside the city, rather than walking through the gates. You aren't triggering a cosmic death-trap; you are simply experiencing the natural, destructive consequences of acting against the design of the Kingdom.</p>
+
+      <h2>7. The Dissolution of the Adamic Framework</h2>
+      <p>Within a strict, audience-relevant, first-century framework, the corporate death of "All in Adam" was not a statement about modern biological human genetics. It described the corporate destiny of a specific group bound to a specific covenant world that was actively passing away in that generation (1 Corinthians 15:22).</p>
+      
+      <p>In the Hebrew mindset, Adam and Israel were deeply intertwined. Adam was the original covenant man who failed in a garden, and Israel became the corporate expansion of Adam—placed in a land, given a law, and failing under it. The "all" dying in Adam were those bound to the old fleshly system of the law, which ministered condemnation and locked them in the realm of Sheol.</p>
+      
+      <p>When the temple fell in AD 70, that entire corporate age was legally and historically terminated. Sheol was emptied and cast into the lake of fire (Revelation 20:14). Because that system was dissolved 2,000 years ago, you cannot be born into a system that no longer exists. Your baseline reality is the New Creation age. Humanity's issue today isn't that they are born guilty in Adam; it's that they are ignoring the massive, wide-open invitation to live out their true identity inside the New Jerusalem.</p>
+
+      <h2>8. Total Corporate Identification with Christ</h2>
+      <p>Because Christ acted as the corporate head (the "Second Man") of a new humanity, His history became our history. Where He went, we went. We are legally and spiritually fused to every step of His journey:</p>
+
+      <ul>
+        <li><strong>Identified with His Death (Colossians 3:3):</strong> When Christ died, the Old Covenant world and Adamic headship were legally ended. The old "you" was executed, emancipating you from performance-based covenant mechanics.</li>
+        <li><strong>Identified with His Resurrection (Ephesians 2:5-6):</strong> When He stepped out of the tomb, the corporate body of the New Humanity stepped out with Him. Resurrection is not a future event on your calendar; it is the current spiritual platform from which you live.</li>
+        <li><strong>Identified with His Ascension (Ephesians 2:6):</strong> Positionally and covenantally, we ascended with Him. To be "seated in heavenly places" means you currently possess the citizenship, security, and open access of the heavenly realm right now.</li>
+        <li><strong>Identified with His Glory (John 17:22):</strong> Glory is the manifest presence of God dwelling inside human beings—the restoration of the divine image. You live in the radiant, fully vindicated glory of the Son.</li>
+      </ul>
+    </div>
+
+    <nav class="bottom">
+      <a href="/Bible/Prophecy/index.html">← Back to Prophecy Hub</a> |
+      <a href="#top">Top</a>
+    </nav>
+
+    <div style="text-align: center; margin-top: 25px; margin-bottom: 15px;">
+      <div style="margin-bottom: 15px;">
+        <a href="#" style="color: var(--muted); text-decoration: none; margin: 0 10px; font-weight: 500;">Facebook</a> |
+        <a href="#" style="color: var(--muted); text-decoration: none; margin: 0 10px; font-weight: 500;">X (Twitter)</a> |
+        <a href="#" style="color: var(--muted); text-decoration: none; margin: 0 10px; font-weight: 500;">YouTube</a>
+      </div>
+      <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">
+        <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="Support On Ko-fi" style="height: 36px; width: auto; border: none;">
+      </a>
+    </div>
+
+    <footer>
+      <p><strong>The Fulfilled Prophecy Bible</strong> — Scripture text based on the <strong>World English Bible (WEB)</strong>.</p>
+      <p>Commentary honours audience relevance and first-century fulfillment.</p>
+    </footer>
+
   </div>
 
-  <hr />
+  <button id="ai-fab" title="Open Study Assistant" aria-label="Open AI Assistant">✨</button>
 
-  <h2>3. The New Creation Environment</h2>
-  <p>Because the old world order has been entirely cleared from the map, salvation today is an accomplished, environmental reality. It is the spiritual atmosphere we inherit by virtue of Christ’s finished work. Within this <strong>Eighth Day Reality</strong>, the ground of relationship has been radically altered:</p>
-
-  <h3>No More Architectural Walls</h3>
-  <p>There is no longer a holy geographic city, a physical sanctuary, or a specialized human class standing between you and the Father. The external management system is gone. You are the living temple, directly indwelt by His Spirit, possessing direct access without an earthly mediator.</p>
-
-  <h3>The Courtroom is Closed</h3>
-  <p>Salvation means you are not on trial. There is no pending evaluation, no lingering probation, and no future cosmic court date hanging over your head. The ledger of performance-based debt was permanently buried in the ashes of the old system. The courtroom is permanently closed, and the King is on His throne.</p>
-
-  <h3>Identity Precedes Action</h3>
-  <p>In the New Creation, Christ has become our complete standing: <em>Wisdom, Righteousness, Sanctification, and Redemption</em> (1 Corinthians 1:30). We do not perform to <em>become</em> wise, righteous, holy, or redeemed; we walk out our daily lives from the settled reality that we already are all of these things by virtue of our union with Him.</p>
-
-  <div class="highlight">
-    <h3>The Trap of Modern Reconstruction</h3>
-    <p>The great tragedy of modern religious systems is the continuous attempt to rebuild the stones of Herod's Temple. When communities build performance ladders, rely on modern human mediators, or use fear of future covenantal wrath to control behavior, they are retreating into an obsolete house that God leveled centuries ago.</p>
+  <div id="ai-chat-window">
+    <div id="ai-chat-header">
+      <span>✨ Covenant Study Assistant</span>
+      <button id="ai-close-btn">&times;</button>
+    </div>
+    <div id="ai-chat-messages">
+      <div class="chat-msg ai">Welcome! I am your study assistant. You can ask me to explain the precise textual differences between <strong>"The Sin"</strong> and <strong>"sins"</strong>, how the **Exodus Amnesty Analogy** disproves automatic universalism, or the role of **washed robes** for access into the gates. What would you like to explore?</div>
+      <div class="typing-indicator" id="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+    <div id="ai-chat-input-container">
+      <input type="text" id="ai-chat-input" placeholder="Ask about corporate inclusion vs subjective faith..." autocomplete="off">
+      <button id="ai-send-btn" title="Send text">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
   </div>
 
-  <hr />
+  <script>
+    const apiKey = ""; // Set dynamically by hosting framework
+    const modelEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    
+    const fab = document.getElementById('ai-fab');
+    const chatWindow = document.getElementById('ai-chat-window');
+    const closeBtn = document.getElementById('ai-close-btn');
+    const sendBtn = document.getElementById('ai-send-btn');
+    const chatInput = document.getElementById('ai-chat-input');
+    const messagesContainer = document.getElementById('ai-chat-messages');
+    const typingIndicator = document.getElementById('typing-indicator');
 
-  <h2>Summary: The Corporate Shift</h2>
-  <p>To view the full scope of the finished work, we can contrast the operational structures of the two eras:</p>
+    fab.addEventListener('click', () => { chatWindow.classList.add('open'); chatInput.focus(); });
+    closeBtn.addEventListener('click', () => { chatWindow.classList.remove('open'); });
 
-  <ul>
-    <li><strong>Under the Old Covenant System:</strong> Human life was defined by managed alienation, perpetual debt, conditional access, and constant behavioral adjustments under a law of performance.</li>
-    <li><strong>Under the New Creation Reality:</strong> Human life is defined by eradicated debt, immediate and open access, a cleared spiritual horizon, and a life lived from a position of unconditional, settled welcome.</li>
-  </ul>
+    function appendMessage(text, role) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `chat-msg ${role}`;
+      let htmlText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      htmlText = htmlText.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      msgDiv.innerHTML = htmlText;
+      messagesContainer.insertBefore(msgDiv, typingIndicator);
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
 
-  <hr />
+    async function fetchWithRetry(url, options, maxRetries = 5) {
+      let delay = 1000;
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          const response = await fetch(url, options);
+          if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+          return await response.json();
+        } catch (error) {
+          if (i === maxRetries - 1) throw error;
+          await new Promise(res => setTimeout(res, delay));
+          delay *= 2;
+        }
+      }
+    }
 
-  <div class="reflection">
-    <h3>A Question for Reflection</h3>
-    <p>If salvation was a historical rescue mission that successfully cleared away the architecture of separation in AD 70, are you still living like a prisoner awaiting a verdict? What changes in your everyday life when you stop striving for acceptance and begin living from a position of finished rest?</p>
-  </div>
+    async function askGemini(userMessage) {
+      const articleContext = document.getElementById('article-content').innerText;
+      const payload = {
+        contents: [{ parts: [{ text: userMessage }] }],
+        systemInstruction: {
+          parts: [{
+            text: `You are an expert biblical research assistant specializing in New Testament prophecy from a full preterist perspective. 
+            Answer questions based exclusively on the provided article context. Maintain a highly structured, clear, and logical tone suitable for students. 
+            Keep answers precise and restricted to 3-4 concise sentences.
+            
+            CONTEXT:
+            ${articleContext}`
+          }]
+        }
+      };
 
-  <hr />
+      try {
+        const result = await fetchWithRetry(modelEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const replyText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (replyText) appendMessage(replyText, 'ai');
+        else throw new Error("Empty payload returned.");
+      } catch (error) {
+        appendMessage("An issue occurred connecting to the service. Please verify your connection and retry.", "error");
+      }
+    }
 
-  <div class="share-row">
-    <span class="label-sm">Share this deep-dive:</span>
-    <a class="btn" href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Salvation: A Fulfilled Perspective — The Fulfilled Prophecy Bible:&url=' + encodeURIComponent(window.location.href)); return false;">𝕏 Twitter</a>
-    <a class="btn" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">Facebook</a>
-  </div>
+    async function handleSend() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+      chatInput.value = '';
+      chatInput.disabled = true;
+      sendBtn.disabled = true;
+      appendMessage(text, 'user');
+      typingIndicator.style.display = 'flex';
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      await askGemini(text);
+      typingIndicator.style.display = 'none';
+      chatInput.disabled = false;
+      sendBtn.disabled = false;
+      chatInput.focus();
+    }
 
-  <nav class="bottom">
-    <a href="/Bible/index.html">Home</a> |
-    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-    <a href="#top">Top</a>
-  </nav>
-
-  <div class="kofi-wrap">
-    <a href="https://ko-fi.com/fpbible" target="_blank">
-      <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="Support the Project on Ko-fi" style="height: 36px; width: auto;" />
-    </a>
-  </div>
-
-  <footer>
-    <p><strong>The Fulfilled Prophecy Bible Project</strong> — Scripture: WEB</p>
-    <p>Restoring audience relevance and the AD 70 horizon to the message of life.</p>
-  </footer>
-
-</div>
+    sendBtn.addEventListener('click', handleSend);
+    chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleSend(); });
+  </script>
 </body>
 </html>
