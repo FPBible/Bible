@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living as a New Creation (Kainē Ktisis) — Fulfilled Prophecy Bible</title>
+  <meta name="description" content="To live as a New Creation is to inhabit the fully realized reality of the New Covenant age. The new covenantal world order inaugurated by Christ and established in AD 70.">
+  <link rel="stylesheet" href="/Bible/style.css">
+  <style>
+    /* Supplemental styles for this page that align with site variables */
+    :root {
+      --maxw: 800px;
+      --accent: #2a6496;
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #555555;
+      --card: #f6f7f9;
+      --border: #e6e8ee;
+      --scripture-bg: #f0f4f8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121416;
+        --ink: #e8eaed;
+        --muted: #9aa0a6;
+        --card: #1e2126;
+        --border: #2d323a;
+        --accent: #5b9bd5;
+        --scripture-bg: #1a2332;
+      }
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--ink);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      padding: 1rem 0 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 1.85rem;
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.75rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.6rem;
+      color: var(--accent);
+    }
+    p {
+      margin: 0 0 1.1rem;
+    }
+    blockquote.scripture {
+      background: var(--scripture-bg);
+      border-left: 4px solid var(--accent);
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      font-style: italic;
+      border-radius: 0 6px 6px 0;
+    }
+    blockquote.scripture cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 1.35rem;
+      margin: 0.75rem 0 1.25rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+    }
+    li strong {
+      color: var(--ink);
+    }
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .comparison th,
+    .comparison td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 0.9rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison th {
+      background: var(--card);
+      font-weight: 600;
+    }
+    .comparison tr:nth-child(even) td {
+      background: var(--card);
+    }
+    .pillars {
+      display: grid;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .pillar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
+    }
+    .pillar h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .old-new {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 0.75rem 0 0.5rem;
+      font-size: 0.92rem;
+    }
+    @media (max-width: 620px) {
+      .old-new {
+        grid-template-columns: 1fr;
+      }
+    }
+    .old-new > div {
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+    }
+    .old {
+      background: rgba(180, 60, 60, 0.08);
+      border: 1px solid rgba(180, 60, 60, 0.2);
+    }
+    .new {
+      background: rgba(42, 100, 150, 0.08);
+      border: 1px solid rgba(42, 100, 150, 0.25);
+    }
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      opacity: 0.8;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+    .summary-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.35rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .summary-box p:last-child {
+      margin-bottom: 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--accent);
+    }
+    .greek {
+      font-style: italic;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="/Bible/index.html">Home</a>
+      <a href="/Bible/NewCreation/manifesto.html">New Creation Manifesto</a>
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
+      <a href="/Bible/Studies/index.html">Studies</a>
+      <a href="#top">Top</a>
+    </nav>
+
+    <header id="top">
+      <h1>Living as a New Creation</h1>
+      <p class="subtitle"><span class="greek">Kainē Ktisis</span> — Inhabiting the Fully Realized New Covenant Age</p>
+    </header>
+
+    <p>To live as a <strong>New Creation</strong> (<em>Kainē Ktisis</em>) is to inhabit the fully realized reality of the New Covenant age. From a Covenantal Fulfillment perspective, the “New Creation” is not a reformed physical universe created after the destruction of the earth, but the <strong>new covenantal world order</strong> inaugurated by Christ and fully established when the Old Covenant temple system passed away in AD 70.</p>
+
+    <p>Where the Old Covenant was defined by distance, physical rituals, legalistic striving, and spiritual death in Adam, New Creation living is defined by <strong>unbroken union, finished righteousness, and the active reign of the Spirit within.</strong></p>
+
+    <hr>
+
+    <h2>1. The Covenantal Shift: From “Old World” to “New World”</h2>
+
+    <p>To understand New Creation living, we must understand what “passed away” and what “became new.”</p>
+
+    <blockquote class="scripture">
+      “Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new.”
+      <cite>— 2 Corinthians 5:17</cite>
+    </blockquote>
+
+    <ul>
+      <li><strong>The Old Things Passed Away:</strong> The “old things” refer to the Old Covenant order—the age of the Law, physical temple sacrifices, legalistic condemnation, and the barrier of separation between Jew and Gentile (and between God and humanity).</li>
+      <li><strong>All Things Made New:</strong> The “new creation” is the New Covenant age prophesied in Isaiah 65–66. Through Christ’s resurrection and the destruction of the physical Jerusalem temple in AD 70, the old age came to its absolute end, leaving the New Creation as the abiding, permanent reality for all who are in Christ.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. Key Pillars of New Creation Living</h2>
+
+    <p>Living in this fulfilled reality radically transforms how a believer views God, identity, and daily life.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <h3>I. Identity Rooted in Finished Work <span style="font-weight:400;color:var(--muted)">(No Longer Striving)</span></h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">Old Age Mindset</div>
+            Trying to achieve God’s favor through moral performance, rituals, or constant self-recrimination.
+          </div>
+          <div class="new">
+            <div class="label">New Creation Mindset</div>
+            Resting in Christ’s finished work (Hebrews 10:14). Righteousness is not something earned; it is an intrinsic part of the believer’s identity in Christ.
+          </div>
+        </div>
+        <p><strong>Living It Out:</strong> Operating from a place of <em>rest</em> rather than <em>anxiety</em>. You do not work <em>toward</em> acceptance; you live <em>from</em> a state of complete acceptance and oneness with God.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>II. Walking as the Living Temple</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">Old Age Mindset</div>
+            God’s presence is localized in a physical building or accessible only through special mediators and holy sites.
+          </div>
+          <div class="new">
+            <div class="label">New Creation Mindset</div>
+            The physical temple was a shadowy type; the church—the body of believers—is the true, eternal temple of God (1 Corinthians 3:16; 1 Peter 2:5).
+          </div>
+        </div>
+        <p><strong>Living It Out:</strong> Practicing continual awareness of the Divine Indwelling. Every interaction, place, and daily task becomes sacred space because you carry the presence of the Holy Spirit wherever you go.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>III. Kingdom Dominion in the Present</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">Old Age Mindset</div>
+            Waiting for a future, far-off political reign while viewing the present world as entirely abandoned to darkness.
+          </div>
+          <div class="new">
+            <div class="label">New Creation Mindset</div>
+            Recognizing that the Kingdom of God is a present, spiritual reality reigning now (Luke 17:21; Romans 14:17). Christ is currently seated on the throne, having defeated sin and death (spiritually and covenantally).
+          </div>
+        </div>
+        <p><strong>Living It Out:</strong> Exercising kingdom authority—bringing peace, healing, reconciliation, and light into culture, families, and communities today rather than adopting a posture of defeatism.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>IV. The Ministry of Reconciliation</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">Old Age Mindset</div>
+            Division, nationalism, and legalistic boundaries separating people into clean and unclean.
+          </div>
+          <div class="new">
+            <div class="label">New Creation Mindset</div>
+            As Paul writes in 2 Corinthians 5:18–19, God was in Christ reconciling the world to Himself, not counting their trespasses against them, and giving us the message of reconciliation.
+          </div>
+        </div>
+        <p><strong>Living It Out:</strong> Viewing humanity through the lens of Christ’s victory rather than covenantal alienation. New Creation believers actively bridge divides, show radical love, and invite others to step into the realized light of the New Covenant.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>3. Comparing the Old Age vs. New Creation Reality</h2>
+
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>The Old Covenant Age<br><span style="font-weight:400;font-size:0.85em">(Passing Away)</span></th>
+          <th>The New Creation Age<br><span style="font-weight:400;font-size:0.85em">(Fulfilled &amp; Present)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Locus of God’s Presence</strong></td>
+          <td>Physical Temple in Jerusalem</td>
+          <td>The Believer / The Spirit-filled Body</td>
+        </tr>
+        <tr>
+          <td><strong>Status Before God</strong></td>
+          <td>Distance, veil, guilt, physical sacrifices</td>
+          <td>Unbroken Oneness, open access, complete forgiveness</td>
+        </tr>
+        <tr>
+          <td><strong>The “Law”</strong></td>
+          <td>Written on tablets of stone (external requirement)</td>
+          <td>Written on the heart (internal divine nature)</td>
+        </tr>
+        <tr>
+          <td><strong>Primary Lens</strong></td>
+          <td>Looking forward to the promised Messiah</td>
+          <td>Living out of Christ’s accomplished victory</td>
+        </tr>
+        <tr>
+          <td><strong>Atmosphere</strong></td>
+          <td>Fear of judgment, bondage to law</td>
+          <td>Peace, joy, and freedom in the Holy Spirit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Summary</h2>
+
+    <div class="summary-box">
+      <p>New Creation living means waking up every day to the reality that <strong>the veil has been torn forever.</strong> You are not living in the “last days” of an old covenant age, waiting for a delayed redemption; you are living in the <strong>unending age of the New Covenant</strong>, fully united with God in Christ, empowered to reflect His nature, peace, and reign to the world around you.</p>
+    </div>
+
+    <footer>
+      <p>
+        <a href="/Bible/NewCreation/manifesto.html">← New Creation Manifesto</a> ·
+        <a href="/Bible/index.html">Home</a> ·
+        <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
+      </p>
+      <p style="margin-top:0.75rem;">Part of the <strong>Fulfilled Prophecy Bible</strong> — Scripture read through completion, not postponement.</p>
+    </footer>
+  </div>
+</body>
+</html>
