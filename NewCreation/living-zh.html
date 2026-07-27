@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>活出新創造（Kainē Ktisis）— 已實現的新約時代｜Fulfilled Prophecy Bible</title>
+  <meta name="description" content="從聖約應驗的角度，活出新創造（Kainē Ktisis）就是活在已完全實現的新約時代。舊約聖殿體系在公元70年過去後，新的聖約世界秩序已經確立。">
+  <link rel="stylesheet" href="/Bible/style.css">
+  <style>
+    :root {
+      --maxw: 800px;
+      --accent: #2a6496;
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #555555;
+      --card: #f6f7f9;
+      --border: #e6e8ee;
+      --scripture-bg: #f0f4f8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121416;
+        --ink: #e8eaed;
+        --muted: #9aa0a6;
+        --card: #1e2126;
+        --border: #2d323a;
+        --accent: #5b9bd5;
+        --scripture-bg: #1a2332;
+      }
+    }
+    body {
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, -apple-system, sans-serif;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      padding: 1rem 0 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 1.85rem;
+      line-height: 1.3;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.75rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.6rem;
+      color: var(--accent);
+    }
+    p {
+      margin: 0 0 1.1rem;
+    }
+    blockquote.scripture {
+      background: var(--scripture-bg);
+      border-left: 4px solid var(--accent);
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      font-style: normal;
+      border-radius: 0 6px 6px 0;
+    }
+    blockquote.scripture cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 1.35rem;
+      margin: 0.75rem 0 1.25rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+    }
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+    .comparison th,
+    .comparison td {
+      border: 1px solid var(--border);
+      padding: 0.75rem 0.9rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison th {
+      background: var(--card);
+      font-weight: 600;
+    }
+    .comparison tr:nth-child(even) td {
+      background: var(--card);
+    }
+    .pillars {
+      display: grid;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .pillar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.15rem 1.25rem;
+    }
+    .pillar h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .old-new {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin: 0.75rem 0 0.5rem;
+      font-size: 0.92rem;
+    }
+    @media (max-width: 620px) {
+      .old-new {
+        grid-template-columns: 1fr;
+      }
+    }
+    .old-new > div {
+      padding: 0.6rem 0.75rem;
+      border-radius: 6px;
+    }
+    .old {
+      background: rgba(180, 60, 60, 0.08);
+      border: 1px solid rgba(180, 60, 60, 0.2);
+    }
+    .new {
+      background: rgba(42, 100, 150, 0.08);
+      border: 1px solid rgba(42, 100, 150, 0.25);
+    }
+    .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      opacity: 0.8;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+    .summary-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.35rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .summary-box p:last-child {
+      margin-bottom: 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--accent);
+    }
+    .greek {
+      font-style: italic;
+      color: var(--muted);
+    }
+    .lang-switch {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="/Bible/index.html">首頁</a>
+      <a href="/Bible/NewCreation/manifesto.html">新創造宣言</a>
+      <a href="/Bible/NewCreation/living.html">English</a>
+      <a href="/Bible/Prophecy/index.html">預言中心</a>
+      <a href="#top">回到頂部</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="/Bible/NewCreation/living.html">English version</a>
+    </div>
+
+    <header id="top">
+      <h1>活出新創造</h1>
+      <p class="subtitle"><span class="greek">Kainē Ktisis</span> — 活在已完全實現的新約時代</p>
+    </header>
+
+    <p>活出<strong>新創造</strong>（<em>Kainē Ktisis</em>），就是活在新約時代已完全實現的實在裡。從<strong>聖約應驗</strong>的角度來看，「新創造」並不是指物質宇宙在地球毀滅後被重新創造，而是指<strong>基督所 inaugurate、並在公元70年舊約聖殿體系過去後完全確立的新聖約世界秩序</strong>。</p>
+
+    <p>舊約以距離、外在禮儀、律法上的努力，以及在亞當裡的屬靈死亡為特徵；新創造的生活則以<strong>不間斷的聯合、已完成的義，以及聖靈在裡面主動掌權</strong>為特徵。</p>
+
+    <hr>
+
+    <h2>1. 聖約的轉移：從「舊世界」到「新世界」</h2>
+
+    <p>要明白新創造的生活，我們必須先明白什麼「已過去」，什麼「已變成新的」。</p>
+
+    <blockquote class="scripture">
+      「若有人在基督裡，他就是新造的人，舊事已過，都變成新的了。」
+      <cite>— 哥林多後書 5:17</cite>
+    </blockquote>
+
+    <ul>
+      <li><strong>舊事已過：</strong>「舊事」指的是舊約秩序——律法時代、物質聖殿的祭物、律法上的定罪，以及猶太人與外邦人之間（也是神與人之間）的隔牆。</li>
+      <li><strong>一切都變成新的：</strong>「新創造」就是以賽亞書 65–66 章所預言的新約時代。藉著基督的復活，以及公元70年耶路撒冷物質聖殿的拆毀，舊時代徹底結束，新創造成為所有在基督裡之人永遠長存的實在。</li>
+    </ul>
+
+    <hr>
+
+    <h2>2. 新創造生活的四大支柱</h2>
+
+    <p>活在這個已應驗的實在裡，會徹底改變信徒對神、對身份，以及對日常生活的看法。</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <h3>一、身份建立在已完成的工作上 <span style="font-weight:400;color:var(--muted)">（不再努力掙扎）</span></h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">舊時代心態</div>
+            靠道德表現、禮儀或不斷的自我責備，試圖賺取神的悅納。
+          </div>
+          <div class="new">
+            <div class="label">新創造心態</div>
+            安息在基督已完成的工作裡（希伯來書 10:14）。義不是賺來的，而是信徒在基督裡身份的固有部分。
+          </div>
+        </div>
+        <p><strong>實際活出：</strong>從<strong>安息</strong>出發，而不是從<strong>焦慮</strong>出發。你不是為了被接納而工作，而是從已經完全被接納、與神合一的狀態中生活。</p>
+      </div>
+
+      <div class="pillar">
+        <h3>二、作為活的聖殿行走</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">舊時代心態</div>
+            神的同在侷限在物質建築裡，或只能透過特殊中保和聖地才能接觸。
+          </div>
+          <div class="new">
+            <div class="label">新創造心態</div>
+            物質聖殿只是預表；教會——信徒的身體——才是神真正、永遠的聖殿（哥林多前書 3:16；彼得前書 2:5）。
+          </div>
+        </div>
+        <p><strong>實際活出：</strong>持續意識到神內住。每一個互動、每一個地方、每一件日常事務都成為聖所，因為你無論去到哪裡，都帶著聖靈的同在。</p>
+      </div>
+
+      <div class="pillar">
+        <h3>三、現在就行使國度的權柄</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">舊時代心態</div>
+            等待一個遙遠未來的政治統治，同時認為現今世界完全被黑暗所棄。
+          </div>
+          <div class="new">
+            <div class="label">新創造心態</div>
+            承認神的國是現在就掌權的屬靈實在（路加福音 17:21；羅馬書 14:17）。基督現在已坐在寶座上，已經戰勝了罪與死（在屬靈與聖約層面上）。
+          </div>
+        </div>
+        <p><strong>實際活出：</strong>行使國度的權柄——把平安、醫治、和好與光帶進今日的文化、家庭與社區，而不是採取失敗主義的姿態。</p>
+      </div>
+
+      <div class="pillar">
+        <h3>四、和好的職分</h3>
+        <div class="old-new">
+          <div class="old">
+            <div class="label">舊時代心態</div>
+            分裂、民族主義，以及把人分成潔淨與不潔淨的律法界限。
+          </div>
+          <div class="new">
+            <div class="label">新創造心態</div>
+            正如保羅在哥林多後書 5:18–19 所寫：神在基督裡，叫世人與自己和好，不將他們的過犯歸到他們身上，並且把這和好的道理託付給我們。
+          </div>
+        </div>
+        <p><strong>實際活出：</strong>透過基督得勝的眼光來看人類，而不是透過聖約疏離的眼光。新創造的信徒主動彌合隔閡，顯出徹底的愛，邀請別人進入新約已實現的光中。</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>3. 舊時代 vs 新創造實在的對比</h2>
+
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>層面</th>
+          <th>舊約時代<br><span style="font-weight:400;font-size:0.85em">（正在過去）</span></th>
+          <th>新創造時代<br><span style="font-weight:400;font-size:0.85em">（已應驗並現存）</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>神同在的所在</strong></td>
+          <td>耶路撒冷的物質聖殿</td>
+          <td>信徒本人／被聖靈充滿的身體</td>
+        </tr>
+        <tr>
+          <td><strong>在神面前的地位</strong></td>
+          <td>距離、幔子、罪疚、物質祭物</td>
+          <td>不間斷的合一、敞開的通道、完全的赦免</td>
+        </tr>
+        <tr>
+          <td><strong>「律法」</strong></td>
+          <td>寫在石版上（外在要求）</td>
+          <td>寫在心上（內在的神性）</td>
+        </tr>
+        <tr>
+          <td><strong>主要視角</strong></td>
+          <td>向前望向應許的彌賽亞</td>
+          <td>從基督已完成的得勝中生活</td>
+        </tr>
+        <tr>
+          <td><strong>氛圍</strong></td>
+          <td>對審判的恐懼、律法的捆綁</td>
+          <td>聖靈裡的平安、喜樂與自由</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>總結</h2>
+
+    <div class="summary-box">
+      <p>活出新創造，意味著每天醒來都活在這個實在裡：<strong>幔子已經永遠被撕開了</strong>。你不是活在舊約時代的「末後日子」裡，等待一個延遲的救贖；你是活在<strong>永不止息的新約時代</strong>裡，在基督裡與神完全合一，被賦能去向周圍的世界反映出祂的性情、平安與掌權。</p>
+    </div>
+
+    <footer>
+      <p>
+        <a href="/Bible/NewCreation/manifesto.html">← 新創造宣言</a> ·
+        <a href="/Bible/NewCreation/living.html">English version</a> ·
+        <a href="/Bible/index.html">首頁</a>
+      </p>
+      <p style="margin-top:0.75rem;">《應驗預言聖經》— 以完成而非延遲的眼光閱讀聖經。</p>
+    </footer>
+  </div>
+</body>
+</html>
