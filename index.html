@@ -1,1 +1,148 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FPBible | Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="World English Bible with fulfilled covenant-transition commentary (AD 30–70) — without futurist delay theology." />
+  <style>
+    :root{ --maxw: 1020px; --pad: 16px; --line: rgba(0,0,0,0.12); --line2: rgba(0,0,0,0.18); --muted: rgba(0,0,0,0.72); --soft2: rgba(0,0,0,0.04); --radius: 14px; --accent: #2a6496; --warn: #f59e0b; }
+    body{ font-family: system-ui, sans-serif; line-height: 1.65; margin: 0; color: #111; background: #fff; }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 18px var(--pad) 42px; }
+    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; }
+    h1{ margin-top: 0.9em; font-size: 2.1rem; }
+    a{ color: inherit; text-decoration: underline; }
+    hr{ margin: 2.8em 0; border: 0; border-top: 1px solid var(--line); }
+    .topnav{ position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.92); border-bottom: 1px solid var(--line); }
+    .topnav .bar{ max-width: var(--maxw); margin: 0 auto; padding: 10px var(--pad); display: flex; flex-wrap: wrap; gap: 10px 12px; justify-content: center; }
+    .banner{ margin: 14px 0 0; border: 1px solid rgba(0,0,0,0.12); border-left: 4px solid var(--warn); border-radius: var(--radius); padding: 12px 14px; }
+    .hero{ text-align: center; padding: 2em 0 1.5em; }
+    .hero .cta a{ display: inline-block; padding: 12px 28px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; }
+    .stats{ display: flex; justify-content: center; gap: 20px 40px; flex-wrap: wrap; padding: 1.5em 0; margin: 1em 0 2em; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .stats .stat{ text-align: center; }
+    .stats .stat-value{ font-size: 1.8rem; font-weight: 600; color: var(--accent); }
+    .stats .stat-label{ font-size: 0.9em; color: var(--muted); }
+    .pill{ display: inline-block; border: 1px solid var(--line2); border-radius: 999px; padding: 3px 11px; font-size: 0.88em; margin: 0 6px 6px 0; background: var(--soft2); }
+    .grid{ display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 14px; }
+    @media(min-width: 900px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    .card{ border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; background: #fff; }
+    .card h3{ margin-top: 0.3em; }
+    .section-head{ display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; justify-content: space-between; }
+    .section-head .hint{ font-size: 0.95em; color: var(--muted); }
+    .searchrow{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-top: 1em; }
+    .searchrow input{ width: 100%; max-width: 520px; padding: 10px 12px; border: 1px solid var(--line2); border-radius: 10px; font-size: 1rem; }
+    .searchrow .muted{ color: var(--muted); font-size: 0.95em; }
+    footer{ margin-top: 3em; padding-top: 2em; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.96em; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
+</head>
+<body>
+<a id="top"></a>
+<div class="topnav"><div class="bar">
+  <a href="#start">Start</a>
+  <a href="#books">Books</a>
+  <a href="#resources">Resources</a>
+  <a href="/Bible/about.html">About</a>
+</div></div>
+<div class="wrap">
+  <div class="banner"><strong>Under Construction:</strong> FPBible is actively being built and expanded.</div>
+  <section class="hero">
+    <h1>Scripture Through Fulfillment</h1>
+    <p>The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology.</p>
+    <div class="cta"><a href="#books">Browse Finished Books</a></div>
+  </section>
+  <div class="stats">
+    <div class="stat"><div class="stat-value" id="bookCount">—</div><div class="stat-label">Finished Books</div></div>
+    <div class="stat"><div class="stat-value">Zero</div><div class="stat-label">Futurism</div></div>
+    <div class="stat"><div class="stat-value">WEB</div><div class="stat-label">Base Text</div></div>
+    <div class="stat"><div class="stat-value">AD 30–70</div><div class="stat-label">Covenant Transition</div></div>
+  </div>
+  <section id="start">
+    <h2>Start Here</h2>
+    <p>Open a finished book index and read chapter-by-chapter. Use the <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> when you hit coming / wrath / day / fire / resurrection.</p>
+  </section>
+  <hr />
+  <section id="books">
+    <div class="section-head">
+      <h2>Finished Books</h2>
+      <div class="hint">Complete and readable end-to-end</div>
+    </div>
+    <div class="searchrow">
+      <input id="bookSearch" type="search" placeholder="Search finished books…" />
+      <div class="muted"><span id="bookCountInline">—</span> listed</div>
+    </div>
+    <div id="bookGrid" class="grid" style="margin-top: 1em;"></div>
+  </section>
+  <hr />
+  <section id="resources">
+    <h2>Resources</h2>
+    <p><a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="/Bible/Studies/index.html">Studies</a></p>
+  </section>
+  <footer>
+    <p><strong>The Fulfilled Prophecy Bible</strong> — World English Bible (WEB)</p>
+    <p><a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a> · <a href="#top">Back to top</a></p>
+  </footer>
+</div>
+<script>
+const FINISHED_BOOKS = [
+  {title:"Isaiah (Selected)",pill:"Prophet",desc:"Key covenant-world passages and New Creation anchors.",links:[["/Bible/Isaiah/index.html","Book Index"]]},
+  {title:"Daniel",pill:"Prophet",desc:"The Four Empires, the 70 Weeks, and the indestructible Kingdom.",links:[["/Bible/Daniel/index.html","Book Index"]]},
+  {title:"Zechariah",pill:"Prophet",desc:"The Night Visions, the Branch, and the final AD 70 transition.",links:[["/Bible/Zechariah/index.html","Book Index"]]},
+  {title:"Matthew",pill:"Gospel",desc:"Jesus, covenant crisis, the Olivet Discourse, and the end of the Mosaic age.",links:[["/Bible/Matthew/index.html","Book Index"]]},
+  {title:"Mark",pill:"Gospel",desc:"The time is fulfilled, the Kingdom is at hand. This generation will not pass away until all these things happen.",links:[["/Bible/Mark/index.html","Book Index"],["/Bible/Mark/preface.html","Preface"]]},
+  {title:"Luke",pill:"Gospel",desc:"The manifest glory of the Son and the dawn of the New Creation.",links:[["/Bible/Luke/index.html","Book Index"]]},
+  {title:"John",pill:"Gospel",desc:"Light vs darkness, sonship vs slavery, temple replacement, life already present in Him.",links:[["/Bible/John/index.html","Book Index"]]},
+  {title:"Acts",pill:"History",desc:"The Transition Generation — gospel to the nations while the Temple still stands.",links:[["/Bible/Acts/index.html","Book Index"]]},
+  {title:"Romans",pill:"Epistle",desc:"Righteousness apart from Law, condemnation dismantled, Spirit-life as present identity.",links:[["/Bible/Romans/index.html","Book Index"]]},
+  {title:"1 Corinthians",pill:"Epistle",desc:"One-body life, holiness without legalism, resurrection as covenant victory.",links:[["/Bible/1Corinthians/index.html","Book Index"]]},
+  {title:"2 Corinthians",pill:"Epistle",desc:"Veil removed, reconciliation proclaimed, true authority through weakness.",links:[["/Bible/2Corinthians/index.html","Book Index"]]},
+  {title:"Galatians",pill:"Epistle",desc:"Freedom from Torah-identity, sonship by promise, Spirit as operating reality.",links:[["/Bible/Galatians/index.html","Book Index"]]},
+  {title:"Ephesians",pill:"Epistle",desc:"Union with Christ, one new humanity, Spirit-filled life as normal reality.",links:[["/Bible/Ephesians/index.html","Book Index"]]},
+  {title:"Philippians",pill:"Epistle",desc:"Joy in pressure, the mind of Christ, New Creation life that shines.",links:[["/Bible/Philippians/index.html","Book Index"]]},
+  {title:"Colossians",pill:"Epistle",desc:"Christ as fullness, old humanity stripped off, new humanity lived now.",links:[["/Bible/Colossians/index.html","Book Index"]]},
+  {title:"1 Thessalonians",pill:"Epistle",desc:"New Creation church under pressure: faith, love, holiness, the Lord's presence.",links:[["/Bible/1Thessalonians/index.html","Book Index"]]},
+  {title:"2 Thessalonians",pill:"Epistle",desc:"Panic corrected, lawlessness exposed, steady New Creation life restored.",links:[["/Bible/2Thessalonians/index.html","Book Index"]]},
+  {title:"1 Timothy",pill:"Epistle",desc:"Sound doctrine, the household of God, guard the deposit.",links:[["/Bible/1Timothy/index.html","Book Index"],["/Bible/1Timothy/preface.html","Preface"]]},
+  {title:"2 Timothy",pill:"Epistle",desc:"Last words of Paul: guard the deposit, endure hardship.",links:[["/Bible/2Timothy/index.html","Book Index"],["/Bible/2Timothy/preface.html","Preface"]]},
+  {title:"Titus",pill:"Epistle",desc:"Order the household, silence empty talkers, grace has appeared.",links:[["/Bible/Titus/index.html","Book Index"],["/Bible/Titus/preface.html","Preface"]]},
+  {title:"Philemon",pill:"Epistle",desc:"Onesimus received no longer as a slave but as a beloved brother.",links:[["/Bible/Philemon/index.html","Book Index"],["/Bible/Philemon/preface.html","Preface"]]},
+  {title:"Hebrews",pill:"Epistle",desc:"End of sacrifice and priesthood, access secured, shadow to substance.",links:[["/Bible/Hebrews/index.html","Book Index"]]},
+  {title:"James",pill:"Epistle",desc:"Undivided loyalty, wisdom from above, mercy over status.",links:[["/Bible/James/index.html","Book Index"]]},
+  {title:"1 Peter",pill:"Epistle",desc:"Living as exiles, sharing in Christ's sufferings, imminent end of the Old Covenant age.",links:[["/Bible/1Peter/index.html","Book Index"]]},
+  {title:"2 Peter",pill:"Epistle",desc:"Scoffers, melting of the covenantal elements, New Heavens and New Earth.",links:[["/Bible/2Peter/index.html","Book Index"]]},
+  {title:"1 John",pill:"Epistle",desc:"Fellowship, light, the final hour, many antichrists already present.",links:[["/Bible/1John/index.html","Book Index"],["/Bible/1John/preface.html","Preface"]]},
+  {title:"2 John",pill:"Epistle",desc:"Walk in truth and love; do not receive those who deny the incarnation.",links:[["/Bible/2John/index.html","Book Index"],["/Bible/2John/preface.html","Preface"]]},
+  {title:"3 John",pill:"Epistle",desc:"Support those who go out for the Name; imitate what is good.",links:[["/Bible/3John/index.html","Book Index"],["/Bible/3John/preface.html","Preface"]]},
+  {title:"Jude",pill:"Epistle",desc:"Contending for the faith and the judgment of first-century apostasy.",links:[["/Bible/Jude/index.html","Book Index"]]},
+  {title:"Revelation",pill:"Apocalypse",desc:"First-century apocalyptic language unveiling covenant judgment and New Jerusalem.",links:[["/Bible/Revelation/index.html","Book Index"]]}
+];
+function esc(s){
+  return String(s).replace(/[&<>"']/g, function(m){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m];
+  });
+}
+function renderBooks(filterText){
+  if (!filterText) filterText = "";
+  var q = filterText.trim().toLowerCase();
+  var grid = document.getElementById("bookGrid");
+  var filtered = FINISHED_BOOKS.filter(function(b){
+    return !q || (b.title + " " + b.pill + " " + b.desc).toLowerCase().indexOf(q) !== -1;
+  });
+  grid.innerHTML = filtered.map(function(b){
+    var links = b.links.map(function(pair){
+      return "<a href=\"" + esc(pair[0]) + "\">" + esc(pair[1]) + "</a>";
+    }).join(" · ");
+    return "<div class=\"card\"><span class=\"pill\">" + esc(b.pill) + "</span><h3>" + esc(b.title) + "</h3><p>" + esc(b.desc) + "</p><ul><li>" + links + "</li></ul></div>";
+  }).join("");
+  document.getElementById("bookCount").textContent = String(FINISHED_BOOKS.length);
+  document.getElementById("bookCountInline").textContent = String(FINISHED_BOOKS.length);
+}
+document.addEventListener("DOMContentLoaded", function(){
+  renderBooks("");
+  var input = document.getElementById("bookSearch");
+  if (input) input.addEventListener("input", function(){ renderBooks(input.value); });
+});
+</script>
+</body>
+</html>
