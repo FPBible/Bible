@@ -177,7 +177,6 @@
       border-left: 3px solid var(--accent);
     }
     .pathway h3{ font-size: 1.15rem; }
-    /* Book Promotion Panel Styles */
     .book-promo {
       display: flex;
       flex-direction: column;
@@ -550,10 +549,10 @@
         <h4>Popular Books</h4>
         <ul>
           <li><a href="/Bible/Matthew/">Matthew</a></li>
+          <li><a href="/Bible/Mark/">Mark</a></li>
           <li><a href="/Bible/Luke/">Luke</a></li>
           <li><a href="/Bible/John/">John</a></li>
           <li><a href="/Bible/Romans/">Romans</a></li>
-          <li><a href="/Bible/Galatians/">Galatians</a></li>
           <li><a href="/Bible/Hebrews/">Hebrews</a></li>
           <li><a href="/Bible/Revelation/">Revelation</a></li>
         </ul>
@@ -604,6 +603,12 @@ const FINISHED_BOOKS = [
     links: [["/Bible/Matthew/index.html","Book Index"], ["/Bible/Matthew/preface.html","Preface"]]
   },
   {
+    title: "Mark",
+    pill: "Gospel",
+    desc: "The time is fulfilled, the Kingdom is at hand. This generation will not pass away until all these things happen.",
+    links: [["/Bible/Mark/index.html","Book Index"], ["/Bible/Mark/preface.html","Preface"]]
+  },
+  {
     title: "Luke",
     pill: "Gospel",
     desc: "The manifest glory of the Son, the legal restoration of the lost, and the dawn of the New Creation.",
@@ -621,7 +626,6 @@ const FINISHED_BOOKS = [
     desc: "The Transition Generation — the gospel goes to the nations while the Temple still stands. From Jerusalem to Rome, unhindered.",
     links: [["/Bible/Acts/index.html","Book Index"], ["/Bible/Acts/preface.html","Preface"]]
   },
-
   {
     title: "Romans",
     pill: "Epistle",
@@ -677,6 +681,30 @@ const FINISHED_BOOKS = [
     links: [["/Bible/2Thessalonians/index.html","Book Index"]]
   },
   {
+    title: "1 Timothy",
+    pill: "Epistle",
+    desc: "Sound doctrine, the household of God, and the charge to guard the deposit against myths and the love of money.",
+    links: [["/Bible/1Timothy/index.html","Book Index"], ["/Bible/1Timothy/preface.html","Preface"]]
+  },
+  {
+    title: "2 Timothy",
+    pill: "Epistle",
+    desc: "Last words of Paul: guard the deposit, endure hardship, the Lord will rescue from every evil work.",
+    links: [["/Bible/2Timothy/index.html","Book Index"], ["/Bible/2Timothy/preface.html","Preface"]]
+  },
+  {
+    title: "Titus",
+    pill: "Epistle",
+    desc: "Order the household, silence the empty talkers, and live as those for whom the grace of God has appeared.",
+    links: [["/Bible/Titus/index.html","Book Index"], ["/Bible/Titus/preface.html","Preface"]]
+  },
+  {
+    title: "Philemon",
+    pill: "Epistle",
+    desc: "Onesimus received no longer as a slave but as a beloved brother — the New Creation reorders relationships.",
+    links: [["/Bible/Philemon/index.html","Book Index"], ["/Bible/Philemon/preface.html","Preface"]]
+  },
+  {
     title: "Hebrews",
     pill: "Epistle",
     desc: "End of sacrifice and priesthood, access secured, transition from shadow to substance.",
@@ -701,6 +729,24 @@ const FINISHED_BOOKS = [
     links: [["/Bible/2Peter/index.html","Book Index"], ["/Bible/2Peter/preface.html","Preface"]]
   },
   {
+    title: "1 John",
+    pill: "Epistle",
+    desc: "Fellowship, light, the final hour with many antichrists already present, and the call to remain.",
+    links: [["/Bible/1John/index.html","Book Index"], ["/Bible/1John/preface.html","Preface"]]
+  },
+  {
+    title: "2 John",
+    pill: "Epistle",
+    desc: "Walk in truth and love; do not receive those who deny that Jesus Christ has come in the flesh.",
+    links: [["/Bible/2John/index.html","Book Index"], ["/Bible/2John/preface.html","Preface"]]
+  },
+  {
+    title: "3 John",
+    pill: "Epistle",
+    desc: "Support those who go out for the Name; Diotrephes loves to be first; imitate what is good.",
+    links: [["/Bible/3John/index.html","Book Index"], ["/Bible/3John/preface.html","Preface"]]
+  },
+  {
     title: "Jude",
     pill: "Epistle",
     desc: "Tactical emergency broadcast: contending for the faith and the certain judgment of the first-century apostasy.",
@@ -714,23 +760,23 @@ const FINISHED_BOOKS = [
   }
 ];
 function esc(s){
-  return String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+  return String(s).replace(/[&<>\"']/g, m => ({\"&\":\"&amp;\",\"<\":\"&lt;\",\">\":\"&gt;\",'\"':\"&quot;\",\"'\":\"&#39;\"}[m]));
 }
-function renderBooks(filterText=""){
+function renderBooks(filterText=\"\"){
   const q = filterText.trim().toLowerCase();
-  const grid = document.getElementById("bookGrid");
-  const filtered = FINISHED_BOOKS.filter(b => !q || (b.title + " " + b.pill + " " + b.desc).toLowerCase().includes(q));
+  const grid = document.getElementById(\"bookGrid\");
+  const filtered = FINISHED_BOOKS.filter(b => !q || (b.title + \" \" + b.pill + \" \" + b.desc).toLowerCase().includes(q));
   grid.innerHTML = filtered.map(b => {
-    const links = b.links.map(([href,label]) => `<a href="${esc(href)}">${esc(label)}</a>`).join(" · ");
-    return `<div class="card"><span class="pill">${esc(b.pill)}</span><h3>${esc(b.title)}</h3><p>${esc(b.desc)}</p><ul><li>${links}</li></ul></div>`;
-  }).join("");
-  document.getElementById("bookCount").textContent = String(FINISHED_BOOKS.length);
-  document.getElementById("bookCountInline").textContent = String(FINISHED_BOOKS.length);
+    const links = b.links.map(([href,label]) => `<a href=\"${esc(href)}\">${esc(label)}</a>`).join(\" · \");
+    return `<div class=\"card\"><span class=\"pill\">${esc(b.pill)}</span><h3>${esc(b.title)}</h3><p>${esc(b.desc)}</p><ul><li>${links}</li></ul></div>`;
+  }).join(\"\");
+  document.getElementById(\"bookCount\").textContent = String(FINISHED_BOOKS.length);
+  document.getElementById(\"bookCountInline\").textContent = String(FINISHED_BOOKS.length);
 }
-document.addEventListener("DOMContentLoaded", () => {
-  renderBooks("");
-  const input = document.getElementById("bookSearch");
-  if (input) input.addEventListener("input", () => renderBooks(input.value));
+document.addEventListener(\"DOMContentLoaded\", () => {
+  renderBooks(\"\");
+  const input = document.getElementById(\"bookSearch\");
+  if (input) input.addEventListener(\"input\", () => renderBooks(input.value));
 });
 </script>
 </body>
