@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FPBible — Scripture Through Fulfillment</title>
+  <meta name="description" content="The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology." />
+  <link rel="icon" href="images/favicon.ico" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
+  <style>
+    :root{
+      --bg:#fff; --text:#111; --muted:rgba(0,0,0,0.65); --line:rgba(0,0,0,0.1);
+      --accent:#0066cc; --warn:#f59e0b; --radius:12px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:var(--text);background:var(--bg)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+    .topbar{border-bottom:1px solid var(--line);background:#fafafa}
+    .topbar .inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:12px;flex-wrap:wrap}
+    .brand{font-weight:700;font-size:1.1rem;color:var(--text)}
+    .nav a{margin-left:14px;color:var(--muted);font-size:0.95rem}
+    .nav a:hover{color:var(--text)}
+    .banner{ margin:14px 0 0; border:1px solid rgba(0,0,0,0.12); border-left:4px solid var(--warn); border-radius:var(--radius); padding:12px 14px; background:linear-gradient(135deg,rgba(245,158,11,0.12) 0%,transparent 65%); }
+    .banner .small{ color:var(--muted); font-size:0.95em; margin-top:6px; }
+    .hero{ text-align:center; padding:2em 0 1.5em; }
+    .hero h1{ margin:0.5em 0 0.3em; font-size:2.4rem; letter-spacing:-0.5px; }
+    .hero .tagline{ font-size:1.15em; color:var(--muted); max-width:66ch; margin:0 auto; }
+    .hero .cta{ margin-top:1.5em; }
+    .hero .cta a{ display:inline-block; padding:12px 28px; background:var(--accent); color:#fff; text-decoration:none; border-radius:8px; font-weight:500; }
+    .hero .cta a:hover{ opacity:0.9; text-decoration:none; }
+    .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.5em 0 2em; }
+    .stat{ text-align:center; padding:1em; border:1px solid var(--line); border-radius:var(--radius); background:#fafafa; }
+    .stat-value{ font-size:1.5rem; font-weight:700; }
+    .stat-label{ font-size:0.85rem; color:var(--muted); margin-top:4px; }
+    .grid{ display:grid; gap:16px; }
+    .grid-3{ grid-template-columns:repeat(3,1fr); }
+    .grid-2{ grid-template-columns:repeat(2,1fr); }
+    .card{ border:1px solid var(--line); border-radius:var(--radius); padding:1.2em; background:#fff; }
+    .card h3{ margin:0 0 0.5em; }
+    .pathway ol{ margin:0.8em 0 1em 1.2em; }
+    .pathway li{ margin:0.4em 0; }
+    section{ margin:2em 0; }
+    h2{ font-size:1.5rem; margin:0 0 0.8em; }
+    .search-box{ width:100%; padding:12px 16px; border:1px solid var(--line); border-radius:8px; font-size:1rem; margin-bottom:1em; }
+    .book-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; }
+    .book-item a{ display:block; padding:10px 14px; border:1px solid var(--line); border-radius:8px; color:var(--text); }
+    .book-item a:hover{ border-color:var(--accent); background:#f8fbff; text-decoration:none; }
+    .book-item .meta{ font-size:0.85rem; color:var(--muted); }
+    footer{ margin-top:3em; padding:2em 0; border-top:1px solid var(--line); color:var(--muted); font-size:0.92rem; text-align:center; }
+    @media (max-width:800px){
+      .stats{ grid-template-columns:repeat(2,1fr); }
+      .grid-3,.grid-2{ grid-template-columns:1fr; }
+      .hero h1{ font-size:1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="topbar"><div class="wrap inner">
+  <a class="brand" href="/Bible/">FPBible</a>
+  <div class="nav">
+  <a href="#start">Start</a>
+  <a href="#books">Books</a>
+  <a href="eighth-day-reality.html" style="color:var(--accent);font-weight:600;">New Book!</a>
+  <a href="#resources">Resources</a>
+  <a href="/Bible/about.html">About</a>
+  <a href="#support">Support</a>
+</div></div>
+<div class="wrap">
+
+  <section class="hero">
+    <div style="margin-bottom:1em;"><img src="images/og-light.png" alt="FPBible Logo" style="max-width:400px;width:100%;height:auto;"></div>
+    <h1>Scripture Through Fulfillment</h1>
+    <p class="tagline">The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology.</p>
+    <div class="cta"><a href="#books">Browse Finished Books</a></div>
+  </section>
+  <div class="stats">
+    <div class="stat"><div class="stat-value" id="bookCount">—</div><div class="stat-label">Finished Books</div></div>
+    <div class="stat"><div class="stat-value">Zero</div><div class="stat-label">Futurism</div></div>
+    <div class="stat"><div class="stat-value">WEB</div><div class="stat-label">Base Text</div></div>
+    <div class="stat"><div class="stat-value">AD 30–70</div><div class="stat-label">Covenant Transition</div></div>
+  </div>
+  <section id="pathways">
+    <h2 style="text-align:center;margin-bottom:0.8em;">Choose Your Path</h2>
+    <div class="grid grid-3">
+      <div class="card pathway">
+        <h3>Foundational Tracks</h3>
+        <ol style="margin:0.8em 0 1em 1.2em;">
+          <li><a href="/Bible/Prophecy/good-news.html"><strong>What Is the Good News?</strong></a></li>
+          <li><a href="/Bible/Prophecy/new-covenant.html"><strong>The New Covenant</strong></a></li>
+          <li><a href="/Bible/Prophecy/new-creation.html"><strong>The New Creation</strong></a></li>
+          <li><a href="/Bible/Prophecy/parousia.html"><strong>Parousia</strong></a></li>
+        </ol>
+      </div>
+      <div class="card pathway">
+        <h3>Prophecy Hub</h3>
+        <p style="color:var(--muted);margin:0.5em 0 1em;">Time statements, cosmic language, judgment, and the end of the age — all inside the first-century horizon.</p>
+        <a href="/Bible/Prophecy/index.html">Open Prophecy Hub →</a>
+      </div>
+      <div class="card pathway">
+        <h3>Start with a Gospel</h3>
+        <p style="color:var(--muted);margin:0.5em 0 1em;">Matthew, Mark, Luke, or John — read with fulfillment notes and New Creation commentary.</p>
+        <a href="#books">Browse Gospels →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <h2>How to Read</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Audience Relevance</h3>
+        <p>Every time statement, warning, and promise is read first for the people who first heard it — the generation Jesus addressed.</p>
+      </div>
+      <div class="card">
+        <h3>AD 30–70 Horizon</h3>
+        <p>The cross, the Spirit, and the fall of the Temple close the Old Covenant age and open the New Creation reality we live in now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="books">
+    <h2>Finished Books</h2>
+    <input type="search" class="search-box" id="bookSearch" placeholder="Filter books…" oninput="renderBooks(this.value)" />
+    <div class="book-list" id="bookList"></div>
+  </section>
+
+  <section id="resources">
+    <h2>Resources</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Prophecy Hub</h3><p><a href="/Bible/Prophecy/index.html">Themes &amp; studies</a></p></div>
+      <div class="card"><h3>About</h3><p><a href="/Bible/about.html">Method &amp; mission</a></p></div>
+      <div class="card"><h3>Eighth Day Reality</h3><p><a href="eighth-day-reality.html">New book</a></p></div>
+    </div>
+  </section>
+
+  <section id="support">
+    <h2 style="text-align:center;">Support</h2>
+    <p style="text-align:center;color:var(--muted);">FPBible is free. If it helps you, you can support the work.</p>
+    <p style="text-align:center;"><a href="https://ko-fi.com/fpbible" target="_blank">Support on Ko-fi</a></p>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and first-century fulfillment.</p>
+    <p><a href="/Bible/about.html">About</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="https://ko-fi.com/fpbible" target="_blank">Support</a></p>
+  </div>
+</footer>
+
+<script>
+const FINISHED_BOOKS = [
+  { title: "Matthew", path: "Matthew/index.html", group: "Gospels" },
+  { title: "Mark", path: "Mark/index.html", group: "Gospels" },
+  { title: "Luke", path: "Luke/index.html", group: "Gospels" },
+  { title: "John", path: "John/index.html", group: "Gospels" },
+  { title: "Acts", path: "Acts/index.html", group: "History" },
+  { title: "Romans", path: "Romans/index.html", group: "Paul" },
+  { title: "1 Corinthians", path: "1Corinthians/index.html", group: "Paul" },
+  { title: "2 Corinthians", path: "2Corinthians/index.html", group: "Paul" },
+  { title: "Galatians", path: "Galatians/index.html", group: "Paul" },
+  { title: "Ephesians", path: "Ephesians/index.html", group: "Paul" },
+  { title: "Philippians", path: "Philippians/index.html", group: "Paul" },
+  { title: "Colossians", path: "Colossians/index.html", group: "Paul" },
+  { title: "1 Thessalonians", path: "1Thessalonians/index.html", group: "Paul" },
+  { title: "2 Thessalonians", path: "2Thessalonians/index.html", group: "Paul" },
+  { title: "1 Timothy", path: "1Timothy/index.html", group: "Paul" },
+  { title: "2 Timothy", path: "2Timothy/index.html", group: "Paul" },
+  { title: "Titus", path: "Titus/index.html", group: "Paul" },
+  { title: "Philemon", path: "Philemon/index.html", group: "Paul" },
+  { title: "Hebrews", path: "Hebrews/index.html", group: "General" },
+  { title: "James", path: "James/index.html", group: "General" },
+  { title: "1 Peter", path: "1Peter/index.html", group: "General" },
+  { title: "2 Peter", path: "2Peter/index.html", group: "General" },
+  { title: "1 John", path: "1John/index.html", group: "General" },
+  { title: "2 John", path: "2John/index.html", group: "General" },
+  { title: "3 John", path: "3John/index.html", group: "General" },
+  { title: "Jude", path: "Jude/index.html", group: "General" },
+  { title: "Revelation", path: "Revelation/index.html", group: "Apocalypse" },
+  { title: "Isaiah", path: "Isaiah/index.html", group: "Prophets" },
+  { title: "Daniel", path: "Daniel/index.html", group: "Prophets" },
+  { title: "Zechariah", path: "Zechariah/index.html", group: "Prophets" }
+];
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g, m => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  })[m]);
+}
+
+function renderBooks(filterText=""){
+  const q = (filterText || "").toLowerCase().trim();
+  const books = FINISHED_BOOKS.filter(b => !q || b.title.toLowerCase().includes(q) || (b.group||"").toLowerCase().includes(q));
+  const el = document.getElementById("bookList");
+  if (!el) return;
+  el.innerHTML = books.map(b =>
+    `<div class="book-item"><a href="${esc(b.path)}"><strong>${esc(b.title)}</strong><div class="meta">${esc(b.group||"")}</div></a></div>`
+  ).join("");
+  const count = document.getElementById("bookCount");
+  if (count) count.textContent = String(FINISHED_BOOKS.length);
+}
+
+renderBooks();
+</script>
+</body>
+</html>
