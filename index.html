@@ -5,204 +5,418 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FPBible — Scripture Through Fulfillment</title>
   <meta name="description" content="The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology." />
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="icon" href="/Bible/images/favicon.ico" />
+  <meta property="og:title" content="FPBible — Scripture Through Fulfillment" />
+  <meta property="og:description" content="WEB text with fulfilled commentary: audience relevance, AD 30–70 horizon, New Creation now." />
+  <meta property="og:image" content="https://fpbible.github.io/Bible/images/og-light.png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
   <style>
     :root{
-      --bg:#fff; --text:#111; --muted:rgba(0,0,0,0.65); --line:rgba(0,0,0,0.1);
-      --accent:#0066cc; --warn:#f59e0b; --radius:12px; --maxw:1100px;
+      --bg:#ffffff;
+      --bg-soft:#f7f8fa;
+      --text:#111111;
+      --muted:rgba(0,0,0,0.62);
+      --line:rgba(0,0,0,0.10);
+      --accent:#0066cc;
+      --accent-soft:#e8f1fb;
+      --radius:12px;
+      --maxw:1040px;
+      --shadow:0 1px 2px rgba(0,0,0,0.04);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0f1115;
+        --bg-soft:#171a21;
+        --text:#eef1f6;
+        --muted:rgba(238,241,246,0.62);
+        --line:rgba(255,255,255,0.10);
+        --accent:#5aa2ff;
+        --accent-soft:#1a2740;
+        --shadow:none;
+      }
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:var(--text);background:var(--bg)}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      line-height:1.65;
+      color:var(--text);
+      background:var(--bg);
+    }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
-    .topbar{border-bottom:1px solid var(--line);background:#fafafa}
-    .topbar .inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:12px;flex-wrap:wrap}
-    .brand{font-weight:700;font-size:1.1rem;color:var(--text)}
-    .nav a{margin-left:14px;color:var(--muted);font-size:0.95rem}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      border-bottom:1px solid var(--line);
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter:blur(10px);
+    }
+    .topbar .inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;gap:12px;flex-wrap:wrap;
+    }
+    .brand{font-weight:700;font-size:1.08rem;color:var(--text);letter-spacing:-0.02em}
+    .brand:hover{text-decoration:none}
+    .nav{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+    .nav a{color:var(--muted);font-size:0.94rem}
     .nav a:hover{color:var(--text)}
-    .banner{ margin:14px 0 0; border:1px solid rgba(0,0,0,0.12); border-left:4px solid var(--warn); border-radius:var(--radius); padding:12px 14px; background:linear-gradient(135deg,rgba(245,158,11,0.12) 0%,transparent 65%); }
-    .banner .small{ color:var(--muted); font-size:0.95em; margin-top:6px; }
-    .hero{ text-align:center; padding:2em 0 1.5em; }
-    .hero h1{ margin:0.5em 0 0.3em; font-size:2.4rem; letter-spacing:-0.5px; }
-    .hero .tagline{ font-size:1.15em; color:var(--muted); max-width:66ch; margin:0 auto; }
-    .hero .cta{ margin-top:1.5em; }
-    .hero .cta a{ display:inline-block; padding:12px 28px; background:var(--accent); color:#fff; text-decoration:none; border-radius:8px; font-weight:500; }
-    .hero .cta a:hover{ opacity:0.9; text-decoration:none; }
-    .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:1.5em 0 2em; }
-    .stat{ text-align:center; padding:1em; border:1px solid var(--line); border-radius:var(--radius); background:#fafafa; }
-    .stat-value{ font-size:1.5rem; font-weight:700; }
-    .stat-label{ font-size:0.85rem; color:var(--muted); margin-top:4px; }
-    .grid{ display:grid; gap:16px; }
-    .grid-3{ grid-template-columns:repeat(3,1fr); }
-    .grid-2{ grid-template-columns:repeat(2,1fr); }
-    .card{ border:1px solid var(--line); border-radius:var(--radius); padding:1.2em; background:#fff; }
-    .card h3{ margin:0 0 0.5em; }
-    .pathway ol{ margin:0.8em 0 1em 1.2em; }
-    .pathway li{ margin:0.4em 0; }
-    section{ margin:2em 0; }
-    h2{ font-size:1.5rem; margin:0 0 0.8em; }
-    .search-box{ width:100%; padding:12px 16px; border:1px solid var(--line); border-radius:8px; font-size:1rem; margin-bottom:1em; }
-    .book-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; }
-    .book-item a{ display:block; padding:10px 14px; border:1px solid var(--line); border-radius:8px; color:var(--text); }
-    .book-item a:hover{ border-color:var(--accent); background:#f8fbff; text-decoration:none; }
-    .book-item .meta{ font-size:0.85rem; color:var(--muted); }
-    footer{ margin-top:3em; padding:2em 0; border-top:1px solid var(--line); color:var(--muted); font-size:0.92rem; text-align:center; }
+
+    .hero{text-align:center;padding:2.4em 0 1.6em}
+    .hero img{max-width:340px;width:100%;height:auto;margin:0 auto 1em;display:block}
+    .hero h1{
+      margin:0.2em 0 0.35em;
+      font-size:clamp(1.85rem,4vw,2.55rem);
+      letter-spacing:-0.03em;
+      line-height:1.15;
+    }
+    .hero .tagline{
+      font-size:1.08rem;color:var(--muted);
+      max-width:62ch;margin:0 auto;
+    }
+    .hero .cta{margin-top:1.4em;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      display:inline-block;padding:11px 22px;border-radius:9px;
+      font-weight:600;font-size:0.95rem;border:1px solid transparent;
+    }
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{opacity:0.92;text-decoration:none}
+    .btn-ghost{
+      background:transparent;color:var(--text);
+      border-color:var(--line);
+    }
+    .btn-ghost:hover{background:var(--bg-soft);text-decoration:none}
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin:0.5em 0 2em;
+    }
+    .stat{
+      text-align:center;padding:1em 0.6em;
+      border:1px solid var(--line);border-radius:var(--radius);
+      background:var(--bg-soft);box-shadow:var(--shadow);
+    }
+    .stat-value{font-size:1.35rem;font-weight:700;letter-spacing:-0.02em}
+    .stat-label{font-size:0.82rem;color:var(--muted);margin-top:3px}
+
+    section{margin:2.4em 0}
+    h2{
+      font-size:1.35rem;margin:0 0 0.9em;
+      letter-spacing:-0.02em;
+      padding-bottom:0.45em;
+      border-bottom:1px solid var(--line);
+    }
+    h3{margin:0 0 0.45em;font-size:1.05rem}
+
+    .grid{display:grid;gap:14px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{
+      border:1px solid var(--line);border-radius:var(--radius);
+      padding:1.15em 1.2em;background:var(--bg);box-shadow:var(--shadow);
+    }
+    .card p{margin:0.4em 0 0;color:var(--muted);font-size:0.95rem}
+    .card ul,.card ol{margin:0.7em 0 0;padding-left:1.15em}
+    .card li{margin:0.35em 0}
+
+    .search-box{
+      width:100%;padding:12px 14px;
+      border:1px solid var(--line);border-radius:9px;
+      font-size:1rem;margin:0 0 1.1em;
+      background:var(--bg);color:var(--text);
+    }
+    .search-box:focus{outline:2px solid var(--accent);outline-offset:1px}
+
+    .book-group{margin:0 0 1.6em}
+    .book-group h3{
+      margin:0 0 0.65em;font-size:0.82rem;font-weight:700;
+      text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);
+    }
+    .book-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(148px,1fr));
+      gap:8px;
+    }
+    .book-item a{
+      display:block;padding:11px 12px;
+      border:1px solid var(--line);border-radius:9px;
+      color:var(--text);background:var(--bg);
+      font-weight:600;font-size:0.95rem;
+      transition:border-color .15s, background .15s;
+    }
+    .book-item a:hover{
+      border-color:var(--accent);
+      background:var(--accent-soft);
+      text-decoration:none;
+    }
+    .book-item.is-hidden{display:none}
+
+    .empty-msg{display:none;color:var(--muted);padding:0.8em 0}
+    .empty-msg.show{display:block}
+
+    footer{
+      margin-top:3em;padding:2em 0 2.4em;
+      border-top:1px solid var(--line);
+      color:var(--muted);font-size:0.92rem;text-align:center;
+    }
+    footer p{margin:0.4em 0}
+
     @media (max-width:800px){
-      .stats{ grid-template-columns:repeat(2,1fr); }
-      .grid-3,.grid-2{ grid-template-columns:1fr; }
-      .hero h1{ font-size:1.8rem; }
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .topbar .inner{justify-content:center}
+      .nav{justify-content:center}
     }
   </style>
 </head>
 <body>
-<div class="topbar"><div class="wrap inner">
-  <a class="brand" href="/Bible/">FPBible</a>
-  <div class="nav">
-  <a href="#start">Start</a>
-  <a href="#books">Books</a>
-  <a href="eighth-day-reality.html" style="color:var(--accent);font-weight:600;">New Book!</a>
-  <a href="#resources">Resources</a>
-  <a href="/Bible/about.html">About</a>
-  <a href="#support">Support</a>
-</div></div>
-<div class="wrap">
-
-  <section class="hero">
-    <div style="margin-bottom:1em;"><img src="images/og-light.png" alt="FPBible Logo" style="max-width:400px;width:100%;height:auto;"></div>
-    <h1>Scripture Through Fulfillment</h1>
-    <p class="tagline">The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology.</p>
-    <div class="cta"><a href="#books">Browse Finished Books</a></div>
-  </section>
-  <div class="stats">
-    <div class="stat"><div class="stat-value" id="bookCount">—</div><div class="stat-label">Finished Books</div></div>
-    <div class="stat"><div class="stat-value">Zero</div><div class="stat-label">Futurism</div></div>
-    <div class="stat"><div class="stat-value">WEB</div><div class="stat-label">Base Text</div></div>
-    <div class="stat"><div class="stat-value">AD 30–70</div><div class="stat-label">Covenant Transition</div></div>
+<div class="topbar">
+  <div class="wrap inner">
+    <a class="brand" href="/Bible/">FPBible</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#start">How to read</a>
+      <a href="#books">Books</a>
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
+      <a href="/Bible/eighth-day-reality.html">Eighth Day</a>
+      <a href="/Bible/about.html">About</a>
+      <a href="#support">Support</a>
+    </nav>
   </div>
-  <section id="pathways">
-    <h2 style="text-align:center;margin-bottom:0.8em;">Choose Your Path</h2>
+</div>
+
+<div class="wrap">
+  <section class="hero">
+    <img src="/Bible/images/og-light.png" alt="Fulfilled Prophecy Bible" width="340" />
+    <h1>Scripture Through Fulfillment</h1>
+    <p class="tagline">
+      The World English Bible with study commentary that keeps Scripture inside its original covenant horizon —
+      audience relevance, the AD&nbsp;30–70 transition, and the New Creation as present reality.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#books">Browse finished books</a>
+      <a class="btn btn-ghost" href="/Bible/Prophecy/index.html">Open Prophecy Hub</a>
+    </div>
+  </section>
+
+  <div class="stats" aria-label="At a glance">
+    <div class="stat">
+      <div class="stat-value" id="bookCount">30</div>
+      <div class="stat-label">Finished books</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">Zero</div>
+      <div class="stat-label">Futurism</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">WEB</div>
+      <div class="stat-label">Base text</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">AD 30–70</div>
+      <div class="stat-label">Covenant transition</div>
+    </div>
+  </div>
+
+  <section id="pathways" aria-label="Starting paths">
+    <h2>Choose a path</h2>
     <div class="grid grid-3">
-      <div class="card pathway">
-        <h3>Foundational Tracks</h3>
-        <ol style="margin:0.8em 0 1em 1.2em;">
-          <li><a href="/Bible/Prophecy/good-news.html"><strong>What Is the Good News?</strong></a></li>
-          <li><a href="/Bible/Prophecy/new-covenant.html"><strong>The New Covenant</strong></a></li>
-          <li><a href="/Bible/Prophecy/new-creation.html"><strong>The New Creation</strong></a></li>
-          <li><a href="/Bible/Prophecy/parousia.html"><strong>Parousia</strong></a></li>
-        </ol>
+      <div class="card">
+        <h3>Foundational tracks</h3>
+        <ul>
+          <li><a href="/Bible/Prophecy/good-news.html">What is the Good News?</a></li>
+          <li><a href="/Bible/Prophecy/new-covenant.html">The New Covenant</a></li>
+          <li><a href="/Bible/Prophecy/new-creation.html">The New Creation</a></li>
+          <li><a href="/Bible/Prophecy/parousia.html">Parousia</a></li>
+        </ul>
       </div>
-      <div class="card pathway">
+      <div class="card">
         <h3>Prophecy Hub</h3>
-        <p style="color:var(--muted);margin:0.5em 0 1em;">Time statements, cosmic language, judgment, and the end of the age — all inside the first-century horizon.</p>
-        <a href="/Bible/Prophecy/index.html">Open Prophecy Hub →</a>
+        <p>Time statements, cosmic language, judgment, and the end of the age — inside the first-century horizon.</p>
+        <p style="margin-top:0.9em"><a href="/Bible/Prophecy/index.html">Open Prophecy Hub →</a></p>
       </div>
-      <div class="card pathway">
+      <div class="card">
         <h3>Start with a Gospel</h3>
-        <p style="color:var(--muted);margin:0.5em 0 1em;">Matthew, Mark, Luke, or John — read with fulfillment notes and New Creation commentary.</p>
-        <a href="#books">Browse Gospels →</a>
+        <p>Matthew, Mark, Luke, or John — with fulfillment notes and New Creation commentary.</p>
+        <p style="margin-top:0.9em"><a href="#books">Browse Gospels →</a></p>
       </div>
     </div>
   </section>
 
   <section id="start">
-    <h2>How to Read</h2>
+    <h2>How to read</h2>
     <div class="grid grid-2">
       <div class="card">
-        <h3>Audience Relevance</h3>
+        <h3>Audience relevance</h3>
         <p>Every time statement, warning, and promise is read first for the people who first heard it — the generation Jesus addressed.</p>
       </div>
       <div class="card">
-        <h3>AD 30–70 Horizon</h3>
+        <h3>AD 30–70 horizon</h3>
         <p>The cross, the Spirit, and the fall of the Temple close the Old Covenant age and open the New Creation reality we live in now.</p>
       </div>
     </div>
   </section>
 
   <section id="books">
-    <h2>Finished Books</h2>
-    <input type="search" class="search-box" id="bookSearch" placeholder="Filter books…" oninput="renderBooks(this.value)" />
-    <div class="book-list" id="bookList"></div>
+    <h2>Finished books</h2>
+    <input
+      type="search"
+      class="search-box"
+      id="bookSearch"
+      placeholder="Filter books (e.g. Paul, Mark, Prophets)…"
+      autocomplete="off"
+      aria-label="Filter finished books"
+    />
+    <p class="empty-msg" id="emptyMsg">No books match that filter.</p>
+
+    <div id="bookSections">
+      <div class="book-group" data-group="Gospels">
+        <h3>Gospels</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Matthew" data-group="Gospels"><a href="/Bible/Matthew/index.html">Matthew</a></div>
+          <div class="book-item" data-title="Mark" data-group="Gospels"><a href="/Bible/Mark/index.html">Mark</a></div>
+          <div class="book-item" data-title="Luke" data-group="Gospels"><a href="/Bible/Luke/index.html">Luke</a></div>
+          <div class="book-item" data-title="John" data-group="Gospels"><a href="/Bible/John/index.html">John</a></div>
+        </div>
+      </div>
+
+      <div class="book-group" data-group="History">
+        <h3>History</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Acts" data-group="History"><a href="/Bible/Acts/index.html">Acts</a></div>
+        </div>
+      </div>
+
+      <div class="book-group" data-group="Paul">
+        <h3>Paul</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Romans" data-group="Paul"><a href="/Bible/Romans/index.html">Romans</a></div>
+          <div class="book-item" data-title="1 Corinthians" data-group="Paul"><a href="/Bible/1Corinthians/index.html">1 Corinthians</a></div>
+          <div class="book-item" data-title="2 Corinthians" data-group="Paul"><a href="/Bible/2Corinthians/index.html">2 Corinthians</a></div>
+          <div class="book-item" data-title="Galatians" data-group="Paul"><a href="/Bible/Galatians/index.html">Galatians</a></div>
+          <div class="book-item" data-title="Ephesians" data-group="Paul"><a href="/Bible/Ephesians/index.html">Ephesians</a></div>
+          <div class="book-item" data-title="Philippians" data-group="Paul"><a href="/Bible/Philippians/index.html">Philippians</a></div>
+          <div class="book-item" data-title="Colossians" data-group="Paul"><a href="/Bible/Colossians/index.html">Colossians</a></div>
+          <div class="book-item" data-title="1 Thessalonians" data-group="Paul"><a href="/Bible/1Thessalonians/index.html">1 Thessalonians</a></div>
+          <div class="book-item" data-title="2 Thessalonians" data-group="Paul"><a href="/Bible/2Thessalonians/index.html">2 Thessalonians</a></div>
+          <div class="book-item" data-title="1 Timothy" data-group="Paul"><a href="/Bible/1Timothy/index.html">1 Timothy</a></div>
+          <div class="book-item" data-title="2 Timothy" data-group="Paul"><a href="/Bible/2Timothy/index.html">2 Timothy</a></div>
+          <div class="book-item" data-title="Titus" data-group="Paul"><a href="/Bible/Titus/index.html">Titus</a></div>
+          <div class="book-item" data-title="Philemon" data-group="Paul"><a href="/Bible/Philemon/index.html">Philemon</a></div>
+        </div>
+      </div>
+
+      <div class="book-group" data-group="General">
+        <h3>General epistles</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Hebrews" data-group="General"><a href="/Bible/Hebrews/index.html">Hebrews</a></div>
+          <div class="book-item" data-title="James" data-group="General"><a href="/Bible/James/index.html">James</a></div>
+          <div class="book-item" data-title="1 Peter" data-group="General"><a href="/Bible/1Peter/index.html">1 Peter</a></div>
+          <div class="book-item" data-title="2 Peter" data-group="General"><a href="/Bible/2Peter/index.html">2 Peter</a></div>
+          <div class="book-item" data-title="1 John" data-group="General"><a href="/Bible/1John/index.html">1 John</a></div>
+          <div class="book-item" data-title="2 John" data-group="General"><a href="/Bible/2John/index.html">2 John</a></div>
+          <div class="book-item" data-title="3 John" data-group="General"><a href="/Bible/3John/index.html">3 John</a></div>
+          <div class="book-item" data-title="Jude" data-group="General"><a href="/Bible/Jude/index.html">Jude</a></div>
+        </div>
+      </div>
+
+      <div class="book-group" data-group="Apocalypse">
+        <h3>Apocalypse</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Revelation" data-group="Apocalypse"><a href="/Bible/Revelation/index.html">Revelation</a></div>
+        </div>
+      </div>
+
+      <div class="book-group" data-group="Prophets">
+        <h3>Prophets</h3>
+        <div class="book-list">
+          <div class="book-item" data-title="Isaiah" data-group="Prophets"><a href="/Bible/Isaiah/index.html">Isaiah</a></div>
+          <div class="book-item" data-title="Daniel" data-group="Prophets"><a href="/Bible/Daniel/index.html">Daniel</a></div>
+          <div class="book-item" data-title="Zechariah" data-group="Prophets"><a href="/Bible/Zechariah/index.html">Zechariah</a></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="resources">
     <h2>Resources</h2>
     <div class="grid grid-3">
-      <div class="card"><h3>Prophecy Hub</h3><p><a href="/Bible/Prophecy/index.html">Themes &amp; studies</a></p></div>
-      <div class="card"><h3>About</h3><p><a href="/Bible/about.html">Method &amp; mission</a></p></div>
-      <div class="card"><h3>Eighth Day Reality</h3><p><a href="eighth-day-reality.html">New book</a></p></div>
+      <div class="card">
+        <h3>Prophecy Hub</h3>
+        <p><a href="/Bible/Prophecy/index.html">Themes &amp; studies →</a></p>
+      </div>
+      <div class="card">
+        <h3>About</h3>
+        <p><a href="/Bible/about.html">Method &amp; mission →</a></p>
+      </div>
+      <div class="card">
+        <h3>Eighth Day Reality</h3>
+        <p><a href="/Bible/eighth-day-reality.html">Companion book →</a></p>
+      </div>
     </div>
   </section>
 
   <section id="support">
-    <h2 style="text-align:center;">Support</h2>
-    <p style="text-align:center;color:var(--muted);">FPBible is free. If it helps you, you can support the work.</p>
-    <p style="text-align:center;"><a href="https://ko-fi.com/fpbible" target="_blank">Support on Ko-fi</a></p>
+    <h2 style="text-align:center;border:0;padding:0">Support</h2>
+    <p style="text-align:center;color:var(--muted);max-width:48ch;margin:0.4em auto 1em">
+      FPBible is free. If the work helps you, you can support it.
+    </p>
+    <p style="text-align:center">
+      <a class="btn btn-ghost" href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support on Ko-fi</a>
+    </p>
   </section>
 </div>
 
 <footer>
   <div class="wrap">
     <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and first-century fulfillment.</p>
-    <p><a href="/Bible/about.html">About</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="https://ko-fi.com/fpbible" target="_blank">Support</a></p>
+    <p>
+      <a href="/Bible/about.html">About</a> ·
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> ·
+      <a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a>
+    </p>
   </div>
 </footer>
 
 <script>
-const FINISHED_BOOKS = [
-  { title: "Matthew", path: "Matthew/index.html", group: "Gospels" },
-  { title: "Mark", path: "Mark/index.html", group: "Gospels" },
-  { title: "Luke", path: "Luke/index.html", group: "Gospels" },
-  { title: "John", path: "John/index.html", group: "Gospels" },
-  { title: "Acts", path: "Acts/index.html", group: "History" },
-  { title: "Romans", path: "Romans/index.html", group: "Paul" },
-  { title: "1 Corinthians", path: "1Corinthians/index.html", group: "Paul" },
-  { title: "2 Corinthians", path: "2Corinthians/index.html", group: "Paul" },
-  { title: "Galatians", path: "Galatians/index.html", group: "Paul" },
-  { title: "Ephesians", path: "Ephesians/index.html", group: "Paul" },
-  { title: "Philippians", path: "Philippians/index.html", group: "Paul" },
-  { title: "Colossians", path: "Colossians/index.html", group: "Paul" },
-  { title: "1 Thessalonians", path: "1Thessalonians/index.html", group: "Paul" },
-  { title: "2 Thessalonians", path: "2Thessalonians/index.html", group: "Paul" },
-  { title: "1 Timothy", path: "1Timothy/index.html", group: "Paul" },
-  { title: "2 Timothy", path: "2Timothy/index.html", group: "Paul" },
-  { title: "Titus", path: "Titus/index.html", group: "Paul" },
-  { title: "Philemon", path: "Philemon/index.html", group: "Paul" },
-  { title: "Hebrews", path: "Hebrews/index.html", group: "General" },
-  { title: "James", path: "James/index.html", group: "General" },
-  { title: "1 Peter", path: "1Peter/index.html", group: "General" },
-  { title: "2 Peter", path: "2Peter/index.html", group: "General" },
-  { title: "1 John", path: "1John/index.html", group: "General" },
-  { title: "2 John", path: "2John/index.html", group: "General" },
-  { title: "3 John", path: "3John/index.html", group: "General" },
-  { title: "Jude", path: "Jude/index.html", group: "General" },
-  { title: "Revelation", path: "Revelation/index.html", group: "Apocalypse" },
-  { title: "Isaiah", path: "Isaiah/index.html", group: "Prophets" },
-  { title: "Daniel", path: "Daniel/index.html", group: "Prophets" },
-  { title: "Zechariah", path: "Zechariah/index.html", group: "Prophets" }
-];
-
-function esc(s){
-  return String(s).replace(/[&<>"']/g, m => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  })[m]);
-}
-
-function renderBooks(filterText=""){
-  const q = (filterText || "").toLowerCase().trim();
-  const books = FINISHED_BOOKS.filter(b => !q || b.title.toLowerCase().includes(q) || (b.group||"").toLowerCase().includes(q));
-  const el = document.getElementById("bookList");
-  if (!el) return;
-  el.innerHTML = books.map(b =>
-    `<div class="book-item"><a href="${esc(b.path)}"><strong>${esc(b.title)}</strong><div class="meta">${esc(b.group||"")}</div></a></div>`
-  ).join("");
+(function () {
+  const search = document.getElementById("bookSearch");
+  const items = Array.from(document.querySelectorAll(".book-item"));
+  const groups = Array.from(document.querySelectorAll(".book-group"));
+  const empty = document.getElementById("emptyMsg");
   const count = document.getElementById("bookCount");
-  if (count) count.textContent = String(FINISHED_BOOKS.length);
-}
 
-renderBooks();
+  if (count) count.textContent = String(items.length);
+
+  function filter(q) {
+    const query = (q || "").toLowerCase().trim();
+    let visible = 0;
+
+    items.forEach(function (item) {
+      const title = (item.getAttribute("data-title") || "").toLowerCase();
+      const group = (item.getAttribute("data-group") || "").toLowerCase();
+      const match = !query || title.includes(query) || group.includes(query);
+      item.classList.toggle("is-hidden", !match);
+      if (match) visible += 1;
+    });
+
+    groups.forEach(function (group) {
+      const any = group.querySelectorAll(".book-item:not(.is-hidden)").length > 0;
+      group.style.display = any ? "" : "none";
+    });
+
+    if (empty) empty.classList.toggle("show", visible === 0);
+  }
+
+  if (search) {
+    search.addEventListener("input", function () {
+      filter(search.value);
+    });
+  }
+})();
 </script>
 </body>
 </html>
