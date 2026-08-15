@@ -158,6 +158,23 @@
     .empty-msg{display:none;color:var(--muted);padding:0.8em 0}
     .empty-msg.show{display:block}
 
+    /* Ko-fi */
+    .kofi{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .kofi:hover{ opacity: 0.92; text-decoration: none; }
+    .kofi img{ border: 0; height: 36px; width: auto; display: block; }
+    .kofi span{ font-size: 0.95em; color: #111; }
+
     footer{
       margin-top:3em;padding:2em 0 2.4em;
       border-top:1px solid var(--line);
@@ -365,7 +382,14 @@
       FPBible is free. If the work helps you, you can support it.
     </p>
     <p style="text-align:center">
-      <a class="btn btn-ghost" href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support on Ko-fi</a>
+      <a class="kofi" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer" aria-label="Support this project on Ko-fi">
+        <img height="36" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Buy Me a Coffee at ko-fi.com" />
+        <span>Support on Ko-fi</span>
+      </a>
+    </p>
+    <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin-top:0.8em">
+      If the button doesn’t load:
+      <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">ko-fi.com/B0B61QC1BU</a>
     </p>
   </section>
 </div>
@@ -376,7 +400,7 @@
     <p>
       <a href="/Bible/about.html">About</a> ·
       <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> ·
-      <a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a>
+      <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">Support</a>
     </p>
   </div>
 </footer>
