@@ -3,144 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>About FPBible — Fulfilled Prophecy Bible</title>
-  <meta name="description" content="About the Fulfilled Prophecy Bible: WEB text, AD 30–70 covenant transition, and New Creation reality." />
-
+  <title>About — The Fulfilled Prophecy Bible</title>
+  <meta name="description" content="What FPBible is: WEB text with study commentary that keeps Scripture inside its original covenant horizon — audience relevance, AD 30–70, New Creation now." />
+  <link rel="icon" href="/Bible/images/og-light.png" type="image/png" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
-
   <style>
     :root{
-      --bg: #fff;
-      --text: #111;
-      --muted: rgba(0,0,0,0.68);
-      --line: rgba(0,0,0,0.12);
-      --accent: #0066cc;
-      --warn: #f59e0b;
-      --radius: 14px;
-      --maxw: 920px;
+      --bg:#ffffff;
+      --bg-soft:#f7f8fa;
+      --text:#111111;
+      --muted:rgba(0,0,0,0.62);
+      --line:rgba(0,0,0,0.10);
+      --accent:#0066cc;
+      --radius:12px;
+      --maxw:900px;
     }
-    *{ box-sizing: border-box; }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0f1115;
+        --bg-soft:#171a21;
+        --text:#eef1f6;
+        --muted:rgba(238,241,246,0.62);
+        --line:rgba(255,255,255,0.10);
+        --accent:#5aa2ff;
+      }
+    }
+    *{box-sizing:border-box}
     body{
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-      color: var(--text);
-      background: var(--bg);
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      line-height:1.65;
+      color:var(--text);
+      background:var(--bg);
     }
-    a{ color: var(--accent); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 18px; }
-
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
     .topnav{
-      border-bottom: 1px solid var(--line);
-      background: #fafafa;
+      position:sticky;top:0;z-index:50;
+      border-bottom:1px solid var(--line);
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter:blur(10px);
     }
     .topnav .bar{
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 12px 0;
-      font-size: 0.95rem;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;gap:12px;flex-wrap:wrap;
     }
-    .topnav a{
-      color: var(--muted);
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
+    .brand{font-weight:700;color:var(--text)}
+    .brand:hover{text-decoration:none}
+    .nav{display:flex;flex-wrap:wrap;gap:4px 14px}
+    .nav a{color:var(--muted);font-size:0.94rem}
+    .nav a:hover{color:var(--text)}
+    .hero{text-align:center;padding:2.2em 0 1.4em}
+    .hero h1{margin:0.2em 0 0.35em;font-size:clamp(1.7rem,3.5vw,2.3rem);letter-spacing:-0.03em}
+    .tagline{color:var(--muted);max-width:55ch;margin:0 auto}
+    .cta{margin-top:1.2em;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      display:inline-block;padding:10px 18px;border-radius:9px;
+      font-weight:600;font-size:0.95rem;border:1px solid transparent;
     }
-    .topnav a:hover{
-      opacity: 1;
-      border-bottom-color: var(--accent);
-    }
-
-    /* Under construction banner styles kept unused */
-    .banner{
-      margin: 14px 0 0;
-      border: 1px solid rgba(0,0,0,0.12);
-      border-left: 4px solid var(--warn);
-      border-radius: var(--radius);
-      padding: 12px 14px;
-      background: linear-gradient(135deg, rgba(245,158,11,0.12) 0%, transparent 65%);
-    }
-    .banner strong{ font-weight: 650; }
-    .banner .small{ color: var(--muted); font-size: 0.95em; margin-top: 6px; }
-
-    .hero{
-      text-align: center;
-      padding: 1.8em 0 1.2em;
-    }
-    .hero h1{
-      margin: 0.5em 0 0.3em;
-      font-size: 2.1rem;
-    }
-    .hero .tagline{
-      color: var(--muted);
-      max-width: 62ch;
-      margin: 0 auto;
-      font-size: 1.08rem;
-    }
-    .hero .cta{ margin-top: 1.3em; }
-    .hero .cta a{
-      display: inline-block;
-      padding: 10px 22px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 500;
-    }
-    .hero .cta a:hover{ text-decoration: none; opacity: 0.92; }
-
-    section{ margin: 2em 0; }
-    h2{ font-size: 1.45rem; margin: 0 0 0.6em; }
-    h3{ font-size: 1.15rem; margin: 1.2em 0 0.4em; }
-    p{ margin: 0.6em 0; }
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{opacity:0.92;text-decoration:none}
+    .btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
+    .btn-ghost:hover{background:var(--bg-soft);text-decoration:none}
+    section{margin:2em 0}
+    h2{font-size:1.3rem;margin:0 0 0.7em;letter-spacing:-0.02em;padding-bottom:0.4em;border-bottom:1px solid var(--line)}
+    h3{margin:1em 0 0.35em;font-size:1.05rem}
     .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1.1em 1.2em;
-      margin: 1em 0;
-      background: #fff;
+      border:1px solid var(--line);border-radius:var(--radius);
+      padding:1.15em 1.2em;background:var(--bg);
     }
-    ul{ padding-left: 1.2em; }
-    li{ margin: 0.35em 0; }
-
+    .card p{margin:0.5em 0}
+    .card ul{margin:0.6em 0 0;padding-left:1.15em}
+    .card li{margin:0.35em 0}
     footer{
-      margin-top: 3em;
-      padding: 1.5em 0 2.5em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.92rem;
+      margin-top:3em;padding:2em 0 2.4em;
+      border-top:1px solid var(--line);
+      color:var(--muted);font-size:0.92rem;text-align:center;
     }
+    footer p{margin:0.4em 0}
   </style>
 </head>
 <body>
-
 <div class="topnav">
   <div class="wrap bar">
-    <a href="/Bible/">Home</a>
-    <a href="#about">About</a>
-    <a href="#how">How to Read</a>
-    <a href="#what">What It Is / Isn’t</a>
-    <a href="#support">Support</a>
+    <a class="brand" href="/Bible/">FPBible</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/Bible/">Home</a>
+      <a href="/Bible/#books">Books</a>
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
+      <a href="/Bible/eighth-day-reality.html">Eighth Day</a>
+      <a href="#support">Support</a>
+    </nav>
   </div>
 </div>
 
 <div class="wrap">
-
   <section class="hero">
-    <div style="margin-bottom: 1em;">
-      <img src="images/og-light.png" alt="FPBible Logo" style="max-width: 360px; width: 100%; height: auto;">
-    </div>
     <h1>About FPBible</h1>
     <p class="tagline">
-      FPBible is a reader-first Bible library using the <strong>World English Bible (WEB)</strong> as base text,
-      with commentary anchored in the fulfilled covenant-transition horizon (<strong>AD 30–70</strong>) and the lived reality of the <strong>New Creation</strong>.
+      The World English Bible with study commentary that keeps Scripture inside its original covenant horizon —
+      without delay theology.
     </p>
     <div class="cta">
-      <a href="/Bible/#start">Start Reading</a>
+      <a class="btn btn-primary" href="/Bible/#books">Browse books</a>
+      <a class="btn btn-ghost" href="/Bible/Prophecy/index.html">Prophecy Hub</a>
     </div>
   </section>
 
@@ -148,39 +116,34 @@
     <h2>What this project is</h2>
     <div class="card">
       <p>
-        The Fulfilled Prophecy Bible presents Scripture with notes and commentary that honour
-        <strong>audience relevance</strong> and <strong>time statements</strong>. Warnings, promises, and “coming” language
-        are read first for the generation that heard them — especially the transition from the Old Covenant order
-        to the New Covenant reality completed in the events culminating in AD 70.
+        FPBible is a reading edition of the <strong>World English Bible (WEB)</strong> with chapter-level commentary
+        shaped by three commitments: audience relevance, the AD&nbsp;30–70 covenant transition, and the New Creation
+        as present reality.
       </p>
       <p>
-        The goal is not a new translation, but a consistent reading path: WEB text, clear structure, and commentary
-        that refuses to push first-century fulfillment into an endless future.
+        The goal is not a new denomination or a debate club. It is a clear, scripture-first path for readers who want
+        the time statements of Jesus and the apostles taken at face value inside the first-century horizon.
       </p>
     </div>
   </section>
 
-  <section id="how">
+  <section id="method">
     <h2>How to read</h2>
     <div class="card">
       <h3>Audience relevance</h3>
-      <p>Ask first: who first heard these words, and what did they mean in that covenant setting?</p>
+      <p>Every time statement, warning, and promise is read first for the people who first heard it — the generation Jesus addressed.</p>
       <h3>Time statements</h3>
-      <p>“This generation,” “soon,” “at hand,” and similar language are treated as binding for the original audience unless the text itself expands the horizon.</p>
+      <p>“This generation,” “soon,” “at hand,” and related language are not emptied into a remote unknown. They mark the closing of the Old Covenant age.</p>
       <h3>New Creation as present</h3>
-      <p>After the cross, the Spirit, and the end of the old order, believers live in the New Covenant age — the “Eighth Day” reality of one new man in Christ.</p>
+      <p>What cannot be shaken remains. The unshakable Kingdom is the ground under the feet of those in Christ — not a postponed world after history ends.</p>
     </div>
   </section>
 
-  <section id="what">
+  <section id="clarity">
     <h2>What it is / isn’t</h2>
     <div class="card">
-      <ul>
-        <li><strong>Is:</strong> WEB Scripture with fulfillment-focused commentary and Prophecy Hub links.</li>
-        <li><strong>Is:</strong> Oriented to AD 30–70 as the decisive covenant transition.</li>
-        <li><strong>Is not:</strong> Delay theology or speculative futurism as the default frame.</li>
-        <li><strong>Is not:</strong> A claim that physical mortality has been abolished; physical death remains, but its covenantal sting is dealt with in Christ.</li>
-      </ul>
+      <p><strong>It is:</strong> a fulfilled-prophecy reading of Scripture that treats AD 70 as the historical close of the old order and the open reality of the New Covenant “one new man.”</p>
+      <p><strong>It is not:</strong> a denial of physical death, a claim that every personal struggle is finished, or hostility toward Jewish heritage. The judgment in view is covenantal and historical — the end of the Temple administration — not a license for contempt.</p>
     </div>
   </section>
 
@@ -188,19 +151,14 @@
     <h2>Support</h2>
     <div class="card">
       <p>FPBible is free to read. If the work helps you, you can support continued building and refinement.</p>
-      <p><a href="https://ko-fi.com/fpbible" target="_blank">Support on Ko-fi</a></p>
+      <p><a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">Support on Ko-fi</a></p>
     </div>
   </section>
 
   <footer>
     <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and first-century fulfillment.</p>
-    <p><a href="/Bible/">Home</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="https://ko-fi.com/fpbible" target="_blank">Support</a></p>
-    <p style="margin-top: 1em;">
-      If something looks inconsistent, it’s probably being rebuilt to the current layout.
-    </p>
+    <p><a href="/Bible/">Home</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">Support</a></p>
   </footer>
-
 </div>
-
 </body>
 </html>
