@@ -8,33 +8,37 @@ Keep this file in the repo. It is the machine-readable twin of standard.html.
 PROJECT IDENTITY & CORE LOCKS
 ==================================================
 - World English Bible (WEB) text verbatim (unedited).
-- Fulfilled covenant transition (AD 30–70).
-- ZERO FUTURISM. ZERO HEDGING (no "may", "might", "suggests").
-- ZERO META-LANGUAGE. Never explain how the text is read; state WHAT it means.
-- NON-DUALISTIC MONOTHEISM. In alignment with Isaiah 45:5–7 and 1 Cor 8:4, reject cosmic dualism. "Demons/Unclean Spirits" = First-century Hebrew idioms, personifications of severe affliction, mental exile, pagan darkness, and Old Covenant curse-bondage. NEVER immortal evil entities or fallen angels.
-- "Satan/Devil" = Covenantal Accuser / Law-condemnation; not a fallen angel.
-- "Exorcisms" = Divine accommodation using 1st-century dramatic drama to show Kingdom power over exile and curse; inaugurates Zechariah 13:2.
-- "Inauguration vs Consummation" = AD 30 miracles are INAUGURAL SIGNS; AD 70 is the final CONSUMMATION.
-- Rome is God's rod of anger against apostate Jerusalem. Rome is not Legion.
+- Fulfilled covenant transition lens (AD 30–70).
+- ZERO FUTURISM. ZERO HEDGING (no "may", "might", "suggests", "could", "appears to").
+- ZERO READER-FACING META-LANGUAGE. Never explain how or why the text is interpreted; state WHAT it means directly as objective biblical and historical truth.
+- BANNED META-PHRASES: "from a preterist perspective", "preterists view", "in this lens", "we interpret", "this project reads", "preterists believe".
+- NON-DUALISTIC MONOTHEISM: In strict alignment with ancient Hebrew monotheism (Isaiah 45:5–7; 1 Cor 8:4), reject Persian or pagan cosmic dualism. "Demons/Unclean Spirits" = First-century Hebrew idioms, personifications of severe physical/mental affliction, mental exile, pagan darkness, and Old Covenant curse-bondage under the Law. NEVER immortal, independent supernatural evil entities or fallen angels.
+- "Satan/Devil" = Covenantal Accuser/Adversary (*satan*) tied to Law-condemnation, carnal flesh, and apostate Judean persecuting systems; NOT a cosmic fallen archangel.
+- "Exorcisms" = Divine accommodation using 1st-century dramatic drama to show Kingdom power over exile and curse; inaugurates Zechariah 13:2 (consummated in AD 70).
+- "Inauguration vs Consummation" = AD 30–33 earthly miracles are INAUGURAL SIGNS/TYPES; AD 70 Parousia/Temple collapse is the final CONSUMMATION/ANTITYPE.
+- "Rome != Legion" = Pagan nations (Rome) serve as God's OT "rod of anger" (Isa 10) against apostate Jerusalem; Rome is NOT a demonic entity.
+- AUDIENCE RELEVANCE PRIORITY: Evaluate all time-statements (*tachos*, *en tasei*, *at hand*, *this generation*) as bounded strictly to the first-century hearers.
 
 ==================================================
 LOCKED 10-PART CHAPTER STRUCTURE
 ==================================================
 You MUST output the following exact sequence:
 
-1) Immediate Context (Direct paragraph; context before theology)
-2) Scripture (WEB, verbatim; bold ONLY for annotated terms)
-3) Fulfillment Notes (Exactly 3–5 bullet points; STRICTLY 1 line per bullet)
-4) Annotations (Key idiom/term definitions)
-5) Fulfillment Commentary (500+ WORDS MANDATORY; numbered subheadings: "1) Title")
-6) Prophecy Hub Links (Exactly 3 internal tags)
-7) Cross-References (Exactly 3 curated WEB links)
-8) New Creation Reality (Present identity, union, presence; zero moralism)
-9) Reflection (Exactly ONE presence-based question)
-10) Footer, Share & Navigation Block (Twitter, FB, Email share buttons + Ko-fi button + Nav links)
+1) Immediate Context (Direct paragraph; first-century audience, speaker, covenant moment, and immediate context before theology)
+2) Scripture (WEB, verbatim; bold ONLY for exact phrases defined in Annotations)
+3) Fulfillment Notes (Exactly 3–5 bullet points; STRICTLY 1 line per bullet—no multi-line mini-paragraphs)
+4) Annotations (Key idiom, term, or covenant symbol definitions)
+5) Fulfillment Commentary (STRICT 500+ WORDS MANDATORY; require at least 4 numbered subheadings: "1) Title", "2) Title", "3) Title", "4) Title")
+6) Prophecy Hub Links (Exactly 3 internal tags pointing to Prophecy Hub themes)
+7) Cross-References (Exactly 3 curated WEB links: OT Prophecy Source, NT Fulfillment, Epistle Confirmation)
+8) New Creation Reality (Present-day application detailing believer identity, union with Christ, absolute security, and freedom from Law-condemnation; zero moralism, legalism, or fear)
+9) Reflection (Exactly ONE presence-based question focused on resting in Christ's finished work; zero guilt or performance metrics)
+10) Footer, Share & Navigation Block (𝕏, FB, Email share buttons + Ko-fi button + Nav links)
 
 ==================================================
-AUDIT COMPLIANCE
+WORD COUNT FLOOR & AUDIT COMPLIANCE
 ==================================================
-Any generation where "Fulfillment Commentary" is under 500 words, treats demons as literal cosmic entities, or is missing Section 10 UI is an automatic FAIL.
+- Section 5 ("Fulfillment Commentary") MUST contain at least 500 words of thorough, high-quality exegesis divided across 4+ numbered subheadings. Aim for 550–650 words to guarantee full model compliance.
+- Any generation where "Fulfillment Commentary" is under 500 words, contains meta-language hedging, treats demons/satan as literal cosmic entities/fallen angels, or is missing Section 10 UI is an automatic HARD BUILD FAIL requiring an immediate rewrite.
+
 ASSERT MEANING. STATE FULFILLMENT. MOVE ON.
