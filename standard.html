@@ -4,407 +4,181 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Locked Standard — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Locked chapter standard for The Fulfilled Prophecy Bible: Fulfilled Prophecy study edition using the WEB translation with fulfillment notes and Study Commentary (AD 30–70 covenant transition lens)." />
-
+  <meta name="description" content="Locked chapter standard for The Fulfilled Prophecy Bible: WEB text, Fulfillment Notes, and Study Commentary (AD 30–70)." />
   <style>
-    :root{
-      --maxw: 900px;
-      --pad: 16px;
-      --line: rgba(0,0,0,0.12);
-      --line2: rgba(0,0,0,0.18);
-      --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.06);
-      --soft2: rgba(0,0,0,0.04);
-      --radius: 14px;
-    }
-
-    body{
-      font-family: system-ui, sans-serif;
-      line-height: 1.65;
-      margin: 0;
-      color: #111;
-      background: #fff;
-    }
-
-    .wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 18px var(--pad) 44px;
-    }
-
-    /* Sticky top nav */
-    .topnav{
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topnav .bar{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 10px var(--pad);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 12px;
-      align-items: center;
-    }
-    .topnav a{
-      text-decoration: underline;
-      font-size: 0.95em;
-      color: #111;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    .topnav .sep{ opacity: 0.45; }
-
-    /* Anchors offset for sticky nav */
-    section{ scroll-margin-top: 78px; }
-    #top{ scroll-margin-top: 0; }
-
-    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
-    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
-    h2{ font-size: 1.32rem; }
-    h3{ font-size: 1.06rem; }
-
-    p{ margin: 0.75em 0; }
-    ul{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
-    li{ margin: 0.42em 0; }
-
-    a{ color: inherit; text-decoration: underline; font-weight: 600; }
-    a:hover{ opacity: 0.85; }
-
-    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
-
-    .muted{ color: var(--muted); }
-
-    .rule, .fail{
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      margin: 1em 0;
-    }
-    .rule{ background: var(--soft2); }
-    .fail{ background: #fff6f6; border-color: rgba(0,0,0,0.14); }
-
-    /* Ko-fi */
-    .kofi{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .kofi:hover{ opacity: 0.9; }
-    .kofi span{
-      text-decoration: underline;
-      font-size: 0.95em;
-      font-weight: 600;
-    }
-
-    @media (max-width: 520px){
-      h1{ font-size: 1.85rem; }
-      .topnav .bar{ gap: 8px 10px; }
-    }
-      footer{
-      margin-top: 2.2em;
-      padding-top: 1.2em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.96em;
-    }
-    footer .row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-      justify-content: space-between;
-    }
+    :root{ --maxw:900px; --pad:16px; --line:rgba(0,0,0,0.12); --muted:rgba(0,0,0,0.72); --soft2:rgba(0,0,0,0.04); --radius:14px; }
+    body{ font-family:system-ui,sans-serif; line-height:1.65; margin:0; color:#111; background:#fff; }
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:18px var(--pad) 44px; }
+    .topnav{ position:sticky; top:0; z-index:20; background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+    .topnav .bar{ max-width:var(--maxw); margin:0 auto; padding:10px var(--pad); display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center; }
+    .topnav a{ text-decoration:underline; font-size:0.95em; color:#111; white-space:nowrap; font-weight:600; }
+    .topnav .sep{ opacity:0.45; }
+    section{ scroll-margin-top:78px; }
+    h1,h2,h3{ margin-top:1.6em; margin-bottom:0.45em; line-height:1.2; }
+    h1{ margin-top:0.9em; font-size:2.05rem; }
+    h2{ font-size:1.32rem; }
+    p{ margin:0.75em 0; }
+    ul{ margin:0.6em 0 0.95em 1.15em; padding:0; }
+    li{ margin:0.42em 0; }
+    a{ color:inherit; text-decoration:underline; font-weight:600; }
+    hr{ margin:2em 0; border:0; border-top:1px solid var(--line); }
+    .muted{ color:var(--muted); }
+    .rule,.fail{ padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); margin:1em 0; }
+    .rule{ background:var(--soft2); }
+    .fail{ background:#fff6f6; }
+    footer{ margin-top:2.2em; padding-top:1.2em; border-top:1px solid var(--line); color:var(--muted); font-size:0.96em; }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q22N178LJ8');
-  </script>
-
-  </head>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
+</head>
 <body>
-
 <a id="top"></a>
-
-<div class="topnav" aria-label="Standard navigation">
-  <div class="bar">
-    <a href="/Bible/#books">Bible</a><span class="sep">|</span>
-    <a href="/Bible/index.html">Index</a><span class="sep">|</span>
-    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
-    <a href="/Bible/Salvation/index.html">Salvation</a><span class="sep">|</span>
-    <a href="#rules">Rules</a><span class="sep">|</span>
-    <a href="#passfail">Pass/Fail</a><span class="sep">|</span>
-    <a href="#support">Support</a><span class="sep">|</span>
-    <a href="#top">Top</a>
-  </div>
-</div>
-
+<div class="topnav"><div class="bar">
+  <a href="/Bible/#books">Bible</a><span class="sep">|</span>
+  <a href="/Bible/index.html">Index</a><span class="sep">|</span>
+  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
+  <a href="#rules">Rules</a><span class="sep">|</span>
+  <a href="#passfail">Pass/Fail</a><span class="sep">|</span>
+  <a href="#support">Support</a><span class="sep">|</span>
+  <a href="#top">Top</a>
+</div></div>
 <div class="wrap">
-
   <h1>The Fulfilled Prophecy Bible — Locked Standard</h1>
   <h2>Non-Negotiable Format for Every Chapter Page</h2>
-
-  <p>
-    This page defines the project standard for the <strong>Fulfilled Prophecy Bible</strong>.
-    If a chapter page breaks this standard, it is considered a <strong>fail</strong> and must be corrected.
-    The goal is consistency, clarity, and a fulfilled / New Creation reading that does not drift.
-  </p>
-
-  <div class="rule">
-    <strong>Project scope:</strong>
-    <span class="muted">Scripture is presented as <strong>World English Bible (WEB)</strong> text, with <strong>Fulfillment Notes</strong> and <strong>Study Commentary</strong> (AD 30–70 covenant transition lens).</span>
-  </div>
+  <p>If a chapter page breaks this standard, it is a <strong>fail</strong> and must be corrected. This page and <code>_AI_PROMPT.txt</code> now lock the same order.</p>
+  <div class="rule"><strong>Project scope:</strong> <span class="muted">WEB text verbatim, Fulfillment Notes, and Study Commentary. AD 30–70 covenant transition. New Creation as present reality.</span></div>
 
   <hr />
-
   <section id="rules">
     <h2>1) Chapter Header (Required)</h2>
     <ul>
-      <li><strong>Book + Chapter title</strong> (clear and descriptive)</li>
-      <li><strong>One-line fulfilled theme statement</strong> (no fluff)</li>
+      <li><strong>Book + Chapter title</strong></li>
+      <li><strong>One-line fulfilled theme</strong> (present reality, not speculation)</li>
     </ul>
-    <div class="rule">
-      <strong>Rule:</strong> The theme line must signal fulfilled meaning (present reality), not distant speculation.
-    </div>
-
-    <hr />
 
     <h2>2) Scripture Text (WEB) — Primary Text</h2>
     <ul>
-      <li><strong>World English Bible (WEB)</strong> text is displayed as the primary text block</li>
-      <li>WEB Scripture is presented <strong>verbatim</strong> (word-for-word, unedited)</li>
-      <li>Keep formatting readable (paragraph flow is preferred over choppy fragments)</li>
-      <li>Do not edit the Scripture text</li>
-      <li>Optional: include a small “Text source: WEB” line</li>
+      <li>World English Bible, verbatim, unedited</li>
+      <li>Readable paragraph flow</li>
+      <li>Optional “Text source: WEB” line</li>
     </ul>
-    <div class="rule">
-      <strong>Rule:</strong> The Fulfilled Prophecy Bible is not a paraphrase or new translation. The WEB Scripture is verbatim. The value-add is notes + Study Commentary, not rewritten Scripture.
-    </div>
-
-    <hr />
+    <div class="rule"><strong>Rule:</strong> The value-add is notes + Study Commentary, not rewritten Scripture.</div>
 
     <h2>3) Fulfillment Notes (Required — Brief)</h2>
-    <p>
-      Immediately after the Scripture text, include <strong>3–5</strong> short “Fulfillment Notes.”
-      These must be <strong>one line each</strong>—no mini-commentary.
-    </p>
+    <p>Immediately after Scripture: <strong>3–5</strong> notes, <strong>one line each</strong>.</p>
     <ul>
-      <li>Audience relevance (“this generation,” near/soon language, apostolic horizon)</li>
-      <li>Prophetic idiom (covenantal “heaven and earth,” clouds, fire, etc.)</li>
-      <li>First-century resolution (AD 30–70 covenant transition)</li>
+      <li>Audience relevance</li>
+      <li>Prophetic idiom</li>
+      <li>First-century resolution (AD 30–70)</li>
     </ul>
-    <div class="fail">
-      <strong>Fail condition:</strong> Missing notes, or notes that become paragraphs = FAIL.
-    </div>
-
-    <hr />
+    <div class="fail"><strong>Fail:</strong> missing notes, or notes that become paragraphs.</div>
 
     <h2>4) Immediate Context Block (Required)</h2>
-    <p>A short, direct paragraph answering:</p>
-    <ul>
-      <li>Who is speaking</li>
-      <li>Who is being addressed</li>
-      <li>What covenant moment this is</li>
-      <li>Why it mattered <em>then</em></li>
-    </ul>
-    <div class="rule">
-      <strong>Rule:</strong> Context comes before theology. Always.
-    </div>
-
-    <hr />
+    <p>One short paragraph: who speaks, who is addressed, what covenant moment, why it mattered <em>then</em>.</p>
+    <div class="rule"><strong>Rule:</strong> Context comes before theology.</div>
 
     <h2>5) Study Commentary (The Spine)</h2>
-    <p>This is the required interpretive layer. It must explain:</p>
     <ul>
       <li>What the text meant in its original setting</li>
-      <li>How it resolves in the first-century covenant transition (AD 30–70)</li>
-      <li>What ended (law/temple/priesthood/age/condemnation systems)</li>
-      <li>What replaced it (presence/Spirit/New Creation life in Christ)</li>
+      <li>How it resolves in the AD 30–70 transition</li>
+      <li>What ended (law / temple / priesthood / age / condemnation)</li>
+      <li>What replaced it (presence / Spirit / New Creation life)</li>
     </ul>
     <div class="rule">
-      <strong>Rule:</strong> No “already / not yet.” Say what ended. Say what began.
+      <strong>Rule:</strong> No “already / not yet.” Say what ended. Say what began.<br />
+      <strong>Length:</strong> 700+ words. Numbered subheadings. No plot recap of the WEB block. No method lecture on the page.
     </div>
 
-    <hr />
+    <h2>6) Prophecy Hub Links</h2>
+    <p>Required when the chapter has judgment, coming/clouds, resurrection, heaven-and-earth, or kingdom-transfer language. Exactly 3 internal links.</p>
+    <div class="fail"><strong>Fail:</strong> prophetic tone with no Hub link.</div>
 
-    <h2>6) Prophecy Hub Links (Mandatory When Prophetic)</h2>
-    <p>If the chapter includes any of the following, a Prophecy Hub link is required:</p>
+    <h2>7) Cross-References</h2>
     <ul>
-      <li>Judgment language</li>
-      <li>Coming / clouds / day of the Lord language</li>
-      <li>Resurrection language</li>
-      <li>Heaven and earth / cosmic collapse language</li>
-      <li>Kingdom transfer / enthronement language</li>
+      <li>3–8 max</li>
+      <li>OT source + NT fulfillment + one epistle support</li>
     </ul>
-    <div class="fail">
-      <strong>Fail condition:</strong> Prophetic tone with no Prophecy Hub link = FAIL.
-    </div>
 
-    <hr />
-
-    <h2>7) Cross-References (Curated, Not Dumped)</h2>
-    <ul>
-      <li><strong>3–8 max</strong></li>
-      <li>Chosen for clarity, not volume</li>
-      <li>Include: OT source / NT fulfillment / one epistle support</li>
-    </ul>
-    <div class="rule">
-      <strong>Rule:</strong> Every cross-reference must clarify the text, not impress the reader.
-    </div>
-
-    <hr />
-
-    <h2>8) Key Idioms &amp; Language Notes (Only When Relevant)</h2>
-    <p>Short explanations only. No lexicon essays. Examples:</p>
-    <ul>
-      <li>Heaven and earth</li>
-      <li>Coming on the clouds</li>
-      <li>That day</li>
-      <li>Wrath / fire</li>
-      <li>Resurrection</li>
-      <li>World / age (aiōn)</li>
-      <li>Land (gē)</li>
-    </ul>
-    <div class="rule">
-      <strong>Rule:</strong> Add language notes only when the phrase is actually present or implied in the chapter.
-    </div>
-
-    <hr />
+    <h2>8) Key Idioms & Language Notes</h2>
+    <p>Only when the phrase is in the chapter. Short definitions. No lexicon essays.</p>
 
     <h2>9) New Creation Reality (Today)</h2>
-    <p>Answer the real question: “So what does this mean now?” Focus on:</p>
-    <ul>
-      <li>Identity</li>
-      <li>Union</li>
-      <li>Presence</li>
-      <li>Freedom from condemnation</li>
-      <li>Life in the Spirit</li>
-    </ul>
-    <div class="rule">
-      <strong>Rule:</strong> No moralism. No fear. No end-times anxiety.
-    </div>
-
-    <hr />
+    <p>Identity, union, presence, freedom from condemnation, life in the Spirit. No moralism, fear, or end-times anxiety.</p>
 
     <h2>10) Reflection Prompt</h2>
-    <p>One grounded question. It must be:</p>
-    <ul>
-      <li>Not guilt-based</li>
-      <li>Not performance-based</li>
-      <li>Presence-based</li>
-    </ul>
-    <div class="rule">
-      <strong>Rule:</strong> Keep it short and honest. One question only.
-    </div>
+    <p>Exactly one presence-based question. Not guilt. Not performance.</p>
 
-    <hr />
-
-    <h2>11) Navigation &amp; Consistency (Required)</h2>
-    <p>Every chapter page must include consistent navigation at both top and bottom:</p>
+    <h2>11) Navigation, Share, and Ko-fi</h2>
+    <p>Top and bottom nav:</p>
     <ul>
-      <li>Index</li>
-      <li>Previous</li>
-      <li>Next</li>
-      <li>Top anchor</li>
-      <li>Prophecy Hub link (book level or chapter level — but consistent)</li>
+      <li>Bible Index | Book Index | Preface (if the book has one) | Previous | Next | Prophecy Hub</li>
     </ul>
-    <div class="fail">
-      <strong>Fail condition:</strong> Missing nav, broken nav, or inconsistent layout = FAIL.
-    </div>
+    <p>After the reflection, every chapter includes:</p>
+    <ul>
+      <li>Share this study: X Twitter | Facebook | Email</li>
+      <li>Ko-fi button to https://ko-fi.com/B0B61QC1BU</li>
+    </ul>
+    <div class="fail"><strong>Fail:</strong> missing nav, missing share, or missing Ko-fi.</div>
   </section>
 
   <hr />
+  <section id="theology">
+    <h2>Theological locks</h2>
+    <ul>
+      <li>The End = end of the Mosaic age (AD 70).</li>
+      <li>Coming / Parousia = covenantal vindication and judgment on Jerusalem.</li>
+      <li>Kingdom = present New Creation reality.</li>
+      <li>Resurrection in NT timing texts = covenantal transition into New Creation life.</li>
+      <li>Heaven and earth = covenant-world language.</li>
+      <li>AD 30–33 miracles, exorcisms, and resuscitations are inaugural signs and pledges. AD 70 is the consummation. Do not collapse them.</li>
+      <li>Rome is the rod against apostate Jerusalem. Legion is Satanic bondage and Old Covenant curse — not Rome.</li>
+      <li>Physical mortality continues. Covenantal death and condemnation of the old order ended.</li>
+    </ul>
+    <div class="fail"><strong>Fail:</strong> futurism, already/not-yet, method language on the chapter page, or hedging in the commentary.</div>
+  </section>
 
+  <hr />
   <section id="passfail">
     <h2>Pass / Fail Summary</h2>
-
     <p><strong>A chapter FAILS if:</strong></p>
     <ul>
-      <li>It sounds future-oriented without clear fulfilled clarification</li>
-      <li>It lacks fulfillment explanation</li>
+      <li>It sounds future-oriented without fulfilled clarification</li>
+      <li>Study Commentary is under 700 words or is a Scripture recap</li>
       <li>It lacks Prophecy Hub linkage where prophetic language is present</li>
-      <li>It skips commentary</li>
-      <li>It breaks layout consistency</li>
+      <li>It skips commentary, share, or Ko-fi</li>
+      <li>It breaks this section order</li>
     </ul>
-
     <p><strong>A chapter PASSES if:</strong></p>
     <ul>
       <li>Fulfillment is unmistakable</li>
       <li>Context is clear</li>
-      <li>Language is modern and clean</li>
-      <li>Navigation and structure are consistent across the book</li>
+      <li>Language is clean and declarative</li>
+      <li>Structure and chrome match this page</li>
     </ul>
   </section>
 
   <hr />
-
   <section id="support">
     <h2>Support</h2>
     <p class="muted">If this project helps you, you can support it here.</p>
-
-    <p>
-      <a class="kofi" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer" aria-label="Support this project on Ko-fi">
-        <img height="36" style="border:0;height:36px;" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Ko-fi" />
-        <span>Support on Ko-fi</span>
-      </a>
-    </p>
-
-    <p class="muted">
-      If the button doesn’t load, use this link:
-      <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">ko-fi.com/B0B61QC1BU</a>
-    </p>
+    <p><a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener"><img height="36" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Ko-fi" /></a></p>
   </section>
 
   <hr />
-
   <p>
     Share this study:
-    <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 Twitter</a>
+    <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">ᵔ Twitter</a>
     <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-    <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&amp;body='+encodeURIComponent(location.href);return true;">Email</a>
+    <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
   </p>
-  <hr />
-
-  <nav class="muted" aria-label="Footer navigation">
+  <nav class="muted">
     <a href="#top">Top</a> ·
-    <a href="/Bible/#books">Bible</a> ·
     <a href="/Bible/index.html">Index</a> ·
-    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> ·
-    <a href="/Bible/Salvation/index.html">Salvation</a> ·
-    <a href="#rules">Rules</a> ·
-    <a href="#passfail">Pass/Fail</a> ·
-    <a href="#support">Support</a>
+    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
   </nav>
-
 </div>
-  <footer>
-    <div class="row">
-      <div>
-        <strong>The Fulfilled Prophecy Bible</strong> — Text based on the <strong>World English Bible (WEB)</strong> with Fulfilled Prophecy Study Commentary
-      </div>
-      <div>
-        <a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a> · <a href="#top">Back to top</a>
-      </div>
-    </div>
-    <p class="note">
-      Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-    </p>
-  </footer>
-
-
+<footer>
+  <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text with Fulfilled Prophecy Study Commentary. Same lock as <code>_AI_PROMPT.txt</code>.</p>
+</footer>
 </body>
 </html>
