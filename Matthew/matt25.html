@@ -4,374 +4,418 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matthew 25 — Readiness, Stewardship, and Covenant Separation — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Matthew 25 continues the same Olivet Discourse flow from Matthew 24: Jesus is still preparing His first-century disciples to live wisely through the closing years of the Mosaic age, with Jerusalem’s covenant crisis approaching and the question of faithful readiness hanging over the whole “end of the age” timeframe. - Fulfilled Prophecy study edition using the WEB translation." />
+  <meta name="description" content="Matthew 25 continues the Olivet Discourse flow: Jesus prepares His first-century disciples for Jerusalem's covenant crisis and the close of the Mosaic age using the WEB translation." />
 
   <style>
     :root{
-      --max: 980px;
+      --maxw: 900px;
+      --pad: 16px;
       --line: rgba(0,0,0,0.12);
       --line2: rgba(0,0,0,0.18);
-      --soft: rgba(0,0,0,0.04);
       --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.06);
+      --soft2: rgba(0,0,0,0.04);
       --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
+
     body{
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.65;
       margin: 0;
       color: #111;
       background: #fff;
     }
+
     .wrap{
-      max-width: var(--max);
+      max-width: var(--maxw);
       margin: 0 auto;
-      padding: 18px 16px 44px;
+      padding: 18px var(--pad) 44px;
     }
-    h1{ font-size: 2.05rem; margin: 18px 0 6px; }
-    h2{
-      font-size: 1.35rem;
-      margin: 22px 0 10px;
-      padding-bottom: 6px;
+
+    .topnav{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--line);
     }
-    h3{ font-size: 1.08rem; margin: 16px 0 8px; }
-    p{ margin: 10px 0; }
-    hr{ margin: 26px 0; border: 0; border-top: 1px solid var(--line); }
-
-    nav{
+    .topnav .bar{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px var(--pad);
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 14px 0;
-      font-size: 0.95rem;
+      gap: 10px 12px;
+      align-items: center;
     }
-    nav a{
-      text-decoration: none;
+    .topnav a{
+      text-decoration: underline;
+      font-size: 0.95em;
       color: #111;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
+      white-space: nowrap;
+      font-weight: 600;
     }
+    .topnav .sep{ opacity: 0.45; }
 
-    .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 14px 14px;
-      background: #fff;
-    }
-    .note{
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
+    section{ scroll-margin-top: 78px; }
+    #top{ scroll-margin-top: 0; }
 
-    .scripture-text{ font-size: 1.06rem; }
-    .scripture-text p{ margin: 10px 0; }
+    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
+    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
+    h2{ font-size: 1.32rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    h3{ font-size: 1.06rem; }
+
+    p{ margin: 0.75em 0; }
+    ul, ol{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
+    li{ margin: 0.42em 0; }
+
+    a{ color: inherit; text-decoration: underline; font-weight: 600; }
+    a:hover{ opacity: 0.85; }
+
+    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
+
+    .muted{ color: var(--muted); }
+
+    .scripture-text{ font-size: 1.05rem; }
     .v-num{
       font-weight: 700;
-      font-size: 0.72em;
+      font-size: 0.75em;
       vertical-align: super;
-      opacity: 0.6;
-      margin-right: 6px;
+      opacity: 0.65;
+      margin-right: 4px;
     }
 
     .annotation-block{
-      background: var(--soft);
+      background: var(--soft2);
       border-left: 3px solid var(--line2);
-      padding: 12px 14px;
-      border-radius: 10px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      margin: 1em 0;
     }
     .annotation-item{ margin: 8px 0; font-size: 0.98rem; }
 
-    ul{ margin: 8px 0 0 18px; }
-    li{ margin: 7px 0; }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
 
-    .kofi{ margin-top: 18px; }
-    .kofi img{ border:0; height:36px; }
-      footer{
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: #333;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    footer{
       margin-top: 2.2em;
       padding-top: 1.2em;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.96em;
     }
-    footer .row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    /* Hide specific UI elements */
-    .hide-element { display: none; }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Q22N178LJ8');
   </script>
-
-  </head>
+</head>
 
 <body>
 <a id="top"></a>
+
+<div class="topnav" aria-label="Standard navigation">
+  <div class="bar">
+    <a href="/Bible/index.html">Bible Index</a><span class="sep">|</span>
+    <a href="/Bible/Matthew/index.html">Book Index</a><span class="sep">|</span>
+    <a href="/Bible/Matthew/matt24.html">Prev</a><span class="sep">|</span>
+    <a href="/Bible/Matthew/matt26.html">Next</a><span class="sep">|</span>
+    <a href="/Bible/Prophecy/index.html">Prophecy Hub</a><span class="sep">|</span>
+    <a href="#top">Top</a>
+  </div>
+</div>
+
 <div class="wrap">
 
-<nav>
-  <a href="/Bible/index.html">The Fulfilled Prophecy Bible Index</a>
-  <a href="index.html">Book Index</a>
-  <a href="matt24.html">Prev</a>
-  <a href="matt26.html">Next</a>
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
-  <a href="#top">Top</a>
-</nav>
+  <h1>Matthew 25 — Readiness, Stewardship, and Covenant Separation</h1>
 
-<h1>Matthew 25 — Readiness, Stewardship, and Covenant Separation</h1>
+  <hr />
 
-<hr />
+  <!-- SECTION 1: Immediate Context -->
+  <section id="context">
+    <h2>1) Immediate Context</h2>
+    <p>
+      Matthew 25 continues the single uninterrupted discourse begun in Matthew 24, delivered by Jesus on the Mount of Olives directly to His first-century disciples. Having established the bounded timeframe for Jerusalem's judgment and the Temple's destruction ("this generation"), Jesus uses these parables to instruct His immediate hearers on covenantal readiness, faithful stewardship, and the imminent separation between the faithful remnant and apostate Israel during the transition from the Mosaic age to the New Covenant reign.
+    </p>
+  </section>
 
-<h2>Immediate Context</h2>
-<p>
-Matthew 25 continues the same Olivet Discourse flow from Matthew 24: Jesus is still preparing His first-century disciples to live wisely through the closing years of the Mosaic age, with Jerusalem’s covenant crisis approaching and the question of faithful readiness hanging over the whole “end of the age” timeframe.
-</p>
+  <hr />
 
-<hr />
+  <!-- SECTION 2: Scripture Text (WEB) -->
+  <section id="scripture">
+    <h2>2) Scripture (WEB)</h2>
+    <div class="scripture-text">
+      <p>
+        <span class="v-num">1</span>“<strong>Then the Kingdom of Heaven</strong> will be like ten virgins who took their lamps and went out to meet the bridegroom.
+        <span class="v-num">2</span>Five of them were foolish, and five were wise.
+        <span class="v-num">3</span>Those who were foolish, when they took their lamps, took no oil with them,
+        <span class="v-num">4</span>but the wise took oil in their vessels with their lamps.
+        <span class="v-num">5</span>Now while the bridegroom delayed, they all slumbered and slept.
+      </p>
+      <p>
+        <span class="v-num">6</span>But at midnight there was a cry, ‘Behold! The bridegroom is coming! Come out to meet him!’
+        <span class="v-num">7</span>Then all those virgins arose, and trimmed their lamps.
+        <span class="v-num">8</span>The foolish said to the wise, ‘Give us some of your oil, for our lamps are going out.’
+        <span class="v-num">9</span>But the wise answered, saying, ‘What if there isn’t enough for us and you? You go rather to those who sell, and buy for yourselves.’
+        <span class="v-num">10</span>While they went away to buy, the bridegroom came, and those who were ready went in with him to the wedding feast, and the door was shut.
+      </p>
+      <p>
+        <span class="v-num">11</span>Afterward the other virgins also came, saying, ‘Lord, Lord, open to us.’
+        <span class="v-num">12</span>But he answered, ‘Most certainly I tell you, I don’t know you.’
+        <span class="v-num">13</span><strong>Watch therefore</strong>, for you don’t know the day nor the hour in which the Son of Man is coming.
+      </p>
+      <p>
+        <span class="v-num">14</span>“For it is like a man going into another country, who called his own servants and entrusted his goods to them.
+        <span class="v-num">15</span>To one he gave five talents, to another two, to another one, to each according to his own ability. Then he went on his journey.
+        <span class="v-num">16</span>Immediately he who received the five talents went and traded with them, and made another five talents.
+        <span class="v-num">17</span>In the same way, he also who got the two gained another two.
+        <span class="v-num">18</span>But he who received the one talent went away and dug in the earth and hid his lord’s money.
+      </p>
+      <p>
+        <span class="v-num">19</span>“Now <strong>after a long time</strong> the lord of those servants came, and settled accounts with them.
+        <span class="v-num">20</span>He who received the five talents came and brought another five talents, saying, ‘Lord, you delivered to me five talents. Behold, I have gained another five talents in addition to them.’
+        <span class="v-num">21</span>“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’
+        <span class="v-num">22</span>“He also who got the two talents came and said, ‘Lord, you delivered to me two talents. Behold, I have gained another two talents in addition to them.’
+        <span class="v-num">23</span>“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things. I will set you over many things. Enter into the joy of your lord.’
+      </p>
+      <p>
+        <span class="v-num">24</span>“He also who had received the one talent came and said, ‘Lord, I knew you that you are a hard man, reaping where you didn’t sow, and gathering where you didn’t scatter.
+        <span class="v-num">25</span>I was afraid, and went away and hid your talent in the earth. Behold, you have what is yours.’
+        <span class="v-num">26</span>“But his lord answered him, ‘You wicked and slothful servant. You knew that I reap where I didn’t sow, and gather where I didn’t scatter.
+        <span class="v-num">27</span>You ought therefore to have deposited my money with the bankers, and at my coming I should have received back my own with interest.
+        <span class="v-num">28</span>Take away therefore the talent from him and give it to him who has the ten talents.
+        <span class="v-num">29</span>For to everyone who has will be given, and he will have abundance, but from him who doesn’t have, even that which he has will be taken away.
+        <span class="v-num">30</span>Throw out the unprofitable servant into the <strong>outer darkness</strong>, where there will be <strong>weeping and gnashing of teeth</strong>.’
+      </p>
+      <p>
+        <span class="v-num">31</span>“But when the Son of Man comes in his glory, and all the holy angels with him, then he will sit on the throne of his glory.
+        <span class="v-num">32</span>Before him <strong>all the nations</strong> will be gathered, and he will separate them one from another, as a shepherd separates the sheep from the goats.
+        <span class="v-num">33</span>He will set the sheep on his right hand, but the goats on the left.
+      </p>
+      <p>
+        <span class="v-num">34</span>Then the King will tell those on his right hand, ‘Come, blessed of my Father, inherit the Kingdom prepared for you from the foundation of the world;
+        <span class="v-num">35</span>for I was hungry and you gave me food to eat. I was thirsty and you gave me drink. I was a stranger and you took me in.
+        <span class="v-num">36</span>I was naked and you clothed me. I was sick and you visited me. I was in prison and you came to me.’
+      </p>
+      <p>
+        <span class="v-num">37</span>“Then the righteous will answer him, saying, ‘Lord, when did we see you hungry and feed you, or thirsty and give you a drink?
+        <span class="v-num">38</span>When did we see you as a stranger and take you in, or naked and clothe you?
+        <span class="v-num">39</span>When did we see you sick or in prison and come to you?’
+        <span class="v-num">40</span>“The King will answer them, ‘Most certainly I tell you, because you did it to one of the <strong>least of these my brothers</strong>, you did it to me.’
+      </p>
+      <p>
+        <span class="v-num">41</span>Then he will say also to those on the left hand, ‘Depart from me, you cursed, into the <strong>eternal fire</strong> which is prepared for the devil and his angels;
+        <span class="v-num">42</span>for I was hungry, and you didn’t give me food to eat; I was thirsty, and you gave me no drink;
+        <span class="v-num">43</span>I was a stranger, and you didn’t take me in; naked, and you didn’t clothe me; sick, and in prison, and you didn’t visit me.’
+      </p>
+      <p>
+        <span class="v-num">44</span>“Then they will also answer, saying, ‘Lord, when did we see you hungry, or thirsty, or a stranger, or naked, or sick, or in prison, and didn’t help you?’
+        <span class="v-num">45</span>“Then he will answer them, saying, ‘Most certainly I tell you, because you didn’t do it to one of the least of these, you didn’t do it to me.’
+        <span class="v-num">46</span>These will go away into <strong>eternal punishment</strong>, but the righteous into <strong>eternal life</strong>.”
+      </p>
+    </div>
+  </section>
 
-<h2>Scripture (WEB)</h2>
-<div class="scripture-text">
+  <hr />
 
-  <p>
-    <span class="v-num">1</span>“<strong>Then the Kingdom of Heaven</strong> will be like ten virgins who took their lamps and went out to meet the bridegroom.
-    <span class="v-num">2</span>Five of them were foolish, and five were wise.
-    <span class="v-num">3</span>Those who were foolish, when they took their lamps, took no oil with them,
-    <span class="v-num">4</span>but the wise took oil in their vessels with their lamps.
-    <span class="v-num">5</span>Now while the bridegroom delayed, they all slumbered and slept.
-  </p>
+  <!-- SECTION 3: Fulfillment Notes -->
+  <section id="notes">
+    <h2>3) Fulfillment Notes</h2>
+    <ul>
+      <li>These parables are directly addressed to first-century disciples being trained to remain faithful during the closing years of the Mosaic age.</li>
+      <li>"Then the Kingdom of Heaven" anchors the timing to the inaugural covenant transition, not a distant end-of-world timeline.</li>
+      <li>"Watch therefore" continues the Matthew 24 command to maintain readiness within a known generation-bounded window.</li>
+      <li>The separation imagery depicts the divine covenant lawsuit against apostate Israel, fully consummated in AD 70.</li>
+      <li>"Eternal" (aionios) language denotes age-defining covenant consequences and entrance into the realized New Creation reign.</li>
+    </ul>
+  </section>
 
-  <p>
-    <span class="v-num">6</span>But at midnight there was a cry, ‘Behold! The bridegroom is coming! Come out to meet him!’
-    <span class="v-num">7</span>Then all those virgins arose, and trimmed their lamps.‡
-    <span class="v-num">8</span>The foolish said to the wise, ‘Give us some of your oil, for our lamps are going out.’
-    <span class="v-num">9</span>But the wise answered, saying, ‘What if there isn’t enough for us and you? You go rather to those who sell, and buy for yourselves.’
-    <span class="v-num">10</span>While they went away to buy, the bridegroom came, and those who were ready went in with him to the wedding feast, and the door was shut.
-  </p>
+  <hr />
 
-  <p>
-    <span class="v-num">11</span>Afterward the other virgins also came, saying, ‘Lord, Lord, open to us.’
-    <span class="v-num">12</span>But he answered, ‘Most certainly I tell you, I don’t know you.’
-    <span class="v-num">13</span><strong>Watch therefore</strong>, for you don’t know the day nor the hour in which the Son of Man is coming.
-  </p>
+  <!-- SECTION 4: Annotations -->
+  <section id="annotations">
+    <h2>4) Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>Then the Kingdom of Heaven:</strong> A transition marker tying these parables strictly to the timing of the covenant crisis outlined in Matthew 24.</div>
+      <div class="annotation-item"><strong>Watch therefore:</strong> Readiness language for first-century disciples living in the closing decades preceding the destruction of Jerusalem.</div>
+      <div class="annotation-item"><strong>After a long time:</strong> Delay within a single generation-scale testing window (AD 30–70), not a multi-millennial postponement.</div>
+      <div class="annotation-item"><strong>Outer darkness:</strong> Old Covenant exclusion imagery representing expulsion from the kingdom banquet into covenant destruction.</div>
+      <div class="annotation-item"><strong>Weeping and gnashing of teeth:</strong> Prophetic idiom denoting severe anguish and judgment coming upon the rejected Mosaic order.</div>
+      <div class="annotation-item"><strong>All the nations:</strong> "Ethnē" gathered for covenantal sorting within the historical administration of Christ's enthroned authority.</div>
+      <div class="annotation-item"><strong>Least of these my brothers:</strong> Identification of Christ with His persecuted Apostolic messengers during the pre-AD 70 tribulation.</div>
+      <div class="annotation-item"><strong>Eternal fire:</strong> Age-defining (aionios) judgment language denoting divine destruction of the old order, not pagan post-mortem torture.</div>
+      <div class="annotation-item"><strong>Eternal punishment:</strong> Irreversible covenant judicial sentence belonging to the age-transition verdict.</div>
+      <div class="annotation-item"><strong>Eternal life:</strong> Life of the New Covenant Age-to-Come, fully established and realized through the finished work of Christ.</div>
+    </div>
+  </section>
 
-  <p>
-    <span class="v-num">14</span>“For it is like a man going into another country, who called his own servants and entrusted his goods to them.
-    <span class="v-num">15</span>To one he gave five talents,‡ to another two, to another one, to each according to his own ability. Then he went on his journey.
-    <span class="v-num">16</span>Immediately he who received the five talents went and traded with them, and made another five talents.
-    <span class="v-num">17</span>In the same way, he also who got the two gained another two.
-    <span class="v-num">18</span>But he who received the one talent went away and dug in the earth and hid his lord’s money.
-  </p>
+  <hr />
 
-  <p>
-    <span class="v-num">19</span>“Now <strong>after a long time</strong> the lord of those servants came, and settled accounts with them.
-    <span class="v-num">20</span>He who received the five talents came and brought another five talents, saying, ‘Lord, you delivered to me five talents. Behold, I have gained another five talents in addition to them.’
-    <span class="v-num">21</span>“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’
-    <span class="v-num">22</span>“He also who got the two talents came and said, ‘Lord, you delivered to me two talents. Behold, I have gained another two talents in addition to them.’
-    <span class="v-num">23</span>“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things. I will set you over many things. Enter into the joy of your lord.’
-  </p>
+  <!-- SECTION 5: Fulfillment Commentary (500+ Words Floor) -->
+  <section id="commentary">
+    <h2>5) Fulfillment Commentary</h2>
 
-  <p>
-    <span class="v-num">24</span>“He also who had received the one talent came and said, ‘Lord, I knew you that you are a hard man, reaping where you didn’t sow, and gathering where you didn’t scatter.
-    <span class="v-num">25</span>I was afraid, and went away and hid your talent in the earth. Behold, you have what is yours.’
-    <span class="v-num">26</span>“But his lord answered him, ‘You wicked and slothful servant. You knew that I reap where I didn’t sow, and gather where I didn’t scatter.
-    <span class="v-num">27</span>You ought therefore to have deposited my money with the bankers, and at my coming I should have received back my own with interest.
-    <span class="v-num">28</span>Take away therefore the talent from him and give it to him who has the ten talents.
-    <span class="v-num">29</span>For to everyone who has will be given, and he will have abundance, but from him who doesn’t have, even that which he has will be taken away.
-    <span class="v-num">30</span>Throw out the unprofitable servant into the <strong>outer darkness</strong>, where there will be <strong>weeping and gnashing of teeth</strong>.’
-  </p>
+    <h3>1) One Chapter, One Control: Matthew 24 Still Governs Matthew 25</h3>
+    <p>
+      Matthew 25 is not a shift to a new distant topic; it is the ethical and covenantal application of the Olivet Discourse begun in Matthew 24. The disciples asked concerning the destruction of the Temple, Christ’s parousia, and the end of the Mosaic age. Jesus provided specific historical signs, geographical markers, and an absolute time-lock ("this generation"). Matthew 25 presents the practical imperative of that approaching covenant crisis—how the first-century disciples were to remain vigilant, steward their entrusted Gospel commission, and understand the imminent separation between the true spiritual remnant and apostate Judaism.
+    </p>
 
-  <p>
-    <span class="v-num">31</span>“But when the Son of Man comes in his glory, and all the holy angels with him, then he will sit on the throne of his glory.
-    <span class="v-num">32</span>Before him <strong>all the nations</strong> will be gathered, and he will separate them one from another, as a shepherd separates the sheep from the goats.
-    <span class="v-num">33</span>He will set the sheep on his right hand, but the goats on the left.
-  </p>
+    <h3>2) The Ten Virgins: Covenant Readiness vs. Religious Formalism</h3>
+    <p>
+      The opening phrase, "Then the Kingdom of Heaven," explicitly locks the temporal setting of this parable to the era of covenant transition already in view. The distinction between the wise and foolish virgins contrasts genuine covenant faith with national self-assurance. First-century Israel assumed inherited readiness based on temple ritual, lineage, and Mosaic tradition. However, the true "oil" represents active covenant alignment and spiritual preparedness that cannot be transferred at the moment of crisis. The shutting of the door reflects the judicial closing of the Old Covenant order, leaving unfaithful Judea locked out of the Messianic wedding feast while the desolate house collapsed in AD 70.
+    </p>
 
-  <p>
-    <span class="v-num">34</span>Then the King will tell those on his right hand, ‘Come, blessed of my Father, inherit the Kingdom prepared for you from the foundation of the world;
-    <span class="v-num">35</span>for I was hungry and you gave me food to eat. I was thirsty and you gave me drink. I was a stranger and you took me in.
-    <span class="v-num">36</span>I was naked and you clothed me. I was sick and you visited me. I was in prison and you came to me.’
-  </p>
+    <h3>3) The Talents: Gospel Stewardship During the AD 30–70 Overlap</h3>
+    <p>
+      The Parable of the Talents illustrates the accountability of Christ's servants during the forty-year transition period between the inauguration of the Kingdom at the cross and its consummation at the Temple's fall. The phrase "after a long time" represents a sufficient interval for testing within that single generation. The wicked servant's failure stems from a carnal, fear-driven view of God, mirroring the Judean religious leadership who buried God's truth, rejected His Son, and persecuted His apostles. The verdict of "outer darkness" with "weeping and gnashing of teeth" is a recurring prophetic idiom for covenant exclusion and national ruin during the Roman-Jewish War.
+    </p>
 
-  <p>
-    <span class="v-num">37</span>“Then the righteous will answer him, saying, ‘Lord, when did we see you hungry and feed you, or thirsty and give you a drink?
-    <span class="v-num">38</span>When did we see you as a stranger and take you in, or naked and clothe you?
-    <span class="v-num">39</span>When did we see you sick or in prison and come to you?’
-    <span class="v-num">40</span>“The King will answer them, ‘Most certainly I tell you, because you did it to one of the <strong>least of these my brothers</strong>,§ you did it to me.’
-  </p>
+    <h3>4) Sheep and Goats: The Covenant Verdict on the Nations</h3>
+    <p>
+      The judicial scene of the sheep and goats depicts the enthroned Son of Man exercising sovereign authority over the nations within redemptive history. The primary test applied in this evaluation is how the nations ("ethnē") treated "the least of these my brothers"—specifically, Christ's commissioned apostles and disciples sent into the Roman world prior to AD 70. Reception of Christ’s messengers constituted reception of Christ Himself. The verdict executes the Old Covenant lawsuit, vindicating the persecuted saints and sealing the judgment of those who rejected the gospel of the Kingdom.
+    </p>
 
-  <p>
-    <span class="v-num">41</span>Then he will say also to those on the left hand, ‘Depart from me, you cursed, into the <strong>eternal fire</strong> which is prepared for the devil and his angels;
-    <span class="v-num">42</span>for I was hungry, and you didn’t give me food to eat; I was thirsty, and you gave me no drink;
-    <span class="v-num">43</span>I was a stranger, and you didn’t take me in; naked, and you didn’t clothe me; sick, and in prison, and you didn’t visit me.’
-  </p>
+    <h3>5) Age-Defining Consequence: Resolving the Aionios Judgment</h3>
+    <p>
+      The term "eternal" (aionios) in this text pertains directly to the nature of the age (aion) to which the judgment belongs. It signifies a decisive, permanent covenant verdict rather than endless post-mortem duration in medieval terms. The destruction of the Old Covenant world in AD 70 was total, final, and irreversible. The righteous entered fully into the realized blessings of the New Covenant age ("eternal life"), while the rejected order passed into complete covenantal devastation ("eternal punishment"), demonstrating that the reign of God is fully established in absolute righteousness.
+    </p>
+  </section>
 
-  <p>
-    <span class="v-num">44</span>“Then they will also answer, saying, ‘Lord, when did we see you hungry, or thirsty, or a stranger, or naked, or sick, or in prison, and didn’t help you?’
-    <span class="v-num">45</span>“Then he will answer them, saying, ‘Most certainly I tell you, because you didn’t do it to one of the least of these, you didn’t do it to me.’
-    <span class="v-num">46</span>These will go away into <strong>eternal punishment</strong>, but the righteous into <strong>eternal life</strong>.”
-  </p>
+  <hr />
 
-</div>
+  <!-- SECTION 6: Prophecy Hub Links -->
+  <section id="hub-links">
+    <h2>6) Prophecy Hub Links</h2>
+    <ul>
+      <li><a href="/Bible/Prophecy/index.html#this-generation">This Generation</a></li>
+      <li><a href="/Bible/Prophecy/index.html#outer-darkness">Outer Darkness</a></li>
+      <li><a href="/Bible/Prophecy/index.html#judgment">Covenant Judgment</a></li>
+    </ul>
+  </section>
 
-<hr />
+  <hr />
 
-<h2 class="hide-element">Fulfillment Notes</h2>
-<div class="card">
-  <p>These parables are addressed to first-century disciples being trained to remain faithful as the Mosaic age neared its end.</p>
-  <p>“Then the Kingdom of Heaven” frames the scene as covenant transition timing, not a detached end-of-planet timeline.</p>
-  <p>“Watch therefore” continues the Matthew 24 call to readiness in a known season with an unknown exact day/hour.</p>
-  <p>The separation imagery culminates the covenant lawsuit against an unfaithful order, reaching public resolution in AD 70.</p>
-  <p>“Eternal” language here speaks to decisive, age-defining covenant consequence and life in the New Covenant reality, not futurist delay.</p>
-</div>
+  <!-- SECTION 7: Cross-References -->
+  <section id="cross-refs">
+    <h2>7) Cross-References</h2>
+    <ul>
+      <li><a href="https://ebible.org/eng-web/PSA110.htm" target="_blank" rel="noopener noreferrer">Psalm 110 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/DAN07.htm" target="_blank" rel="noopener noreferrer">Daniel 7 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/MAT10.htm" target="_blank" rel="noopener noreferrer">Matthew 10 (WEB)</a></li>
+    </ul>
+  </section>
 
-<hr />
+  <hr />
 
-<h2>Annotations</h2>
-<div class="annotation-block">
-  <div class="annotation-item"><strong>Then the Kingdom of Heaven:</strong> A transition marker tying these warnings to the imminent change of ages in the first century.</div>
-  <div class="annotation-item"><strong>Watch therefore:</strong> Readiness language for disciples living in the closing decades before Jerusalem’s judgment.</div>
-  <div class="annotation-item"><strong>After a long time:</strong> Delay within a generation-scale window, not a permission slip for a 2,000-year postponement.</div>
-  <div class="annotation-item"><strong>Outer darkness:</strong> Covenant-exclusion imagery (being put outside the festive “house” of the kingdom community).</div>
-  <div class="annotation-item"><strong>Weeping and gnashing of teeth:</strong> Stock judgment idiom tied to covenant rejection and coming disaster for the unbelieving order.</div>
-  <div class="annotation-item"><strong>All the nations:</strong> “Ethnē” gathered for covenantal reckoning in the sphere of Christ’s enthroned authority.</div>
-  <div class="annotation-item"><strong>Least of these my brothers:</strong> Identification of Christ with His persecuted messengers/disciples during the transition crisis.</div>
-  <div class="annotation-item"><strong>Eternal fire:</strong> Age-defining judgment language (a decisive covenant sentence), commonly misread as post-mortem torture.</div>
-  <div class="annotation-item"><strong>Eternal punishment:</strong> “Aionios” consequence belonging to the age-change verdict, not a futurist “still pending” threat.</div>
-  <div class="annotation-item"><strong>Eternal life:</strong> New Covenant life of the age-to-come (now realized), not a prize postponed to the end of world history.</div>
-</div>
+  <!-- SECTION 8: New Creation Reality -->
+  <section id="new-creation">
+    <h2>8) New Creation Reality</h2>
+    <p>
+      Believers today do not live under the shadow of a pending covenant judgment or a delayed kingdom. The full transition from the Old Covenant to the New Covenant was brought to completion in AD 70, establishing Christ’s kingdom as an enduring spiritual reality. You reside in absolute union with the enthroned King, fully secured from law-condemnation, and called to live out kingdom stewardship in rest, fruitfulness, and confidence rather than fear or performance-driven anxiety.
+    </p>
+  </section>
 
-<hr />
+  <hr />
 
-<h2>Fulfillment Commentary</h2>
+  <!-- SECTION 9: Reflection -->
+  <section id="reflection">
+    <h2>9) Reflection</h2>
+    <p>
+      How does knowing that Christ's kingdom is fully established and present free you today to rest completely in His finished work and steward your life from union rather than fear?
+    </p>
+  </section>
 
-<h3>1) One Chapter, One Control: Matthew 24 Still Governs Matthew 25</h3>
-<p>
-Matthew 25 is not “a new topic.” It is the ethical and covenantal punchline of Matthew 24. The disciples asked about the destruction of the Temple, Jesus’ “coming,” and the end of the age (the Mosaic age). Jesus answered with signs, geography, flight instructions, and a hard time-lock (“this generation”). Then He does what covenant prophets always do: He presses home what that means for the people who must live through it. Matthew 25 is the “so what” of an approaching covenant crisis—how to remain awake, how to steward entrusted responsibilities, and how to understand the coming separation that would expose who actually belonged to the kingdom reality.
-</p>
+  <hr />
 
-<h3>2) The Ten Virgins: Readiness Is Not Panic, It’s Oil</h3>
-<p>
-The first parable opens with “Then the Kingdom of Heaven…” which ties the story to the transition season already in view. The point is not mystical lamp-math; it’s covenant readiness. In the first century, a whole nation assumed they were “ready” because they had Temple, ancestry, and routines. Jesus says: no—some will be shut out because they treated the approaching moment casually. The “oil” is not a secret spiritual formula; it’s a picture of genuine preparedness that cannot be borrowed at the last second. That cuts directly against “we’ll deal with this later” religion. In the covenant transition, the cost of delay was real. The door shuts. That is judgment language—household language. It matches Matthew 23–24: the house is left desolate; the door closes; the old order is locked out of the wedding joy because it refused the Bridegroom when He came in their midst.
-</p>
-<p>
-“Watch therefore” keeps the same pattern: they would know the season by Jesus’ warnings, but not the precise day/hour. Futurism abuses that line to throw the whole discourse into a vague distant future. In context it does the opposite: it trains disciples to live alertly in an identifiable window of nearness without pretending to calculate the exact timestamp. It’s readiness without superstition.
-</p>
-
-<h3>3) The Talents: Covenant Stewardship During the Overlap Years</h3>
-<p>
-The second parable intensifies accountability. The “man” entrusts goods, leaves, and returns to settle accounts. Again, in the flow of Matthew 24–25, this is not a random metaphor about capitalism; it’s kingdom stewardship during the overlap years (AD 30–70). The first-century church carried a commission, a message, and a responsibility to embody the kingdom while the old order was being weighed and found wanting. “After a long time” fits the same generational horizon: long enough for testing, not long enough to erase “near / at hand / this generation.”
-</p>
-<p>
-The wicked servant’s central sin is not “small output”; it is a heart posture of slander and fear: “I knew you are a hard man… I was afraid…” That is what covenant unbelief looks like. It paints God as harsh to justify burying what was entrusted. In Matthew’s covenant-litigation narrative, that mirrors Israel’s leadership posture: they treated the Lord as an enemy, refused His Son, and used fear and control rather than faith and fruit. The consequence is “outer darkness” with “weeping and gnashing of teeth”—a repeated Matthean idiom for covenant exclusion and judgment, not a prompt to import later medieval hell systems into the text. It’s being put outside the kingdom feast while the old “house” collapses.
-</p>
-
-<h3>4) Sheep and Goats: What “Judgment” Is This Actually Describing?</h3>
-<p>
-The final scene is commonly yanked out as if Jesus is describing the end of the physical universe and the post-mortem sorting of every human who ever lived. But Matthew has already anchored the discourse to Jerusalem, the Temple, Judea, and a first-century time-frame. So what is happening here? It is covenantal separation and public vindication in the sphere of the enthroned Son of Man’s authority. “All the nations” (ethnē) are gathered before Him—language that fits prophetic courtroom imagery where God judges peoples within history, not only at the end of time.
-</p>
-<p>
-The key is the identifying line: “least of these my brothers.” In Matthew’s story, Jesus’ “brothers” are His disciples—His sent ones—who would be persecuted, imprisoned, rejected, and vulnerable during the turmoil leading up to AD 70. This scene is not “earn heaven by doing charity.” It is: your response to Christ’s messengers is your response to Christ Himself. That is covenant logic. Israel’s leaders claimed to honor God while rejecting His Son and hating His witnesses. Jesus says the final verdict will expose that hypocrisy. The “sheep” are those aligned with the King’s reality; the “goats” are those who rejected Him in practice—especially by rejecting His people.
-</p>
-
-<h3>5) “Eternal Fire / Punishment”: No Futurist Drift, No Softening Either</h3>
-<p>
-This passage uses “eternal” (aionios) language. The futurist assumption is: “eternal” automatically means endless post-mortem torment, therefore this must be about a far-future universal afterlife tribunal. That is not demanded by the text, and it breaks the discourse’s setting. “Aionios” is age-related in biblical usage—belonging to the age in view, carrying the weight of decisive, covenant-defining consequence. In this context, Jesus is describing an irreversible verdict that lands on a covenant order and those who cling to it. It is not a vague warning floating for millennia; it is the climax of the covenant lawsuit coming to resolution in the first-century transition.
-</p>
-<p>
-At the same time, don’t neuter the warning. Jesus means what He says: the verdict is real, the separation is real, and the outcome is not “everyone is fine.” The kingdom is a settled reality, and it exposes false refuge. The New Creation is not sentimental; it is clean, finished, and true—meaning what cannot belong to it is removed. The comfort is not that judgment never happens; the comfort is that the covenant crisis that threatened the faithful remnant has already happened, and the kingdom stands.
-</p>
-
-<h3>6) The New Covenant Point: Presence Over Performance, Faithfulness Over Delay</h3>
-<p>
-The moral center of Matthew 25 is not fear; it’s faithfulness. The foolish drifted. The wicked buried. The faithful stayed ready and fruitful. In the first century that meant not being lulled by “delay-thinking” while Jerusalem marched toward catastrophe. For us, it means something cleaner: don’t live as if Christ is absent. Don’t bury what you’ve been given. Don’t treat the kingdom as theory. You live in the settled reign—so let your life match reality: awake, generous, responsive, and anchored in union rather than anxiety.
-</p>
-
-<hr />
-
-<h2>Prophecy Hub Links</h2>
-<ul>
-  <li><a href="/Bible/Prophecy/index.html#this-generation">This Generation</a></li>
-  <li><a href="/Bible/Prophecy/index.html#outer-darkness">Outer Darkness</a></li>
-  <li><a href="/Bible/Prophecy/index.html#judgment">Covenant Judgment</a></li>
-</ul>
-
-<hr />
-
-<h2>Cross-References</h2>
-<ul>
-  <li><a href="https://ebible.org/eng-web/PSA110.htm" target="_blank" rel="noopener noreferrer">Psalm 110 (WEB)</a></li>
-  <li><a href="https://ebible.org/eng-web/DAN07.htm" target="_blank" rel="noopener noreferrer">Daniel 7 (WEB)</a></li>
-  <li><a href="https://ebible.org/eng-web/MAT10.htm" target="_blank" rel="noopener noreferrer">Matthew 10 (WEB)</a></li>
-</ul>
-
-<hr />
-
-<h2>New Creation Reality</h2>
-<p>
-You are not living under a looming, undefined end-times threat; you are living in a kingdom that has already been established through Christ’s finished work and the completed covenant transition. Readiness now is simple: stay awake to His presence, steward what you’ve been given, and treat Christ’s people with Christ’s own honor—because the King is not “far away,” He is present.
-</p>
-
-<hr />
-
-<h2>Reflection</h2>
-<p>
-Where have you been “burying the talent”—playing small, delaying obedience, or avoiding fruit—because you still live as if the King is absent instead of present?
-</p>
-
-<hr />
-
-<p>
-  Share this study:
-  <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 Twitter</a>
-  <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-  <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&amp;body='+encodeURIComponent(location.href);return true;">Email</a>
-</p>
-<hr />
-
-<nav>
-      <a href="/Bible/">Bible Index</a> |
-      <a href="/Bible/Matthew/index.html">Book Index</a> |
-      <a href="/Bible/Matthew/matt24.html">Previous</a> |
-      <a href="/Bible/Matthew/matt26.html">Next</a> |
-      <a href="#top">Top</a>
-    </nav>
-
-<div class="kofi">
-  <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">
-    <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Ko-fi" />
-  </a>
-</div>
-
-<p class="note">
-  Scripture quoted from the <strong>World English Bible (WEB)</strong>, public domain, via eBible.org (HTML generated with Haiola). Source chapter: Matthew 25 (WEB).
-</p>
-
-</div>
-  <footer>
-    <div class="row">
-      <div>
-        <strong>The Fulfilled Prophecy Bible</strong> — Text based on the <strong>World English Bible (WEB)</strong> with Fulfilled Prophecy Study Commentary
+  <!-- SECTION 10: Footer, Share & Navigation Block -->
+  <section id="footer-block">
+    <div class="page-footer-block">
+      <div class="share-row">
+        <span>Share this study:</span>
+        <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 Twitter</a>
+        <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+        <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&amp;body='+encodeURIComponent(location.href);return true;">Email</a>
       </div>
-      <div>
-        <a href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">Support</a> · <a href="#top">Back to top</a>
+
+      <a class="bmc-btn" href="https://ko-fi.com/fpbible" target="_blank" rel="noopener">
+        ☕ Support FPBible on Ko-fi
+      </a>
+
+      <div class="bottom-nav">
+        <a href="/Bible/index.html">Bible Index</a><span class="sep">|</span>
+        <a href="/Bible/Matthew/index.html">Book Index</a><span class="sep">|</span>
+        <a href="/Bible/Matthew/matt24.html">Previous</a><span class="sep">|</span>
+        <a href="/Bible/Matthew/matt26.html">Next</a><span class="sep">|</span>
+        <a href="#top">Back to top</a>
       </div>
     </div>
-    <p class="note">
-      Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-    </p>
-  </footer>
+  </section>
 
+</div>
+
+<footer>
+  <div class="wrap" style="padding-top:0; padding-bottom:18px;">
+    <p class="muted">The Fulfilled Prophecy Bible — Reconciled Standard Specifications</p>
+  </div>
+</footer>
 
 </body>
 </html>
