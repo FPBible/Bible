@@ -1,0 +1,46 @@
+name: Rewire Matthew Prophecy Hub links
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rewire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rewrite index.html#slug to slug.html
+        run: |
+          python3 << 'PY'
+          from pathlib import Path
+          import re
+          ALIAS = {
+            'coming-of-son-of-man': 'son-of-man-coming',
+            'cornerstone': 'jesus-the-chief-cornerstone',
+          }
+          n = 0
+          for p in sorted(Path('Matthew').glob('matt*.html')):
+              t = p.read_text(encoding='utf-8')
+              def repl(m):
+                  slug = ALIAS.get(m.group(1), m.group(1))
+                  return f'/Bible/Prophecy/{slug}.html'
+              nt = re.sub(r'/Bible/Prophecy/index\.html#([A-Za-z0-9_-]+)', repl, t)
+              if nt != t:
+                  p.write_text(nt, encoding='utf-8')
+                  n += 1
+                  print('updated', p)
+          print('files_updated', n)
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Matthew
+          if git diff --cached --quiet; then
+            echo "No chapter link changes"
+          else
+            git commit -m "Rewire Matthew Prophecy Hub hashes to study pages"
+            git push
+          fi
