@@ -4,16 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 1 — The Word Tabernacled Among Us — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="John opens not with a birth register but with a new beginning: the Word who was with God becomes flesh, pitches tent among Israel, and replaces Law-mediated distance with grace and truth. The old family of blood is confronted by a family born of God — in that generation, before the house that housed the old glory fell." />
+  <meta name="description" content="John opens not with a birth register but with a new beginning: the Word who was with God becomes flesh, pitches tent among Israel, and replaces Law-mediated distance with grace and truth." />
   <style>
     :root{
       --maxw: 980px;
       --pad: 16px;
       --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
       --muted: rgba(0,0,0,0.72);
       --soft: rgba(0,0,0,0.05);
       --soft2: rgba(0,0,0,0.03);
       --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
     body{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -27,15 +30,15 @@
       margin: 0 auto;
       padding: 18px var(--pad) 56px;
     }
-    h1,h2,h3{ margin: 1.1em 0 0.35em; }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
     h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
     h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
     h3{ font-size: 1.08rem; }
-    p{ margin: 0.6em 0; }
+    p{ margin: 0.75em 0; }
     hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
     ul{ margin: 0.6em 0 0.8em 1.2em; }
     li{ margin: 0.35em 0; }
-    a{ color:#111; text-decoration: underline; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
     a.btn{
       display: inline-flex;
       align-items: center;
@@ -46,7 +49,7 @@
       text-decoration: none;
       background: var(--soft2);
     }
-    nav.top, nav.bottom{
+    nav.top{
       display:flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -54,18 +57,12 @@
       justify-content:flex-start;
       margin: 10px 0 16px;
     }
-    .card{
-      background: var(--soft2);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 14px 14px;
-    }
     .scripture-text{
       font-size: 1.08em;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 14px 14px;
+      padding: 16px;
     }
     .v-num{
       font-weight: 700;
@@ -76,17 +73,62 @@
     }
     .annotation-block{
       background: var(--soft);
-      padding: 12px 14px;
+      padding: 14px;
       border-left: 3px solid var(--line);
       border-radius: 10px;
     }
     .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
-    .note{ font-size: 0.95em; color: rgba(0,0,0,0.85); }
     .muted{ color: var(--muted); }
-    .kofi{ margin-top: 14px; }
-    .kofi img{ height: 36px; border: 0; }
-    footer{ margin-top: 18px; }
-    .hide-element { display: none; }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -105,39 +147,44 @@
       <a class="btn" href="/Bible/John/john2.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 1 — The Word Tabernacled Among Us</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      John does not open with a birth register. He opens with a lawsuit against the old beginning. Genesis started a world with a Word; this Gospel starts the close of Israel’s covenant world with the same Word now standing in flesh among “his own.” Priests and Levites come down from Jerusalem to interrogate the Baptist. The questions they bring — Christ? Elijah? the Prophet? — are temple-court questions. The answers they receive relocate glory, family, and access away from blood, will, and the house in Jerusalem, and onto the Son who pitches tent in their generation.
+      John opens not with a human birth register but with a lawsuit against Israel's covenant establishment. Genesis initiated a physical world with a divine Word; this Gospel announces the close of Israel’s old covenant era with that same Word standing in flesh among "his own." Priests and Levites travel from Jerusalem to interrogate John the Baptist with formal temple-court questions regarding Christ, Elijah, and the Prophet. The answers they receive relocate divine glory, covenant lineage, and sacred access away from physical bloodlines and the Jerusalem temple, establishing them permanently in the Son during that first-century generation.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span><strong>In the beginning was the Word</strong>, and the Word was with God, and <strong>the Word was God</strong>.
+        <span class="v-num">1</span><strong>In the beginning</strong> was <strong>the Word</strong>, and the Word was with God, and the Word was God.
         <span class="v-num">2</span>The same was in the beginning with God.
         <span class="v-num">3</span>All things were made through him. Without him, nothing was made that has been made.
-        <span class="v-num">4</span>In him was <strong>life</strong>, and the life was the <strong>light</strong> of men.
+        <span class="v-num">4</span>In him was life, and the life was the light of men.
         <span class="v-num">5</span>The light shines in the darkness, and the darkness hasn’t overcome it.
       </p>
       <p>
         <span class="v-num">6</span>There came a man sent from God, whose name was John.
         <span class="v-num">7</span>The same came as a witness, that he might testify about the light, that all might believe through him.
         <span class="v-num">8</span>He was not the light, but was sent that he might testify about the light.
-        <span class="v-num">9</span>The true light that enlightens everyone was coming into the world.
+        <span class="v-num">9</span>The true light that enlightens everyone was coming into the <strong>world</strong>.
       </p>
       <p>
         <span class="v-num">10</span>He was in the world, and the world was made through him, and the world didn’t recognize him.
         <span class="v-num">11</span>He came to <strong>his own</strong>, and those who were his own didn’t receive him.
-        <span class="v-num">12</span>But as many as received him, to them he gave the right to become <strong>God’s children</strong>, to those who believe in his name:
+        <span class="v-num">12</span>But as many as received him, to them he gave the right to become God’s children, to those who believe in his name:
         <span class="v-num">13</span>who were <strong>born, not of blood, nor of the will of the flesh, nor of the will of man, but of God</strong>.
       </p>
       <p>
-        <span class="v-num">14</span><strong>The Word became flesh</strong> and <strong>lived among us</strong>. We saw his <strong>glory</strong>, such glory as of the only born Son of the Father, full of grace and truth.
+        <span class="v-num">14</span>The Word became flesh and <strong>lived among us</strong>. We saw his <strong>glory</strong>, such glory as of the only born Son of the Father, full of grace and truth.
         <span class="v-num">15</span>John testified about him. He cried out, saying, “This was he of whom I said, ‘He who comes after me has surpassed me, for he was before me.’”
         <span class="v-num">16</span>From his fullness we all received grace upon grace.
-        <span class="v-num">17</span>For <strong>the law was given through Moses. Grace and truth were realized through Jesus Christ</strong>.
+        <span class="v-num">17</span>For <strong>the law was given through Moses; grace and truth were realized through Jesus Christ</strong>.
         <span class="v-num">18</span>No one has seen God at any time. The only born Son, who is in the bosom of the Father, has declared him.
       </p>
       <p>
@@ -169,7 +216,7 @@
         <span class="v-num">38</span>Jesus turned and saw them following, and said to them, “What are you looking for?” They said to him, “Rabbi” (which is to say, being interpreted, Teacher), “where are you staying?”
         <span class="v-num">39</span>He said to them, “Come and see.” They came and saw where he was staying, and they stayed with him that day. It was about the tenth hour.
         <span class="v-num">40</span>One of the two who heard John and followed him was Andrew, Simon Peter’s brother.
-        <span class="v-num">41</span>He first found his own brother, Simon, and said to him, “We have found the <strong>Messiah</strong>!” (which is, being interpreted, Christ).
+        <span class="v-num">41</span>He first found his own brother, Simon, and said to him, “We have found the Messiah!” (which is, being interpreted, Christ).
         <span class="v-num">42</span>He brought him to Jesus. Jesus looked at him and said, “You are Simon the son of Jonah. You shall be called Cephas” (which is by interpretation, Peter).
       </p>
       <p>
@@ -181,66 +228,68 @@
         <span class="v-num">48</span>Nathanael said to him, “How do you know me?” Jesus answered him, “Before Philip called you, when you were under the fig tree, I saw you.”
         <span class="v-num">49</span>Nathanael answered him, “Rabbi, you are the Son of God! You are King of Israel!”
         <span class="v-num">50</span>Jesus answered him, “Because I told you, ‘I saw you underneath the fig tree,’ do you believe? You will see greater things than these!”
-        <span class="v-num">51</span>He said to him, “Most certainly, I tell you all, hereafter you will see <strong>heaven opened</strong>, and the angels of God ascending and descending on the <strong>Son of Man</strong>.”
+        <span class="v-num">51</span>He said to him, “Most certainly, I tell you all, hereafter you will see <strong>heaven opened, and the angels of God ascending and descending on the Son of Man</strong>.”
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) “In the beginning” is Genesis language aimed at a covenant world reaching its designed end, not a second physics lecture.</p>
-      <p class="note">2) “His own” are Israel under the old administration. Reception is not DNA. It is faith in the Son.</p>
-      <p class="note">3) “Lived among us” is tent-language. Glory moves off furniture and onto a Person before the furniture is taken down.</p>
-      <p class="note">4) Moses gave Law. The Son realizes grace and truth. That is succession, not a dual-track religion.</p>
-      <p class="note">5) The Lamb takes away the sin of that world — the covenant world whose accuser was Moses and whose altar stood in Jerusalem.</p>
-      <p class="note">6) “Heaven opened” on the Son of Man is Jacob’s ladder relocated. Access is no longer a stone at Bethel or a veil in the temple.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>Genesis creation language ("In the beginning") signals the dawn of the New Creation and the final closing of Israel’s old covenant world.</li>
+      <li>"Lived among us" (tabernacled) marks divine glory relocating from temple stone onto a Person prior to AD 70.</li>
+      <li>Covenant lineage is redefined: royal standing is granted through birth of God rather than physical Israelite genealogy.</li>
+      <li>The Law given through Moses reaches its administrative endpoint, superseded by the reality of grace and truth in Jesus Christ.</li>
+      <li>"Heaven opened" on the Son of Man fulfills Bethel's ladder, making Christ the sole access between heaven and earth.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>In the beginning</strong>: Echo of Genesis 1 — a world’s origin-word. John uses it to announce the close of one covenant world and the arrival of another.</div>
-      <div class="annotation-item"><strong>the Word</strong>: God’s self-expression, not an abstract principle. What God has always spoken is now standing in a body.</div>
-      <div class="annotation-item"><strong>world (kosmos)</strong>: In this Gospel, often the ordered covenant world that does not know its own Maker — Israel’s public order as much as “planet.”</div>
-      <div class="annotation-item"><strong>his own</strong>: The covenant people to whom the promises belonged. Rejection here is first-century and specific, not a timeless slur.</div>
-      <div class="annotation-item"><strong>born… of God</strong>: Family is relocated. Blood, flesh-will, and male lineage no longer grant standing.</div>
-      <div class="annotation-item"><strong>lived among us</strong>: Greek <em>eskēnōsen</em> — pitched tent. Tabernacle verb. Glory has an address, and it is not the house on the mount.</div>
-      <div class="annotation-item"><strong>glory</strong>: Exodus-cloud language. What filled the tent and later the temple is now seen in a face.</div>
-      <div class="annotation-item"><strong>the law… Moses / grace and truth… Jesus Christ</strong>: Two administrations named side by side. One given; the other realized.</div>
-      <div class="annotation-item"><strong>voice in the wilderness</strong>: Isaiah 40’s road-crew for the returning Lord. If the voice has already cried, the Lord he announced is not still offstage.</div>
-      <div class="annotation-item"><strong>Lamb of God</strong>: Passover and daily-offering speech. The animal system meets its end in a Person.</div>
-      <div class="annotation-item"><strong>sin of the world</strong>: The guilt that defined that covenant order — not a private list waiting for a later cosmic reset.</div>
-      <div class="annotation-item"><strong>heaven opened… Son of Man</strong>: Genesis 28 and Daniel 7 fused. The meeting-place between heaven and earth is a Man.</div>
+      <div class="annotation-item"><strong>In the beginning</strong>: An explicit echo of Genesis 1:1, framing Christ's advent as the origin-word of the New Creation world order.</div>
+      <div class="annotation-item"><strong>the Word (Logos)</strong>: God's ultimate self-expression and covenant voice embodied in a Person rather than written stone tablets.</div>
+      <div class="annotation-item"><strong>world (kosmos)</strong>: Refers to the ordered covenant system of Israel that failed to recognize its own Creator and Lord.</div>
+      <div class="annotation-item"><strong>his own</strong>: First-century Israel under the mosaic administration, who held the promises yet officially rejected the Messiah.</div>
+      <div class="annotation-item"><strong>born... of God</strong>: Re-specification of divine family entry, explicitly bypassing physical descent, circumcision, and human lineage.</div>
+      <div class="annotation-item"><strong>lived among us</strong>: Greek <em>eskēnōsen</em> ("pitched tent"), indicating that God's true tabernacle and glory are now embodied in Christ.</div>
+      <div class="annotation-item"><strong>glory</strong>: The visible Shekinah presence of God that previously filled Moses' tent and Solomon's temple, now revealed in the Son.</div>
+      <div class="annotation-item"><strong>law... Moses / grace... Jesus Christ</strong>: Contrast between the provisional Old Covenant administration and its permanent fulfillment in Christ.</div>
+      <div class="annotation-item"><strong>voice... in the wilderness</strong>: Isaiah 40:3 herald announcing Jehovah’s immediate covenant arrival to inspect and transform Israel.</div>
+      <div class="annotation-item"><strong>Lamb of God / sin of the world</strong>: Fulfills the Old Covenant sacrificial system, taking away the covenant curse and guilt of that old world.</div>
+      <div class="annotation-item"><strong>heaven opened... Son of Man</strong>: Fulfills Jacob's ladder (Genesis 28) and Daniel 7:13, establishing Christ as the single meeting-place of God and man.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Why John Starts With Genesis Instead of a Family Tree</h3>
+    <h3>1) Genesis Language and the Close of the Old Order</h3>
     <p>
-      Matthew opens with paperwork because the old world ran on genealogy. John opens with Genesis because the old world is about to lose its claim to be “the beginning.” A covenant world has a start-word, a light, a darkness, and a people who are supposed to recognize their Maker. John says that world was made through the Word — and then did not know Him when He walked into it. That is not a science debate. It is a charge sheet. The people who handled Moses, temple, and lineage are being told that their origin-story is being rewritten around a Person they can reject. If you flatten “beginning” into raw cosmology, you miss the lawsuit. John is announcing that Israel’s public world has reached the hour when its first word and its last word are the same Word standing in flesh.
+      Matthew opens his Gospel with legal paperwork because the Old Covenant order operated on documented physical lineage. John bypasses genealogies entirely, opening with Genesis 1:1 language to announce that the old world has reached its divine culmination. A covenant world possesses a start-word, light, darkness, and an appointed people designed to reflect their Maker. John asserts that the cosmos of Israel was constructed through the Word, yet when that Word arrived in human history, the temple authorities failed to recognize Him. This framing is not an abstract lesson in physical cosmology; it is a formal covenant lawsuit. The leadership managing Moses, the temple altars, and ancestral records are informed that their foundational history is being reconstituted around the Son. John declares that Israel’s public world has reached the climax where its first word and final fulfillment are the identical Word standing in flesh.
     </p>
-    <h3>2) Light, Darkness, and a World That Did Not Recognize Him</h3>
+
+    <h3>2) The Tabernacle Relocates Divine Glory</h3>
     <p>
-      Light in the prophets is not mood lighting. It is God’s public unveiling — sometimes rescue, sometimes exposure. Darkness in this chapter is not a later devil-myth. It is the refusal of the ordered world to admit the One through whom it was made. “His own” names the tragedy with precision: the covenant family had the oracles, the house, and the calendar, and still did not receive Him. John will spend the rest of the book showing that refusal hardening in Jerusalem’s courts. The light is already shining in the chapter’s present tense. The darkness has not overcome it — which is a verdict, not a weather forecast. By the time the old house falls, that verdict is public.
+      The declaration that the Word became flesh and "lived among us" utilizes explicit Exodus terminology. In the Hebrew Scriptures, God manifested His Shekinah glory within a physical tent and later inside a stone house built upon Mount Zion. Both structures were provisional, heavily guarded by levitical priests, and defined by strict physical boundaries. John employs the tabernacle verb (<em>eskēnōsen</em>) to reveal that God has pitched His permanent tent in a human body. The apostles witnessed His authentic glory—not as a fleeting manifestation over an earthly ark, but as the only born Son full of grace and truth. This historical reality passed sentence upon Jerusalem's temple decades before its physical destruction. With divine glory permanently localized in Christ, the stone building became obsolete long before Roman armies dismantled it in AD 70.
     </p>
-    <h3>3) A Family No Longer Born of Blood</h3>
+
+    <h3>3) Redefining the Family of God Beyond Blood</h3>
     <p>
-      Verses 12–13 are the hinge of the Gospel’s anthropology. The old covenant could speak of sons of Abraham by flesh. John cuts the cord. Standing as God’s child is given to those who receive the Son. Birth here is not improved genealogy. It is God-origin, set over against blood, flesh-will, and a man’s decision to sire an heir. That is why later chapters can put a teacher of Israel in the dark about “born from above,” and why a Samaritan town can believe. The dividing wall was never going to survive a family defined this way. When Jerusalem’s stewardship ends in that generation, it is this new family that remains — not a bloodline waiting for a later restart of Sinai.
+      John 1:12–13 establishes the foundational transition regarding covenant sonship. Under the Sinai administration, membership in the divine family was tied directly to physical descent from Abraham, marked by physical circumcision, and maintained through bloodlines. John dismantles this earthly framework by declaring that true divine sonship is granted exclusively to those who receive the Son through faith. Genuine spiritual birth originates directly from God, standing in contrast to ancestral blood, biological impulses, or human patriarchal choice. This structural shift explains why legalistic teachers in Jerusalem remained in spiritual darkness while Gentiles and Samaritans entered the Kingdom. Covenant identity was stripped of physical lineage, establishing a spiritual house that survived intact when the old Jerusalem fell.
     </p>
-    <h3>4) The Tent Moves Off the Mount</h3>
+
+    <h3>4) Mosaic Administration Yields to Ultimate Reality</h3>
     <p>
-      “The Word became flesh and lived among us” is Exodus without the furniture. Israel knew glory as a cloud over a tent, then as fire over a house. Both were restricted, timed, and guarded. John uses the tent-verb on purpose: God pitches among us in a body. The disciples “saw his glory” — not as a tourist vision of marble, but as the only-born Son, full of grace and truth. That sentence already sentences the temple. If glory has a living address, the stone address is on borrowed time. John 2 will make the claim explicit. John 1 plants it. AD 70 does not invent the move. It removes the vacant building after the glory has already relocated.
+      The assertion that the Law was given through Moses while grace and truth were realized through Jesus Christ defines historic covenant succession. The Sinai Law served as a temporary custodian, introducing shadows, animal sacrifices, and a restricted priesthood. It mediated distance between a holy God and a sinful nation. Christ did not arrive to patch the Mosaic system but to realize everything to which the Law pointed. The priests and Levites sent from Jerusalem were actively managing an administrative apparatus that had served its purpose. When John the Baptist identified himself as the wilderness voice of Isaiah 40, he signaled that the Lord had arrived to conduct covenant inspection. The old sacrificial order was yielding to the Son, who fully reveals the Father without veil, animal blood, or intermediate human priesthood.
     </p>
-    <h3>5) Moses Gave; the Son Realized</h3>
+
+    <h3>5) The Open Heaven and the Human Ladder</h3>
     <p>
-      Verse 17 is succession language. Law given through Moses is not insulted. It is located. Grace and truth are not a warmer mood laid on top of Sinai. They are what the Law pointed at and could not itself be. Moses mediated distance, tablets, and a priesthood that stood daily. The Son declares the Father from the Father’s bosom — no second veil, no second mountain. Priests and Levites asking John who he is are still staffing the old mediation. John will not take their titles. He is a voice, not a replacement Christ, not a recycled Elijah for a later brochure, not “the Prophet” they can file and control. The One among them is already preferred because He was before John. The administration is changing hands in their hearing.
-    </p>
-    <h3>6) The Lamb and the Sin of That World</h3>
-    <p>
-      “Behold, the Lamb of God, who takes away the sin of the world” is temple speech aimed at the temple’s world. Passover lambs marked a people for exit. Daily lambs managed an order that could never finish the job. John does not send Israel back to the altar with a better animal. He points at a Man. “Sin of the world” in this book is the guilt and death that defined the old order — the thing Moses accused, the thing the altar advertised and could not remove. Hebrews will say the same with more courtroom prose. John says it in a sentence on a riverbank. The taking-away is not postponed to a later planet-cleanse. It is the work the Baptist came to reveal to Israel before that Israel’s public system is taken down.
-    </p>
-    <h3>7) Jacob’s Ladder Has a Human Name</h3>
-    <p>
-      Nathanael reaches for the biggest titles he owns: Son of God, King of Israel. Jesus does not scold the titles. He enlarges the vision. Heaven opened, angels ascending and descending on the Son of Man — that is Bethel without the stone. Jacob saw a place. The disciples will see a Person. Daniel’s Son of Man receives dominion; John’s Son of Man is the traffic between heaven and earth. Greater things than a fig-tree word are coming in their lifetime: signs, a lifted-up Son, a torn-open access, and the end of the house that claimed to be the only stair. “Hereafter you will see” is not a ticket for a distant cosmic cinema. It is a promise to men standing in Galilee that the meeting-place has arrived, and the old meeting-place will not survive the comparison.
+      Jesus concludes the chapter by reframing Nathanael’s traditional messianic titles. When Nathanael hails Him as the Son of God and King of Israel, Jesus points to a far greater covenant reality: open heavens with God's angels ascending and descending upon the Son of Man. This imagery directly fulfills Jacob’s vision at Bethel in Genesis 28. Jacob identified a geographical location as the house of God and the gate of heaven; Jesus reveals that He Himself is the true ladder connecting heaven and earth. Access to God is no longer tied to geographical sites, stone altars, or earthly sanctuaries. The Son of Man is the permanent meeting-place between God and humanity. The first-century disciples witnessed this reality unfolded in their lifetime through the inauguration of the New Covenant kingdom.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/immanuel.html">Immanuel — God With Us in the New Covenant</a></li>
@@ -248,61 +297,54 @@
       <li><a href="/Bible/Prophecy/john-the-baptist.html">John the Baptist</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/GEN01.htm" target="_blank" rel="noopener">Genesis 1 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EXO25.htm" target="_blank" rel="noopener">Exodus 25 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA40.htm" target="_blank" rel="noopener">Isaiah 40 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/GEN28.htm" target="_blank" rel="noopener">Genesis 28 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/HEB01.htm" target="_blank" rel="noopener">Hebrews 1 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/GEN01.htm" target="_blank" rel="noopener">Genesis 1:1–5 (WEB)</a> — The original creation word shadowing the New Creation Word.</li>
+      <li><a href="https://ebible.org/eng-web/ISA40.htm" target="_blank" rel="noopener">Isaiah 40:3–5 (WEB)</a> — The prophetic voice herald announcing Jehovah's arrival.</li>
+      <li><a href="https://ebible.org/eng-web/HEB01.htm" target="_blank" rel="noopener">Hebrews 1:1–4 (WEB)</a> — God’s final revelation in the Son replacing former shadows.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Beginning</strong> — origin-word of a world-order, used here for the covenant world reaching its climax.</li>
-      <li><strong>Tabernacled / lived among us</strong> — glory relocating from tent and temple to the Son.</li>
-      <li><strong>His own</strong> — Israel as first addressee, not a slur against later Gentiles.</li>
-      <li><strong>Born of God</strong> — New Covenant family against blood and male will.</li>
-      <li><strong>Lamb of God</strong> — the end of the animal administration in a Person.</li>
-      <li><strong>Opened heaven</strong> — Bethel’s traffic now running through the Son of Man.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for God to move back into a building. The Word has already pitched tent. Family is no longer a blood argument. Access is no longer a veil argument. Life is the Son, and the darkness of that old world did not put Him out. Physical death still returns a body to dust; it is not the enemy this chapter came to abolish. The enemy here was distance — Law-administered, temple-housed, lineage-guarded — and that distance is gone in Him.
+      Believers no longer approach God through physical temples, earthly shadow-altars, or human genealogical qualifications. In Christ, the Word has tabernacled permanently within His people, establishing an unbroken union that can never be severed by legalistic condemnation. Your standing as a child of God rests entirely on divine birth and the finished work of the Son, free from performance-driven anxiety or Old Covenant bondage. You live under the full outflow of grace and truth, residing in an open heaven where Christ Himself is your eternal access and life.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still asking the old Jerusalem questions — Who is authorized? What house do we visit? What blood are we from? — instead of coming and seeing the Word who already lives among His people?
+      How does knowing that Christ is your permanent tabernacle change the way you rest in His present grace today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john2.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john2.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
