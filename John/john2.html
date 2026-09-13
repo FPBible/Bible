@@ -4,16 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 2 — New Wine, New Temple — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="John 2 puts the old purification jars and the Jerusalem house on the same page. Cana turns wash-water into wedding wine. Passover in the temple hears the sentence: destroy this house — He means His body. Glory has already moved before the stones fall." />
+  <meta name="description" content="John 2 puts the old purification jars and the Jerusalem house on the same page. Cana turns wash-water into wedding wine. Passover in the temple hears the sentence: destroy this house — He means His body." />
   <style>
     :root{
       --maxw: 980px;
       --pad: 16px;
       --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
       --muted: rgba(0,0,0,0.72);
       --soft: rgba(0,0,0,0.05);
       --soft2: rgba(0,0,0,0.03);
       --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
     body{
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -27,15 +30,15 @@
       margin: 0 auto;
       padding: 18px var(--pad) 56px;
     }
-    h1,h2,h3{ margin: 1.1em 0 0.35em; }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
     h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
     h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
     h3{ font-size: 1.08rem; }
-    p{ margin: 0.6em 0; }
+    p{ margin: 0.75em 0; }
     hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
     ul{ margin: 0.6em 0 0.8em 1.2em; }
     li{ margin: 0.35em 0; }
-    a{ color:#111; text-decoration: underline; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
     a.btn{
       display: inline-flex;
       align-items: center;
@@ -46,7 +49,7 @@
       text-decoration: none;
       background: var(--soft2);
     }
-    nav.top, nav.bottom{
+    nav.top{
       display:flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -54,18 +57,12 @@
       justify-content:flex-start;
       margin: 10px 0 16px;
     }
-    .card{
-      background: var(--soft2);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 14px 14px;
-    }
     .scripture-text{
       font-size: 1.08em;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 14px 14px;
+      padding: 16px;
     }
     .v-num{
       font-weight: 700;
@@ -76,17 +73,62 @@
     }
     .annotation-block{
       background: var(--soft);
-      padding: 12px 14px;
+      padding: 14px;
       border-left: 3px solid var(--line);
       border-radius: 10px;
     }
     .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
-    .note{ font-size: 0.95em; color: rgba(0,0,0,0.85); }
     .muted{ color: var(--muted); }
-    .kofi{ margin-top: 14px; }
-    .kofi img{ height: 36px; border: 0; }
-    footer{ margin-top: 18px; }
-    .hide-element { display: none; }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -106,17 +148,22 @@
       <a class="btn" href="/Bible/John/john3.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 2 — New Wine, New Temple</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Chapter 1 ended with heaven opened on the Son of Man. Chapter 2 tests that claim in two public rooms: a Galilean wedding short of wine, and the Father’s house turned into a market in Passover week. The same man who pitched tent among them now fills the jars that belonged to Jewish purification, then walks into the stone house and talks about raising a different temple in three days. The audience is not a later planet. It is first-century Israel, still washing, still trading animals, still asking for a sign that will leave their building standing.
+      Chapter 1 concluded with heaven opened upon the Son of Man. Chapter 2 demonstrates that reality across two public first-century settings: a village wedding running short of wine in Cana, and the Father’s house transformed into a commercial market during Passover week in Jerusalem. Jesus encounters an audience still reliant on ritual washings and animal sacrifices. By filling the stone jars dedicated to ceremonial purification and cleansing the temple courts, Christ announces that divine glory, divine access, and true worship are officially transferring from physical buildings and shadow rituals onto His own person.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span>The third day, there was a <strong>wedding in Cana</strong> of Galilee. Jesus’ mother was there.
+        <span class="v-num">1</span>On <strong>the third day</strong>, there was a <strong>wedding in Cana</strong> of Galilee. Jesus’ mother was there.
         <span class="v-num">2</span>Jesus also was invited, with his disciples, to the wedding.
         <span class="v-num">3</span>When the wine ran out, Jesus’ mother said to him, “They have no wine.”
         <span class="v-num">4</span>Jesus said to her, “Woman, what does that have to do with you and me? <strong>My hour has not yet come.</strong>”
@@ -152,61 +199,74 @@
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) The stone jars are not props. They are the old wash-system standing in the room when the better wine arrives.</p>
-      <p class="note">2) “My hour” in this Gospel is a first-century clock — death, lifting-up, and glorification — not an open calendar.</p>
-      <p class="note">3) “Good wine until now” is covenant order: the last is better. Moses is not insulted. He is dated.</p>
-      <p class="note">4) Driving animals out of the house is a prophetic lawsuit against access-by-purchase in the very week of Passover.</p>
-      <p class="note">5) “Destroy this temple” relocates the dwelling from Herod’s project to a body that will rise in three days.</p>
-      <p class="note">6) The stone house can keep standing after Easter. Its authority does not. AD 70 is the public funeral of a vacant building.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The stone water pots represent the Mosaic purification system filled to completion and superseded by Kingdom joy.</li>
+      <li>"My hour" establishes a strict first-century covenant timeline pointing directly to Christ's lifting up and glorification.</li>
+      <li>The transition from ritual water to superior wine demonstrates New Covenant reality replacing Old Covenant ritualism.</li>
+      <li>Jesus driving out traders from the temple court pronounces an immediate lawsuit against access-by-purchase.</li>
+      <li>"Destroy this temple" relocates divine dwelling from Herodian stone to the resurrected body of the Son of Man.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>the third day</strong>: John is already counting. New-creation rhythm sits under a village wedding.</div>
-      <div class="annotation-item"><strong>wedding</strong>: Prophets used banquet and bride language for the Lord’s arrival to His people. Cana is not a party anecdote first. It is a sign.</div>
-      <div class="annotation-item"><strong>My hour has not yet come</strong>: In John, “hour” marks the cross and glorification (12:23, 27; 17:1). The clock is short, and it belongs to that generation.</div>
-      <div class="annotation-item"><strong>water pots… way of purifying</strong>: Stone vessels kept ritual water from contracting uncleanness. Jesus fills the old economy and draws joy out of it.</div>
-      <div class="annotation-item"><strong>good wine until now</strong>: The steward’s sentence is John’s theology in a toast. What comes after Moses is not thinner. It is better.</div>
-      <div class="annotation-item"><strong>revealed his glory</strong>: Same glory named in 1:14. The tent-glory is public at a table before it is public in a tomb.</div>
-      <div class="annotation-item"><strong>Passover of the Jews</strong>: John’s phrase keeps the feast inside the old calendar. The Lamb of chapter 1 now walks into the feast that advertised lambs.</div>
-      <div class="annotation-item"><strong>my Father’s house</strong>: He still names the building as the Father’s — and then treats it as a house under eviction.</div>
-      <div class="annotation-item"><strong>Zeal for your house</strong>: Psalm 69, a psalm of the suffering righteous whose enemies make His house desolate. The citation already leans toward judgment.</div>
-      <div class="annotation-item"><strong>Destroy this temple</strong>: They hear masonry. He means a body. The misunderstanding is the point: they cannot imagine worship without their project.</div>
-      <div class="annotation-item"><strong>temple of his body</strong>: Dwelling, sacrifice, and meeting-place collapse into one Person.</div>
+      <div class="annotation-item"><strong>the third day</strong>: Creation and resurrection rhythm underlying the manifestation of Messiah's glory.</div>
+      <div class="annotation-item"><strong>wedding in Cana</strong>: Prophetic feast imagery (Isaiah 25) signaling Jehovah’s covenant arrival to restore His people.</div>
+      <div class="annotation-item"><strong>My hour has not yet come</strong>: Covenant clock in John pointing strictly to Christ's death, resurrection, and inaugural glorification.</div>
+      <div class="annotation-item"><strong>water pots of stone / Jews’ way of purifying</strong>: Vessels used for ceremonial washings, now filled to capacity and transformed into New Covenant wine.</div>
+      <div class="annotation-item"><strong>good wine until now</strong>: Historical sequence of God's redemptive plan; the New Covenant administration far exceeds the Old.</div>
+      <div class="annotation-item"><strong>revealed his glory</strong>: The manifestation of divine Shekinah presence shifting from stone structures to the incarnate Son.</div>
+      <div class="annotation-item"><strong>Passover of the Jews</strong>: The annual festival highlighting that the true Passover Lamb was inspecting the earthly shadow-system.</div>
+      <div class="annotation-item"><strong>my Father’s house</strong>: Initial designation of the Jerusalem temple prior to its complete abandonment and destruction.</div>
+      <div class="annotation-item"><strong>Zeal for your house will eat me up</strong>: Psalm 69 citation marking Jesus as the suffering righteous servant executing divine judgment.</div>
+      <div class="annotation-item"><strong>Destroy this temple, and in three days I will raise it up</strong>: Prophetic sentence passed on Herod’s building, reidentifying the true sanctuary as Christ's body.</div>
+      <div class="annotation-item"><strong>temple of his body</strong>: The permanent relocation of God’s dwelling place, sacrifice, and access away from Jerusalem masonry to the resurrected Christ.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
     <h3>1) Why the First Sign Is a Wedding Running Dry</h3>
     <p>
-      Israel’s Scriptures do not treat wine as a hobby. Harvest, vintage, and wedding-feast are how the prophets talk when the Lord comes to His people — and how they talk when the vintage fails. Cana is dry. That is the condition of a purification world that can still fill stone jars and still not produce joy. Jesus does not lecture the guests about Moses. He takes the jars that belong to Moses’ wash-system and makes them serve a wedding. The sign is aimed at a people whose religion could keep you clean enough to enter a room and still leave the room thirsty. John calls it the beginning of the signs and the revealing of glory. Glory in chapter 1 pitched tent. Glory in chapter 2 pours.
+      In Hebrew prophecy, vintage, harvest, and wedding banquets represent the public inauguration of Jehovah’s covenant restoration. A wedding running out of wine in Cana symbolizes the spiritual exhaustion of the Old Covenant order. Israel’s ceremonial purity system could maintain outward washings and legal boundaries, yet it remained powerless to impart Kingdom life or enduring joy. Jesus does not condemn the hosts or provide a lecture on ritual ethics; instead, He converts ritual purification water into superior wine. This first miraculous sign reveals His divine Shekinah glory—the identical glory that formerly tabernacled in Moses' wilderness tent and Solomon's temple, now operating directly through the incarnate Son.
     </p>
-    <h3>2) The Jars Are the Old World Standing in the Kitchen</h3>
+
+    <h3>2) Stone Purification Jars and Old Covenant Transition</h3>
     <p>
-      Six stone pots “after the Jews’ way of purifying” are not rustic décor. They are Torah-practice you can trip over. Washings managed contact, meals, and who could approach. Hebrews later says those washings could not perfect the conscience. John shows the same thing without a footnote: the vessels that held the old water become the vessels of the new wine. Jesus does not smash the jars. He fills them to the brim and draws. That is how fulfillment works in this Gospel. The old container is used up into its purpose, then left behind. You are not meant to keep refilling ritual water and calling it the feast.
+      The six stone water jars reserved for the ceremonial washings of the Jews represent the legal apparatus of Sinai. Stone vessels were utilized in legalistic tradition because, unlike earthenware, they were believed immune to contracting ritual uncleanness. Yet these heavy containers could never cleanse the human conscience or grant spiritual righteousness. By ordering them filled to the brim and drawing out miraculous wine, Jesus demonstrates covenant fulfillment. He does not destroy the old vessels; He exhausts their symbolic function by replacing ceremonial shadow with New Covenant reality. Once the superior wine of the Spirit is drawn, returning to empty wash-water constitutes a rejection of the Kingdom feast.
     </p>
-    <h3>3) “My Hour” Is Not a Thousand-Year Shrug</h3>
+
+    <h3>3) The Bounded First-Century "Hour"</h3>
     <p>
-      “My hour has not yet come” is the sentence people use to smuggle delay into John. The book will not allow it. The hour in this Gospel is the hour of being lifted up, of glorification, of the disciples being scattered, of the Father being asked to glorify the Son. All of that lands inside the lives of the people in the room. Mary is not being told that the real wedding is on a later planet. She is being told that the public hour — cross, tomb, opened access — is not this afternoon in Cana. The sign can start. The hour is still appointed, and it is near. Every later “hour” in John keeps that same short fuse.
+      Jesus’ statement, "My hour has not yet come," establishes a precise redemptive timeline bounded within the first century. Throughout John's Gospel, "the hour" consistently identifies the Son's sacrificial death, resurrection, and inaugural glorification (John 12:23; 17:1). This temporal clock was short and specific to that generation. Christ was not postponing Kingdom reality to an imagined future epoch thousands of years removed. Rather, He was indicating that while the preliminary sign was manifest in Cana, the ultimate triumph of New Covenant redemption would be fully realized through His impending cross, resurrection, and the subsequent overthrow of the old sanctuary system.
     </p>
-    <h3>4) Better Wine Is Succession, Not a Side Project</h3>
+
+    <h3>4) Superior Wine and Covenant Succession</h3>
     <p>
-      The steward thinks the bridegroom has broken banquet etiquette: good wine last. John wants you to hear covenant order. What God served first — Law, washings, a house of stone — was not a mistake. It was first. What He serves now is better, and it arrives in the presence of the old pots. “Until now” is a timestamp. The prophets promised a feast on the mountain when death’s shroud was swallowed and vintage was rich. John does not wait for a later mountain. He puts the better cup on a Galilean table and then walks the same glory into Jerusalem at Passover. If you keep Sinai’s wash-water after the better wine has been drawn, you are not being faithful to the first cup. You are refusing the feast.
+      The banquet master’s observation—that the good wine was reserved until now—captures the central mechanism of covenant succession. God's historical economy provided the Law, the ceremonial washings, and the earthly temple as provisional guardians. However, the New Covenant administration instituted by Messiah is inherently superior in nature and quality. What comes after Moses does not weaken divine authority; it fulfills and surpasses it. The feast promised in Isaiah 25 has arrived in the person of Christ. Retaining the shadowy ceremonial washings after the true wine of the Kingdom has been poured is a failure to discern the finished work of redemption.
     </p>
-    <h3>5) Passover, Animals, and a House on Notice</h3>
+
+    <h3>5) Temple Cleansing as Judgment on Earthly Access</h3>
     <p>
-      He goes up at the feast that remembers lambs and finds oxen, sheep, doves, and coin in the courts. This is not a tantrum about noise. It is a claim on the building. “My Father’s house” plus a whip is Malachi’s Lord coming to His temple, and it is Psalm 69’s zeal that consumes the righteous one while enemies occupy the courts. Access had become a market. You could buy the animal that stood between you and the holy place. Jesus throws the inventory out because the meeting-place is about to be a body, not a stall. The leaders ask for a sign. They want authorization that leaves their project intact. He will not give them one.
+      Jesus walking into the Jerusalem temple during Passover and driving out animal merchants is a formal act of covenant lawsuit. By converting the court of nations into a commercial market, the Judean leadership had turned divine access into a transactional business. Using a whip of cords to expel sheep, oxen, and money changers fulfills Malachi's prophecy of the Lord suddenly coming to His temple to purify and judge. Jesus condemns their commercialization of sacrificial access, declaring that the earthly house would no longer function as the authorized mediator between God and humanity.
     </p>
-    <h3>6) “Destroy This Temple” Names the Real Address</h3>
+
+    <h3>6) The Resurrected Body as the True Sanctuary</h3>
     <p>
-      Forty-six years of Herodian work is their measure of reality. His measure is three days and a body. John refuses to let the reader share their confusion: He spoke of the temple of His body. Resurrection is the sign they demanded. It is also the eviction notice. Once the true dwelling stands up, the stone house is no longer the centre of meeting, even if pilgrims keep walking through it. That is why the disciples remember the saying after Easter and believe both Scripture and His word. The argument of the book is already complete here: glory, wine, body, raised house. What remains of Herod’s project is a deadline.
+      When temple authorities demand a legitimizing sign for His actions, Jesus delivers a revolutionary ultimatum: "Destroy this temple, and in three days I will raise it up." The Judean leaders evaluate His statement through literal masonry, citing the forty-six years of Herodian construction. John explicitly clarifies that Jesus was speaking of the temple of His body. Christ's resurrection stands as the ultimate sign of divine authority and the permanent relocation of God’s sanctuary. From Easter morning onward, the true tabernacle, altar, and meeting-place reside exclusively in the resurrected Son.
     </p>
-    <h3>7) The Vacant Building and the Men Who Believed the Signs</h3>
+
+    <h3>7) The Demise of the Old House and Present Kingdom Reality</h3>
     <p>
-      Many in Jerusalem “believe” because they saw signs. Jesus does not entrust Himself to sign-faith that still wants the old house to be the point. He knows what is in man. The chapter that began with servants who obeyed and disciples who believed ends with a crowd that can watch wonders and still not leave the market. AD 70 does not create the replacement. It publishes it. When the stones come down, the three-day temple has already been up for a generation. The living house is the people joined to the risen Son. The wash-jars are empty of their old job. The better wine is the life of the New Covenant, present, not pending.
+      While the stone edifice in Jerusalem continued standing for several decades after the resurrection, its spiritual legitimacy and divine presence had departed. The destruction of Jerusalem and its temple in AD 70 brought the final, visible consummation to an already obsolete building. The true temple was raised in three days, establishing a spiritual house composed of believers joined to the risen Christ. The old ceremonial jars stand completely empty, and the true wine of the New Covenant remains the present, eternal reality for all who reside in Him.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine / New Covenant</a></li>
@@ -214,62 +274,56 @@
       <li><a href="/Bible/Prophecy/wedding-feast.html">Wedding Feast</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EXO12.htm" target="_blank" rel="noopener">Exodus 12 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/PSA69.htm" target="_blank" rel="noopener">Psalm 69 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/MAL03.htm" target="_blank" rel="noopener">Malachi 3 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA25.htm" target="_blank" rel="noopener">Isaiah 25 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/HEB09.htm" target="_blank" rel="noopener">Hebrews 9 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/ISA25.htm" target="_blank" rel="noopener">Isaiah 25:6–8 (WEB)</a> — Prophecy of the Lord's banquet of aged wine swallowing up death.</li>
+      <li><a href="https://ebible.org/eng-web/PSA69.htm" target="_blank" rel="noopener">Psalm 69:9 (WEB)</a> — Messianic psalm of zeal consuming the righteous servant.</li>
+      <li><a href="https://ebible.org/eng-web/HEB09.htm" target="_blank" rel="noopener">Hebrews 9:9–11 (WEB)</a> — Ceremonial washings yielding to the greater and more perfect tabernacle.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Hour</strong> — the appointed lifting-up and glorification inside that generation.</li>
-      <li><strong>Purification jars</strong> — Moses’ wash-economy standing in the room when joy arrives.</li>
-      <li><strong>Better wine</strong> — the New Covenant served after, and better than, the first administration.</li>
-      <li><strong>Father’s house</strong> — the stone centre under eviction, not a permanent address.</li>
-      <li><strong>Temple of His body</strong> — dwelling and sacrifice relocated to the Son.</li>
-      <li><strong>Three days</strong> — the sign they asked for; the deadline their masonry could not meet.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You do not become clean by returning to the jars. You do not meet God by defending a building. The better wine is already drawn. The true temple already stood up. Physical death still returns a body to dust; Cana and the courts were not about cancelling mortality. They were about ending a world of washings and purchased access. That world ended. Union with the risen Son is the house you live in.
+      In Christ, you have been brought into the permanent celebration of the New Covenant, where the superior wine of the Spirit flows without end. You are no longer bound by shadow rituals, performance-driven washings, or institutional mediators to earn divine favor. As a believer, you are directly joined to the true temple—the resurrected Christ Himself—enjoying continuous access, absolute security, and full union with God without fear of condemnation.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still asking for a sign that will leave the old jars and the old house in charge — instead of drinking what He has already poured and meeting God in the temple that already rose?
+      How does knowing that Christ is your living temple inspire you to rest completely in His finished work today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john1.html">Previous</a>
-        <a class="btn" href="/Bible/John/john3.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn’t load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john1.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john3.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
