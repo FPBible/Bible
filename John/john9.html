@@ -4,154 +4,204 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 9 — From Blindness to Sight — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="John frames this sign as a covenant confrontation: light has entered Israel’s world, and the conflict is not “miracle vs no miracle” but Messiah vs the control-system. The question is not “who is to blame,” but what happens when God’s work is revealed and the old order tries to prosecute mercy as a crime. - Fulfilled Prophecy study edition using the WEB translation." />
+  <meta name="description" content="Jesus heals a man born blind on the Sabbath, sparking a legalistic trial that exposes the spiritual blindness of Israel's leadership and demonstrates New Creation sight in Messiah." />
+
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 900px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.06);
+      --soft2: rgba(0,0,0,0.04);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 44px;
+    }
+
+    .topnav{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topnav .bar{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px var(--pad);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      align-items: center;
+    }
+    .topnav a{
+      text-decoration: underline;
+      font-size: 0.95em;
+      color: #111;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .topnav .sep{ opacity: 0.45; }
+
+    section{ scroll-margin-top: 78px; }
+    #top{ scroll-margin-top: 0; }
+
+    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
+    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
+    h2{ font-size: 1.32rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.06rem; }
+
+    p{ margin: 0.75em 0; }
+    ul, ol{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
+    li{ margin: 0.42em 0; }
+
+    a{ color: inherit; text-decoration: underline; font-weight: 600; }
+    a:hover{ opacity: 0.85; }
+
+    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
+
+    .muted{ color: var(--muted); }
+
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 1.5em 0;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+      margin: 1.5em 0;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: #333;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: #0056b3;
+    }
+    .bottom-nav a { color: #0056b3; text-decoration: none; }
+    .bottom-nav a:hover { text-decoration: underline; }
+    .bottom-nav .sep { color: #666; font-weight: 400; }
+
+    footer{
+      margin-top: 2.2em;
+      padding-top: 1.2em;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.96em;
+    }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Q22N178LJ8');
-  </script>
 </head>
 <body>
-  <a id="top"></a>
-  <div class="wrap">
-    <nav class="top">
-      <a class="btn" href="/Bible/">Bible Index</a>
-      <a class="btn" href="/Bible/John/index.html">Book Index</a>
-      <a class="btn" href="/Bible/John/john8.html">Previous</a>
-      <a class="btn" href="/Bible/John/john10.html">Next</a>
-      <a class="btn" href="#top">Top</a>
-    </nav>
-    <h1>John 9</h1>
-    <h2>From Blindness to Sight</h2>
-    <hr />
-    <h2>Immediate Context</h2>
-      <p>
-John frames this sign as a covenant confrontation: light has entered Israel’s world, and the conflict is not “miracle vs no miracle” but
-<strong>Messiah vs the control-system</strong>. The question is not “who is to blame,” but what happens when God’s work is revealed and the old order
-tries to prosecute mercy as a crime.
-</p>
-      <div class="scripture-text">
-<p>As he passed by, he saw a man blind from birth.</p>
-<p>
-His disciples asked him, “Rabbi, who sinned, this man or his parents, that he was born blind?”</p>
-<p>
-Jesus answered, “This man didn’t sin, nor did his parents; but, that the works of God might be revealed in him.</p>
-<p>
-I must work the works of him who sent me while it is day. The night is coming, when no one can work.</p>
-<p>
-While I am in the world, I am the light of the world.”</p>
-<p>
-When he had said this, he spat on the ground, made mud with the saliva, anointed the blind man’s eyes with the mud,</p>
-<p>
-and said to him, “Go, wash in the pool of Siloam” (which means “Sent”). So he went away, washed, and came back seeing.</p>
-<p>
-The neighbors therefore, and those who saw that he was blind before, said, “Isn’t this he who sat and begged?”</p>
-<p>
-Others were saying, “It is he.” Still others were saying, “He looks like him.”</p>
-<p>
-He said, “I am he.”</p>
-<p>
-They therefore were asking him, “How were your eyes opened?”</p>
-<p>
-He answered, “A man called Jesus made mud, anointed my eyes, and said to me, ‘Go to the pool of Siloam and wash.’ So I went away and washed, and I received sight.”</p>
-<p>
-Then they asked him, “Where is he?”</p>
-<p>
-He said, “I don’t know.”</p>
-<p>
-They brought him who had been blind to the Pharisees.</p>
-<p>
-It was a Sabbath when Jesus made the mud and opened his eyes.</p>
-<p>
-Again therefore the Pharisees also asked him how he received his sight. He said to them, “He put mud on my eyes, I washed, and I see.”</p>
-<p>
-Some therefore of the Pharisees said, “This man is not from God, because he doesn’t keep the Sabbath.” Others said, “How can a man who is a sinner do such signs?” There was division among them.</p>
-<p>
-Therefore they asked the blind man again, “What do you say about him, because he opened your eyes?”</p>
-<p>
-He said, “He is a prophet.”</p>
-<p>
-The Jews therefore didn’t believe concerning him, that he had been blind, and had received his sight, until they called the parents of him who had received his sight,</p>
-<p>
-and asked them, “Is this your son, whom you say was born blind? How then does he now see?”</p>
-<p>
-His parents answered them, “We know that this is our son, and that he was born blind;</p>
-<p>
-but how he now sees, we don’t know; or who opened his eyes, we don’t know. He is of age. Ask him. He will speak for himself.”</p>
-<p>
-His parents said these things because they feared the Jews; for the Jews had already agreed that if any man would confess him as Christ, he would be put out of the synagogue.</p>
-<p>
-Therefore his parents said, “He is of age. Ask him.”</p>
-<p>
-So they called the man who was blind a second time, and said to him, “Give glory to God. We know that this man is a sinner.”</p>
-<p>
-He therefore answered, “I don’t know if he is a sinner. One thing I do know: that though I was blind, now I see.”</p>
-<p>
-They said to him again, “What did he do to you? How did he open your eyes?”</p>
-<p>
-He answered them, “I told you already, and you didn’t listen. Why do you want to hear it again? You don’t also want to become his disciples, do you?”</p>
-<p>
-They insulted him and said, “You are his disciple, but we are disciples of Moses.</p>
-<p>
-We know that God has spoken to Moses. But as for this man, we don’t know where he comes from.”</p>
-<p>
-The man answered them, “How amazing! You don’t know where he comes from, yet he opened my eyes.</p>
-<p>
-We know that God doesn’t listen to sinners, but if anyone is a worshiper of God, and does his will, he listens to him.</p>
-<p>
-Since the world began it has never been heard of that anyone opened the eyes of someone born blind.</p>
-<p>
-If this man were not from God, he could do nothing.”</p>
-<p>
-They answered him, “You were altogether born in sins, and do you teach us?” Then they threw him out.</p>
-<p>
-Jesus heard that they had thrown him out, and finding him, he said, “Do you believe in the Son of God?”</p>
-<p>
-He answered, “Who is he, Lord, that I may believe in him?”</p>
-<p>
-Jesus said to him, “You have both seen him, and it is he who speaks with you.”</p>
-<p>
-He said, “Lord, I believe!” and he worshiped him.</p>
-<p>
-Jesus said, “I came into this world for judgment, that those who don’t see may see; and that those who see may become blind.”</p>
-<p>
-Those of the Pharisees who were with him heard these things, and said to him, “Are we also blind?”</p>
-<p>
-Jesus said to them, “If you were blind, you would have no sin; but now you say, ‘We see.’ Therefore your sin remains.</p>
+
+<a id="top"></a>
+
+<div class="topnav" aria-label="Standard navigation">
+  <div class="bar">
+    <a href="/Bible/">Bible Index</a><span class="sep">|</span>
+    <a href="/Bible/John/index.html">John Index</a><span class="sep">|</span>
+    <a href="/Bible/John/john8.html">Previous</a><span class="sep">|</span>
+    <a href="/Bible/John/john10.html">Next</a><span class="sep">|</span>
+    <a href="#top">Top</a>
+  </div>
 </div>
-    <hr />
+
+<div class="wrap">
+
+  <h1>John 9 — From Blindness to Sight</h1>
+  <hr />
+
+  <!-- 1. Immediate Context -->
+  <section id="context">
+    <h2>Immediate Context</h2>
+    <p>
+      Following His confrontation in the temple treasury, Jesus encounters a man born blind in Jerusalem on the Sabbath. Rather than framing the man's condition through traditional Judean blame and ancestral guilt, Jesus uses the miracle as an inaugural sign to demonstrate that divine illumination has entered Israel's world. By sending the man to wash at the pool of Siloam and restoring his sight, Jesus provokes a major legalistic trial by the Sanhedrin. In this first-century context, the religious establishment attempts to prosecute mercy as a Sabbath violation, threatening to expel anyone who confesses Jesus as Christ, thereby exposing their own profound spiritual blindness before the temple's destruction in AD 70.
+    </p>
+  </section>
+  <hr />
+
+  <!-- 2. Scripture Text (WEB) -->
+  <section id="scripture">
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -159,11 +209,11 @@ Jesus said to them, “If you were blind, you would have no sin; but now you say
         <span class="v-num">2</span>His disciples asked him, “Rabbi, who sinned, this man or his parents, that he was born blind?”
         <span class="v-num">3</span>Jesus answered, “Neither did this man sin, nor his parents; but, that the works of God might be revealed in him.
         <span class="v-num">4</span>I must work the works of him who sent me, while it is day. The night is coming, when no one can work.
-        <span class="v-num">5</span>While I am in the world, I am the light of the world.”
+        <span class="v-num">5</span>While I am in the world, I am the <strong>light of the world</strong>.”
       </p>
       <p>
         <span class="v-num">6</span>When he had said this, he spat on the ground, made mud with the saliva, anointed the blind man’s eyes with the mud,
-        <span class="v-num">7</span>and said to him, “Go, wash in the pool of Siloam” (which means “Sent”). So he went away, washed, and came back seeing.
+        <span class="v-num">7</span>and said to him, “Go, wash in the <strong>pool of Siloam</strong>” (which means “Sent”). So he went away, washed, and came back seeing.
         <span class="v-num">8</span>The neighbors therefore, and those who saw that he was blind before, said, “Isn’t this he who sat and begged?”
         <span class="v-num">9</span>Others were saying, “It is he.” Still others were saying, “He looks like him.” He said, “I am he.”
         <span class="v-num">10</span>They therefore were asking him, “How were your eyes opened?”
@@ -172,7 +222,7 @@ Jesus said to them, “If you were blind, you would have no sin; but now you say
         <span class="v-num">11</span>He answered, “A man called Jesus made mud, anointed my eyes, and said to me, ‘Go to the pool of Siloam, and wash.’ So I went away and washed, and I received sight.”
         <span class="v-num">12</span>Then they asked him, “Where is he?” He said, “I don’t know.”
         <span class="v-num">13</span>They brought him who had been blind to the Pharisees.
-        <span class="v-num">14</span>It was a Sabbath when Jesus made the mud and opened his eyes.
+        <span class="v-num">14</span>It was a <strong>Sabbath</strong> when Jesus made the mud and opened his eyes.
         <span class="v-num">15</span>Again therefore the Pharisees also asked him how he received his sight. He said to them, “He put mud on my eyes, I washed, and I see.”
       </p>
       <p>
@@ -184,7 +234,7 @@ Jesus said to them, “If you were blind, you would have no sin; but now you say
       </p>
       <p>
         <span class="v-num">21</span>but how he now sees, we don’t know; or who opened his eyes, we don’t know. He is of age. Ask him. He will speak for himself.”
-        <span class="v-num">22</span>His parents said these things because they feared the Jews; for the Jews had already agreed that if any man would confess him as Christ, he would be put out of the synagogue.
+        <span class="v-num">22</span>His parents said these things because they feared the Jews; for the Jews had already agreed that if any man would confess him as Christ, he would be <strong>put out of the synagogue</strong>.
         <span class="v-num">23</span>Therefore his parents said, “He is of age. Ask him.”
         <span class="v-num">24</span>So they called the man who was blind a second time, and said to him, “Give glory to God. We know that this man is a sinner.”
         <span class="v-num">25</span>He therefore answered, “I don’t know if he is a sinner. One thing I do know: that though I was blind, now I see.”
@@ -192,7 +242,7 @@ Jesus said to them, “If you were blind, you would have no sin; but now you say
       <p>
         <span class="v-num">26</span>They said to him again, “What did he do to you? How did he open your eyes?”
         <span class="v-num">27</span>He answered them, “I told you already, and you didn’t listen. Why do you want to hear it again? You don’t also want to become his disciples, do you?”
-        <span class="v-num">28</span>They insulted him and said, “You are his disciple, but we are disciples of Moses.
+        <span class="v-num">28</span>They insulted him and said, “You are his disciple, but we are <strong>disciples of Moses</strong>.
         <span class="v-num">29</span>We know that God has spoken to Moses. But as for this man, we don’t know where he comes from.”
         <span class="v-num">30</span>The man answered them, “How amazing! You don’t know where he comes from, yet he opened my eyes.
       </p>
@@ -207,140 +257,142 @@ Jesus said to them, “If you were blind, you would have no sin; but now you say
         <span class="v-num">36</span>He answered, “Who is he, Lord, that I may believe in him?”
         <span class="v-num">37</span>Jesus said to him, “You have both seen him, and it is he who speaks with you.”
         <span class="v-num">38</span>He said, “Lord, I believe!” and he worshiped him.
-        <span class="v-num">39</span>Jesus said, “I came into this world for judgment, that those who don’t see may see; and that those who see may become blind.”
+        <span class="v-num">39</span>Jesus said, “I came into this world for <strong>judgment</strong>, that those who don’t see may see; and that those who see may become blind.”
         <span class="v-num">40</span>Those of the Pharisees who were with him heard these things, and said to him, “Are we also blind?”
       </p>
       <p>
         <span class="v-num">41</span>Jesus said to them, “If you were blind, you would have no sin; but now you say, ‘We see.’ Therefore your sin remains.
       </p>
     </div>
-    <hr />
-        <h2 class="hide-element">Fulfillment Notes</h2>
+  </section>
+  <hr />
+
+  <!-- 3. Fulfillment Notes -->
+  <section id="notes">
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li>John 9 is judgment-as-exposure: light arrives and reveals who is truly blind in the covenant crisis.</li>
-<li>The synagogue expulsion shows the old order policing “access” and punishing testimony as the transition intensifies toward AD 70.</li>
-<li>Sabbath controversy here is not “God vs rest” but leadership defending itself by calling mercy illegal.</li>
-<li>The healed man becomes the witness; the experts become the blind—covenant reversal in real time.</li>
-</ul>
-    <hr />
+      <li>Healing the man born blind serves as an inaugural sign of divine creation, replacing temple-managed access with Messiah's authority.</li>
+      <li>The pool of Siloam ("Sent") points to Christ as the true source of spiritual cleansing and illumination in the New Creation.</li>
+      <li>Threatening expulsion from the synagogue demonstrates the apostate Judean leadership enforcing loyalty through social control.</li>
+      <li>The blind man's progressive confession illustrates true covenant sight, while the religious experts harden in their spiritual blindness.</li>
+      <li>Divine judgment operates in real time as light enters first-century Israel, exposing those who claim sight while rejecting Messiah.</li>
+    </ul>
+  </section>
+  <hr />
+
+  <!-- 4. Annotations -->
+  <section id="annotations">
     <h2>Annotations</h2>
-    <div class="note">
-<p><strong>“We must work… while it is day”</strong> — covenant-timing urgency: light is present; the old world’s night is approaching.</p>
-<p><strong>Siloam (“Sent”)</strong> — the sign points to the Sent One as the source of sight and cleansing, not the system.</p>
-<p><strong>“Put out of the synagogue”</strong> — power language: exclusion used to enforce loyalty during the covenant showdown.</p>
-</div>
-    <hr />
-    <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) The question is wrong because the system is wrong</h3>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>light of the world</strong>: Messiah's presence invading first-century Israel's darkness to bring spiritual illumination.</div>
+      <div class="annotation-item"><strong>pool of Siloam</strong>: Hebrew *Shiloach* ("Sent"); symbolic water source pointing to Christ as the divine Sent One.</div>
+      <div class="annotation-item"><strong>Sabbath</strong>: Old Covenant seventh-day rest sign, transcended by Messiah's ongoing work of divine mercy and recreation.</div>
+      <div class="annotation-item"><strong>put out of the synagogue</strong>: Greek *aposynagōgos*; formal exclusion and social ostracization used by the Sanhedrin to suppress messianic confession.</div>
+      <div class="annotation-item"><strong>disciples of Moses</strong>: Designation used by Judean authorities to assert allegiance to Sinai legalism over Messiah's New Covenant authority.</div>
+      <div class="annotation-item"><strong>judgment</strong>: The immediate judicial exposure resulting from the light of truth entering an apostate covenant order.</div>
+    </div>
+  </section>
+  <hr />
+
+  <!-- 5. Fulfillment Commentary -->
+  <section id="commentary">
+    <h2>Fulfillment Commentary</h2>
+    
+    <h3>1) Refusing the Ancestral Blame Framework</h3>
     <p>
-The disciples ask the standard blame question: “Who sinned—him or his parents?” That’s the reflex of a world built on accusation.
-Jesus refuses the frame. He doesn’t turn suffering into a courtroom. He turns it into a stage where God’s work is revealed.
-The old order wanted categories: clean/unclean, worthy/unworthy, guilty/innocent. Jesus exposes that the categories themselves were part of the blindness.
-</p>
-    <h3>2) “Day” and “night” are covenant-timing language</h3>
+      When the disciples observe the man born blind, they immediately pose a traditional rabbinic question: "Rabbi, who sinned, this man or his parents, that he was born blind?" This inquiry reflects the dominant Old Covenant mindset, which viewed physical infirmity strictly as judicial punishment for personal or ancestral guilt. Jesus flatly rejects this blame-centered framework, clarifying that neither the man nor his parents sinned to cause the blindness, but that the works of God might be revealed in him. Under the Mosaic system, legalistic categories of clean and unclean, worthy and unworthy, served to maintain social boundaries and human condemnation. Jesus dismantles this accusing apparatus, reframing human suffering not as a courtroom case for human legalism, but as the stage for Messiah’s creative work. By declaring, "I must work the works of him who sent me while it is day; night is coming," Jesus highlights the temporal urgency of His first-century ministry. Light was present in Messiah, and the day of opportunity for covenant Israel was rapidly drawing to a close before the night of judgment overwhelmed the old order.
+    </p>
+
+    <h3>2) Siloam and Creation Motifs in Redemptive Context</h3>
     <p>
-“We must work… while it is day; night is coming.” John isn’t giving you poetic motivation. He’s giving you covenant timing.
-Light is present in the Messiah, and the old age is running out of road. This is the same storyline running through John:
-the Light shines; the darkness resists; judgment happens as exposure. “Night” in this setting is not the end of the planet,
-but the closing of a covenant world that rejected the Light and therefore moved toward its own collapse.
-</p>
-    <h3>3) Mud and washing: creation imagery with a point</h3>
+      In restoring the man’s sight, Jesus performs an intentional, symbolic act by spitting on the ground, making mud with His saliva, and anointing the man’s eyes. This action directly recalls Genesis 2, where God formed man from the dust of the ground, framing the miracle as an act of New Creation. Jesus then instructs the man to wash in the pool of Siloam, which John explicitly translates as "Sent." By directing the man to Siloam, Jesus redirects Israel's attention away from the temple-controlled water systems to Himself as the true Sent One from God. Healing does not flow from levitical sacrifices, priestly intervention, or temple masonry, but directly from the living word of Messiah. The man goes, washes, and returns seeing, obtaining complete physical and spiritual restoration outside the authorization of the religious establishment.
+    </p>
+
+    <h3>3) The Trial of Mercy and Sabbath Legalism</h3>
     <p>
-John uses creation motifs deliberately. The sign is not “look what Jesus can do,” but “look what Jesus is replacing.”
-Sight comes from the Sent One. Not from temple-managed access. Not from ritual status. Not from leadership permission.
-The man receives sight outside the system’s control, and that threatens the whole apparatus.
-</p>
-    <h3>4) Sabbath conflict reveals a regime, not a theology debate</h3>
+      When the neighbors bring the healed man to the Pharisees, the religious authorities initiate an intense investigation. Because Jesus performed the miracle on the Sabbath, the Sanhedrin ignores the reality of the miracle and focuses exclusively on technical Sabbath compliance: "This man is not from God, because he doesn't keep the Sabbath." This controversy reveals the fundamental flaw of the apostate regime. The Sabbath was instituted to foreshadow Messiah’s eternal rest and divine mercy; yet the Judean authorities weaponized the sign to condemn acts of compassion. In their attempt to protect their institutional authority, the Pharisees prosecute mercy as a crime. The trial exposes the deep division within the Sanhedrin, as some question how a sinner could perform such undeniable messianic signs. The Sabbath debate was never a genuine theological inquiry; it was a desperate attempt by an expiring leadership to defend its control over the people.
+    </p>
+
+    <h3>4) Synagogue Expulsion and the Shepherding of the Cast-Out</h3>
     <p>
-The Sabbath wasn’t the issue—authority was. When mercy is treated as criminal, you’re watching a regime defending itself.
-John 9 is a courtroom drama where the wrong people are on trial. The leaders aren’t seeking truth; they’re protecting a narrative.
-That’s why they escalate to intimidation and exclusion: the system survives by controlling who gets to “belong.”
-</p>
-    <h3>5) The cost of sight is expulsion, and that’s the tell</h3>
+      As the investigation escalates, the Pharisees summon the man’s parents to verify his former condition. Out of intense fear of the religious leaders, the parents refuse to testify about Jesus, deferring to their son because "the Jews had already agreed that if any man would confess him as Christ, he would be put out of the synagogue." Expulsion (*aposynagōgos*) meant complete social, economic, and religious excommunication from Judean community life. This intimidation tactic demonstrates how the Old Covenant regime policed access and enforced compliance through fear. When the healed man boldly defends Jesus before the Sanhedrin—pointing out that God does not listen to unrepentant sinners, yet opened the eyes of one born blind—the leaders insult him, declare him altogether born in sins, and cast him out. Upon hearing of his expulsion, Jesus seeks out the rejected man, revealing Himself as the Son of God. This encounter establishes a key covenant reality: the old system expels, but the true Shepherd gathers. The cast-out man becomes the firstfruits of the flock claimed by Messiah.
+    </p>
+
+    <h3>5) Judicial Exposure and First-Century Covenant Resolution</h3>
     <p>
-The parents are afraid of being put out of the synagogue. That fear tells you everything. This is not neutral “Bible study.”
-It’s social control with religious clothing. The healed man loses religious status the moment he tells the truth.
-John is showing how the old world policed access and punished testimony—right in the run-up to covenant resolution.
-</p>
-    <h3>6) Judgment is present-tense exposure</h3>
-    <p>
-Jesus says He came “for judgment”—so the blind may see, and those who claim sight may become blind.
-That’s the punchline: judgment is not mainly future scheduling. It is what happens when Light arrives.
-Truth exposes blindness, and refusal hardens it. “We see” becomes the self-condemning line because it’s the claim of final authority
-while rejecting the very thing God is doing.
-</p>
-    <h3>7) John 9 sets up John 10: the Shepherd gathers the cast-out</h3>
-    <p>
-Jesus finds the expelled man. That’s not sentimental; it’s structural. The system expels; the Shepherd gathers.
-John 10 is the direct answer to John 9: corrupt shepherds throw out; the true Shepherd secures.
-The healed man is the sheep the old order rejected—and the exact one the Messiah claims as His own.
-</p>
-    <hr />
-    <h2>Prophecy Hub Connections</h2>
+      Jesus concludes the event by announcing His judicial purpose: "I came into this world for judgment, that those who don't see may see; and that those who see may become blind." In John’s Gospel, judgment is not primarily a far-off event at the end of physical time, but an immediate process of covenant exposure triggered by the arrival of Messiah’s light. When divine truth shines into first-century Israel, it creates an inevitable division: those who recognize their spiritual poverty receive sight and Kingdom life, while those who arrogantly claim "We see" remain locked in their sin. The Pharisees’ confident claim to possess exclusive scriptural and covenantal sight became their very sentence of condemnation. Their refusal to receive Messiah sealed the fate of the Jerusalem establishment, leading directly to the final desolation of their house in AD 70.
+    </p>
+  </section>
+  <hr />
+
+  <!-- 6. Prophecy Hub Links -->
+  <section id="links">
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><a href="/Bible/Prophecy/index.html#heaven-and-earth">Heaven and Earth — Covenant World Language</a></li>
-<li><a href="/Bible/Prophecy/index.html#parousia">Parousia — Presence and Vindication</a></li>
-<li><a href="/Bible/Prophecy/index.html#judgment">Judgment — Covenant Exposure and Resolution</a></li>
-</ul>
-    <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+      <li><a href="/Bible/Prophecy/light-of-the-world.html">Light of the World</a></li>
+      <li><a href="/Bible/Prophecy/judgment-and-exposure.html">Covenant Judgment and Exposure</a></li>
+      <li><a href="/Bible/Prophecy/good-shepherd.html">The Good Shepherd</a></li>
+    </ul>
+  </section>
+  <hr />
+
+  <!-- 7. Cross-References -->
+  <section id="crossref">
+    <h2>Cross-References</h2>
     <ul>
-<li><a href="https://ebible.org/web/ISA06.htm" rel="noopener noreferrer" target="_blank">Isaiah 6</a></li>
-<li><a href="https://ebible.org/web/EZE34.htm" rel="noopener noreferrer" target="_blank">Ezekiel 34</a></li>
-<li><a href="https://ebible.org/web/JHN10.htm" rel="noopener noreferrer" target="_blank">John 10</a></li>
-</ul>
-    <hr />
+      <li><a href="https://ebible.org/eng-web/ISA06.htm" target="_blank" rel="noopener">Isaiah 6:9–10 (WEB)</a> — Prophecy of judicial blindness and spiritual hardness upon Israel.</li>
+      <li><a href="https://ebible.org/eng-web/EZE34.htm" target="_blank" rel="noopener">Ezekiel 34:11–16 (WEB)</a> — The Lord searching out and gathering the sheep scattered by false shepherds.</li>
+      <li><a href="https://ebible.org/eng-web/1PE02.htm" target="_blank" rel="noopener">1 Peter 2:9–10 (WEB)</a> — The called-out people brought out of darkness into His marvelous light.</li>
+    </ul>
+  </section>
+  <hr />
+
+  <!-- 8. New Creation Reality -->
+  <section id="newcreation">
     <h2>New Creation Reality</h2>
     <p>
-Jesus still finds the cast-out. The kingdom is not run by gatekeepers. Sight is not awarded by approval systems.
-You live from the Light, not from the verdicts of anxious religious control. In Christ, belonging is settled—and the Shepherd does not lose His sheep.
-</p>
-    <hr />
+      In Christ, your spiritual sight and covenant standing are forever secure. You are not defined by the approval, categories, or threats of human religious systems, nor do you live under the fear of rejection or condemnation. Messiah has opened your eyes to the light of truth and gathered you into His permanent flock. Your belonging in the Father’s Kingdom rests entirely on the finished work of the Son, who continually upholds you, restores you, and walks with you in complete freedom.
+    </p>
+  </section>
+  <hr />
+
+  <!-- 9. Reflection -->
+  <section id="reflection">
     <h2>Reflection</h2>
     <p>
-Where am I still letting an approval-system tell me what is “allowed,” instead of letting Christ define what is true?
-</p>
-    <p>
-<a href="/Bible/">Bible Index</a> |
-  <a href="/Bible/John/">Book Index</a> |
-  <a href="/Bible/John/john8.html">Previous</a> |
-  <a href="/Bible/John/john10.html">Next</a> |
-  <a href="#top">Top</a>
-</p>
-    <p>
-<a href="https://ko-fi.com/B0B61QC1BU" rel="noopener noreferrer" target="_blank">
-<img alt="Support on Ko-fi" height="36" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" style="border:0;height:36px;"/>
-</a>
-</p>
-    <hr />
-    <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john8.html">Previous</a>
-        <a class="btn" href="/Bible/John/john10.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
-        </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+      How does knowing that Christ has personally gathered you into His light free you from seeking approval from performance-driven systems today?
+    </p>
+  </section>
+  <hr />
+
+  <!-- 10. Footer, Share & Navigation Block -->
+  <footer>
+    <div class="page-footer-block">
+      <div class="share-row">
+        <span>Share this study:</span>
+        <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+        <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+        <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
-    </footer>
-  </div>
+
+      <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+        <span>☕ Support on Ko-fi</span>
+      </a>
+
+      <div class="bottom-nav">
+        <a href="/Bible/">Bible Index</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/index.html">John Index</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/john8.html">Previous Chapter</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/john10.html">Next Chapter</a>
+        <span class="sep">|</span>
+        <a href="#top">Top</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
