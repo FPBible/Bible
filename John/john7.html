@@ -7,33 +7,128 @@
   <meta name="description" content="Division at the Feast of Booths. Rivers of living water promised from the Spirit. The old calendar meets the true source." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,24 +148,29 @@
       <a class="btn" href="/Bible/John/john8.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 7 — Living Water at the Feast</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      The Feast of Booths gathers Jerusalem. Jesus goes up privately, then teaches openly. Brothers press for publicity; the crowd divides. On the last day He cries out about living water. The Spirit is not yet given because Jesus is not yet glorified. Officers sent to arrest Him return empty-handed. Nicodemus asks for process. The calendar of the old covenant is about to be outrun by the source it pointed toward.
+      During the autumn pilgrimage festival of the Feast of Booths (Sukkot) in Jerusalem, Jesus travels up to the temple courts in secret after rejecting His brothers' demand for public political showmanship. In the first-century context, Sukkot was the climax of the Judean liturgical calendar, commemorating Israel's wilderness journeys with daily water-pouring ceremonies from the Pool of Siloam. As the Judean authorities intensify their plot to arrest and execute Him, Jesus teaches openly in the temple complex. On the final and greatest day of the feast, Jesus delivers a dramatic public proclamation, identifying Himself as the true source of living water and declaring that the Holy Spirit would flow from within believers once He was glorified through His cross and resurrection.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>After these things, Jesus was walking in Galilee, for he wouldn’t walk in Judea, because the Jews sought to kill him.
-        <span class="v-num">2</span>Now the feast of the Jews, the Feast of Booths, was at hand.
+        <span class="v-num">2</span>Now the feast of the Jews, the <strong>Feast of Booths</strong>, was at hand.
         <span class="v-num">3</span>His brothers therefore said to him, “Depart from here, and go into Judea, that your disciples also may see your works which you do.
         <span class="v-num">4</span>For no one does anything in secret, and himself seeks to be known openly. If you do these things, reveal yourself to the world.”
         <span class="v-num">5</span>For even his brothers didn’t believe in him.
       </p>
       <p>
-        <span class="v-num">6</span>Jesus therefore said to them, “My time has not yet come, but your time is always ready.
+        <span class="v-num">6</span>Jesus therefore said to them, “<strong>My time has not yet come</strong>, but your time is always ready.
         <span class="v-num">7</span>The world can’t hate you, but it hates me, because I testify about it, that its works are evil.
         <span class="v-num">8</span>You go up to the feast. I am not yet going up to this feast, because my time is not yet fulfilled.”
         <span class="v-num">9</span>Having said these things to them, he stayed in Galilee.
@@ -88,11 +188,11 @@
         <span class="v-num">17</span>If anyone desires to do his will, he will know about the teaching, whether it is from God, or if I am speaking from myself.
         <span class="v-num">18</span>He who speaks from himself seeks his own glory, but he who seeks the glory of him who sent him is true, and no unrighteousness is in him.
         <span class="v-num">19</span>Didn’t Moses give you the law, and yet none of you keeps the law? Why do you seek to kill me?”
-        <span class="v-num">20</span>The multitude answered, “You have a demon! Who seeks to kill you?”
+        <span class="v-num">20</span>The multitude answered, “You have a <strong>demon</strong>! Who seeks to kill you?”
       </p>
       <p>
         <span class="v-num">21</span>Jesus answered them, “I did one work, and you all marvel because of it.
-        <span class="v-num">22</span>Moses has given you circumcision (not that it is of Moses, but of the fathers), and on the Sabbath you circumcise a boy.
+        <span class="v-num">22</span>Moses has given you circumcision (not that it is of Moses, but of the fathers), and on the Sabbath you <strong>circumcise a boy</strong>.
         <span class="v-num">23</span>If a boy receives circumcision on the Sabbath, that the law of Moses may not be broken, are you angry with me, because I made a man completely healthy on the Sabbath?
         <span class="v-num">24</span>Don’t judge according to appearance, but judge righteous judgment.”
         <span class="v-num">25</span>Therefore some of them of Jerusalem said, “Isn’t this he whom they seek to kill?
@@ -109,13 +209,13 @@
         <span class="v-num">32</span>The Pharisees heard the multitude murmuring these things concerning him, and the chief priests and the Pharisees sent officers to arrest him.
         <span class="v-num">33</span>Then Jesus said, “I will be with you a little while longer, then I go to him who sent me.
         <span class="v-num">34</span>You will seek me, and won’t find me; and where I am, you can’t come.”
-        <span class="v-num">35</span>The Jews therefore said among themselves, “Where will this man go that we won’t find him? Will he go to the Dispersion among the Greeks, and teach the Greeks?
+        <span class="v-num">35</span>The Jews therefore said among themselves, “Where will this man go that we won’t find him? Will he go to the <strong>Dispersion among the Greeks</strong>, and teach the Greeks?
       </p>
       <p>
         <span class="v-num">36</span>What is this word that he said, ‘You will seek me, and won’t find me; and where I am, you can’t come’?”
         <span class="v-num">37</span>Now on the last and greatest day of the feast, Jesus stood and cried out, “If anyone is thirsty, let him come to me and drink!
-        <span class="v-num">38</span>He who believes in me, as the Scripture has said, from within him will flow rivers of living water.”
-        <span class="v-num">39</span>But he said this about the Spirit, which those believing in him were to receive. For the Holy Spirit was not yet given, because Jesus wasn’t yet glorified.
+        <span class="v-num">38</span>He who believes in me, as the Scripture has said, from within him will flow <strong>rivers of living water</strong>.”
+        <span class="v-num">39</span>But he said this about the Spirit, which those believing in him were to receive. For the Holy <strong>Spirit was not yet given</strong>, because Jesus wasn’t yet glorified.
         <span class="v-num">40</span>Many of the multitude therefore, when they heard these words, said, “This is truly the prophet.”
       </p>
       <p>
@@ -126,7 +226,7 @@
         <span class="v-num">45</span>The officers therefore came to the chief priests and Pharisees, and they said to them, “Why didn’t you bring him?”
       </p>
       <p>
-        <span class="v-num">46</span>The officers answered, “No man ever spoke like this man!”
+        <span class="v-num">46</span>The officers answered, “<strong>No man ever spoke like this man</strong>!”
         <span class="v-num">47</span>The Pharisees therefore answered them, “You aren’t also led astray, are you?
         <span class="v-num">48</span>Have any of the rulers believed in him, or of the Pharisees?
         <span class="v-num">49</span>But this multitude that doesn’t know the law is accursed.”
@@ -135,46 +235,65 @@
       <p>
         <span class="v-num">51</span>“Does our law judge a man, unless it first hears from him personally and knows what he does?”
         <span class="v-num">52</span>They answered him, “Are you also from Galilee? Search, and see that no prophet has arisen out of Galilee.”
-        <span class="v-num">53</span>Everyone went to his own house,
+        <span class="v-num">53</span>Everyone went to his own house.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Feast of Booths remembered wilderness provision; Jesus offers the water that ends the temporary tent system.</p>
-      <p class="note">2) “My time has not yet come” is covenant timing language, not vague delay across ages.</p>
-      <p class="note">3) Living water = the Spirit given after glorification — within that generation’s horizon.</p>
-      <p class="note">4) Division is the expected outcome when the true source stands inside the old calendar.</p>
-      <p class="note">5) Officers cannot arrest the Word; process itself begins to crack under the claim.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The Feast of Booths commemorated wilderness dwelling, now superseded by Messiah as the eternal tabernacle and source of living water.</li>
+      <li>"My time has not yet come" defines a strict first-century covenant timeline pointing directly to Christ's cross and glorification.</li>
+      <li>The accusation "You have a demon" represents a first-century Hebrew idiom for mental madness used by hostile Judean authorities.</li>
+      <li>Living water flowing from within believers fulfills Old Testament prophecy regarding the Spirit's outpouring following Messiah's exaltation.</li>
+      <li>The division among temple officers and rulers signals the irrevocable cracking of the Old Covenant legal administration.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>Feast of Booths</strong>: wilderness memory and temporary dwelling; Jesus offers permanent source.</div>
-      <div class="annotation-item"><strong>My time</strong>: appointed hour of glorification, not open-ended postponement.</div>
-      <div class="annotation-item"><strong>rivers of living water</strong>: Spirit overflowing from the believer after the cross/resurrection.</div>
-      <div class="annotation-item"><strong>not yet given</strong>: sequential: glorification first, then Spirit outpouring.</div>
-      <div class="annotation-item"><strong>No man ever spoke</strong>: authority that disarms enforcement.</div>
+      <div class="annotation-item"><strong>Feast of Booths</strong>: Sukkot, the autumn pilgrimage festival commemorating wilderness shelter and temple water-libation rites, fulfilled in Christ.</div>
+      <div class="annotation-item"><strong>My time has not yet come</strong>: Covenant timing marker referencing Messiah's appointed hour of crucifixion, resurrection, and ascension.</div>
+      <div class="annotation-item"><strong>demon</strong>: First-century Hebrew cultural idiom and personification for severe mental affliction or madness, used pejoratively by the crowd.</div>
+      <div class="annotation-item"><strong>circumcise a boy</strong>: Old Covenant covenantal marker permitted on the Sabbath, used by Jesus to demonstrate that full healing transcends ritual shadows.</div>
+      <div class="annotation-item"><strong>Dispersion among the Greeks</strong>: The exiled Judeans (*Diaspora*) scattered among Gentile nations, foreshadowing global New Covenant gathering.</div>
+      <div class="annotation-item"><strong>rivers of living water</strong>: Prophetic motif (Zechariah 14; Ezekiel 47) describing the abundant, continuous life of the Holy Spirit in believers.</div>
+      <div class="annotation-item"><strong>Spirit was not yet given</strong>: The sequential redemptive order requiring Christ's sacrificial glorification before the Pentecost outpouring.</div>
+      <div class="annotation-item"><strong>No man ever spoke like this man</strong>: The undeniable divine authority of Messiah's voice disarming the temple guards sent by the Sanhedrin.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) The Calendar Meets Its Source</h3>
+    <h3>1) The Feast of Booths and the End of Temporary Shelters</h3>
     <p>
-      Booths celebrated God’s provision in the wilderness and the temporary nature of the tents. Jesus stands on the last day and offers rivers that do not run dry. The feast is not cancelled by theory; it is surpassed by the One who is the true provision.
+      The Feast of Booths (Sukkot) was established in the Mosaic Law as a memorial of Israel’s forty-year wilderness journey, during which the nation lived in temporary shelters while relying on divine provision for bread and water. By the first century, Sukkot had evolved into a massive week-long festival featuring daily water-libation ceremonies, where priests drew water from the Pool of Siloam and poured it out at the temple altar while praying for rain and the messianic kingdom. Jesus travels up to Jerusalem during this feast, standing in the temple courts to confront an audience observing shadows. When Jesus proclaims on the greatest day of the feast that thirsty souls must come to Him to drink, He asserts that the entire apparatus of Sukkot finds its ultimate fulfillment in His person. The temporary booths and symbolic water rituals of Sinai reached their endpoint; Messiah Himself is the permanent tabernacle and eternal source of life.
     </p>
-    <h3>2) Timing Language, Not Delay Rhetoric</h3>
+
+    <h3>2) Demon Accusations and the Sabbath Argument</h3>
     <p>
-      “My time has not yet come” sits inside the same Gospel that tracks “the hour.” The hour arrives in the cross, resurrection, and the Spirit’s coming. The brothers want public theatre; Jesus moves on the Father’s timetable that culminates inside that generation.
+      When Jesus exposes the intent of the Jerusalem authorities to execute Him, the crowd responds with the hostile accusation, "You have a demon!" In the ancient Near East and first-century Hebrew idiom, accusing someone of "having a demon" did not describe possession by an immortal fallen archangel or cosmic evil entity. Rather, it was a common vernacular phrase used to denote severe mental disorientation, delusion, or irrational paranoia—equivalent to saying someone was completely out of their mind. Jesus disregards their colloquial insult and dismantles their hypocrisy by referencing His healing of the paralyzed man at Bethesda on the Sabbath (John 5). He notes that under the Mosaic Law, priests perform physical circumcision on the eighth day even if it falls on a Sabbath to maintain the covenant sign. Jesus argues that if a minor surgical shadow can supersede Sabbath rest, making a whole human body healthy is the supreme fulfillment of divine rest. He commands them to judge righteous judgment rather than relying on external legalism.
     </p>
-    <h3>3) Living Water After Glorification</h3>
+
+    <h3>3) Rivers of Living Water and the Glorified Messiah</h3>
     <p>
-      The parenthetical in verse 39 is decisive: the Spirit is given after Jesus is glorified. Pentecost is not a distant symbol; it is the next step after the exaltation. The rivers flow from within those who believe — the New Covenant people themselves become the location of the water.
+      On the seventh and final day of the feast, during the climax of the water-pouring ritual, Jesus issues His sweeping messianic invitation: "If anyone is thirsty, let him come to me and drink! He who believes in me, as the Scripture has said, from within him will flow rivers of living water." This statement directly fulfills classic Old Testament prophecies such as Zechariah 14:8, Ezekiel 47:1–12, and Isaiah 55:1, which foretold a life-giving river flowing out from God's sanctuary to heal the nations. John provides the essential redemptive timeline in verse 39: Jesus spoke this regarding the Holy Spirit, which believers were to receive once Jesus was glorified. Under the Old Covenant, divine presence was localized inside a stone temple behind a heavy veil. Under the New Covenant, through Christ’s cross, resurrection, and ascension, the glorified Messiah bestows the Spirit, transforming believers into the living sanctuary from which rivers of divine life continuously flow.
     </p>
-    <h3>4) Division as Evidence</h3>
+
+    <h3>4) The Division of Israel and the Cracking of Temple Authority</h3>
     <p>
-      Some say He is good; others say He deceives. Officers return empty. Nicodemus asks for hearing. The old house cannot contain the claim without fracture. That fracture is the beginning of the transition, not a side effect to be managed away.
+      Jesus' teaching creates sharp, unavoidable division among the Judean population and their leadership. Some recognize Him as the Prophet foretold by Moses, while others confess Him as the Christ. Meanwhile, legalistic critics attempt to dismiss His messianic identity based on His Galilean upbringing, unaware of His Davidic lineage and Bethlehem birth. The chief priests and Pharisees dispatch temple officers to arrest Him, yet the officers return empty-handed, confessing, "No man ever spoke like this man!" The divine authority of Messiah's spoken word disarmed the legal enforcement of the Sanhedrin. When the Pharisaic council attempts to curse the common people for not knowing the Law, Nicodemus intervenes, pointing out that their own Law forbids condemning a man without a fair hearing. This internal conflict demonstrates that the Old Covenant leadership was fracturing under the weight of Messiah's presence, signaling the rapid decay of the Jerusalem establishment.
+    </p>
+
+    <h3>5) The Dispersion and the Gathering of the New Creation</h3>
+    <p>
+      When Jesus tells the crowd that He will remain with them only a little while longer before returning to the Father where they cannot come, the Judean leaders mockingly ask if He intends to go to the "Dispersion among the Greeks" to teach the Gentiles. Though spoken in sarcastic unbelief, their question unwittingly prophesied the actual expansion of the New Covenant. Following the inaugural events of Christ's glorification and the Pentecost outpouring of the Spirit, the gospel of the Kingdom broke past Judean borders to reach the scattered Israelites (*Diaspora*) and Gentile nations across the Roman world. The old, localized sanctuary in Jerusalem was destined for complete desolation in AD 70, while the New Creation Kingdom gathered all nations into one spiritual body, indwelt by the living water of the Spirit.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/living-water.html">Living Water</a></li>
@@ -182,58 +301,56 @@
       <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EXO17.htm" target="_blank" rel="noopener">Exodus 17 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA55.htm" target="_blank" rel="noopener">Isaiah 55 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ZEC14.htm" target="_blank" rel="noopener">Zechariah 14 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/JOE02.htm" target="_blank" rel="noopener">Joel 2 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/ZEC14.htm" target="_blank" rel="noopener">Zechariah 14:8 (WEB)</a> — Prophecy of living waters flowing out from Jerusalem in the day of the Lord.</li>
+      <li><a href="https://ebible.org/eng-web/JOE02.htm" target="_blank" rel="noopener">Joel 2:28–29 (WEB)</a> — Prophecy of the Holy Spirit poured out upon all flesh in the last days.</li>
+      <li><a href="https://ebible.org/eng-web/1CO10.htm" target="_blank" rel="noopener">1 Corinthians 10:1–4 (WEB)</a> — The spiritual rock and drinking in the wilderness fulfilled in Messiah.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Living water</strong> — Spirit life, not ritual cisterns.</li>
-      <li><strong>My time / hour</strong> — appointed covenant climax.</li>
-      <li><strong>Rivers from within</strong> — believers as the new location of flow.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for another feast cycle to unlock the Spirit. The water has been given. Physical death still ends earthly bodies. What ended is the thirst that only calendars and temporary booths could manage.
+      As a believer in Christ, you live in the full reality of the glorified Messiah's gift. You do not need to observe ancient calendar feasts, pilgrimage rituals, or shadow ceremonies to experience divine presence. Through your union with the risen Son, the Holy Spirit dwells within you as an unending, overflowing river of living water. You possess immediate, permanent spiritual hydration, completely secure in Christ's finished work and free from legalistic condemnation or spiritual dryness.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still treating the Spirit as a future drop instead of the river already flowing from the glorified Son?
+      How does knowing that rivers of living water continuously flow from Messiah within your spirit encourage you to rest in His indwelling presence today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john6.html">Previous</a>
-        <a class="btn" href="/Bible/John/john8.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john6.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john8.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
