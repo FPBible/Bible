@@ -7,33 +7,119 @@
   <meta name="description" content="The Good Shepherd lays down His life for the sheep. One flock, one Shepherd. The door, the thief, and the voice that the true sheep know." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,17 +139,22 @@
       <a class="btn" href="/Bible/John/john11.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 10 — The Good Shepherd</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      After the healing of the man born blind and the synagogue expulsion, Jesus speaks of the sheepfold, the door, the thief, and the Good Shepherd. He lays down His life for the sheep and takes it up again. Other sheep not of this fold will be brought; one flock, one Shepherd. At the Feast of Dedication the question of Messiahship is pressed; stones are lifted again when He claims oneness with the Father.
+      Following the healing of the man born blind and his subsequent expulsion from the synagogue, Jesus delivers the discourse of the Good Shepherd in Jerusalem. Directed at the Pharisees and Judean authorities, Jesus contrasts His own sacrificial, divine care with the corrupt, self-serving leadership of Israel—the "thieves and robbers" who abused the flock. Later, during the winter Feast of Dedication (Hanukkah) in Solomon's Porch, Jesus explicitly declares His oneness with the Father and His authority to gather both Israel and Gentile "other sheep" into one spiritual flock. This bold assertion provokes another violent reaction from the establishment, signaling the irrevocable fracture between the expiring Old Covenant leadership and Messiah's eternal Kingdom before AD 70.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span>“Most certainly, I tell you, one who doesn’t enter by the door into the sheep fold, but climbs up some other way, the same is a thief and a robber.
+        <span class="v-num">1</span>“Most certainly, I tell you, one who doesn’t enter by the door into the sheep fold, but climbs up some other way, the same is a <strong>thief and a robber</strong>.
         <span class="v-num">2</span>But one who enters in by the door is the shepherd of the sheep.
         <span class="v-num">3</span>The gatekeeper opens the gate for him, and the sheep listen to his voice. He calls his own sheep by name, and leads them out.
         <span class="v-num">4</span>Whenever he brings out his own sheep, he goes before them, and the sheep follow him, for they know his voice.
@@ -71,28 +162,28 @@
       </p>
       <p>
         <span class="v-num">6</span>Jesus spoke this parable to them, but they didn’t understand what he was telling them.
-        <span class="v-num">7</span>Jesus therefore said to them again, “Most certainly, I tell you, I am the sheep’s door.
-        <span class="v-num">8</span>All who came before me are thieves and robbers, but the sheep didn’t listen to them.
+        <span class="v-num">7</span>Jesus therefore said to them again, “Most certainly, I tell you, I am the <strong>sheep’s door</strong>.
+        <span class="v-num">8</span>All who came before me are <strong>thieves and robbers</strong>, but the sheep didn’t listen to them.
         <span class="v-num">9</span>I am the door. If anyone enters in by me, he will be saved, and will go in and go out, and will find pasture.
         <span class="v-num">10</span>The thief only comes to steal, kill, and destroy. I came that they may have life, and may have it abundantly.
       </p>
       <p>
-        <span class="v-num">11</span>I am the good shepherd. The good shepherd lays down his life for the sheep.
+        <span class="v-num">11</span>I am the <strong>good shepherd</strong>. The <strong>good shepherd</strong> lays down his life for the sheep.
         <span class="v-num">12</span>He who is a hired hand, and not a shepherd, who doesn’t own the sheep, sees the wolf coming, leaves the sheep, and flees. The wolf snatches the sheep, and scatters them.
         <span class="v-num">13</span>The hired hand flees because he is a hired hand, and doesn’t care for the sheep.
-        <span class="v-num">14</span>I am the good shepherd. I know my own, and I’m known by my own;
+        <span class="v-num">14</span>I am the <strong>good shepherd</strong>. I know my own, and I’m known by my own;
         <span class="v-num">15</span>even as the Father knows me, and I know the Father. I lay down my life for the sheep.
       </p>
       <p>
-        <span class="v-num">16</span>I have other sheep, which are not of this fold. I must bring them also, and they will hear my voice. They will become one flock with one shepherd.
+        <span class="v-num">16</span>I have <strong>other sheep</strong>, which are not of this fold. I must bring them also, and they will hear my voice. They will become one flock with one shepherd.
         <span class="v-num">17</span>Therefore the Father loves me, because I lay down my life, that I may take it again.
         <span class="v-num">18</span>No one takes it away from me, but I lay it down by myself. I have power to lay it down, and I have power to take it again. I received this commandment from my Father.”
         <span class="v-num">19</span>Therefore a division arose again among the Jews because of these words.
-        <span class="v-num">20</span>Many of them said, “He has a demon, and is insane! Why do you listen to him?”
+        <span class="v-num">20</span>Many of them said, “He has a <strong>demon</strong>, and is insane! Why do you listen to him?”
       </p>
       <p>
-        <span class="v-num">21</span>Others said, “These are not the sayings of one possessed by a demon. It isn’t possible for a demon to open the eyes of the blind, is it?”
-        <span class="v-num">22</span>It was the Feast of the Dedication at Jerusalem.
+        <span class="v-num">21</span>Others said, “These are not the sayings of one possessed by a <strong>demon</strong>. It isn’t possible for a <strong>demon</strong> to open the eyes of the blind, is it?”
+        <span class="v-num">22</span>It was the <strong>Feast of the Dedication</strong> at Jerusalem.
         <span class="v-num">23</span>It was winter, and Jesus was walking in the temple, in Solomon’s porch.
         <span class="v-num">24</span>The Jews therefore came around him and said to him, “How long will you hold us in suspense? If you are the Christ, tell us plainly.”
         <span class="v-num">25</span>Jesus answered them, “I told you, and you don’t believe. The works that I do in my Father’s name, these testify about me.
@@ -102,7 +193,7 @@
         <span class="v-num">27</span>My sheep hear my voice, and I know them, and they follow me.
         <span class="v-num">28</span>I give eternal life to them. They will never perish, and no one will snatch them out of my hand.
         <span class="v-num">29</span>My Father, who has given them to me, is greater than all. No one is able to snatch them out of my Father’s hand.
-        <span class="v-num">30</span>I and the Father are one.”
+        <span class="v-num">30</span><strong>I and the Father are one</strong>.”
       </p>
       <p>
         <span class="v-num">31</span>Therefore Jews took up stones again to stone him.
@@ -124,101 +215,113 @@
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Good Shepherd fulfills and surpasses the failed shepherds of Israel (Ezekiel 34).</p>
-      <p class="note">2) Laying down life is voluntary, timed, and aimed at gathering the flock inside that generation’s horizon.</p>
-      <p class="note">3) One flock, one Shepherd ends the exclusive claim of the old fold.</p>
-      <p class="note">4) “I and the Father are one” is the claim that forces the final division.</p>
-      <p class="note">5) Life abundant is New Covenant life, not merely extended physical survival.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The Good Shepherd directly fulfills Ezekiel 34, replacing the corrupt, self-serving leaders of first-century Israel.</li>
+      <li>"Other sheep not of this fold" refers to Gentiles and dispersed Israelites gathered into one New Covenant body.</li>
+      <li>The accusation "He has a demon" reflects a first-century Hebrew idiom for severe mental madness used to discredit Messiah.</li>
+      <li>"I and the Father are one" asserts Messiah's divine identity, bringing the Old Covenant temple system to its formal endpoint.</li>
+      <li>Laying down His life voluntarily accomplishes the total redemption and eternal security of the flock inside that generation.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>sheep’s door</strong>: the only legitimate entrance; all other claims are thieves.</div>
-      <div class="annotation-item"><strong>good shepherd</strong>: contrasts hirelings and thieves; lays down life.</div>
-      <div class="annotation-item"><strong>other sheep</strong>: Gentiles and the wider gathering into one flock.</div>
-      <div class="annotation-item"><strong>lay down / take again</strong>: voluntary death and resurrection authority.</div>
-      <div class="annotation-item"><strong>I and the Father are one</strong>: unity of will and identity that the old house rejects.</div>
+      <div class="annotation-item"><strong>thieves and robbers</strong>: The apostate Judean leadership and religious hirelings who exploited the sheep for self-preservation.</div>
+      <div class="annotation-item"><strong>sheep’s door</strong>: Messiah as the sole legitimate entrance into divine life and covenant security, superseding temple rites.</div>
+      <div class="annotation-item"><strong>good shepherd</strong>: The divine shepherd foretold in Ezekiel 34 and Psalm 23 who voluntarily lays down His life for the flock.</div>
+      <div class="annotation-item"><strong>other sheep</strong>: Non-Judean believers and scattered Gentiles brought into the single New Covenant community.</div>
+      <div class="annotation-item"><strong>demon</strong>: First-century Hebrew cultural idiom and personification for severe mental affliction or madness.</div>
+      <div class="annotation-item"><strong>Feast of the Dedication</strong>: Hanukkah, celebrating the rededication of the Second Temple, now surpassed by the true Temple—Christ Himself.</div>
+      <div class="annotation-item"><strong>I and the Father are one</strong>: The explicit claim of divine equality and shared essence between the Son and the Father.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Shepherd After the Failure</h3>
+    <h3>1) The Indictment of the Corrupt Shepherds</h3>
     <p>
-      Ezekiel 34 indicted the shepherds who fed themselves. Jesus claims the office and the cost: He lays down His life. The fold is no longer secured by temple or lineage; it is secured by the voice of the Shepherd who dies and rises.
+      In John 10, Jesus directly addresses the Pharisees and Sanhedrin who had just expelled the healed blind man from the synagogue in John 9. In the Old Testament prophetic tradition—most notably Ezekiel 34 and Zechariah 11—God issued severe indictments against Israel’s rulers, accusing them of feeding themselves while slaughtering, scattering, and abandoning the flock. Jesus picks up this exact prophetic motif, branding the first-century Judean leadership as "thieves, robbers, and hired hands" who entered the fold through illicit authority rather than divine commission. Unlike hirelings who flee when the wolf comes because they care nothing for the sheep, Jesus demonstrates genuine messianic ownership by protecting the vulnerable. The old system used exclusion and fear to maintain institutional control; Messiah comes to liberate the sheep from those false shepherds, inaugurating a New Covenant administration grounded in divine love and protection.
     </p>
-    <h3>2) One Flock, Not Two Schedules</h3>
+
+    <h3>2) The Gate, the Door, and New Covenant Access</h3>
     <p>
-      “Other sheep not of this fold” are brought so there is one flock and one Shepherd. The gathering is not postponed to a later ethnic program; it is the New Covenant people formed by the voice of the risen Shepherd.
+      Jesus identifies Himself as both the Shepherd and the "sheep's door." In ancient Near Eastern pastoral practice, a shepherd often lay across the entrance of the stone sheepfold at night, physically becoming the gate through which every sheep passed. By claiming to be the exclusive door, Jesus asserts that true covenant access to God is no longer mediated through the Jerusalem temple, levitical sacrifices, or Mosaic lineage. All who attempt to enter covenant life through legalistic rituals or ancestral pride are categorized as thieves climbing over the wall. To enter through Christ is to find total salvation, freedom, and spiritual pasture. The localized, shadow-based access of Sinai reached its final termination point when Messiah opened the living way through His flesh, granting unhindered access to the Father for all who hear His voice.
     </p>
-    <h3>3) Life Laid Down and Taken Up</h3>
+
+    <h3>3) One Flock and the Global Gathering</h3>
     <p>
-      The authority to lay down and take up is stated before the cross. The death is not defeat; it is the deliberate act that gathers the flock. Physical death still ends earthly life; the abundant life is the Spirit-given participation in the Shepherd’s victory over the accusation and death-structure of the old age.
+      When Jesus declares, "I have other sheep, which are not of this fold. I must bring them also... They will become one flock with one shepherd," He foretells the radical covenant transition from a localized Judean institution to a universal New Creation reality. The "other sheep" refer to the scattered Diaspora Israelites and the Gentile nations across the Roman world. Under the Old Covenant, a heavy wall of separation (*the fence of the Law*) divided Jew from Gentile. Jesus proclaims that His upcoming death and resurrection will demolish this division, gathering both groups into a single, unified body under His sole oversight. This prophetic gathering was not deferred to a distant millennium; it was realized in the first century through the apostolic proclamation of the gospel, establishing one unified New Covenant kingdom where national and ceremonial distinctions no longer exist.
     </p>
-    <h3>4) Oneness and the Stones</h3>
+
+    <h3>4) Voluntary Sacrifice and Eternal Security</h3>
     <p>
-      “I and the Father are one” is the claim that ends negotiation. The attempt to seize Him shows the old order’s response. The Shepherd continues; the flock is formed around the voice, not around the institutions that rejected Him.
+      A central theme of the discourse is the voluntary nature of Messiah's sacrificial death: "No one takes it away from me, but I lay it down by myself." Unlike Old Covenant animal sacrifices offered under compulsion and legal necessity, Jesus willingly surrenders His life to ransom the flock and takes it back up in His triumphant resurrection. This finished work guarantees absolute eternal security for His sheep. Jesus promises that His sheep will "never perish, and no one will snatch them out of my hand." In the first-century context, believers facing intense persecution and excommunication from the Jerusalem temple were tempted to fear losing their covenant standing. Jesus reassures them that their security rests in the invincible grip of both the Son and the Father. No religious authority, earthly persecution, or covenantal curse can strip a believer of the life bestowed by the Shepherd.
+    </p>
+
+    <h3>5) Oneness with the Father at Hanukkah</h3>
+    <p>
+      The setting shifts to the Feast of Dedication (Hanukkah) in winter, held in Solomon's Porch within the temple complex. Hanukkah commemorated the historic liberation and rededication of the temple under the Maccabees after its desecration by Antiochus Epiphanes. As the Judean leaders surround Jesus demanding to know if He is the Christ, Jesus points to His miraculous works and makes the supreme theological declaration: "I and the Father are one." By claiming equality of essence, power, and purpose with the Father, Jesus reveals that He Himself is the true Temple and the ultimate rededication of divine presence. Enraged by what they perceive as blasphemy, the religious leaders take up stones to execute Him. Their violent rejection confirms their apostasy and seals the doom of the physical temple, which was destined for total destruction in AD 70 when the shadow fully yielded to the substance of Christ's eternal Kingdom.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
-      <li><a href="/Bible/Prophecy/good-shepherd.html">Good Shepherd</a></li>
-      <li><a href="/Bible/Prophecy/ezekiel.html">Ezekiel 34 Pattern</a></li>
-      <li><a href="/Bible/Prophecy/one-flock.html">One Flock</a></li>
+      <li><a href="/Bible/Prophecy/good-shepherd.html">The Good Shepherd</a></li>
+      <li><a href="/Bible/Prophecy/ezekiel-34-shepherds.html">Ezekiel 34 and the Shepherds of Israel</a></li>
+      <li><a href="/Bible/Prophecy/one-flock-one-shepherd.html">One Flock, One Shepherd</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EZK34.htm" target="_blank" rel="noopener">Ezekiel 34 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/PSA23.htm" target="_blank" rel="noopener">Psalm 23 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA40.htm" target="_blank" rel="noopener">Isaiah 40 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/MIC05.htm" target="_blank" rel="noopener">Micah 5 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/EZK34.htm" target="_blank" rel="noopener">Ezekiel 34:11–16 (WEB)</a> — The prophecy of the Lord Himself coming to search for His sheep and appoint one shepherd.</li>
+      <li><a href="https://ebible.org/eng-web/PSA23.htm" target="_blank" rel="noopener">Psalm 23:1–6 (WEB)</a> — The classic psalm of Yahweh as the Good Shepherd providing rest and pasture.</li>
+      <li><a href="https://ebible.org/eng-web/HEB13.htm" target="_blank" rel="noopener">Hebrews 13:20–21 (WEB)</a> — The great Shepherd of the sheep brought back from the dead through the blood of the eternal covenant.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Good Shepherd</strong> — lays down life, knows the sheep.</li>
-      <li><strong>One flock</strong> — unity under one voice, not ethnic partition.</li>
-      <li><strong>Door of the sheep</strong> — exclusive legitimate entrance.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for another shepherd to arrive. The Good Shepherd has laid down His life and taken it again. Physical death still returns bodies to dust. What ended is the rule of hirelings and the exclusive claim of the old fold.
+      As a believer in Christ, you are held in the permanent, invincible care of the Good Shepherd. You are not subject to the manipulation, threats, or conditional approval of human religious systems. The Son has laid down His life for you, risen in victory, and gathered you into His one universal flock. You possess eternal life today—a life that can never be stolen, forfeited, or revoked. Held securely in the Father’s hand and the Son’s hand, you can rest in complete peace, fully knowing His voice and enjoying abundant pasture in His kingdom.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Whose voice are you following — the Shepherd who laid down His life, or the competing claims that still try to define the fold?
+      How does knowing that no one can ever snatch you out of the Father's and the Son's hands deepen your rest in Christ's finished work today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john9.html">Previous</a>
-        <a class="btn" href="/Bible/John/john11.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john9.html">Previous</a>
+          <a class="btn" href="/Bible/John/john11.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
