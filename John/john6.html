@@ -7,33 +7,128 @@
   <meta name="description" content="Wilderness bread again — and a hard word that thins the crowd. The food that remains is the Son given for the life of the world." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,13 +148,18 @@
       <a class="btn" href="/Bible/John/john7.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 6 — The Bread of Life</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      A crowd follows because they ate. He will not be made a bakery-king. Manna is named so it can be surpassed. The bread is His flesh given for the life of the world — that generation’s Passover moving from sign to body. Many walk away. The Twelve stay because He has the words of eternal life.
+      Following the Sabbath conflict at Bethesda in Jerusalem, Jesus returns to the Sea of Galilee during the season of Passover. When a vast multitude of five thousand follows Him into the wilderness after witnessing His healing signs, Jesus tests His disciples by miraculously multiplying five barley loaves and two fish. Recognizing the Exodus parallels, the crowd attempts to force Jesus into becoming an earthly political king. In response, Jesus withdraws and delivers the Bread of Life discourse in the synagogue at Capernaum. Speaking directly to a first-century audience saturated in Mosaic tradition, Jesus confronts their reliance on physical manna and nationalistic ambition, declaring that true life is found exclusively through spiritual participation in the Son whose flesh is offered for the life of the world.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -80,7 +180,7 @@
         <span class="v-num">11</span>Jesus took the loaves; and having given thanks, he distributed to the disciples, and the disciples to those who were sitting down; likewise also of the fish as much as they desired.
         <span class="v-num">12</span>When they were filled, he said to his disciples, “Gather up the broken pieces which are left over, that nothing be lost.”
         <span class="v-num">13</span>So they gathered them up, and filled twelve baskets with broken pieces from the five barley loaves, which were left over by those who had eaten.
-        <span class="v-num">14</span>When therefore the people saw the sign which Jesus did, they said, “This is truly the prophet who comes into the world.”
+        <span class="v-num">14</span>When therefore the people saw the sign which Jesus did, they said, “This is truly <strong>the prophet who comes into the world</strong>.”
         <span class="v-num">15</span>Jesus therefore, perceiving that they were about to come and take him by force, to make him king, withdrew again to the mountain by himself.
       </p>
       <p>
@@ -99,44 +199,44 @@
       </p>
       <p>
         <span class="v-num">26</span>Jesus answered them, “Most certainly I tell you, you seek me, not because you saw signs, but because you ate of the loaves, and were filled.
-        <span class="v-num">27</span>Don’t work for the food which perishes, but for the food which remains to eternal life, which the Son of Man will give to you. For God the Father has sealed him.”
+        <span class="v-num">27</span>Don’t work for the food which perishes, but for the <strong>food which remains to eternal life</strong>, which the Son of Man will give to you. For God the Father has sealed him.”
         <span class="v-num">28</span>They said therefore to him, “What must we do, that we may work the works of God?”
         <span class="v-num">29</span>Jesus answered them, “This is the work of God, that you believe in him whom he has sent.”
         <span class="v-num">30</span>They said therefore to him, “What then do you do for a sign, that we may see, and believe you? What work do you do?
       </p>
       <p>
-        <span class="v-num">31</span>Our fathers ate the manna in the wilderness. As it is written, ‘He gave them bread out of heaven to eat.’”
+        <span class="v-num">31</span>Our fathers ate the <strong>manna in the wilderness</strong>. As it is written, ‘He gave them bread out of heaven to eat.’”
         <span class="v-num">32</span>Jesus therefore said to them, “Most certainly, I tell you, it wasn’t Moses who gave you the bread out of heaven, but my Father gives you the true bread out of heaven.
         <span class="v-num">33</span>For the bread of God is that which comes down out of heaven, and gives life to the world.”
         <span class="v-num">34</span>They said therefore to him, “Lord, always give us this bread.”
-        <span class="v-num">35</span>Jesus said to them, “I am the bread of life. He who comes to me will not be hungry, and he who believes in me will never be thirsty.
+        <span class="v-num">35</span>Jesus said to them, “I am the <strong>bread of life</strong>. He who comes to me will not be hungry, and he who believes in me will never be thirsty.
       </p>
       <p>
         <span class="v-num">36</span>But I told you that you have seen me, and yet you don’t believe.
         <span class="v-num">37</span>All those whom the Father gives me will come to me. He who comes to me I will in no way throw out.
         <span class="v-num">38</span>For I have come down from heaven, not to do my own will, but the will of him who sent me.
-        <span class="v-num">39</span>This is the will of my Father who sent me, that of all he has given to me I should lose nothing, but should raise him up at the last day.
-        <span class="v-num">40</span>This is the will of the one who sent me, that everyone who sees the Son, and believes in him, should have eternal life; and I will raise him up at the last day.”
+        <span class="v-num">39</span>This is the will of my Father who sent me, that of all he has given to me I should lose nothing, but should <strong>raise him up at the last day</strong>.
+        <span class="v-num">40</span>This is the will of the one who sent me, that everyone who sees the Son, and believes in him, should have eternal life; and I will <strong>raise him up at the last day</strong>.”
       </p>
       <p>
         <span class="v-num">41</span>The Jews therefore murmured concerning him, because he said, “I am the bread which came down out of heaven.”
         <span class="v-num">42</span>They said, “Isn’t this Jesus, the son of Joseph, whose father and mother we know? How then does he say, ‘I have come down out of heaven?’”
         <span class="v-num">43</span>Therefore Jesus answered them, “Don’t murmur among yourselves.
-        <span class="v-num">44</span>No one can come to me unless the Father who sent me draws him, and I will raise him up in the last day.
+        <span class="v-num">44</span>No one can come to me unless the Father who sent me draws him, and I will <strong>raise him up at the last day</strong>.
         <span class="v-num">45</span>It is written in the prophets, ‘They will all be taught by God.’ Therefore everyone who hears from the Father, and has learned, comes to me.
       </p>
       <p>
         <span class="v-num">46</span>Not that anyone has seen the Father, except he who is from God. He has seen the Father.
         <span class="v-num">47</span>Most certainly, I tell you, he who believes in me has eternal life.
-        <span class="v-num">48</span>I am the bread of life.
+        <span class="v-num">48</span>I am the <strong>bread of life</strong>.
         <span class="v-num">49</span>Your fathers ate the manna in the wilderness, and they died.
         <span class="v-num">50</span>This is the bread which comes down out of heaven, that anyone may eat of it and not die.
       </p>
       <p>
         <span class="v-num">51</span>I am the living bread which came down out of heaven. If anyone eats of this bread, he will live forever. Yes, the bread which I will give for the life of the world is my flesh.”
         <span class="v-num">52</span>The Jews therefore contended with one another, saying, “How can this man give us his flesh to eat?”
-        <span class="v-num">53</span>Jesus therefore said to them, “Most certainly I tell you, unless you eat the flesh of the Son of Man and drink his blood, you don’t have life in yourselves.
-        <span class="v-num">54</span>He who eats my flesh and drinks my blood has eternal life, and I will raise him up at the last day.
+        <span class="v-num">53</span>Jesus therefore said to them, “Most certainly I tell you, unless you <strong>eat the flesh of the Son of Man and drink his blood</strong>, you don’t have life in yourselves.
+        <span class="v-num">54</span>He who eats my flesh and drinks my blood has eternal life, and I will <strong>raise him up at the last day</strong>.
         <span class="v-num">55</span>For my flesh is food indeed, and my blood is drink indeed.
       </p>
       <p>
@@ -149,58 +249,73 @@
       <p>
         <span class="v-num">61</span>But Jesus knowing in himself that his disciples murmured at this, said to them, “Does this cause you to stumble?
         <span class="v-num">62</span>Then what if you would see the Son of Man ascending to where he was before?
-        <span class="v-num">63</span>It is the spirit who gives life. The flesh profits nothing. The words that I speak to you are spirit, and are life.
+        <span class="v-num">63</span><strong>It is the spirit who gives life; the flesh profits nothing</strong>. The <strong>words of eternal life</strong> that I speak to you are spirit, and are life.
         <span class="v-num">64</span>But there are some of you who don’t believe.” For Jesus knew from the beginning who they were who didn’t believe, and who it was who would betray him.
         <span class="v-num">65</span>He said, “For this cause I have said to you that no one can come to me, unless it is given to him by my Father.”
       </p>
       <p>
         <span class="v-num">66</span>At this, many of his disciples went back, and walked no more with him.
         <span class="v-num">67</span>Jesus said therefore to the twelve, “You don’t also want to go away, do you?”
-        <span class="v-num">68</span>Simon Peter answered him, “Lord, to whom would we go? You have the words of eternal life.
+        <span class="v-num">68</span>Simon Peter answered him, “Lord, to whom would we go? You have the <strong>words of eternal life</strong>.
         <span class="v-num">69</span>We have come to believe and know that you are the Christ, the Son of the living God.”
-        <span class="v-num">70</span>Jesus answered them, “Didn’t I choose you, the twelve, and one of you is a devil?”
+        <span class="v-num">70</span>Jesus answered them, “Didn’t I choose you, the twelve, and one of you is a <strong>devil</strong>?”
       </p>
       <p>
         <span class="v-num">71</span>Now he spoke of Judas, the son of Simon Iscariot, for it was he who would betray him, being one of the twelve.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) The feeding is wilderness manna replayed — then refused as a standing political program.</p>
-      <p class="note">2) True bread is the Son, not a second Moses ration.</p>
-      <p class="note">3) Eating flesh / drinking blood is covenant participation in the given life, not a later magic.</p>
-      <p class="note">4) “The flesh profits nothing” kills both cannibal readings and flesh-lineage confidence.</p>
-      <p class="note">5) The crowd thins. The New Covenant people are not a majority movement inside old Israel.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The miraculous multiplication of loaves serves as an inaugural Exodus sign surpassing Moses' wilderness manna.</li>
+      <li>Refusing to be crowned an earthly political king, Jesus redirects the crowd from physical bread to spiritual life.</li>
+      <li>Eating Messiah's flesh and drinking His blood signifies New Covenant union rather than physical or ritual participation.</li>
+      <li>"The flesh profits nothing" establishes that spiritual life is imparted through Christ's words rather than Mosaic lineage.</li>
+      <li>The thinning of the crowd demonstrates that true covenant standing in Messiah was rejected by apostate first-century Judea.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>loaves</strong>: provision sign, not a throne-platform.</div>
-      <div class="annotation-item"><strong>true bread</strong>: against manna that left fathers dead.</div>
-      <div class="annotation-item"><strong>I am</strong>: identity, not metaphor as decoration.</div>
-      <div class="annotation-item"><strong>flesh for the world</strong>: given life, Passover direction.</div>
-      <div class="annotation-item"><strong>the flesh profits nothing</strong>: Spirit-life versus body-as-system.</div>
+      <div class="annotation-item"><strong>the prophet who comes into the world</strong>: Reference to Deuteronomy 18:15, expecting the Moses-like prophet during Messiah's inaugural advent.</div>
+      <div class="annotation-item"><strong>food which remains to eternal life</strong>: The spiritual reality of New Covenant life in Christ, contrasting with perishing Mosaic shadow-rituals.</div>
+      <div class="annotation-item"><strong>manna in the wilderness</strong>: Physical wilderness bread (Exodus 16) that sustained physical life temporarily but could not prevent death.</div>
+      <div class="annotation-item"><strong>bread of life</strong>: Christ Himself as the true, heavenly source of eternal life and spiritual nourishment for God's people.</div>
+      <div class="annotation-item"><strong>raise him up at the last day</strong>: The covenant resurrection and vindication of believers at the close of the Old Covenant age.</div>
+      <div class="annotation-item"><strong>eat the flesh... and drink his blood</strong>: Idiomatic covenant language for personal faith, spiritual reception, and complete union with Christ's sacrificial life.</div>
+      <div class="annotation-item"><strong>it is the spirit who gives life; the flesh profits nothing</strong>: The principle that spiritual life comes from the Spirit and Christ's words, not external rituals or physical descent.</div>
+      <div class="annotation-item"><strong>words of eternal life</strong>: The authoritative gospel proclamation of Messiah that bestows life in the New Creation Kingdom.</div>
+      <div class="annotation-item"><strong>devil</strong>: Greek <em>diabolos</em> ("accuser" or "adversary"), used here covenantally to describe Judas Iscariot as the treacherous adversary within the apostolic group.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Not That Kind of King</h3>
+    <h3>1) The Surpassing of Mosaic Manna and Exodus Shadows</h3>
     <p>
-      They will take Him by force. That is old-covenant politics: feed us and we will enthrone you against Rome. He withdraws. The sign was never a campaign. It was wilderness memory aimed at a better bread.
+      The feeding of the five thousand occurs during the Passover season, deliberately connecting the miracle to Israel’s historical Exodus narrative. When the crowd witnesses five barley loaves and two fish multiply to feed thousands in the wilderness, they immediately recognize the fulfillment of Deuteronomy 18:15, exclaiming, "This is truly the prophet who comes into the world." However, their understanding of Messiah's mission remains trapped in physical and political terms. They attempt to seize Jesus by force to make Him a nationalistic king who will provide free provisions and overthrow Roman political dominance. Jesus rejects this carnal ambition and withdraws to the mountain. In the subsequent synagogue discourse at Capernaum, Jesus confronts their materialistic expectations, clarifying that while Moses gave physical manna that sustained biological life temporarily, the Father is now bestowing the true Bread from heaven. Mosaic manna was a temporary shadow; Christ is the substance who grants eternal life to the world.
     </p>
-    <h3>2) Manna Was the Contrast, Not the Ceiling</h3>
+
+    <h3>2) Eating Flesh and Drinking Blood as New Covenant Union</h3>
     <p>
-      Fathers ate manna and died. That sentence ends nostalgia as theology. The Father is now giving the true bread. Coming to the Son is the eating. Remaining hungry after a sign-meal is the diagnosis of a crowd that wanted calories, not covenant.
+      Jesus scandalizes His first-century Judean audience by declaring, "Unless you eat the flesh of the Son of Man and drink his blood, you don’t have life in yourselves." To an audience governed by the Mosaic Law, which strictly prohibited the consumption of blood under threat of covenant exclusion (Leviticus 17:10–14), this language was intensely shocking. Jesus uses this vivid, hyperbolic metaphor to shatter their reliance on legalistic shadow-keeping. Eating His flesh and drinking His blood does not describe a physical, cannibalistic act or a literal material ritual. Rather, it signifies total spiritual participation in His impending sacrificial death. As the true Passover Lamb, Messiah surrenders His body to bring an end to the Old Covenant animal sacrificial system. To feed on Him means to receive His finished work through faith, entering into an indissoluble spiritual union where the believer resides in Christ and Christ in the believer.
     </p>
-    <h3>3) Given Flesh, Spirit Words</h3>
+
+    <h3>3) "The Flesh Profits Nothing" and the Redefinition of Covenant Standing</h3>
     <p>
-      “My flesh for the life of the world” is the direction of the cross inside that generation. “The flesh profits nothing” is the guardrail: this is not a butcher-shop sacrament and not a DNA claim. The words are spirit and life. Those who walk away prove they wanted a king who stays in the old economy.
+      When His disciples complain that His teaching is a "hard saying," Jesus provides the hermeneutical key to the entire discourse in verse 63: "It is the spirit who gives life; the flesh profits nothing. The words that I speak to you are spirit, and are life." This foundational principle directly refutes the primary assumption of first-century Judean theology—that physical ancestry, biological descent from Abraham, physical circumcision, and physical Torah-keeping secured standing in the Kingdom of God. Jesus establishes that human flesh and biological heritage possess zero spiritual value in the New Creation. Eternal life is not transmitted through fleshly lineage or material ceremonies, but is imparted sovereignly by the Holy Spirit through the authoritative words of the Son. Those who sought an earthly kingdom centered on physical bread and nationalistic privilege stumbled over this spiritual reality and abandoned Him.
     </p>
-    <h3>4) To Whom Would We Go?</h3>
+
+    <h3>4) The Last Day Resurrection and the Sifting of Israel</h3>
     <p>
-      Peter’s question is the remnant’s question. When the old house still looks full and the Son looks costly, the words of eternal life are the only remaining address.
+      Four times in John 6, Jesus promises that everyone who believes in the Son will be raised up "at the last day." In the first-century redemptive framework, the "last day" refers to the terminal period of the Old Covenant order, which culminated in the AD 70 destruction of Jerusalem and its temple. While apostate Israel faced covenant judgment and the final collapse of their earthly house, those joined to Messiah were vindicated and raised into the spiritual glory of the Kingdom age. The departure of the insincere crowds and the faithful confession of the Twelve highlight the historical sifting of Israel. When Jesus asks if the Twelve wish to leave as well, Peter responds on behalf of the faithful remnant: "Lord, to whom would we go? You have the words of eternal life." Peter recognized that the obsolete shadows of Moses could no longer offer life, and that true covenant rest was found exclusively in the Son.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/bread-in-wilderness.html">Bread in the Wilderness</a></li>
@@ -208,58 +323,56 @@
       <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine, New Covenant</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EXO16.htm" target="_blank" rel="noopener">Exodus 16 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/PSA78.htm" target="_blank" rel="noopener">Psalm 78 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA55.htm" target="_blank" rel="noopener">Isaiah 55 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/DEU08.htm" target="_blank" rel="noopener">Deuteronomy 8 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/EXO16.htm" target="_blank" rel="noopener">Exodus 16:4 (WEB)</a> — The original wilderness manna shadowing the true bread from heaven.</li>
+      <li><a href="https://ebible.org/eng-web/ISA55.htm" target="_blank" rel="noopener">Isaiah 55:1–3 (WEB)</a> — Prophetic invitation to partake of God's enduring covenant feast without cost.</li>
+      <li><a href="https://ebible.org/eng-web/1CO10.htm" target="_blank" rel="noopener">1 Corinthians 10:16–17 (WEB)</a> — Spiritual communion and participation in the body and blood of Messiah.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>True bread</strong> — the Son, not recycled manna.</li>
-      <li><strong>Flesh given</strong> — life handed over, not a later theory.</li>
-      <li><strong>Flesh profits nothing</strong> — Spirit against system.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for another wilderness drop. The bread has been given. Physical death still returns bodies to dust. What this chapter ends is hunger-as-religion — living on signs that never become the Son.
+      In Christ, you possess the true bread of life and live in unbroken spiritual union with the Son. You are not striving to sustain your spiritual standing through physical rituals, legalistic performance, or shadow observance. Having partaken of Messiah through faith, His very life dwells within you as an unshakeable reality. You are fully justified, eternally secure, and completely nourished by His Spirit, resting peacefully in His finished work today.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still trying to force a bakery-king instead of receiving the words of eternal life?
+      How does knowing that Christ is your complete spiritual nourishment free you from seeking validation or security in performance-driven efforts today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john5.html">Previous</a>
-        <a class="btn" href="/Bible/John/john7.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john5.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john7.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
