@@ -7,33 +7,128 @@
   <meta name="description" content="A teacher of Israel comes by night. Jesus answers with Ezekiel’s water and Spirit, Moses’ lifted serpent, and a judgment that has already begun in that generation." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,18 +148,23 @@
       <a class="btn" href="/Bible/John/john4.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 3 — Born From Above</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      A ruler of the Jews comes after dark, still measuring Jesus by signs. Chapter 2 just relocated the temple to a body. Chapter 3 tells Israel’s teacher that seeing the kingdom will take a birth he cannot manage from flesh. The conversation is not a later altar-call script. It is Ezekiel 36–37 spoken to a man who should have recognized it, then Numbers 21 aimed at a cross inside that generation.
+      Nicodemus, a prominent Pharisee and member of the Sanhedrin, comes to Jesus under cover of night during the early period of Christ's public ministry in Jerusalem. Following Jesus' cleansing of the temple and performance of signs during Passover week, this conversation represents Old Covenant Israel's theological establishment confronting the inaugural presence of the Messiah. Jesus addresses Israel's leading teacher directly, explaining that seeing and entering the Kingdom of God cannot be achieved through physical lineage, ancestral covenant privilege, or legal compliance, but requires the prophetic regeneration promised in Ezekiel 36 and Numbers 21 for that first-century generation.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>Now there was a man of the Pharisees named <strong>Nicodemus</strong>, a <strong>ruler of the Jews</strong>.
-        <span class="v-num">2</span>He came to Jesus by night and said to him, “Rabbi, we know that you are a teacher come from God, for no one can do these signs that you do, unless God is with him.”
+        <span class="v-num">2</span>He came to Jesus <strong>by night</strong> and said to him, “Rabbi, we know that you are a teacher come from God, for no one can do these signs that you do, unless God is with him.”
         <span class="v-num">3</span>Jesus answered him, “Most certainly I tell you, unless one is <strong>born anew</strong>, he can’t see God’s Kingdom.”
       </p>
       <p>
@@ -81,10 +181,10 @@
         <span class="v-num">12</span>If I told you earthly things and you don’t believe, how will you believe if I tell you heavenly things?
         <span class="v-num">13</span>No one has ascended into heaven but he who descended out of heaven, the Son of Man, who is in heaven.
         <span class="v-num">14</span>As Moses <strong>lifted up the serpent</strong> in the wilderness, even so must the <strong>Son of Man be lifted up</strong>,
-        <span class="v-num">15</span>that whoever believes in him should not perish, but have eternal life.
+        <span class="v-num">15</span>that whoever believes in him should not perish, but have <strong>eternal life</strong>.
       </p>
       <p>
-        <span class="v-num">16</span>For God so loved the world, that he gave his only born Son, that whoever believes in him should not perish, but have <strong>eternal life</strong>.
+        <span class="v-num">16</span>For God so loved the <strong>world</strong>, that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.
         <span class="v-num">17</span>For God didn’t send his Son into the world to judge the world, but that the world should be saved through him.
         <span class="v-num">18</span>He who believes in him is not judged. He who doesn’t believe <strong>has been judged already</strong>, because he has not believed in the name of the only born Son of God.
         <span class="v-num">19</span>This is the judgment, that the light has come into the world, and men loved the darkness rather than the light, for their works were evil.
@@ -101,7 +201,7 @@
       <p>
         <span class="v-num">27</span>John answered, “A man can receive nothing unless it has been given him from heaven.
         <span class="v-num">28</span>You yourselves testify that I said, ‘I am not the Christ,’ but, ‘I have been sent before him.’
-        <span class="v-num">29</span>He who has the bride is the bridegroom; but the friend of the bridegroom, who stands and hears him, rejoices greatly because of the bridegroom’s voice. Therefore my joy is made full.
+        <span class="v-num">29</span>He who has the bride is the <strong>bridegroom</strong>; but the friend of the bridegroom, who stands and hears him, rejoices greatly because of the bridegroom’s voice. Therefore my joy is made full.
         <span class="v-num">30</span><strong>He must increase, but I must decrease.</strong>
         <span class="v-num">31</span>He who comes from above is above all. He who is from the earth belongs to the earth and speaks of the earth. He who comes from heaven is above all.
         <span class="v-num">32</span>What he has seen and heard, of that he testifies; and no one receives his witness.
@@ -112,50 +212,63 @@
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Nicodemus is not a random seeker. He is old-covenant Israel’s faculty in one man.</p>
-      <p class="note">2) Born from above / water and Spirit is Ezekiel’s promised national washing and new heart, arriving in the Son.</p>
-      <p class="note">3) “You” in “you must be born” is plural. The teacher of Israel is being told about Israel.</p>
-      <p class="note">4) The lifted serpent is the lifted Son — look and live, in the wilderness of that age.</p>
-      <p class="note">5) Judgment in this chapter is already underway: light has come, and refusal is the verdict.</p>
-      <p class="note">6) The Baptist decreases because the bridegroom has the bride. The forerunner’s job ends when the voice has done its work.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>Nicodemus represents Old Covenant Israel's ruling establishment confronting the transition to Messiah's Kingdom.</li>
+      <li>"Born of water and Spirit" fulfills Ezekiel 36:25–27 as the promised national cleansing and divine spirit-bestowal.</li>
+      <li>The lifting up of the Son of Man fulfills Numbers 21, providing instant life over Old Covenant curse-death.</li>
+      <li>Divine judgment in John 3 is already active in the first century, exposing those who reject the light.</li>
+      <li>John the Baptist's decrease marks the official administrative transition from forerunner shadow to Messiah's reign.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>by night</strong>: Darkness is this Gospel’s climate for unbelief. A ruler still walks in it.</div>
-      <div class="annotation-item"><strong>born anew / from above</strong>: Greek <em>anōthen</em> — again and from above. Not a second womb. A different origin.</div>
-      <div class="annotation-item"><strong>water and Spirit</strong>: Ezekiel 36:25–27 — sprinkle, cleanse, new heart, Spirit within.</div>
-      <div class="annotation-item"><strong>teacher of Israel</strong>: If Israel’s instructor misses Ezekiel, the problem is not information. It is covenant blindness.</div>
-      <div class="annotation-item"><strong>lifted up</strong>: Wilderness pole and cross. Healing by looking at God’s provision, not by climbing back under Moses.</div>
-      <div class="annotation-item"><strong>world</strong>: The ordered world that needed saving — first Israel’s public order under sentence.</div>
-      <div class="annotation-item"><strong>has been judged already</strong>: Refusal is not waiting for a later courtroom. Light has already exposed it.</div>
-      <div class="annotation-item"><strong>bridegroom</strong>: Cana’s wedding continues. John is friend, not rival.</div>
+      <div class="annotation-item"><strong>Nicodemus / ruler of the Jews</strong>: A member of the Sanhedrin representing the pinnacle of Old Covenant legal authority and ancestry.</div>
+      <div class="annotation-item"><strong>by night</strong>: Symbolizes the spiritual darkness and blindness surrounding Israel’s religious establishment.</div>
+      <div class="annotation-item"><strong>born anew / from above</strong>: Greek <em>anōthen</em> ("again" or "from above"), signaling divine Spirit-origin rather than biological descent.</div>
+      <div class="annotation-item"><strong>water and Spirit</strong>: Direct reference to Ezekiel 36:25–27, promising spiritual cleansing and heart-transformation for New Covenant entry.</div>
+      <div class="annotation-item"><strong>teacher of Israel</strong>: Title highlighting Nicodemus' responsibility to understand prophetic promises of Israel's national regeneration.</div>
+      <div class="annotation-item"><strong>lifted up the serpent / Son of Man be lifted up</strong>: Typological link to Numbers 21:8–9; Christ’s cross and glorification bring deliverance from covenant curse.</div>
+      <div class="annotation-item"><strong>eternal life</strong>: Greek <em>zōēn aiōnion</em> ("life of the age to come"), the present possession of Kingdom life in Christ.</div>
+      <div class="annotation-item"><strong>world (kosmos)</strong>: The ordered first-century world needing redemptive deliverance from darkness and judgment.</div>
+      <div class="annotation-item"><strong>has been judged already</strong>: Present-tense judicial verdict; rejecting the light results in immediate self-condemnation.</div>
+      <div class="annotation-item"><strong>bridegroom / He must increase, but I must decrease</strong>: The formal passing of redemptive authority from the Old Covenant forerunner to Messiah.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Why a Teacher of Israel Comes at Night</h3>
+    <h3>1) Nicodemus and the Confrontation of Old Covenant Lineage</h3>
     <p>
-      Nicodemus grants that God is with Jesus because of signs. That is chapter 2’s crowd-faith wearing better clothes. Jesus does not compliment the concession. He denies that flesh can see the kingdom. The old world produced teachers, rulers, and night visits. It could not produce the birth Ezekiel promised. If you read this as only a private conversion chat, you miss why Jesus asks whether Israel’s teacher understands. The man is standing in for a people whose credentials are about to expire.
+      Nicodemus approaches Jesus under the cover of night, addressing Him as a teacher endorsed by miraculous signs. This night visit symbolizes the spiritual darkness enveloping Israel’s ruling establishment. As a Pharisee and member of the Sanhedrin, Nicodemus embodied the highest peak of Old Covenant prestige, ancestral pedigree, and Torah expertise. Yet, Jesus immediately confronts this heritage, asserting that physical lineage, legal compliance, and religious status cannot grant entry into God's Kingdom. The inauguration of the Kingdom demands an entirely different origin—a birth from above. Jesus addresses Nicodemus not merely as a private seeker, but as a representative of first-century Israel whose covenant credentials were expiring. The old system was incapable of producing spiritual life, requiring the ruling class to surrender their reliance on physical descent from Abraham.
     </p>
-    <h3>2) Water, Spirit, and Bones That Need Breath</h3>
+
+    <h3>2) Water, Spirit, and Ezekiel’s Promised Regeneration</h3>
     <p>
-      Ezekiel heard two promises that belong together: clean water sprinkled, a new spirit given, and a valley of bones told to live. Jesus puts both on Nicodemus. Born of water and Spirit is not “baptism plus sincerity.” It is the announced regeneration of a people who were covenant-dead. Flesh births flesh. Lineage can staff a Sanhedrin. It cannot open the kingdom that is arriving in the Son. The wind-word is the same as Spirit: you hear it, you do not manage it. That is why a ruler who manages Israel cannot schedule this birth.
+      When Jesus speaks of being "born of water and Spirit," He is not introducing an abstract sacramental formula, but citing the explicit Old Covenant promises of national restoration found in Ezekiel 36:25–27 and Ezekiel 37. God promised that under the New Covenant, He would sprinkle clean water upon His people, cleanse them from idols, place His Spirit within them, and transform their hearts of stone into hearts of flesh. As "the teacher of Israel," Nicodemus was expected to recognize these iconic prophetic themes. Physical flesh can only propagate flesh; it cannot generate the resurrection life of the Kingdom age. The Spirit operates like the wind, sovereignly bestowing New Creation life beyond human control or levitical regulation. The old covenant administration was reaching its endpoint, replaced by the Spirit-breathed regeneration realized through the Son.
     </p>
-    <h3>3) The Serpent on the Pole Is the Clock</h3>
+
+    <h3>3) The Lifted Serpent and Deliverance from Covenant Curse</h3>
     <p>
-      Moses lifted a bronze serpent in a camp that was dying under judgment. Looking was life. Jesus says the Son of Man must be lifted the same way. That is not a symbol parked for a later planet. It is the means by which that wilderness generation — and everyone who would believe — lives. Eternal life in John is the life of the coming age arriving now, not a postponement of breath. Perishing here is covenant death under the old order, the thing the lifted Son deals with before that order’s house falls.
+      Jesus anchors His redemptive mission in the wilderness narrative of Numbers 21, where Moses raised a bronze serpent upon a pole to heal Israelites dying from venomous bites. Jesus declares that the Son of Man must be lifted up in the exact same manner. This lifting up encompasses both His crucifixion on Mount Calvary and His subsequent resurrection and ascension to divine glory. In the first-century context, Israel was suffering under the ultimate curse of the Law—spiritual death and alienation from God. Just as looking upon the bronze serpent brought physical healing to the dying camp in the wilderness, believing in the lifted Son imparts instant, permanent eternal life. Eternal life in John’s Gospel is the very life of the age to come, breaking into present history and delivering believers from the imminent judgment coming upon that covenant generation.
     </p>
-    <h3>4) Love, World, and a Judgment Already Running</h3>
+
+    <h3>4) The Light Present and the First-Century Verdict</h3>
     <p>
-      “God so loved the world” is not a slogan that empties the lawsuit of chapters 1–2. The world in view is the world light has entered. Sending the Son is rescue. Refusing the Son is already judgment, because the light is not future. Men loved darkness. That is the verdict on a leadership that can study signs at night and still not come to the light. AD 70 will make the verdict public. It does not start it.
+      The famous declaration of John 3:16–19 highlights the immense scope of God's covenant love and the immediate nature of divine judgment. God sent His Son into the world not to condemn it, but to accomplish genuine salvation. However, for those who rejected the incarnate Light, judgment was not a distant event deferred to the end of physical time; it was already actively taking place in their historical present. Refusing the Son constituted self-condemnation. The first-century Judean leadership loved the darkness of their legalistic system because their works were exposed by Messiah's light. The eventual destruction of the Jerusalem temple in AD 70 was the public execution of a sentence that had already been passed when the religious authorities rejected the Son.
     </p>
-    <h3>5) The Friend Steps Aside</h3>
+
+    <h3>5) The Decreasing Forerunner and the Bridegroom’s Era</h3>
     <p>
-      The purification argument in the Judean countryside is the old jars still talking. John’s disciples worry about market share. John hears a wedding. The bride belongs to the bridegroom. Increase and decrease is not humility advice. It is administration change. The forerunner’s water yields to the One who gives the Spirit without measure. Wrath remaining on the one who disobeys the Son is the old world’s weather — not a threat that the New Creation people still live under.
+      The final movement of John 3 resolves a dispute regarding baptism and ceremonial purification between the disciples of John the Baptist and certain Judean leaders. John the Baptist clarifies his temporary role, identifying himself not as the Messiah, but as the friend of the Bridegroom who rejoices at the Bridegroom's voice. His famous declaration, "He must increase, but I must decrease," marks the divine transition between two covenant eras. The preparatory ministry of the Old Covenant forerunner was reaching its appointed conclusion, making way for the permanent reign of the Son. The Father has entrusted all authority into the hands of the Son. Those who trust in Him possess eternal life immediately, while those who persist in Old Covenant disobedience remain under the divine wrath that consumed the old system.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/new-creation.html">New Creation</a></li>
@@ -163,60 +276,56 @@
       <li><a href="/Bible/Prophecy/john-the-baptist.html">John the Baptist</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EZK36.htm" target="_blank" rel="noopener">Ezekiel 36 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/NUM21.htm" target="_blank" rel="noopener">Numbers 21 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/JER31.htm" target="_blank" rel="noopener">Jeremiah 31 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/EZK36.htm" target="_blank" rel="noopener">Ezekiel 36:25–27 (WEB)</a> — Prophecy of water cleansing and new Spirit-indwelling.</li>
+      <li><a href="https://ebible.org/eng-web/NUM21.htm" target="_blank" rel="noopener">Numbers 21:8–9 (WEB)</a> — The bronze serpent lifted up in the wilderness for healing.</li>
+      <li><a href="https://ebible.org/eng-web/TIT03.htm" target="_blank" rel="noopener">Titus 3:5 (WEB)</a> — Washing of regeneration and renewing by the Holy Spirit.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Born from above</strong> — Spirit-origin against flesh-origin.</li>
-      <li><strong>Water and Spirit</strong> — Ezekiel’s cleansing and breath, not a second physical birth.</li>
-      <li><strong>Lifted up</strong> — wilderness pole and cross in one motion.</li>
-      <li><strong>Eternal life</strong> — the age-to-come life possessed now in the Son.</li>
-      <li><strong>Already judged</strong> — light present; refusal is the sentence.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting to be born from a later program. The Spirit-birth Ezekiel named has arrived in the Son. Physical death still returns a body to dust. What ended is covenant death — the darkness that could not see the kingdom. Life is the Son, given, not earned.
+      As a believer in Christ, you possess the permanent life of the age to come right now. You are not waiting for future spiritual rebirth or striving under Old Covenant legalism to secure divine acceptance. Having been born from above through the Holy Spirit, your identity is rooted entirely in Christ’s finished work. You live under an open heaven, completely delivered from covenant condemnation, enjoying continuous union with the Son and resting securely in His eternal life.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still coming at night with sign-talk, instead of coming to the light as one already told to look at the lifted Son and live?
+      How does knowing that you possess eternal life today empower you to rest completely in Christ's finished work?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john2.html">Previous</a>
-        <a class="btn" href="/Bible/John/john4.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john2.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john4.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
