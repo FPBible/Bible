@@ -5,87 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 9 — From Blindness to Sight — Fulfilled Prophecy Bible (WEB)</title>
   <meta name="description" content="Jesus heals a man born blind on the Sabbath, sparking a legalistic trial that exposes the spiritual blindness of Israel's leadership and demonstrates New Creation sight in Messiah." />
-
   <style>
     :root{
-      --maxw: 900px;
+      --maxw: 980px;
       --pad: 16px;
       --line: rgba(0,0,0,0.12);
       --line2: rgba(0,0,0,0.18);
       --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.06);
-      --soft2: rgba(0,0,0,0.04);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
       --radius: 14px;
       --btn-bg: #ffffff;
       --bmc-yellow: #ffdd00;
     }
-
     body{
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.65;
       margin: 0;
       color: #111;
       background: #fff;
     }
-
     .wrap{
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 18px var(--pad) 44px;
+      padding: 18px var(--pad) 56px;
     }
-
-    .topnav{
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topnav .bar{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 10px var(--pad);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 12px;
-      align-items: center;
-    }
-    .topnav a{
-      text-decoration: underline;
-      font-size: 0.95em;
-      color: #111;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    .topnav .sep{ opacity: 0.45; }
-
-    section{ scroll-margin-top: 78px; }
-    #top{ scroll-margin-top: 0; }
-
-    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
-    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
-    h2{ font-size: 1.32rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
-    h3{ font-size: 1.06rem; }
-
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
     p{ margin: 0.75em 0; }
-    ul, ol{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
-    li{ margin: 0.42em 0; }
-
-    a{ color: inherit; text-decoration: underline; font-weight: 600; }
-    a:hover{ opacity: 0.85; }
-
-    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
-
-    .muted{ color: var(--muted); }
-
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
     .scripture-text{
       font-size: 1.08em;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 16px;
-      margin: 1.5em 0;
     }
     .v-num{
       font-weight: 700;
@@ -94,16 +71,14 @@
       opacity: 0.55;
       margin-right: 4px;
     }
-
     .annotation-block{
       background: var(--soft);
       padding: 14px;
       border-left: 3px solid var(--line);
       border-radius: 10px;
-      margin: 1.5em 0;
     }
     .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
-
+    .muted{ color: var(--muted); }
     .page-footer-block {
       display: flex;
       flex-direction: column;
@@ -112,7 +87,6 @@
       margin: 2.5em 0 1em;
       text-align: center;
     }
-
     .share-row {
       display: flex;
       flex-wrap: wrap;
@@ -120,9 +94,7 @@
       justify-content: center;
       gap: 12px;
       font-size: 0.98rem;
-      color: #333;
     }
-
     .share-btn {
       display: inline-flex;
       align-items: center;
@@ -135,7 +107,6 @@
       font-weight: 500;
       color: #111;
     }
-
     .bmc-btn {
       display: inline-flex;
       align-items: center;
@@ -148,60 +119,38 @@
       font-weight: 700;
       font-size: 1rem;
     }
-
-    .bottom-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 8px 10px;
-      font-weight: 600;
-      font-size: 0.98rem;
-      color: #0056b3;
-    }
-    .bottom-nav a { color: #0056b3; text-decoration: none; }
-    .bottom-nav a:hover { text-decoration: underline; }
-    .bottom-nav .sep { color: #666; font-weight: 400; }
-
-    footer{
-      margin-top: 2.2em;
-      padding-top: 1.2em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.96em;
-    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q22N178LJ8');
+  </script>
 </head>
 <body>
+  <a id="top"></a>
+  <div class="wrap">
+    <nav class="top">
+      <a class="btn" href="/Bible/">Bible Index</a>
+      <a class="btn" href="/Bible/John/index.html">Book Index</a>
+      <a class="btn" href="/Bible/John/john8.html">Previous</a>
+      <a class="btn" href="/Bible/John/john10.html">Next</a>
+      <a class="btn" href="#top">Top</a>
+    </nav>
 
-<a id="top"></a>
+    <h1>John 9 — From Blindness to Sight</h1>
+    <hr />
 
-<div class="topnav" aria-label="Standard navigation">
-  <div class="bar">
-    <a href="/Bible/">Bible Index</a><span class="sep">|</span>
-    <a href="/Bible/John/index.html">John Index</a><span class="sep">|</span>
-    <a href="/Bible/John/john8.html">Previous</a><span class="sep">|</span>
-    <a href="/Bible/John/john10.html">Next</a><span class="sep">|</span>
-    <a href="#top">Top</a>
-  </div>
-</div>
-
-<div class="wrap">
-
-  <h1>John 9 — From Blindness to Sight</h1>
-  <hr />
-
-  <!-- 1. Immediate Context -->
-  <section id="context">
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
       Following His confrontation in the temple treasury, Jesus encounters a man born blind in Jerusalem on the Sabbath. Rather than framing the man's condition through traditional Judean blame and ancestral guilt, Jesus uses the miracle as an inaugural sign to demonstrate that divine illumination has entered Israel's world. By sending the man to wash at the pool of Siloam and restoring his sight, Jesus provokes a major legalistic trial by the Sanhedrin. In this first-century context, the religious establishment attempts to prosecute mercy as a Sabbath violation, threatening to expel anyone who confesses Jesus as Christ, thereby exposing their own profound spiritual blindness before the temple's destruction in AD 70.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 2. Scripture Text (WEB) -->
-  <section id="scripture">
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -264,11 +213,9 @@
         <span class="v-num">41</span>Jesus said to them, “If you were blind, you would have no sin; but now you say, ‘We see.’ Therefore your sin remains.
       </p>
     </div>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 3. Fulfillment Notes -->
-  <section id="notes">
+    <!-- 3. Fulfillment Notes -->
     <h2>Fulfillment Notes</h2>
     <ul>
       <li>Healing the man born blind serves as an inaugural sign of divine creation, replacing temple-managed access with Messiah's authority.</li>
@@ -277,11 +224,9 @@
       <li>The blind man's progressive confession illustrates true covenant sight, while the religious experts harden in their spiritual blindness.</li>
       <li>Divine judgment operates in real time as light enters first-century Israel, exposing those who claim sight while rejecting Messiah.</li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 4. Annotations -->
-  <section id="annotations">
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
       <div class="annotation-item"><strong>light of the world</strong>: Messiah's presence invading first-century Israel's darkness to bring spiritual illumination.</div>
@@ -291,13 +236,10 @@
       <div class="annotation-item"><strong>disciples of Moses</strong>: Designation used by Judean authorities to assert allegiance to Sinai legalism over Messiah's New Covenant authority.</div>
       <div class="annotation-item"><strong>judgment</strong>: The immediate judicial exposure resulting from the light of truth entering an apostate covenant order.</div>
     </div>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 5. Fulfillment Commentary -->
-  <section id="commentary">
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    
     <h3>1) Refusing the Ancestral Blame Framework</h3>
     <p>
       When the disciples observe the man born blind, they immediately pose a traditional rabbinic question: "Rabbi, who sinned, this man or his parents, that he was born blind?" This inquiry reflects the dominant Old Covenant mindset, which viewed physical infirmity strictly as judicial punishment for personal or ancestral guilt. Jesus flatly rejects this blame-centered framework, clarifying that neither the man nor his parents sinned to cause the blindness, but that the works of God might be revealed in him. Under the Mosaic system, legalistic categories of clean and unclean, worthy and unworthy, served to maintain social boundaries and human condemnation. Jesus dismantles this accusing apparatus, reframing human suffering not as a courtroom case for human legalism, but as the stage for Messiah’s creative work. By declaring, "I must work the works of him who sent me while it is day; night is coming," Jesus highlights the temporal urgency of His first-century ministry. Light was present in Messiah, and the day of opportunity for covenant Israel was rapidly drawing to a close before the night of judgment overwhelmed the old order.
@@ -322,77 +264,63 @@
     <p>
       Jesus concludes the event by announcing His judicial purpose: "I came into this world for judgment, that those who don't see may see; and that those who see may become blind." In John’s Gospel, judgment is not primarily a far-off event at the end of physical time, but an immediate process of covenant exposure triggered by the arrival of Messiah’s light. When divine truth shines into first-century Israel, it creates an inevitable division: those who recognize their spiritual poverty receive sight and Kingdom life, while those who arrogantly claim "We see" remain locked in their sin. The Pharisees’ confident claim to possess exclusive scriptural and covenantal sight became their very sentence of condemnation. Their refusal to receive Messiah sealed the fate of the Jerusalem establishment, leading directly to the final desolation of their house in AD 70.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 6. Prophecy Hub Links -->
-  <section id="links">
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/light-of-the-world.html">Light of the World</a></li>
       <li><a href="/Bible/Prophecy/judgment-and-exposure.html">Covenant Judgment and Exposure</a></li>
       <li><a href="/Bible/Prophecy/good-shepherd.html">The Good Shepherd</a></li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 7. Cross-References -->
-  <section id="crossref">
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
       <li><a href="https://ebible.org/eng-web/ISA06.htm" target="_blank" rel="noopener">Isaiah 6:9–10 (WEB)</a> — Prophecy of judicial blindness and spiritual hardness upon Israel.</li>
       <li><a href="https://ebible.org/eng-web/EZE34.htm" target="_blank" rel="noopener">Ezekiel 34:11–16 (WEB)</a> — The Lord searching out and gathering the sheep scattered by false shepherds.</li>
       <li><a href="https://ebible.org/eng-web/1PE02.htm" target="_blank" rel="noopener">1 Peter 2:9–10 (WEB)</a> — The called-out people brought out of darkness into His marvelous light.</li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 8. New Creation Reality -->
-  <section id="newcreation">
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
       In Christ, your spiritual sight and covenant standing are forever secure. You are not defined by the approval, categories, or threats of human religious systems, nor do you live under the fear of rejection or condemnation. Messiah has opened your eyes to the light of truth and gathered you into His permanent flock. Your belonging in the Father’s Kingdom rests entirely on the finished work of the Son, who continually upholds you, restores you, and walks with you in complete freedom.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 9. Reflection -->
-  <section id="reflection">
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
       How does knowing that Christ has personally gathered you into His light free you from seeking approval from performance-driven systems today?
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 10. Footer, Share & Navigation Block -->
-  <footer>
-    <div class="page-footer-block">
-      <div class="share-row">
-        <span>Share this study:</span>
-        <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
-        <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+    <!-- 10. Footer, Share & Navigation Block -->
+    <footer>
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
+        </a>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john8.html">Previous</a>
+          <a class="btn" href="/Bible/John/john10.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-
-      <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-        <span>☕ Support on Ko-fi</span>
-      </a>
-
-      <div class="bottom-nav">
-        <a href="/Bible/">Bible Index</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/index.html">John Index</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/john8.html">Previous Chapter</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/john10.html">Next Chapter</a>
-        <span class="sep">|</span>
-        <a href="#top">Top</a>
-      </div>
-    </div>
-  </footer>
-
-</div>
+    </footer>
+  </div>
 </body>
 </html>
