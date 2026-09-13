@@ -7,33 +7,128 @@
   <meta name="description" content="Jacob’s well, two mountains, and a harvest already white. Jesus ends sacred geography in a Samaritan noon." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,28 +148,33 @@
       <a class="btn" href="/Bible/John/john5.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 4 — Living Water, Spirit and Truth</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Chapter 3 told a Jerusalem ruler he needed a birth he could not manage. Chapter 4 walks the same life through Samaria — the place a careful Jew would route around. Jacob’s well, Gerizim, and Jerusalem are put on notice in one noon conversation. The hour is coming and now is: worship will not be a mountain contest.
+      Following His early Judean ministry and discourse with Nicodemus, Jesus travels north toward Galilee, deliberately passing through Samaria—a region typically avoided by Judeans due to centuries of intense ethnic and religious hostility. At Jacob’s well near Sychar around the sixth hour, Jesus initiates a conversation with a Samaritan woman. By addressing her, Jesus directly confronts the ancient rift between Judean and Samaritan temple traditions. In this first-century context, Jesus declares that divine access, true worship, and spiritual life are no longer localized to physical mountains like Gerizim or Zion, but are inaugurated immediately through His own person.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>Therefore when the Lord knew that the Pharisees had heard that Jesus was making and baptizing more disciples than John
         <span class="v-num">2</span>(although Jesus himself didn’t baptize, but his disciples),
         <span class="v-num">3</span>he left Judea, and departed into Galilee.
-        <span class="v-num">4</span>He needed to pass through Samaria.
+        <span class="v-num">4</span>He needed to pass through <strong>Samaria</strong>.
         <span class="v-num">5</span>So he came to a city of Samaria, called Sychar, near the parcel of ground that Jacob gave to his son, Joseph.
       </p>
       <p>
-        <span class="v-num">6</span>Jacob’s well was there. Jesus therefore, being tired from his journey, sat down by the well. It was about the sixth hour.
+        <span class="v-num">6</span><strong>Jacob’s well</strong> was there. Jesus therefore, being tired from his journey, sat down by the well. It was about the sixth hour.
         <span class="v-num">7</span>A woman of Samaria came to draw water. Jesus said to her, “Give me a drink.”
         <span class="v-num">8</span>For his disciples had gone away into the city to buy food.
         <span class="v-num">9</span>The Samaritan woman therefore said to him, “How is it that you, being a Jew, ask for a drink from me, a Samaritan woman?” (For Jews have no dealings with Samaritans.)
-        <span class="v-num">10</span>Jesus answered her, “If you knew the gift of God, and who it is who says to you, ‘Give me a drink,’ you would have asked him, and he would have given you living water.”
+        <span class="v-num">10</span>Jesus answered her, “If you knew the gift of God, and who it is who says to you, ‘Give me a drink,’ you would have asked him, and he would have given you <strong>living water</strong>.”
       </p>
       <p>
         <span class="v-num">11</span>The woman said to him, “Sir, you have nothing to draw with, and the well is deep. So where do you get that living water?
@@ -91,9 +191,9 @@
         <span class="v-num">20</span>Our fathers worshiped in this mountain, and you Jews say that in Jerusalem is the place where people ought to worship.”
       </p>
       <p>
-        <span class="v-num">21</span>Jesus said to her, “Woman, believe me, the hour comes, when neither in this mountain, nor in Jerusalem, will you worship the Father.
+        <span class="v-num">21</span>Jesus said to her, “Woman, believe me, the hour comes, when <strong>neither in this mountain, nor in Jerusalem</strong>, will you worship the Father.
         <span class="v-num">22</span>You worship that which you don’t know. We worship that which we know; for salvation is from the Jews.
-        <span class="v-num">23</span>But the hour comes, and now is, when the true worshipers will worship the Father in spirit and truth, for the Father seeks such to be his worshipers.
+        <span class="v-num">23</span>But <strong>the hour comes, and now is</strong>, when the true worshipers will <strong>worship the Father in spirit and truth</strong>, for the Father seeks such to be his worshipers.
         <span class="v-num">24</span>God is spirit, and those who worship him must worship in spirit and truth.”
         <span class="v-num">25</span>The woman said to him, “I know that Messiah comes, he who is called Christ. When he has come, he will declare to us all things.”
       </p>
@@ -109,7 +209,7 @@
         <span class="v-num">32</span>But he said to them, “I have food to eat that you don’t know about.”
         <span class="v-num">33</span>The disciples therefore said to one another, “Has anyone brought him something to eat?”
         <span class="v-num">34</span>Jesus said to them, “My food is to do the will of him who sent me, and to accomplish his work.
-        <span class="v-num">35</span>Don’t you say, ‘There are yet four months until the harvest?’ Behold, I tell you, lift up your eyes, and look at the fields, that they are white for harvest already.
+        <span class="v-num">35</span>Don’t you say, ‘There are yet four months until the harvest?’ Behold, I tell you, lift up your eyes, and look at the fields, that they are <strong>white for harvest already</strong>.
       </p>
       <p>
         <span class="v-num">36</span>He who reaps receives wages, and gathers fruit to eternal life; that both he who sows and he who reaps may rejoice together.
@@ -120,7 +220,7 @@
       </p>
       <p>
         <span class="v-num">41</span>Many more believed because of his word.
-        <span class="v-num">42</span>They said to the woman, “Now we believe, not because of your speaking; for we have heard for ourselves, and know that this is indeed the Christ, the Savior of the world.”
+        <span class="v-num">42</span>They said to the woman, “Now we believe, not because of your speaking; for we have heard for ourselves, and know that this is indeed the Christ, the <strong>Savior of the world</strong>.”
         <span class="v-num">43</span>After the two days he went out from there and went into Galilee.
         <span class="v-num">44</span>For Jesus himself testified that a prophet has no honor in his own country.
         <span class="v-num">45</span>So when he came into Galilee, the Galileans received him, having seen all the things that he did in Jerusalem at the feast, for they also went to the feast.
@@ -136,112 +236,123 @@
         <span class="v-num">51</span>As he was now going down, his servants met him and reported, saying “Your child lives!”
         <span class="v-num">52</span>So he inquired of them the hour when he began to get better. They said therefore to him, “Yesterday at the seventh hour, the fever left him.”
         <span class="v-num">53</span>So the father knew that it was at that hour in which Jesus said to him, “Your son lives.” He believed, as did his whole house.
-        <span class="v-num">54</span>This is again the second sign that Jesus did, having come out of Judea into Galilee.
+        <span class="v-num">54</span>This is again the <strong>second sign</strong> that Jesus did, having come out of Judea into Galilee.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Passing through Samaria is the map of the New Covenant, not a travel note.</p>
-      <p class="note">2) Living water is Spirit-life against inherited wells.</p>
-      <p class="note">3) Gerizim versus Jerusalem dies in a sentence.</p>
-      <p class="note">4) “The hour comes and now is” is that generation’s transition language.</p>
-      <p class="note">5) Harvest is already white. The delay proverb is refused.</p>
-      <p class="note">6) “Savior of the world” is a Samaritan town’s confession before the old house falls.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>Jesus passing through Samaria demonstrates New Covenant inclusion overriding Old Covenant ethnic and geographical barriers.</li>
+      <li>"Living water" fulfills Ezekiel 47 and Isaiah 12, replacing inherited ancestral wells with perpetual Spirit-indwelling.</li>
+      <li>The declaration of worshiping in "spirit and truth" permanently abolishes sacred geography between Gerizim and Jerusalem.</li>
+      <li>"White for harvest already" reframes covenant gathering as immediately active rather than delayed to a distant epoch.</li>
+      <li>Healing the nobleman's son by spoken word serves as an inaugural sign of Christ's authoritative Kingdom power.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>Samaria</strong>: split-kingdom wound walked into on purpose.</div>
-      <div class="annotation-item"><strong>Jacob’s well</strong>: ancestral claim; He is greater than the father of the well.</div>
-      <div class="annotation-item"><strong>living water</strong>: Ezekiel 47 / Isaiah 12 — river from the new dwelling.</div>
-      <div class="annotation-item"><strong>neither mountain</strong>: both old addresses lose exclusivity.</div>
-      <div class="annotation-item"><strong>hour… now is</strong>: worship-mode already present in Him.</div>
-      <div class="annotation-item"><strong>white for harvest</strong>: calendar excuse cancelled.</div>
+      <div class="annotation-item"><strong>Samaria</strong>: Historic region of the northern kingdom, representing long-standing covenant division and Gentile inclusion.</div>
+      <div class="annotation-item"><strong>Jacob’s well</strong>: Patriarchal water source symbolizing inherited ancestral tradition, surpassed by Christ's infinite supply.</div>
+      <div class="annotation-item"><strong>living water</strong>: Prophetic motif (Ezekiel 47; Isaiah 12) referring to the internal, continuous life of the Holy Spirit.</div>
+      <div class="annotation-item"><strong>neither in this mountain, nor in Jerusalem</strong>: The total abolition of localized sacred geography and exclusive earthly sanctuaries.</div>
+      <div class="annotation-item"><strong>the hour comes, and now is</strong>: Temporal transition language marking the immediate first-century inauguration of Messiah's spiritual reign.</div>
+      <div class="annotation-item"><strong>worship the Father in spirit and truth</strong>: The New Covenant mode of worship, rooted in spiritual union with Christ rather than physical altars.</div>
+      <div class="annotation-item"><strong>white for harvest already</strong>: Rejection of agricultural delay proverbs, establishing the immediate first-century gathering of souls.</div>
+      <div class="annotation-item"><strong>Savior of the world</strong>: Universal title confessed by Samaritans, expanding Messiah's reign far beyond national Judean borders.</div>
+      <div class="annotation-item"><strong>second sign</strong>: Miraculous healing demonstrating Christ's sovereign, distance-spanning authority over sickness and death.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Why He Had to Go Through Samaria</h3>
+    <h3>1) Transgressing Covenant Boundaries in Samaria</h3>
     <p>
-      Jews and Samaritans had no dealings. That clause is the old world. Jesus needs to pass through because the gift of God will not stay inside Judean courts. Chapter 1’s family “not of blood” now drinks with a woman the blood-system would not greet.
+      Under the Old Covenant administration, deep-seated ethnic and religious hostility separated Judeans from Samaritans, rooted in the historic division of the kingdom and rival sanctuary traditions. Judeans routinely bypassed Samaritan territory when traveling between Judea and Galilee. However, John records that Jesus "needed to pass through Samaria." This route was not dictated by mere geographical convenience, but by divine covenant necessity. By initiating a conversation with a Samaritan woman at Sychar, Jesus deliberately dismantled centuries of legalistic exclusion. Chapter 1 declared that entry into God's family is derived not of blood, physical lineage, or human will, but of God. In Samaria, Jesus visibly demonstrates this truth, revealing that the scope of Messiah's redemption extends beyond Judah's borders to gather the discarded outcasts of the ancient world.
     </p>
-    <h3>2) A Well That Cannot Finish Thirst</h3>
+
+    <h3>2) Living Water and the End of Ancestral Wells</h3>
     <p>
-      She argues from Jacob. He answers with a spring in the person. Inherited water — tradition, mountain, bucket — will make you walk back tomorrow. The water He gives becomes a well in the drinker. Leaving the water pot is the right commentary.
+      At Jacob's well, the Samaritan woman appeals to ancient patriarchs and inherited tradition, asking if Jesus is greater than father Jacob who dug the physical well. Jesus answers by contrasting physical, temporary water with "living water"—a key prophetic motif drawn from Isaiah 12 and Ezekiel 47. Physical wells require continuous human effort and offer only temporary relief from thirst. In contrast, the living water that Christ bestows becomes an internal, perpetual spring springing up into eternal life. This transition marks the end of relying on external shadow-rituals, ancestral merit, and localized religious institutions. The indwelling Holy Spirit, granted through faith in the Son, satisfies the human spirit completely, replacing obsolete Old Covenant vessels with the self-sustaining, eternal life of the New Creation.
     </p>
-    <h3>3) Neither Mountain</h3>
+
+    <h3>3) The Abolition of Sacred Geography</h3>
     <p>
-      She relocates the conversation onto Gerizim or Zion. He grants that salvation is from the Jews and then takes both buildings off the board. Spirit-and-truth worship is not a post-70 invention. AD 70 only makes the vacant mountains obvious. The mode arrived when the Messiah spoke to her.
+      When the conversation turns to the ancient debate between Mount Gerizim and Mount Zion, Jesus issues a monumental declaration regarding worship: "the hour comes, when neither in this mountain, nor in Jerusalem, will you worship the Father." For centuries, sacred location was central to covenant life, with Jerusalem serving as the exclusive, authorized sanctuary for sacrificial access. Jesus announces that the entire system of localized sacred geography has reached its administrative endpoint. True worship is no longer defined by physical altars, earthly cities, or stone temples, but is conducted "in spirit and truth." This shift was inaugurally present during Messiah's earthly ministry and was fully consummated when the physical Jerusalem temple was destroyed in AD 70, leaving Christ Himself as the true sanctuary for all believers across the earth.
     </p>
-    <h3>4) Harvest Already White</h3>
+
+    <h3>4) The Present Harvest of the Kingdom Age</h3>
     <p>
-      Disciples worry about lunch. He talks about fields. “Four months yet” is the farmer’s proverb for delay. He refuses it. If you keep saying the real harvest is later, you are using the proverb He cancelled.
+      When His disciples return with food and urge Him to eat, Jesus redirects their focus from physical sustenance to His divine mission, declaring that His food is to accomplish the Father's work. He directly refutes the common agricultural proverb, "There are yet four months until the harvest," instructing them to lift up their eyes because the fields are white for harvest already. In traditional futurist or delayed schemes, the spiritual harvest is postponed to a distant epoch at the end of physical time. However, Jesus emphasizes that the apostolic gathering of souls was actively underway in that first-century generation. The Samaritans streaming out of Sychar to hear the Messiah represented the immediate, present-harvest reality of the New Covenant Kingdom, where sowers and reapers rejoice together in real time.
     </p>
-    <h3>5) Word-Faith in Cana Again</h3>
+
+    <h3>5) Inaugural Signs and Royal Authority in Galilee</h3>
     <p>
-      The nobleman wants Jesus to come down before the child dies. Jesus sends a word instead. Physical death is still in the story. The sign is not that dust is abolished. The sign is that the Son’s word already carries life.
+      The chapter concludes with Jesus returning to Cana of Galilee, where He performs His second miraculous sign by healing a royal official’s dying son in Capernaum from a distance. The nobleman begged Jesus to travel down before his child died, expecting physical presence to be necessary for healing. Jesus tests his faith and speaks a simple word of authority: "Go your way. Your son lives." The official believed the spoken word, and the child recovered at that exact hour. This miracle served as an inaugural sign demonstrating Christ's absolute sovereign authority over sickness, distance, and death. While physical mortality remained part of human experience, this sign confirmed that the King’s authoritative word brings immediate life, calling His people to rest in His spoken promises rather than demanding visible proofs.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/gentile-inclusion.html">Gentile Inclusion</a></li>
-      <li><a href="/Bible/Prophecy/immanuel.html">Immanuel</a></li>
+      <li><a href="/Bible/Prophecy/immanuel.html">Immanuel — God With Us in the New Covenant</a></li>
       <li><a href="/Bible/Prophecy/harvest-separation.html">Harvest and Separation</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/ISA12.htm" target="_blank" rel="noopener">Isaiah 12 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZK47.htm" target="_blank" rel="noopener">Ezekiel 47 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/MAL01.htm" target="_blank" rel="noopener">Malachi 1 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA49.htm" target="_blank" rel="noopener">Isaiah 49 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/ISA12.htm" target="_blank" rel="noopener">Isaiah 12:2–3 (WEB)</a> — Prophecy of drawing water with joy from the wells of salvation.</li>
+      <li><a href="https://ebible.org/eng-web/EZK47.htm" target="_blank" rel="noopener">Ezekiel 47:1–9 (WEB)</a> — Vision of the life-giving river flowing from the divine sanctuary.</li>
+      <li><a href="https://ebible.org/eng-web/MAL01.htm" target="_blank" rel="noopener">Malachi 1:11 (WEB)</a> — Prophecy of pure worship offered to God's name among all nations.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Living water</strong> — Spirit-life in the person.</li>
-      <li><strong>Neither mountain</strong> — sacred geography retired.</li>
-      <li><strong>Hour now is</strong> — worship-mode present in the Son.</li>
-      <li><strong>Harvest already</strong> — delay proverb cancelled.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You do not commute to Gerizim or Jerusalem to find the Father. The well is in you because the Son has spoken. Physical death still meets bodies. This chapter ends place-rationed presence.
+      As a believer in Christ, you do not need to travel to physical mountains, sacred shrines, or specialized earthly temples to encounter God. Through your union with the risen Son, the living water of the Holy Spirit resides within you as an unending, spring-fed source of divine life. You are brought into immediate, unrestricted communion with the Father, worshiping Him in spirit and truth. You live in the active reality of the Kingdom harvest, completely secure in the authoritative word of Christ and free from legalistic performance or geographical barriers.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still arguing mountains instead of drinking what He has already given?
+      How does knowing that the living water of the Spirit permanently dwells within you change how you approach daily fellowship with God?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john3.html">Previous</a>
-        <a class="btn" href="/Bible/John/john5.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john3.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john5.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
