@@ -4,36 +4,122 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 12 — The Hour Has Come — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="The Greeks seek Jesus. The hour arrives. A grain of wheat falls. The ruler of this world is cast out. The light is among them a little while longer." />
+  <meta name="description" content="The Greeks seek Jesus, signaling the arrival of the appointed hour. The grain of wheat falls to bear fruit, the prince of this world is cast out, and Messiah is lifted up to draw all people into the New Covenant." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,13 +139,18 @@
       <a class="btn" href="/Bible/John/john13.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 12 — The Hour Has Come</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Six days before Passover. Mary anoints. Judas objects. Crowds come because of Lazarus. Greeks seek Jesus through Philip. The hour that has been approaching now arrives. A grain of wheat must fall. The ruler of this world is judged and cast out. The light is among them a little while longer. Many of the rulers believe but will not confess for fear of the synagogue. Isaiah’s blindness oracle is recalled. The chapter closes the public ministry and turns toward the upper room.
+      Six days before the Passover, Jesus returns to Bethany where He raised Lazarus, receiving a royal anointing from Mary that foreshadows His burial. As Jesus enters Jerusalem riding a donkey's colt, the crowds hail Him as the King of Israel, prompting the Pharisees to lament that "the world has gone after him." The arrival of Gentile Greeks seeking an audience with Jesus signals that the appointed hour for Messiah's passion and global glorification has officially arrived. Concluding His public ministry to first-century Israel, Jesus proclaims the impending judgment of the old world order, the casting out of its ruling accuser, and the inevitable judicial blindness coming upon those who refuse the light before the temple's destruction in AD 70.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -93,8 +184,8 @@
       <p>
         <span class="v-num">21</span>These, therefore, came to Philip, who was from Bethsaida of Galilee, and asked him, saying, “Sir, we want to see Jesus.”
         <span class="v-num">22</span>Philip came and told Andrew, and in turn, Andrew came with Philip, and they told Jesus.
-        <span class="v-num">23</span>Jesus answered them, “The time has come for the Son of Man to be glorified.
-        <span class="v-num">24</span>Most certainly I tell you, unless a grain of wheat falls into the earth and dies, it remains by itself alone. But if it dies, it bears much fruit.
+        <span class="v-num">23</span>Jesus answered them, “<strong>The hour has come</strong> for the Son of Man to be glorified.
+        <span class="v-num">24</span>Most certainly I tell you, unless a <strong>grain of wheat</strong> falls into the earth and dies, it remains by itself alone. But if it dies, it bears much fruit.
         <span class="v-num">25</span>He who loves his life will lose it. He who hates his life in this world will keep it to eternal life.
       </p>
       <p>
@@ -105,11 +196,11 @@
         <span class="v-num">30</span>Jesus answered, “This voice hasn’t come for my sake, but for your sakes.
       </p>
       <p>
-        <span class="v-num">31</span>Now is the judgment of this world. Now the prince of this world will be cast out.
-        <span class="v-num">32</span>And I, if I am lifted up from the earth, will draw all people to myself.”
+        <span class="v-num">31</span>Now is the judgment of this world. Now the <strong>prince of this world</strong> will be cast out.
+        <span class="v-num">32</span>And I, if I am <strong>lifted up</strong> from the earth, will draw all people to myself.”
         <span class="v-num">33</span>But he said this, signifying by what kind of death he should die.
         <span class="v-num">34</span>The multitude answered him, “We have heard out of the law that the Christ remains forever. How do you say, ‘The Son of Man must be lifted up?’ Who is this Son of Man?”
-        <span class="v-num">35</span>Jesus therefore said to them, “Yet a little while the light is with you. Walk while you have the light, that darkness doesn’t overtake you. He who walks in the darkness doesn’t know where he is going.
+        <span class="v-num">35</span>Jesus therefore said to them, “Yet <strong>a little while</strong> the light is with you. Walk while you have the light, that darkness doesn’t overtake you. He who walks in the darkness doesn’t know where he is going.
       </p>
       <p>
         <span class="v-num">36</span>While you have the light, believe in the light, that you may become children of light.” Jesus said these things, and he departed and hid himself from them.
@@ -134,42 +225,53 @@
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) The hour is not postponed; it arrives within the narrative timeline of that generation.</p>
-      <p class="note">2) The grain of wheat must die to bear fruit — the cross is the path to the much fruit.</p>
-      <p class="note">3) “Now” the ruler of this world is judged and cast out — present tense judgment language.</p>
-      <p class="note">4) Lifted up draws all peoples; the Greeks’ request signals the widening scope.</p>
-      <p class="note">5) Light is temporary among them; walking in it is urgent, not optional delay.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The arrival of the Greeks marks the fulfillment of the appointed hour for Messiah's passion and international glorification.</li>
+      <li>The parable of the grain of wheat demonstrates that Christ's sacrificial death is the necessary catalyst for New Covenant harvest.</li>
+      <li>"Now is the judgment of this world" establishes that the expulsion of the Old Covenant accuser occurred at the cross in that generation.</li>
+      <li>Being "lifted up" joins Christ's crucifixion with His exaltation, drawing both Jew and Gentile into one New Creation family.</li>
+      <li>The invocation of Isaiah 6 confirms the judicial hardening of the Jerusalem establishment prior to its destruction in AD 70.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>the hour</strong>: the appointed time of glorification through the cross.</div>
-      <div class="annotation-item"><strong>grain of wheat</strong>: death as the necessary condition for multiplication.</div>
-      <div class="annotation-item"><strong>prince of this world</strong>: the accusing power tied to the old order, judged now.</div>
-      <div class="annotation-item"><strong>lifted up</strong>: cross and exaltation in one movement.</div>
-      <div class="annotation-item"><strong>a little while</strong>: urgency of the remaining light before the decisive transition.</div>
+      <div class="annotation-item"><strong>The hour has come</strong>: The long-anticipated, first-century climax of redemptive history where Messiah enters His passion to establish the Kingdom.</div>
+      <div class="annotation-item"><strong>grain of wheat</strong>: Agricultural metaphor for Christ's substitutionary death producing a multiplied harvest of New Creation believers.</div>
+      <div class="annotation-item"><strong>prince of this world</strong>: The covenantal Accuser (*satan*) and legalistic system of Law-condemnation, decisively dethroned and cast out at the cross.</div>
+      <div class="annotation-item"><strong>lifted up</strong>: Double-entendre referring simultaneously to Christ's physical crucifixion on the cross and His divine exaltation to authority.</div>
+      <div class="annotation-item"><strong>a little while</strong>: Bounded temporal indicator emphasizing the imminent conclusion of Jesus' public ministry before the AD 70 judgment.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) The Hour Arrives</h3>
+    <h3>1) The Arrival of the Gentiles and the Appointed Hour</h3>
     <p>
-      Throughout the Gospel the hour has been “not yet.” The request of the Greeks becomes the trigger. The scope is no longer only the lost sheep of the house of Israel; the nations are already seeking. The hour of glorification is the hour of the cross.
+      Throughout the earlier chapters of John’s Gospel, Jesus repeatedly declared that His "hour had not yet come" (John 2:4; 7:30; 8:20). However, when certain God-fearing Greeks approach Philip asking to see Jesus, Messiah immediately announces a monumental shift: "The hour has come for the Son of Man to be glorified." In Old Testament prophecy, the gathering of the Gentile nations to Zion was the definitive sign of the messianic age (Isaiah 2:2–4; Zechariah 8:22–23). The request of these Greeks signals that Christ’s public ministry to Israel has reached its climax. The hour of glorification in John’s Gospel is not an earthly political enthronement, nor is it a event deferred to a distant future age; it is the immediate redemptive event of the cross, resurrection, and ascension, through which the local barrier separating Jew from Gentile was dismantled forever.
     </p>
-    <h3>2) Death That Bears Fruit</h3>
+
+    <h3>2) The Seed, the Cross, and the Universal Harvest</h3>
     <p>
-      A grain that refuses to fall remains alone. The Son’s death is not defeat but the condition for the much fruit of the New Covenant people. Self-preservation would leave the mission sterile. The path through death is the path to life for many.
+      Jesus explains the necessity of His upcoming death using powerful agricultural imagery: "Unless a grain of wheat falls into the earth and dies, it remains by itself alone. But if it dies, it bears much fruit." Had Jesus avoided the cross to establish a physical kingdom in first-century Jerusalem, He would have remained isolated as an earthly King over a single nation. By surrendering His life as the substitutionary grain of wheat, Messiah released the life of God into the world, bearing a global harvest of New Covenant sons and daughters. This principle extended to His first-century followers, who were called to "hate their life in this world"—meaning they were to relinquish their status, securities, and ties to the expiring Old Covenant order to participate in the indestructible life of the Kingdom.
     </p>
-    <h3>3) Now the Ruler Is Cast Out</h3>
+
+    <h3>3) The Decisive Casting Out of the Accuser</h3>
     <p>
-      The language is present and decisive. The prince of this world — the accusing power that held the old order in its grip — is judged and expelled in the lifting up of the Son. The judgment of the world is not postponed to a remote future; it is enacted in the cross and its aftermath within that generation.
+      In verse 31, Jesus makes a profound statement regarding the temporal immediacy of redemptive judgment: "Now is the judgment of this world. Now the prince of this world will be cast out." In the covenantal framework, the "prince of this world" represents the accuser (*satan*) operating through the legalistic condemnation of the Law and the persecuting power of the apostate Jerusalem authorities. Jesus does not place this judgment in an indeterminate end-of-world scenario. By using the repeated Greek temporal adverb *nyn* ("now"), He asserts that His imminent death on the cross stripped the old system of its judicial power. When Christ was "lifted up" on the cross, He bore the full curse of the Law, disarming the spiritual accusation that bound humanity in fear and drawing people of all nations into His reconciled New Creation.
     </p>
-    <h3>4) Light While It Remains</h3>
+
+    <h3>4) Judicial Hardening and the Close of Public Ministry</h3>
     <p>
-      The light is among them a little while longer. Walking in it is the only way darkness does not overtake. Belief that remains secret for fear of the synagogue is exposed as incomplete. Isaiah’s oracle of blindness is fulfilled in those who will not see the glory that has come.
+      John concludes Jesus' public ministry by addressing the tragic paradox of Israel's widespread unbelief despite witnessing undeniable miraculous signs. He explains this rejection as the fulfillment of Isaiah 6:10, where God judicially blinded the eyes and hardened the hearts of an apostate generation. Many of the Judean rulers actually believed in Jesus in their hearts, but out of fear of the Pharisees, they refused to confess Him openly so as not to be "put out of the synagogue." This cowardice exposed the ultimate idolatry of the Old Covenant elite, who "loved men's praise more than God's praise." Their judicial blindness sealed the fate of the earthly Jerusalem, leading directly to the covenantal catastrophe of AD 70 when the temple was burned, the old order was abolished, and the light of Christ fully displaced the shadows of Sinai.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/hour-of-glorification.html">The Hour of Glorification</a></li>
@@ -177,58 +279,52 @@
       <li><a href="/Bible/Prophecy/light-and-darkness.html">Light and Darkness</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/ISA53.htm" target="_blank" rel="noopener">Isaiah 53 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA6.htm" target="_blank" rel="noopener">Isaiah 6 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/PSA22.htm" target="_blank" rel="noopener">Psalm 22 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ZEC9.htm" target="_blank" rel="noopener">Zechariah 9 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/ISA53.htm" target="_blank" rel="noopener">Isaiah 53:1–5 (WEB)</a> — Prophecy of the Messiah's suffering, rejection, and ultimate glorification.</li>
+      <li><a href="https://ebible.org/eng-web/ISA06.htm" target="_blank" rel="noopener">Isaiah 6:9–10 (WEB)</a> — The prophetic oracle of judicial blindness and spiritual hardness upon Israel.</li>
+      <li><a href="https://ebible.org/eng-web/ZEC09.htm" target="_blank" rel="noopener">Zechariah 9:9–11 (WEB)</a> — Prophecy of Zion's King arriving humbly on a donkey's colt to establish peace.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>The hour</strong> — the appointed time of the cross and glorification.</li>
-      <li><strong>Grain of wheat</strong> — death as the path to multiplication.</li>
-      <li><strong>Lifted up</strong> — cross and exaltation together.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      The hour has come. The grain has fallen. The ruler has been judged. You are not waiting for a future casting-out of the accusing power; it has already been accomplished in the lifting up of the Son. Walk in the light that remains.
+      In Christ, you live on this side of the decisive hour. The grain of wheat has fallen and risen, yielding an eternal harvest of which you are a full partaker. The accusing power of legalism and spiritual condemnation has been cast out forever by the cross. You do not walk in darkness or under the fear of divine rejection; you are a child of light, permanently united to the Son who has drawn you to Himself and honored by the Father in His everlasting Kingdom.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still treating the decisive hour as future when the narrative presents it as arrived?
+      How does knowing that the accuser was decisively cast out at the cross give you complete rest from performance-driven fear today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john11.html">Previous</a>
-        <a class="btn" href="/Bible/John/john13.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john11.html">Previous</a>
+          <a class="btn" href="/Bible/John/john13.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
