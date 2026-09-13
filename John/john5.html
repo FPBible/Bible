@@ -7,33 +7,128 @@
   <meta name="description" content="Bethesda cannot heal. Sabbath becomes a weapon. The Son gives life now, and Moses is named as accuser." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,27 +148,32 @@
       <a class="btn" href="/Bible/John/john6.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 5 — The Son Gives Life — Moses Accuses</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      He is back in Jerusalem beside a pool that advertises help and delivers waiting. Thirty-eight years is wilderness time. Healing on the Sabbath detonates the old rest-marker. Then two hours are named: one that is coming and now is, and one that is coming — the public raising of a condemned order.
+      During a feast of the Jews in Jerusalem, Jesus encounters an invalid man who had been paralyzed for thirty-eight years beside the pool of Bethesda. In healing this man on the Sabbath and commanding him to pick up his mat, Jesus directly challenges the rabbinic traditions of the religious leadership and detonates the Old Covenant Sabbath apparatus. When the Judean leaders persecute Jesus for breaking the Sabbath and claiming equality with God, Jesus delivers a formal defense of His divine Sonship. Speaking to the temple authorities in the first-century setting, Jesus announces that spiritual resurrection and judgment are actively underway in Him, warning them that Moses, in whom they set their hope, is their true accuser for rejecting the Messiah.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>After these things, there was a feast of the Jews, and Jesus went up to Jerusalem.
-        <span class="v-num">2</span>Now in Jerusalem by the sheep gate, there is a pool, which is called in Hebrew, “Bethesda”, having five porches.
+        <span class="v-num">2</span>Now in Jerusalem by the sheep gate, there is a pool, which is called in Hebrew, “<strong>Bethesda</strong>”, having five porches.
         <span class="v-num">3</span>In these lay a great multitude of those who were sick, blind, lame, or paralyzed, waiting for the moving of the water;
         <span class="v-num">4</span>for an angel went down at certain times into the pool, and stirred up the water. Whoever stepped in first after the stirring of the water was healed of whatever disease he had.
-        <span class="v-num">5</span>A certain man was there, who had been sick for thirty-eight years.
+        <span class="v-num">5</span>A certain man was there, who had been sick for <strong>thirty-eight years</strong>.
       </p>
       <p>
         <span class="v-num">6</span>When Jesus saw him lying there, and knew that he had been sick for a long time, he asked him, “Do you want to be made well?”
         <span class="v-num">7</span>The sick man answered him, “Sir, I have no one to put me into the pool when the water is stirred up, but while I’m coming, another steps down before me.”
         <span class="v-num">8</span>Jesus said to him, “Arise, take up your mat, and walk.”
-        <span class="v-num">9</span>Immediately, the man was made well, and took up his mat and walked. Now it was the Sabbath on that day.
+        <span class="v-num">9</span>Immediately, the man was made well, and took up his mat and walked. Now it was the <strong>Sabbath</strong> on that day.
         <span class="v-num">10</span>So the Jews said to him who was cured, “It is the Sabbath. It is not lawful for you to carry the mat.”
       </p>
       <p>
@@ -94,13 +194,13 @@
         <span class="v-num">21</span>For as the Father raises the dead and gives them life, even so the Son also gives life to whom he desires.
         <span class="v-num">22</span>For the Father judges no one, but he has given all judgment to the Son,
         <span class="v-num">23</span>that all may honor the Son, even as they honor the Father. He who doesn’t honor the Son doesn’t honor the Father who sent him.
-        <span class="v-num">24</span>“Most certainly I tell you, he who hears my word, and believes him who sent me, has eternal life, and doesn’t come into judgment, but has passed out of death into life.
-        <span class="v-num">25</span>Most certainly, I tell you, the hour comes, and now is, when the dead will hear the Son of God’s voice; and those who hear will live.
+        <span class="v-num">24</span>“Most certainly I tell you, he who hears my word, and believes him who sent me, has eternal life, and doesn’t come into judgment, but has <strong>passed out of death into life</strong>.
+        <span class="v-num">25</span>Most certainly, I tell you, the <strong>hour comes, and now is</strong>, when the dead will hear the Son of God’s voice; and those who hear will live.
       </p>
       <p>
         <span class="v-num">26</span>For as the Father has life in himself, even so he gave to the Son also to have life in himself.
         <span class="v-num">27</span>He also gave him authority to execute judgment, because he is a son of man.
-        <span class="v-num">28</span>Don’t marvel at this, for the hour comes, in which all that are in the tombs will hear his voice,
+        <span class="v-num">28</span>Don’t marvel at this, for the <strong>hour comes</strong>, in which all that are in the tombs will hear his voice,
         <span class="v-num">29</span>and will come out; those who have done good, to the resurrection of life; and those who have done evil, to the resurrection of judgment.
         <span class="v-num">30</span>I can of myself do nothing. As I hear, I judge, and my judgment is righteous; because I don’t seek my own will, but the will of my Father who sent me.
       </p>
@@ -123,7 +223,7 @@
         <span class="v-num">42</span>But I know you, that you don’t have God’s love in yourselves.
         <span class="v-num">43</span>I have come in my Father’s name, and you don’t receive me. If another comes in his own name, you will receive him.
         <span class="v-num">44</span>How can you believe, who receive glory from one another, and you don’t seek the glory that comes from the only God?
-        <span class="v-num">45</span>“Don’t think that I will accuse you to the Father. There is one who accuses you, even Moses, on whom you have set your hope.
+        <span class="v-num">45</span>“Don’t think that I will accuse you to the Father. There is one who <strong>accuses you, even Moses</strong>, on whom you have set your hope.
       </p>
       <p>
         <span class="v-num">46</span>For if you believed Moses, you would believe me; for he wrote about me.
@@ -131,49 +231,60 @@
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Bethesda is the old system in architecture: near help, never first.</p>
-      <p class="note">2) Thirty-eight years echoes the wilderness delay (Deut 2:14).</p>
-      <p class="note">3) Sabbath conflict is the end of old rest, not a medical ethics debate.</p>
-      <p class="note">4) “Has passed out of death into life” is present transfer.</p>
-      <p class="note">5) The hour that “now is” is covenant awakening. The hour that “is coming” is public judgment of that world.</p>
-      <p class="note">6) Moses accuses the people who hoped in Moses while refusing the One Moses wrote.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>Bethesda's five porches represent the Old Covenant legal system, providing the appearance of mercy without the power to heal.</li>
+      <li>The thirty-eight years of infirmity echo Israel's wilderness wanderings, signaling the end of the nation's spiritual paralysis.</li>
+      <li>Healing on the Sabbath demonstrates that Christ is the true Sabbath rest, bringing an end to legalistic shadow-keeping.</li>
+      <li>Passing from death into life is a present spiritual transfer accomplished through faith in the Son during the inaugural Kingdom age.</li>
+      <li>Moses functions as the legal accuser of first-century Judea, condemning those who rested in the Law while rejecting Messiah.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>Bethesda</strong>: house of mercy that cannot mercy.</div>
-      <div class="annotation-item"><strong>thirty-eight years</strong>: Deuteronomy’s delay-number.</div>
-      <div class="annotation-item"><strong>Sabbath</strong>: sign of old rest turned into a charge-sheet.</div>
-      <div class="annotation-item"><strong>passed out of death into life</strong>: perfect tense. The crossing has happened.</div>
-      <div class="annotation-item"><strong>hour… now is</strong>: covenant-dead hearing the Son in His ministry.</div>
-      <div class="annotation-item"><strong>hour comes</strong> (v. 28): no “now is.” Public tomb-language aimed at that world’s end.</div>
-      <div class="annotation-item"><strong>Moses accuses</strong>: the tutor becomes the prosecutor.</div>
+      <div class="annotation-item"><strong>Bethesda</strong>: A house of mercy surrounded by five porches, representing the obsolete Old Covenant apparatus that advertised help but could not impart life.</div>
+      <div class="annotation-item"><strong>thirty-eight years</strong>: Direct echo of Israel's 38-year wilderness delay (Deuteronomy 2:14), symbolizing long-standing covenant paralysis under the Law.</div>
+      <div class="annotation-item"><strong>Sabbath</strong>: The seventh-day sign of the Mosaic Covenant, fulfilled and transcended by Christ who is the true rest for God's people.</div>
+      <div class="annotation-item"><strong>passed out of death into life</strong>: Greek perfect tense indicating an accomplished spiritual reality, where believers possess eternal life in the present age.</div>
+      <div class="annotation-item"><strong>hour comes, and now is</strong>: Temporal transition phrase referring to the inaugural resurrection of the covenant-dead during Messiah's earthly ministry.</div>
+      <div class="annotation-item"><strong>hour comes</strong>: Refers to the imminent covenant judgment and corporate resurrection associated with Daniel 12 and the end of the Old Covenant order in AD 70.</div>
+      <div class="annotation-item"><strong>accuses you, even Moses</strong>: The Mosaic Law acts as a prosecuting witness against unbelieving Judea, exposing their failure to recognize the Messiah of whom Moses wrote.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) A Pool That Cannot Save the Man Beside It</h3>
+    <h3>1) Bethesda and the Failure of Old Covenant Structures</h3>
     <p>
-      The scene is mercy as infrastructure: porches, stirring, a race the weak always lose. Jesus does not improve the pool. He speaks a man up. The old world can surround the broken and still not raise them.
+      The pool of Bethesda with its five porches serves as a vivid physical picture of the Old Covenant system. Surrounding the pool lay a crowd of sick, blind, and paralyzed individuals waiting for the moving of the water, operating within a framework where only the fastest or strongest could obtain healing. This competitive, performance-based environment highlights the fundamental limitation of the Mosaic Law: it could identify human weakness and advertise divine mercy, yet possessed no internal power to heal or liberate the sufferer. Jesus bypasses the pool completely, speaking a direct word of command that immediately restores a man who had been paralyzed for thirty-eight years. This duration explicitly echoes the thirty-eight years of Israel’s wilderness wandering described in Deuteronomy 2:14, representing the long era of spiritual paralysis under the Law. By healing the man without the pool's water, Jesus demonstrates that true restoration originates solely from the Son, superseding the obsolete mechanisms of the Old Covenant order.
     </p>
-    <h3>2) Wilderness Years on a Mat</h3>
+
+    <h3>2) The Sabbath Controversy and Sovereign Rest</h3>
     <p>
-      Deuteronomy counts thirty-eight years from Kadesh to the Zered — a delivered people who had not entered rest. John lays that number on a body in Jerusalem. Israel is still on the mat. The Son does not wait for the water. He is the rest the Sabbath only signed.
+      By commanding the healed man to pick up his mat and walk on the Sabbath, Jesus deliberately provoked a confrontation with the Judean religious authorities. In rabbinic tradition, carrying a mat on the Sabbath constituted a major violation of oral law. When challenged, Jesus defended His actions by declaring, "My Father is still working, so I am working, too." This assertion enraged the authorities because He not only dismantled their Sabbath regulations, but also claimed divine Sonship and functional equality with God. Under the Sinai administration, the seventh-day Sabbath was a temporary sign pointing toward the ultimate rest found in Messiah. Jesus revealed that God’s redemptive work did not cease on the Sabbath; rather, the Son possesses absolute divine authority to bestow Kingdom life and true rest. The Sabbath shadow was reaching its administrative fulfillment, yielding to the reality of the Son’s ongoing work of New Creation.
     </p>
-    <h3>3) Two Hours, One Generation</h3>
+
+    <h3>3) Two Hours of Resurrection and Covenant Judgment</h3>
     <p>
-      Verse 25: the hour comes and now is — the dead hear and live. That is Ezekiel’s bones in the ministry of Jesus. Verse 28 drops “now is.” The hour comes when those in the tombs hear and come out. That is Daniel 12 language aimed at the shattering of the holy people’s power. Physical mortality is not cancelled. What is raised and judged is the world that sat beside the pool and called Moses its hope.
+      In John 5:24–29, Jesus outlines two distinct dimensions of resurrection and authority. In verse 25, He speaks of the hour that "comes, and now is, when the dead will hear the Son of God’s voice; and those who hear will live." This present-tense declaration describes the inaugural spiritual resurrection occurring during His first-century ministry, as people dead in sin and covenant darkness were raised to eternal life through faith. In contrast, verses 28–29 describe the coming hour when "all that are in the tombs will hear his voice, and will come out; those who have done good, to the resurrection of life; and those who have done evil, to the resurrection of judgment." This language draws directly from Daniel 12:1–3, predicting the corporate resurrection and final covenant judgment associated with the end of the Jewish age. The AD 70 destruction of Jerusalem and the dismantling of the temple system marked the visible execution of this judgment, where the old house was dismantled and the Kingdom was fully established.
     </p>
-    <h3>4) Life Already Possessed</h3>
+
+    <h3>4) Searching Scriptures Without the Son</h3>
     <p>
-      “Has eternal life… has passed out of death into life” will not sit as a delayed award. Believing the sent Son is the crossing. Judgment for that person is not a looming atmosphere.
+      Jesus directly rebukes the Judean leaders for their approach to the Sacred Writings: "You search the Scriptures, because you think that in them you have eternal life; and these are they which testify about me." The Pharisees treated the text of the Law and Prophets as a self-contained repository of merit, assuming that diligent textual study and ritual compliance granted them automatic standing in the age to come. However, Jesus reveals that the Scriptures do not contain life within themselves; their entire divine purpose is to testify of the Son. By searching the text while rejecting the Person to whom the text pointed, the religious establishment demonstrated profound covenant blindness. They prized religious status and human praise over the divine glory revealed in Christ, isolating themselves from the very source of eternal life.
     </p>
-    <h3>5) Searching Scripture, Missing the Life It Names</h3>
+
+    <h3>5) Moses as the Legal Accuser</h3>
     <p>
-      They search because they think life is in the pages as a possession they already hold. The pages testify about Him, and they will not come. Hope set on Moses becomes accusation from Moses.
+      Jesus concludes His defense with a devastating judicial reversal: "Don’t think that I will accuse you to the Father. There is one who accuses you, even Moses, on whom you have set your hope." The Judean leaders viewed Moses as their divine advocate and covenant protector, relying on their Mosaic identity to guarantee their elite status. Jesus exposes this fatal misconception by revealing that Moses was actually their chief prosecutor. Every line written by Moses—including the Pentateuch's types, sacrifices, and prophetic warnings—pointed directly to Jesus Christ. By rejecting Messiah, the authorities stood condemned by the very Law they claimed to defend. The Mosaic administration, which was designed to lead Israel to Christ, became a witness of judgment against an unrepentant generation that refused to enter the New Covenant reality.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/resurrection.html">Resurrection</a></li>
@@ -181,59 +292,56 @@
       <li><a href="/Bible/Prophecy/wilderness-pattern.html">Wilderness Pattern</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/DEU02.htm" target="_blank" rel="noopener">Deuteronomy 2 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/DAN12.htm" target="_blank" rel="noopener">Daniel 12 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/DAN07.htm" target="_blank" rel="noopener">Daniel 7 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/DEU02.htm" target="_blank" rel="noopener">Deuteronomy 2:14 (WEB)</a> — The thirty-eight year wilderness wanderings of Israel.</li>
+      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37:12–14 (WEB)</a> — Prophecy of God opening tombs and breathing life into the dead.</li>
+      <li><a href="https://ebible.org/eng-web/DAN12.htm" target="_blank" rel="noopener">Daniel 12:1–3 (WEB)</a> — The end-of-age corporate resurrection and covenant judgment.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Pool</strong> — help that never arrives in time.</li>
-      <li><strong>Hour now is</strong> — covenant dead hearing the Son.</li>
-      <li><strong>Hour comes</strong> — public judgment of that world.</li>
-      <li><strong>Moses accuses</strong> — hope misplaced becomes the charge.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      If you are in the Son, you are not lying beside a pool waiting for a stir. You have crossed from death into life. Physical death still meets a body. This chapter ended the accusing world that kept the broken racing for water they could not reach.
+      In Christ, you have passed out of death into life and will never come into judgment. You are no longer sitting beside an earthly pool of striving, nor are you subject to the legalistic condemnation of the Law. The Son has granted you His own eternal life, establishing your identity in complete union with Him. You do not labor under the anxiety of performance-based acceptance; rather, you live in the constant reality of Messiah’s Sabbath rest, fully justified, eternally secure, and forever free from the accuser.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still waiting for the water to move instead of rising at the Son’s word?
+      How does knowing that you have already passed out of death into life empower you to rest completely in Christ's finished work today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john4.html">Previous</a>
-        <a class="btn" href="/Bible/John/john6.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john4.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john6.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
