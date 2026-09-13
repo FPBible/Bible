@@ -4,36 +4,122 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 11 — The Resurrection and the Life — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Lazarus is called out of the tomb. The sign forces a decision: life in the Son, or preservation of a dying system. Covenant death is confronted head-on." />
+  <meta name="description" content="Jesus raises Lazarus from the dead in Bethany, proclaiming 'I am the resurrection and the life.' Caiaphas prophesies that one man should die for the nation as the Sanhedrin plots His execution." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,193 +139,209 @@
       <a class="btn" href="/Bible/John/john12.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 11 — The Resurrection and the Life</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Lazarus is sick. Jesus delays. The delay is deliberate. When He arrives the man has been four days in the tomb — beyond ordinary hope. The sign is not private comfort; it is a public confrontation with covenant death. Martha and Mary meet Him with grief and faith mixed. The result accelerates the plot against Him: better one man die than the nation perish. The nation that chooses to preserve the system will lose both temple and people.
+      In Bethany, near Jerusalem, Lazarus falls severely ill and dies while Jesus remains across the Jordan. Jesus delays His arrival intentionally to turn a physical bereavement into a monumental inaugural sign of Kingdom authority. Arriving four days after Lazarus's burial, Jesus meets Martha and Mary, proclaiming "I am the resurrection and the life" before commanding Lazarus to come out of the tomb in the presence of Judean mourners. Rather than accepting this undeniable miracle, Caiaphas and the Sanhedrin convene an emergency council, fearing Roman intervention and plotting Jesus' execution. In the first-century covenantal setting, this physical resuscitation serves as an inaugural type of the spiritual resurrection and final consummation of the Old Covenant age in AD 70.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>Now a certain man was sick, Lazarus from Bethany, of the village of Mary and her sister, Martha.
-        <span class="v-num">2</span>It was that Mary who had anointed the Lord with ointment, and wiped his feet with her hair, whose brother, Lazarus, was sick.
+        <span class="v-num">2</span>It was that Mary who had anointed the Lord with ointment and wiped his feet with her hair, whose brother Lazarus was sick.
         <span class="v-num">3</span>The sisters therefore sent to him, saying, “Lord, behold, he for whom you have great affection is sick.”
-        <span class="v-num">4</span>But when Jesus heard it, he said, “This sickness is not to death, but for the glory of God, that God’s Son may be glorified by it.”
+        <span class="v-num">4</span>But when Jesus heard it, he said, “This <strong>sickness is not to death</strong>, but for the glory of God, that God’s Son may be glorified by it.”
         <span class="v-num">5</span>Now Jesus loved Martha, and her sister, and Lazarus.
       </p>
       <p>
         <span class="v-num">6</span>When therefore he heard that he was sick, he stayed two days in the place where he was.
         <span class="v-num">7</span>Then after this he said to the disciples, “Let’s go into Judea again.”
-        <span class="v-num">8</span>The disciples told him, “Rabbi, the Jews were just trying to stone you, and are you going there again?”
-        <span class="v-num">9</span>Jesus answered, “Aren’t there twelve hours of daylight? If a man walks in the day, he doesn’t stumble, because he sees the light of this world.
-        <span class="v-num">10</span>But if a man walks in the night, he stumbles, because the light isn’t in him.”
+        <span class="v-num">8</span>The disciples told him, “Rabbi, the Jews were just now seeking to stone you, and are you going there again?”
+        <span class="v-num">9</span>Jesus answered, “Aren’t there twelve hours of daylight? If anyone walks in the day, he doesn’t stumble, because he sees the light of this world.
+        <span class="v-num">10</span>But if anyone walks in the night, he stumbles, because the light isn’t in him.”
       </p>
       <p>
-        <span class="v-num">11</span>He said these things, and after that, he said to them, “Our friend, Lazarus, has fallen asleep, but I am going so that I may awake him out of sleep.”
+        <span class="v-num">11</span>He said these things, and after that, he said to them, “Our friend Lazarus has fallen asleep, but I am going so that I may awake him out of sleep.”
         <span class="v-num">12</span>The disciples therefore said, “Lord, if he has fallen asleep, he will recover.”
         <span class="v-num">13</span>Now Jesus had spoken of his death, but they thought that he spoke of taking rest in sleep.
-        <span class="v-num">14</span>So Jesus said to them plainly then, “Lazarus is dead.
+        <span class="v-num">14</span>So Jesus then told them plainly, “Lazarus is dead.
         <span class="v-num">15</span>I am glad for your sakes that I was not there, so that you may believe. Nevertheless, let’s go to him.”
       </p>
       <p>
         <span class="v-num">16</span>Thomas therefore, who is called Didymus, said to his fellow disciples, “Let’s go also, that we may die with him.”
-        <span class="v-num">17</span>So when Jesus came, he found that he had been in the tomb four days already.
+        <span class="v-num">17</span>So when Jesus came, he found that he had been in the tomb <strong>four days</strong> already.
         <span class="v-num">18</span>Now Bethany was near Jerusalem, about fifteen stadia away.
         <span class="v-num">19</span>Many of the Jews had joined the women around Martha and Mary, to console them concerning their brother.
-        <span class="v-num">20</span>Then when Martha heard that Jesus was coming, she went and met him, but Mary stayed in the house.
+        <span class="v-num">20</span>Then Martha, when she heard that Jesus was coming, went and met him, but Mary stayed in the house.
       </p>
       <p>
-        <span class="v-num">21</span>Therefore Martha said to Jesus, “Lord, if you would have been here, my brother wouldn’t have died.
-        <span class="v-num">22</span>Even now I know that, whatever you ask of God, God will give you.”
+        <span class="v-num">21</span>Martha therefore said to Jesus, “Lord, if you had been here, my brother wouldn’t have died.
+        <span class="v-num">22</span>Even now I know that whatever you ask of God, God will give you.”
         <span class="v-num">23</span>Jesus said to her, “Your brother will rise again.”
         <span class="v-num">24</span>Martha said to him, “I know that he will rise again in the resurrection at the last day.”
-        <span class="v-num">25</span>Jesus said to her, “I am the resurrection and the life. He who believes in me will still live, even if he dies.
+        <span class="v-num">25</span>Jesus said to her, “I am the <strong>resurrection and the life</strong>. He who believes in me, though he die, yet will he live.
       </p>
       <p>
         <span class="v-num">26</span>Whoever lives and believes in me will never die. Do you believe this?”
         <span class="v-num">27</span>She said to him, “Yes, Lord. I have come to believe that you are the Christ, God’s Son, he who comes into the world.”
-        <span class="v-num">28</span>When she had said this, she went away, and called Mary, her sister, secretly, saying, “The Teacher is here, and is calling you.”
-        <span class="v-num">29</span>When she heard this, she arose quickly, and went to him.
-        <span class="v-num">30</span>Now Jesus had not yet come into the village, but was in the place where Martha met him.
+        <span class="v-num">28</span>When she had said this, she went her way, and called Mary her sister secretly, saying, “The Teacher is here, and is calling you.”
+        <span class="v-num">29</span>When she heard it, she arose quickly and went to him.
+        <span class="v-num">30</span>Now Jesus had not yet come into the village, but was still in the place where Martha met him.
       </p>
       <p>
-        <span class="v-num">31</span>Then the Jews who were with her in the house, and were consoling her, when they saw Mary, that she rose up quickly and went out, followed her, saying, “She is going to the tomb to weep there.”
-        <span class="v-num">32</span>Therefore when Mary came to where Jesus was, and saw him, she fell down at his feet, saying to him, “Lord, if you would have been here, my brother wouldn’t have died.”
-        <span class="v-num">33</span>When Jesus therefore saw her weeping, and the Jews weeping who came with her, he groaned in the spirit, and was troubled,
+        <span class="v-num">31</span>Then the Jews who were with her in the house and were consoling her, when they saw Mary, that she rose up quickly and went out, followed her, saying, “She is going to the tomb to weep there.”
+        <span class="v-num">32</span>Therefore when Mary came where Jesus was, and saw him, she fell down at his feet, saying to him, “Lord, if you had been here, my brother wouldn’t have died.”
+        <span class="v-num">33</span>When Jesus therefore saw her weeping, and the Jews who came with her weeping, he groaned in the spirit, and was troubled,
         <span class="v-num">34</span>and said, “Where have you laid him?” They told him, “Lord, come and see.”
         <span class="v-num">35</span>Jesus wept.
       </p>
       <p>
         <span class="v-num">36</span>The Jews therefore said, “See how much affection he had for him!”
-        <span class="v-num">37</span>Some of them said, “Couldn’t this man, who opened the eyes of him who was blind, have also kept this man from dying?”
+        <span class="v-num">37</span>But some of them said, “Couldn’t this man, who opened the eyes of him who was blind, have also kept this man from dying?”
         <span class="v-num">38</span>Jesus therefore, again groaning in himself, came to the tomb. Now it was a cave, and a stone lay against it.
-        <span class="v-num">39</span>Jesus said, “Take away the stone.” Martha, the sister of him who was dead, said to him, “Lord, by this time there is a stench, for he has been dead four days.”
+        <span class="v-num">39</span>Jesus said, “Take away the stone.” Martha, the sister of him who was dead, said to him, “Lord, by this time there is a stench, for he has been dead <strong>four days</strong>.”
         <span class="v-num">40</span>Jesus said to her, “Didn’t I tell you that if you believed, you would see God’s glory?”
       </p>
       <p>
         <span class="v-num">41</span>So they took away the stone from the place where the dead man was lying. Jesus lifted up his eyes, and said, “Father, I thank you that you listened to me.
-        <span class="v-num">42</span>I know that you always listen to me, but because of the multitude standing around I said this, that they may believe that you sent me.”
-        <span class="v-num">43</span>When he had said this, he cried with a loud voice, “Lazarus, come out!”
-        <span class="v-num">44</span>He who was dead came out, bound hand and foot with wrappings, and his face was wrapped around with a cloth. Jesus said to them, “Free him, and let him go.”
-        <span class="v-num">45</span>Therefore many of the Jews, who came to Mary and saw what Jesus did, believed in him.
+        <span class="v-num">42</span>I knew that you always listen to me, but because of the multitude standing by I said it, that they may believe that you sent me.”
+        <span class="v-num">43</span>When he had said this, he cried with a loud voice, “<strong>Lazarus, come out</strong>!”
+        <span class="v-num">44</span>He who was dead came out, bound hand and foot with grave clothes, and his face was wrapped with a cloth. Jesus said to them, “Untie him, and let him go.”
       </p>
       <p>
+        <span class="v-num">45</span>Therefore many of the Jews who came to Mary and saw the doings of Jesus believed in him.
         <span class="v-num">46</span>But some of them went away to the Pharisees, and told them the things which Jesus had done.
         <span class="v-num">47</span>The chief priests therefore and the Pharisees gathered a council, and said, “What are we doing? For this man does many signs.
         <span class="v-num">48</span>If we leave him alone like this, everyone will believe in him, and the Romans will come and take away both our place and our nation.”
+      </p>
+      <p>
         <span class="v-num">49</span>But a certain one of them, Caiaphas, being high priest that year, said to them, “You know nothing at all,
-        <span class="v-num">50</span>nor do you consider that it is advantageous for us that one man should die for the people, and that the whole nation not perish.”
-      </p>
-      <p>
+        <span class="v-num">50</span>nor do you consider that it is <strong>expedient for us that one man should die</strong> for the people, and that the whole nation not perish.”
         <span class="v-num">51</span>Now he didn’t say this of himself, but being high priest that year, he prophesied that Jesus would die for the nation,
-        <span class="v-num">52</span>and not for the nation only, but that he might also gather together into one the children of God who are scattered abroad.
+        <span class="v-num">52</span>and not for the nation only, but that he might also <strong>gather together into one</strong> the children of God who are scattered abroad.
         <span class="v-num">53</span>So from that day forward they took counsel that they might put him to death.
-        <span class="v-num">54</span>Jesus therefore walked no more openly among the Jews, but departed from there into the country near the wilderness, to a city called Ephraim. He stayed there with his disciples.
-        <span class="v-num">55</span>Now the Passover of the Jews was at hand. Many went up from the country to Jerusalem before the Passover, to purify themselves.
       </p>
       <p>
-        <span class="v-num">56</span>Then they sought for Jesus and spoke one with another, as they stood in the temple, “What do you think—that he isn’t coming to the feast at all?”
-        <span class="v-num">57</span>Now the chief priests and the Pharisees had commanded that if anyone knew where he was, he should report it, that they might seize him.
+        <span class="v-num">54</span>Jesus therefore walked no more openly among the Jews, but went away from there into the country near the wilderness, into a city called Ephraim; and there he stayed with his disciples.
+        <span class="v-num">55</span>Now the Passover of the Jews was at hand. Many went up to Jerusalem out of the country before the Passover, to purify themselves.
+        <span class="v-num">56</span>They sought therefore for Jesus, and spoke one with another as they stood in the temple, “What do you think? That he isn’t coming to the feast at all?”
+        <span class="v-num">57</span>Now the chief priests and the Pharisees had given a command that if anyone knew where he was, he should report it, that they might arrest him.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Four days in the tomb marks finality under the old order — beyond ordinary recovery.</p>
-      <p class="note">2) “I am the resurrection and the life” is present-tense identity, not a distant future promise only.</p>
-      <p class="note">3) The sign forces the Sanhedrin’s calculus: preserve the system by removing the Life-giver.</p>
-      <p class="note">4) Caiaphas speaks better than he knows — one dies so the true people may live.</p>
-      <p class="note">5) Physical death is not abolished; covenant death and its accusation are confronted and overturned in the Son.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The raising of Lazarus is an inaugural sign of Kingdom resurrection power, foreshadowing the AD 70 covenantal resurrection of the dead.</li>
+      <li>Jesus' declaration "I am the resurrection" relocates eternal life from a distant earthly future to His immediate, indwelling person.</li>
+      <li>The four-day delay in the tomb visibly breaks first-century rabbinic traditions regarding soul departure, proving Messiah's absolute authority.</li>
+      <li>Caiaphas' involuntary prophecy highlights the substitutionary sacrifice of Christ to gather scattered Israel into one New Covenant body.</li>
+      <li>The Sanhedrin's plot to murder Jesus over a resurrection sign demonstrates the total moral and covenantal collapse of temple authority.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>four days</strong>: past the point where ordinary hope still operates.</div>
-      <div class="annotation-item"><strong>I am the resurrection</strong>: identity claim before the act, not after.</div>
-      <div class="annotation-item"><strong>come out</strong>: authoritative word that ends the hold of death’s appearance.</div>
-      <div class="annotation-item"><strong>one man die</strong>: ironic prophecy from the high priest himself.</div>
-      <div class="annotation-item"><strong>from that day</strong>: the sign locks the path to the cross.</div>
+      <div class="annotation-item"><strong>sickness is not to death</strong>: An inaugural physical condition intended to reveal God's redemptive power rather than permanent cessation.</div>
+      <div class="annotation-item"><strong>four days</strong>: The first-century Judean threshold past which rabbinic tradition held physical decay was irreversible and the soul departed.</div>
+      <div class="annotation-item"><strong>resurrection and the life</strong>: Messiah as the present embodiment of resurrection, rendering physical death incapable of severing covenant life.</div>
+      <div class="annotation-item"><strong>Lazarus, come out</strong>: The authoritative messianic call out of death-bondage, prefiguring the emptying of Hades at the Old Covenant end.</div>
+      <div class="annotation-item"><strong>expedient for us that one man should die</strong>: Caiaphas' high-priestly prophecy inadvertently framing Christ's death as the covenant sacrifice for the nation.</div>
+      <div class="annotation-item"><strong>gather together into one</strong>: The global unification of true Israel and scattered believers into one spiritual New Creation family.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Delay Is Not Absence</h3>
+    <h3>1) Inaugural Sign versus Final Consummation</h3>
     <p>
-      Jesus stays two more days. The sickness is “not to death” in the ultimate sense — yet Lazarus dies. The delay creates the conditions for a greater glory: life spoken into a four-day tomb. The old order’s finality is allowed to stand so that the new word can be heard against it.
+      The raising of Lazarus stands as the seventh and most dramatic miraculous sign recorded in John’s Gospel prior to Christ’s passion. In the redemptive framework of the New Testament, earthly miracles performed during Jesus’ AD 30–33 ministry were inaugural signs designed to validate His messianic authority and typify the spiritual realities of the Kingdom. Lazarus was physically resuscitated to mortal life, meaning he would eventually experience natural bodily death again. This physical event was not the final resurrection itself, but an inaugural demonstration of Messiah's divine power over death. The ultimate antitype—the true covenantal resurrection of the dead and the emptying of Sheol/Hades—was realized at the consummation of the Old Covenant age in AD 70 when Christ returned in Parousia judgment, fully establishing the New Creation Kingdom where physical death no longer possesses covenantal sting or spiritual condemnation.
     </p>
-    <h3>2) Resurrection Is a Person</h3>
+
+    <h3>2) Present Identity: "I Am the Resurrection and the Life"</h3>
     <p>
-      Martha knows the last-day hope. Jesus relocates it: “I am the resurrection and the life.” Belief in Him is already participation in the life that death cannot keep. Physical death still claims bodies; the covenant death that held the people under accusation is the deeper issue being answered.
+      When Jesus arrives in Bethany, Martha expresses orthodox first-century Pharisaic eschatology, saying, "I know that he will rise again in the resurrection at the last day." Like many in her generation, Martha viewed resurrection strictly as a remote, end-of-history event tied to a physical restoration of the world. Jesus completely corrects her framework with the monumental declaration: "I am the resurrection and the life. He who believes in me, though he die, yet will he live. Whoever lives and believes in me will never die." By identifying Himself as the resurrection in the present tense, Jesus relocates eternal life from a future calendar event to an immediate spiritual reality accessed through union with Him. Those who abide in Christ already possess indestructible New Covenant life; physical death of the earthly body cannot interrupt their uninterrupted communion with God.
     </p>
-    <h3>3) The Sign That Hardens</h3>
+
+    <h3>3) Dismantling Rabbinic Traditions and Death-Bondage</h3>
     <p>
-      Many believe. Others report to the Pharisees. The council’s logic is pragmatic and deadly: better one man die than the nation and the place be lost. The place will be lost anyway. The one Man’s death will gather the true children of God. The system that chooses self-preservation over the Life-giver signs its own end.
+      Jesus intentionally stayed two extra days across the Jordan after hearing of Lazarus's illness, ensuring that Lazarus had been in the tomb four days before His arrival. In first-century Judean rabbinic tradition (as recorded in the Leviticus Rabbah), it was commonly believed that a person's spirit hovered near the corpse for three days attempting to re-enter, but on the fourth day, as decomposition set in, the soul departed permanently. By waiting until the fourth day when physical decay had undeniably begun ("Lord, by this time there is a stench"), Jesus shattered all rabbinic superstitions and human limitations. When He cried with a loud voice, "Lazarus, come out!", He demonstrated total mastery over corruption and Sheol. The grave clothes wrapping Lazarus symbolized the binding grip of Old Covenant death-bondage, which Messiah commanded to be untied, signaling the liberation of God's people from the fear of death.
     </p>
-    <h3>4) Bound, Then Freed</h3>
+
+    <h3>4) High-Priestly Prophecy and the Unification of the Flock</h3>
     <p>
-      Lazarus comes out still wrapped. The word that raises also commands: free him and let him go. Resurrection life is not meant to remain bound by the old grave-clothes. The community that receives the raised one must also release him into freedom.
+      Following the miracle, the chief priests and Pharisees assembled the Sanhedrin in panic, asking, "If we leave him alone like this... the Romans will come and take away both our place and our nation." Their anxiety exposed their primary motive: preserving their earthly political standing, temple revenues, and institutional power. Caiaphas, serving as high priest that pivotal year, sarcastically dismissed their indecision: "You know nothing at all, nor do you consider that it is expedient for us that one man should die for the people, and that the whole nation not perish." John highlights the profound divine irony in Caiaphas' statement. Though spoken out of pragmatic political malice to justify judicial murder, Caiaphas was unconsciously uttering an official high-priestly prophecy. God used the office of the high priest to declare that Jesus would die as the true substitutionary Lamb, taking upon Himself the covenantal curse of the nation and gathering into one spiritual body the scattered children of God across the earth.
+    </p>
+
+    <h3>5) The Sanhedrin's Terror and the Imminent End of the Old Order</h3>
+    <p>
+      The raising of Lazarus sealed the Sanhedrin’s resolve to execute Jesus, creating a point of no return. The irony of the old regime was absolute: in their effort to kill the Prince of Life to prevent the Romans from taking away "their place and nation," they committed the ultimate covenantal apostasy. By rejecting the Messiah who offered eternal life, they insured the very destruction they sought to avoid. Forty years later, in AD 70, the Roman legions surrounded Jerusalem, burned the physical temple to ashes, and brought the Old Covenant nation to a permanent end. Meanwhile, the true sanctuary—the resurrected Christ and His indwelling New Creation people—expanded across the globe, triumphing over the grave and fulfilling the ancient promises given to the fathers.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
-      <li><a href="/Bible/Prophecy/resurrection-life.html">Resurrection and Life</a></li>
-      <li><a href="/Bible/Prophecy/temple-judgment.html">Temple Judgment</a></li>
-      <li><a href="/Bible/Prophecy/new-creation.html">New Creation Reality</a></li>
+      <li><a href="/Bible/Prophecy/resurrection.html">The Covenantal Resurrection</a></li>
+      <li><a href="/Bible/Prophecy/caiaphas-prophecy.html">High-Priestly Prophecy</a></li>
+      <li><a href="/Bible/Prophecy/gathering-the-dispersion.html">Gathering the Dispersion</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/ISA26.htm" target="_blank" rel="noopener">Isaiah 26 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZE37.htm" target="_blank" rel="noopener">Ezekiel 37 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/DAN12.htm" target="_blank" rel="noopener">Daniel 12 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/1CO15.htm" target="_blank" rel="noopener">1 Corinthians 15 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/EZE37.htm" target="_blank" rel="noopener">Ezekiel 37:12–14 (WEB)</a> — Prophecy of God opening the graves of Israel and bringing them into their land.</li>
+      <li><a href="https://ebible.org/eng-web/DAN12.htm" target="_blank" rel="noopener">Daniel 12:1–3 (WEB)</a> — Prophecy of the resurrection of the dead at the time of the holy people's shattering.</li>
+      <li><a href="https://ebible.org/eng-web/1CO15.htm" target="_blank" rel="noopener">1 Corinthians 15:54–57 (WEB)</a> — Apostolic confirmation that death is swallowed up in victory through Messiah's triumph.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Sleep / death</strong> — covenant death awaiting the voice that wakes.</li>
-      <li><strong>I am the resurrection</strong> — present identity, not postponed hope only.</li>
-      <li><strong>One man for the people</strong> — ironic high-priestly prophecy fulfilled beyond their intent.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for a future age to begin living the life that death cannot hold. The Resurrection and the Life has already spoken. Physical death still returns bodies to dust. What this chapter ends is the finality of covenant death as the last word over those who believe in the Son.
+      In Christ, you live in the full present reality of resurrection life today. You do not need to look to a distant future date or fear physical decay to experience Kingdom life. Because Jesus is "the resurrection and the life," your spirit is permanently alive in Him, entirely freed from the fear of death, legalistic accusation, and spiritual condemnation. You belong to the unified New Creation family gathered from all nations, securely anchored in the Son's finished work and indwelt by His eternal Spirit.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still treating resurrection as only a distant future event instead of a present Person who calls the dead out?
+      How does knowing that Christ is your present resurrection and life free you from the fear of physical mortality and human systems today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john10.html">Previous</a>
-        <a class="btn" href="/Bible/John/john12.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john10.html">Previous</a>
+          <a class="btn" href="/Bible/John/john12.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
