@@ -1,315 +1,158 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>John 19 — Fulfilled Prophecy Bible (WEB)</title>
-<meta content="Speaker: Jesus, largely silent before accusers - Fulfilled Prophecy study edition using the WEB translation." name="description"/>
-<style>    :root{
-      --maxw: 980px;
-      --pad: 16px;
-      --line: rgba(0,0,0,0.12);
-      --line2: rgba(0,0,0,0.18);
-      --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.06);
-      --soft2: rgba(0,0,0,0.04);
-      --radius: 14px;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John 19 — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Speaker: Jesus, largely silent before accusers - Fulfilled Prophecy study edition using the WEB translation." />
+  <style>
+    :root{
+      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
     }
-
-    body{
-      font-family: system-ui, sans-serif;
-      line-height: 1.65;
-      margin: 0;
-      color: #111;
-      background: #fff;
-    }
-
-    .wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 18px var(--pad) 44px;
-    }
-
-    /* Sticky top nav */
-    .topnav{
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topnav .bar{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 10px var(--pad);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 12px;
-      align-items: center;
-    }
-    .topnav a{
-      text-decoration: underline;
-      font-size: 0.95em;
-      color: #111;
-      white-space: nowrap;
-    }
-    .topnav .sep{ opacity: 0.45; }
-
-    /* Anchors offset for sticky nav */
-    section{ scroll-margin-top: 78px; }
-    #top{ scroll-margin-top: 0; }
-
-    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
-    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
-    h2{ font-size: 1.32rem; }
-    h3{ font-size: 1.06rem; }
-
-    p{ margin: 0.75em 0; }
-    ul{ margin: 0.6em 0 0.9em 1.15em; padding: 0; }
-    ol{ margin: 0.6em 0 0.9em 1.15em; padding: 0; }
-    li{ margin: 0.42em 0; }
-
-    a{ color: inherit; text-decoration: underline; }
-    a:hover{ opacity: 0.85; }
-
-    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
-
-    .note{
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--soft2);
-      margin: 1em 0;
-    }
-
-    .muted{ color: var(--muted); }
-
-    .pill{
-      display: inline-block;
-      border: 1px solid var(--line2);
-      border-radius: 999px;
-      padding: 2px 10px;
-      font-size: 0.9em;
-      margin: 0 6px 6px 0;
-      background: var(--soft2);
-    }
-
-    .reading p{ max-width: 76ch; }
-
-    /* Ko-fi support button */
-    .support{
-      margin-top: 2em;
-      padding-top: 1em;
-      border-top: 1px solid var(--line);
-    }
-    .kofi{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: #fff;
-      text-decoration: none;
-    }
-    .kofi:hover{ opacity: 0.9; }
-    .kofi span{
-      text-decoration: underline;
-      font-size: 0.95em;
-    }
-
-    @media (max-width: 520px){
-      h1{ font-size: 1.85rem; }
-      .topnav .bar{ gap: 8px 10px; }
-    }
-
-    /* Scripture text — tight verse spacing */
-    .scripture-text{ margin: 1em 0; }
-    .scripture-text p{
-      margin: 0.28em 0;
-      max-width: 76ch;
-      line-height: 1.6;
-    }
-    .v-num{ display:inline-block; min-width: 2.4em; opacity:0.7; }
-
-    footer{
-      margin-top: 2.2em;
-      padding-top: 1.2em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.96em;
-    }
-    footer .row{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    /* Hide specific UI elements */
-    .hide-element { display: none; }
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
+    h1,h2,h3{margin:1.1em 0 0.35em;}
+    h1{font-size:2.05rem;letter-spacing:-0.02em;}
+    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
+    h3{font-size:1.08rem;}
+    p{margin:0.6em 0;}
+    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
+    ul{margin:0.6em 0 0.8em 1.2em;}
+    li{margin:0.35em 0;}
+    a{color:#111;text-decoration:underline;}
+    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
+    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
+    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
+    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
+    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
+    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
+    .annotation-item{font-size:0.98em;margin:0.55em 0;}
+    .note{font-size:0.95em;}
+    .muted{color:var(--muted);}
+    .kofi{margin-top:14px;}
+    .kofi img{height:36px;border:0;}
+    footer{margin-top:18px;}
+    .hide-element{display:none;}
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-Q22N178LJ8');
   </script>
-
-  </head>
+</head>
 <body>
-<a id="top"></a>
-<div aria-label="John navigation" class="topnav">
-<div class="bar">
-<a href="/Bible/">Bible Index</a>
-<span class="sep">|</span>
-<a href="/Bible/John/index.html">Book Index</a>
-<span class="sep">|</span>
-<a href="/Bible/John/john18.html">Previous</a>
-<span class="sep">|</span>
-<a href="/Bible/John/john20.html">Next</a>
-<span class="sep">|</span>
-<a href="#top">Top</a>
-</div>
-</div>
-<div class="wrap reading">
-<h1>John 19</h1>
-<h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
-
-<hr/><section id="scripture">
-<div class="scripture-text">
-<p>So Pilate then took Jesus, and flogged him.</p>
-<p>
-The soldiers twisted thorns into a crown, and put it on his head, and dressed him in a purple garment.</p>
-<p>
-They kept saying, “Hail, King of the Jews!” and they kept slapping him.</p>
-<p>
-Then Pilate went out again, and said to them, “Behold, I bring him out to you, that you may know that I find no basis for a charge against him.”</p>
-<p>
-Jesus therefore came out, wearing the crown of thorns and the purple garment. Pilate said to them, “Behold, the man!”</p>
-<p>
-When therefore the chief priests and the officers saw him, they shouted, saying, “Crucify! Crucify!”</p>
-<p>
-Pilate said to them, “Take him yourselves, and crucify him, for I find no basis for a charge against him.”</p>
-<p>
-The Jews answered him, “We have a law, and by our law he ought to die, because he made himself the Son of God.”</p>
-<p>
-When therefore Pilate heard this saying, he was more afraid.</p>
-<p>
-He entered into the Praetorium again, and said to Jesus, “Where are you from?” But Jesus gave him no answer.</p>
-<p>
-Pilate therefore said to him, “Aren’t you speaking to me? Don’t you know that I have power to release you and have power to crucify you?”</p>
-<p>
-Jesus answered, “You would have no power at all against me, unless it were given to you from above. Therefore he who delivered me to you has greater sin.”</p>
-<p>
-At this, Pilate was seeking to release him, but the Jews cried out, saying, “If you release this man, you aren’t Caesar’s friend! Everyone who makes himself a king speaks against Caesar!”</p>
-<p>
-When Pilate therefore heard these words, he brought Jesus out and sat down on the judgment seat at a place called “The Pavement”, but in Hebrew, “Gabbatha.”</p>
-<p>
-Now it was the Preparation Day of the Passover, at about the sixth hour. He said to the Jews, “Behold, your King!”</p>
-<p>
-They cried out, “Away with him! Away with him! Crucify him!”</p>
-<p>
-Pilate said to them, “Shall I crucify your King?”</p>
-<p>
-The chief priests answered, “We have no king but Caesar!”</p>
-<p>
-So then he delivered him to them to be crucified. So they took Jesus and led him away.</p>
-<p>
-He went out, bearing his cross, to the place called “The Place of a Skull”, which is called in Hebrew, “Golgotha”,</p>
-<p>
-where they crucified him, and with him two others, on either side one, and Jesus in the middle.</p>
-<p>
-Pilate wrote a title also, and put it on the cross. There was written, “JESUS OF NAZARETH, THE KING OF THE JEWS.”</p>
-<p>
-Therefore many of the Jews read this title, for the place where Jesus was crucified was near the city; and it was written in Hebrew, in Latin, and in Greek.</p>
-<p>
-The chief priests of the Jews therefore said to Pilate, “Don’t write, ‘The King of the Jews,’ but, ‘he said, “I am King of the Jews.” ’ ”</p>
-<p>
-Pilate answered, “What I have written, I have written.”</p>
-<p>
-Then the soldiers, when they had crucified Jesus, took his garments and made four parts, to every soldier a part; and also the coat. Now the coat was without seam, woven from the top throughout.</p>
-<p>
-Then they said to one another, “Let’s not tear it, but cast lots for it to decide whose it will be,” that the Scripture might be fulfilled, which says,</p>
-<p>
-“They parted my garments among them. For my cloak they cast lots.”</p>
-<p>
-Therefore the soldiers did these things.</p>
-<p>
-But standing by Jesus’ cross were his mother, his mother’s sister, Mary the wife of Clopas, and Mary Magdalene.</p>
-<p>
-Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!”</p>
-<p>
-Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home.</p>
-<p>
-After this, Jesus, seeing that all things were now finished, that the Scripture might be fulfilled, said, “I am thirsty.”</p>
-<p>
-Now a vessel full of vinegar was set there; so they put a sponge full of the vinegar on hyssop, and held it at his mouth.</p>
-<p>
-When Jesus therefore had received the vinegar, he said, “It is finished.” He bowed his head, and gave up his spirit.</p>
-<p>
-Therefore the Jews, because it was the Preparation Day, so that the bodies wouldn’t remain on the cross on the Sabbath (for that Sabbath was a special one), asked of Pilate that their legs might be broken, and that they might be taken away.</p>
-<p>
-Therefore the soldiers came, and broke the legs of the first, and of the other who was crucified with him;</p>
-<p>
-but when they came to Jesus, and saw that he was already dead, they didn’t break his legs.</p>
-<p>
-However one of the soldiers pierced his side with a spear, and immediately blood and water came out.</p>
-<p>
-He who has seen has testified, and his testimony is true. He knows that he tells the truth, that you may believe.</p>
-<p>
-For these things happened that the Scripture might be fulfilled, “A bone of him will not be broken.”</p>
-<p>
-Again another Scripture says, “They will look on him whom they pierced.”</p>
-<p>
-After these things, Joseph of Arimathaea, being a disciple of Jesus, but secretly for fear of the Jews, asked of Pilate that he might take away Jesus’ body. Pilate gave him permission. He came therefore and took away his body.</p>
-<p>
-Nicodemus, who at first came to Jesus by night, also came bringing a mixture of myrrh and aloes, about a hundred Roman pounds.</p>
-<p>
-So they took Jesus’ body, and bound it in linen cloths with the spices, as the custom of the Jews is to bury.</p>
-<p>
-Now in the place where he was crucified there was a garden. In the garden was a new tomb in which no man had ever yet been laid.</p>
-<p>
-Then because of the Jews’ Preparation Day (for the tomb was near at hand) they laid Jesus there.</p>
-</div>
-</section>
-<h2>Immediate Context</h2>
-<p><strong>Speaker:</strong> Jesus, largely silent before accusers</p>
-<p><strong>Audience:</strong> Roman authority, temple leadership, and Israel</p>
-<p><strong>Covenant moment:</strong> The decisive judgment and completion of the old covenant world through the cross</p>
-<p><strong>Why it mattered then:</strong> Israel publicly rejects its Messiah and declares allegiance to Caesar, sealing the fate of the old order.</p>
-<hr/>
-<h2 class="hide-element">Prophecy Commentary</h2>
-<h3>1) “We have no king but Caesar” ends the old covenant</h3>
-<p>This declaration is the climax of covenant rebellion. Israel renounces God’s kingship and transfers loyalty to Rome.</p>
-<h3>2) What ended</h3>
-<p>Temple-centered authority, sacrificial mediation, and national covenant identity.</p>
-<h3>3) What replaced it</h3>
-<p>A kingdom established through the cross, a people formed by Spirit, and access to God opened through the Son.</p>
-<h3>4) The cross is enthronement</h3>
-<p>John presents the crucifixion as the moment Jesus is revealed as King. His title is proclaimed in multiple languages.</p>
-<h3>5) “It is finished” means completed</h3>
-<p>The work of the old covenant is brought to completion. Nothing remains unfinished, delayed, or pending.</p>
-<h3>6) Blood and water</h3>
-<p>This imagery signals cleansing and life flowing from the crucified Christ — New Covenant reality replacing temple rituals.</p>
-<h3>7) First-century fulfillment</h3>
-<p>The cross initiates the irreversible judgment of the old order, culminating in Jerusalem’s fall in AD 70.</p>
-<hr/>
-<h2>Key Idioms &amp; Language Notes</h2>
-<ul>
+  <a id="top"></a>
+  <div class="wrap">
+    <nav class="top">
+      <a class="btn" href="/Bible/">Bible Index</a>
+      <a class="btn" href="/Bible/John/index.html">Book Index</a>
+      <a class="btn" href="/Bible/John/john18.html">Previous</a>
+      <a class="btn" href="/Bible/John/john20.html">Next</a>
+      <a class="btn" href="#top">Top</a>
+    </nav>
+    <h1>John 19</h1>
+    <h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
+    <hr />
+    <h2>Immediate Context</h2>
+      <p><strong>Speaker:</strong> Jesus, largely silent before accusers</p>
+      <p><strong>Audience:</strong> Roman authority, temple leadership, and Israel</p>
+      <p><strong>Covenant moment:</strong> The decisive judgment and completion of the old covenant world through the cross</p>
+      <p><strong>Why it mattered then:</strong> Israel publicly rejects its Messiah and declares allegiance to Caesar, sealing the fate of the old order.</p>
+    <hr />
+    <h2>Scripture (WEB)</h2>
+    <div class="scripture-text">
+      <p>
+        <span class="v-num">1</span>So Pilate then took Jesus, and flogged him.
+        <span class="v-num">2</span>The soldiers twisted thorns into a crown, and put it on his head, and dressed him in a purple garment.
+        <span class="v-num">3</span>They kept saying, “Hail, King of the Jews!” and they kept slapping him.
+        <span class="v-num">4</span>Then Pilate went out again, and said to them, “Behold, I bring him out to you, that you may know that I find no basis for a charge against him.”
+        <span class="v-num">5</span>Jesus therefore came out, wearing the crown of thorns and the purple garment. Pilate said to them, “Behold, the man!”
+      </p>
+      <p>
+        <span class="v-num">6</span>When therefore the chief priests and the officers saw him, they shouted, saying, “Crucify! Crucify!” Pilate said to them, “Take him yourselves, and crucify him, for I find no basis for a charge against him.”
+        <span class="v-num">7</span>The Jews answered him, “We have a law, and by our law he ought to die, because he made himself the Son of God.”
+        <span class="v-num">8</span>When therefore Pilate heard this saying, he was more afraid.
+        <span class="v-num">9</span>He entered into the Praetorium again, and said to Jesus, “Where are you from?” But Jesus gave him no answer.
+        <span class="v-num">10</span>Pilate therefore said to him, “Aren’t you speaking to me? Don’t you know that I have power to release you, and have power to crucify you?”
+      </p>
+      <p>
+        <span class="v-num">11</span>Jesus answered, “You would have no power at all against me, unless it were given to you from above. Therefore he who delivered me to you has greater sin.”
+        <span class="v-num">12</span>At this, Pilate was seeking to release him, but the Jews cried out, saying, “If you release this man, you aren’t Caesar’s friend! Everyone who makes himself a king speaks against Caesar!”
+        <span class="v-num">13</span>When Pilate therefore heard these words, he brought Jesus out, and sat down on the judgment seat at a place called “The Pavement”, but in Hebrew, “Gabbatha.”
+        <span class="v-num">14</span>Now it was the Preparation Day of the Passover, at about the sixth hour. He said to the Jews, “Behold, your King!”
+        <span class="v-num">15</span>They cried out, “Away with him! Away with him! Crucify him!” Pilate said to them, “Shall I crucify your King?” The chief priests answered, “We have no king but Caesar!”
+      </p>
+      <p>
+        <span class="v-num">16</span>So then he delivered him to them to be crucified. So they took Jesus and led him away.
+        <span class="v-num">17</span>He went out, bearing his cross, to the place called “The Place of a Skull”, which is called in Hebrew, “Golgotha”,
+        <span class="v-num">18</span>where they crucified him, and with him two others, on either side one, and Jesus in the middle.
+        <span class="v-num">19</span>Pilate wrote a title also, and put it on the cross. There was written, “JESUS OF NAZARETH, THE KING OF THE JEWS.”
+        <span class="v-num">20</span>Therefore many of the Jews read this title, for the place where Jesus was crucified was near the city; and it was written in Hebrew, in Latin, and in Greek.
+      </p>
+      <p>
+        <span class="v-num">21</span>The chief priests of the Jews therefore said to Pilate, “Don’t write, ‘The King of the Jews,’ but, ‘he said, “I am King of the Jews.”’”
+        <span class="v-num">22</span>Pilate answered, “What I have written, I have written.”
+        <span class="v-num">23</span>Then the soldiers, when they had crucified Jesus, took his garments and made four parts, to every soldier a part; and also the coat. Now the coat was without seam, woven from the top throughout.
+        <span class="v-num">24</span>Then they said to one another, “Let’s not tear it, but cast lots for it to decide whose it will be,” that the Scripture might be fulfilled, which says, “They parted my garments among them. For my cloak they cast lots.” Therefore the soldiers did these things.
+        <span class="v-num">25</span>But there were standing by the cross of Jesus his mother, and his mother’s sister, Mary the wife of Clopas, and Mary Magdalene.
+      </p>
+      <p>
+        <span class="v-num">26</span>Therefore when Jesus saw his mother, and the disciple whom he loved standing there, he said to his mother, “Woman, behold, your son!”
+        <span class="v-num">27</span>Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home.
+        <span class="v-num">28</span>After this, Jesus, seeing that all things were now finished, that the Scripture might be fulfilled, said, “I am thirsty.”
+        <span class="v-num">29</span>Now a vessel full of vinegar was set there; so they put a sponge full of the vinegar on hyssop, and held it at his mouth.
+        <span class="v-num">30</span>When Jesus therefore had received the vinegar, he said, “It is finished.” He bowed his head, and gave up his spirit.
+      </p>
+      <p>
+        <span class="v-num">31</span>Therefore the Jews, because it was the Preparation Day, so that the bodies wouldn’t remain on the cross on the Sabbath (for that Sabbath was a special one), asked of Pilate that their legs might be broken, and that they might be taken away.
+        <span class="v-num">32</span>Therefore the soldiers came, and broke the legs of the first, and of the other who was crucified with him;
+        <span class="v-num">33</span>but when they came to Jesus, and saw that he was already dead, they didn’t break his legs.
+        <span class="v-num">34</span>However one of the soldiers pierced his side with a spear, and immediately blood and water came out.
+        <span class="v-num">35</span>He who has seen has testified, and his testimony is true. He knows that he tells the truth, that you may believe.
+      </p>
+      <p>
+        <span class="v-num">36</span>For these things happened, that the Scripture might be fulfilled, “A bone of him will not be broken.”
+        <span class="v-num">37</span>Again another Scripture says, “They will look on him whom they pierced.”
+        <span class="v-num">38</span>After these things, Joseph of Arimathaea, being a disciple of Jesus, but secretly for fear of the Jews, asked of Pilate that he might take away Jesus’ body. Pilate gave him permission. He came therefore and took away his body.
+        <span class="v-num">39</span>Nicodemus, who at first came to Jesus by night, also came bringing a mixture of myrrh and aloes, about a hundred Roman pounds.
+        <span class="v-num">40</span>So they took Jesus’ body, and bound it in linen cloths with the spices, as the custom of the Jews is to bury.
+      </p>
+      <p>
+        <span class="v-num">41</span>Now in the place where he was crucified there was a garden. In the garden was a new tomb in which no man had ever yet been laid.
+        <span class="v-num">42</span>Then because of the Jews’ Preparation Day (for the tomb was near at hand) they laid Jesus there.
+      </p>
+    </div>
+    <hr />
+        <h2 class="hide-element">Prophecy Commentary</h2>
+    <h3>1) “We have no king but Caesar” ends the old covenant</h3>
+    <p>This declaration is the climax of covenant rebellion. Israel renounces God’s kingship and transfers loyalty to Rome.</p>
+    <h3>2) What ended</h3>
+    <p>Temple-centered authority, sacrificial mediation, and national covenant identity.</p>
+    <h3>3) What replaced it</h3>
+    <p>A kingdom established through the cross, a people formed by Spirit, and access to God opened through the Son.</p>
+    <h3>4) The cross is enthronement</h3>
+    <p>John presents the crucifixion as the moment Jesus is revealed as King. His title is proclaimed in multiple languages.</p>
+    <h3>5) “It is finished” means completed</h3>
+    <p>The work of the old covenant is brought to completion. Nothing remains unfinished, delayed, or pending.</p>
+    <h3>6) Blood and water</h3>
+    <p>This imagery signals cleansing and life flowing from the crucified Christ — New Covenant reality replacing temple rituals.</p>
+    <h3>7) First-century fulfillment</h3>
+    <p>The cross initiates the irreversible judgment of the old order, culminating in Jerusalem’s fall in AD 70.</p>
+    <hr />
+    <h2>Key Idioms & Language Notes</h2>
+    <ul>
 <li><strong>Crown of thorns</strong> — cursed rule absorbed by the King</li>
 <li><strong>King of the Jews</strong> — true kingship publicly declared</li>
 <li><strong>It is finished</strong> — covenant completion</li>
 <li><strong>Pierced</strong> — judgment and recognition</li>
 <li><strong>Garden tomb</strong> — new creation setting</li>
 </ul>
-<hr/>
-<h2>Cross-References (Scripture — eBible)</h2>
-<ul>
+    <hr />
+    <h2>Cross-References (Scripture — eBible)</h2>
+    <ul>
 <li><strong>Suffering servant</strong> —
     <a href="https://ebible.org/eng-web/ISA53.htm">Isa 53</a>
 </li>
@@ -320,8 +163,9 @@ Then because of the Jews’ Preparation Day (for the tomb was near at hand) they
     <a href="https://ebible.org/eng-web/ZEC12.htm">Zech 12</a>
 </li>
 </ul>
-<h2>Prophecy Fulfilment</h2>
-<ul>
+    <hr />
+    <h2>Prophecy Fulfilment</h2>
+    <ul>
 <li>
 <strong>The pierced one</strong> —
     <a href="https://ebible.org/eng-web/ZEC12.htm">Zech 12</a> |
@@ -338,47 +182,41 @@ Then because of the Jews’ Preparation Day (for the tomb was near at hand) they
     <a href="/Bible/Prophecy/son-of-man.html">Prophecy Hub</a>
 </li>
 </ul>
-<hr/>
-<h2>New Creation Reality</h2>
-<p>The work is finished. Nothing remains to be added, earned, or repeated. You live from completion, not anticipation.</p>
-<hr/>
-<h2>Reflection</h2>
-<p>If the work is finished, where might you still be living as if it is not?</p>
-<hr/>
-<p>
-  Share this study:
-  <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 Twitter</a>
-  <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-  <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&amp;body='+encodeURIComponent(location.href);return true;">Email</a>
-</p>
-<hr />
-
-<nav aria-label="Bottom navigation" class="muted">
-<a href="/Bible/">Bible Index</a> | <a href="/Bible/John/index.html">Book Index</a> | <a href="/Bible/John/john18.html">Previous</a> | <a href="/Bible/John/john20.html">Next</a> | <a href="#top">Top</a>
-</nav>
-</div>
-  <footer>
-    <div class="row">
-      <div>
-        <strong>The Fulfilled Prophecy Bible</strong> — Text based on the <strong>World English Bible (WEB)</strong> with Fulfilled Prophecy Study Commentary
-      </div>
-      <div>
-        <a href="#top">Back to top</a>
-      </div>
-    </div>
-    <div class="support">
-      <a class="kofi" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer" aria-label="Support this project on Ko-fi">
-        <img height="36" style="border:0;height:36px;" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Ko-fi" />
-        <span>Support on Ko-fi</span>
-      </a>
-      <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-        If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">ko-fi.com/B0B61QC1BU</a>
+    <hr />
+    <h2>New Creation Reality</h2>
+    <p>The work is finished. Nothing remains to be added, earned, or repeated. You live from completion, not anticipation.</p>
+    <hr />
+    <h2>Reflection</h2>
+    <p>If the work is finished, where might you still be living as if it is not?</p>
+    <hr />
+    <footer>
+      <hr />
+      <p>
+        Share this study:
+        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
+        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
       </p>
-    </div>
-    <p class="note" style="margin-top:1em;">
-      Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-    </p>
-  </footer>
-
+      <hr />
+      <nav class="bottom">
+        <a class="btn" href="/Bible/">Bible Index</a>
+        <a class="btn" href="/Bible/John/index.html">Book Index</a>
+        <a class="btn" href="/Bible/John/john18.html">Previous</a>
+        <a class="btn" href="/Bible/John/john20.html">Next</a>
+        <a class="btn" href="#top">Top</a>
+      </nav>
+      <div class="kofi">
+        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+        </a>
+        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
+          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
+        </p>
+      </div>
+      <p class="note" style="margin-top:1em;">
+        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
