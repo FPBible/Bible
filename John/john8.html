@@ -5,87 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 8 — Light of the World, Truth That Frees — Fulfilled Prophecy Bible (WEB)</title>
   <meta name="description" content="Light of the world, truth that sets free, and the hard claim: before Abraham was, I AM. The old fatherhood claim is tested and found wanting." />
-
   <style>
     :root{
-      --maxw: 900px;
+      --maxw: 980px;
       --pad: 16px;
       --line: rgba(0,0,0,0.12);
       --line2: rgba(0,0,0,0.18);
       --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.06);
-      --soft2: rgba(0,0,0,0.04);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
       --radius: 14px;
       --btn-bg: #ffffff;
       --bmc-yellow: #ffdd00;
     }
-
     body{
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.65;
       margin: 0;
       color: #111;
       background: #fff;
     }
-
     .wrap{
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 18px var(--pad) 44px;
+      padding: 18px var(--pad) 56px;
     }
-
-    .topnav{
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topnav .bar{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 10px var(--pad);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 12px;
-      align-items: center;
-    }
-    .topnav a{
-      text-decoration: underline;
-      font-size: 0.95em;
-      color: #111;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    .topnav .sep{ opacity: 0.45; }
-
-    section{ scroll-margin-top: 78px; }
-    #top{ scroll-margin-top: 0; }
-
-    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
-    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
-    h2{ font-size: 1.32rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
-    h3{ font-size: 1.06rem; }
-
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
     p{ margin: 0.75em 0; }
-    ul, ol{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
-    li{ margin: 0.42em 0; }
-
-    a{ color: inherit; text-decoration: underline; font-weight: 600; }
-    a:hover{ opacity: 0.85; }
-
-    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
-
-    .muted{ color: var(--muted); }
-
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
     .scripture-text{
       font-size: 1.08em;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 16px;
-      margin: 1.5em 0;
     }
     .v-num{
       font-weight: 700;
@@ -94,16 +71,14 @@
       opacity: 0.55;
       margin-right: 4px;
     }
-
     .annotation-block{
       background: var(--soft);
       padding: 14px;
       border-left: 3px solid var(--line);
       border-radius: 10px;
-      margin: 1.5em 0;
     }
     .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
-
+    .muted{ color: var(--muted); }
     .page-footer-block {
       display: flex;
       flex-direction: column;
@@ -112,7 +87,6 @@
       margin: 2.5em 0 1em;
       text-align: center;
     }
-
     .share-row {
       display: flex;
       flex-wrap: wrap;
@@ -120,9 +94,7 @@
       justify-content: center;
       gap: 12px;
       font-size: 0.98rem;
-      color: #333;
     }
-
     .share-btn {
       display: inline-flex;
       align-items: center;
@@ -135,7 +107,6 @@
       font-weight: 500;
       color: #111;
     }
-
     .bmc-btn {
       display: inline-flex;
       align-items: center;
@@ -148,7 +119,6 @@
       font-weight: 700;
       font-size: 1rem;
     }
-
     .bottom-nav {
       display: flex;
       flex-wrap: wrap;
@@ -157,51 +127,39 @@
       gap: 8px 10px;
       font-weight: 600;
       font-size: 0.98rem;
-      color: #0056b3;
     }
-    .bottom-nav a { color: #0056b3; text-decoration: none; }
-    .bottom-nav a:hover { text-decoration: underline; }
-    .bottom-nav .sep { color: #666; font-weight: 400; }
-
-    footer{
-      margin-top: 2.2em;
-      padding-top: 1.2em;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.96em;
-    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q22N178LJ8');
+  </script>
 </head>
 <body>
+  <a id="top"></a>
+  <div class="wrap">
+    <nav class="top">
+      <a class="btn" href="/Bible/">Bible Index</a>
+      <a class="btn" href="/Bible/John/index.html">Book Index</a>
+      <a class="btn" href="/Bible/John/john7.html">Previous</a>
+      <a class="btn" href="/Bible/John/john9.html">Next</a>
+      <a class="btn" href="#top">Top</a>
+    </nav>
 
-<a id="top"></a>
+    <h1>John 8 — Light of the World, Truth That Frees</h1>
+    <hr />
 
-<div class="topnav" aria-label="Standard navigation">
-  <div class="bar">
-    <a href="/Bible/">Bible Index</a><span class="sep">|</span>
-    <a href="/Bible/John/index.html">John Index</a><span class="sep">|</span>
-    <a href="/Bible/John/john7.html">Previous</a><span class="sep">|</span>
-    <a href="/Bible/John/john9.html">Next</a><span class="sep">|</span>
-    <a href="#top">Top</a>
-  </div>
-</div>
-
-<div class="wrap">
-
-  <h1>John 8 — Light of the World, Truth That Frees</h1>
-  <hr />
-
-  <!-- 1. Immediate Context -->
-  <section id="context">
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
       Following the Feast of Booths, Jesus returns to the temple treasury in Jerusalem to teach openly. In a direct confrontation with the Pharisees and Judean authorities, Jesus completely dismantles their ultimate source of security: physical descent from Abraham. He exposes the ruling establishment as children of the "devil"—the murderous, accusing covenantal adversary—rather than children of God. By appropriating the eternal divine name "I AM," Jesus formally pronounces the end of the Old Covenant shadow system, replacing physical pedigree with spiritual freedom through His living word before the temple's destruction in that first-century generation.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 2. Scripture Text (WEB) -->
-  <section id="scripture">
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -288,11 +246,9 @@
         <span class="v-num">59</span>Therefore they took up stones to throw at him, but Jesus was hidden, and went out of the temple, having gone through the middle of them, and so passed by.
       </p>
     </div>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 3. Fulfillment Notes -->
-  <section id="notes">
+    <!-- 3. Fulfillment Notes -->
     <h2>Fulfillment Notes</h2>
     <ul>
       <li>The declaration "light of the world" establishes Messiah as the true illumination, ending the claim that the physical temple alone dispelled darkness.</li>
@@ -301,11 +257,9 @@
       <li>"I AM" is the ultimate divine name claim, forcing the first-century generation to choose between the old shadows and the true Lord.</li>
       <li>The lifting of stones by the religious leaders physically demonstrates the apostate system's inability to receive the New Covenant reality.</li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 4. Annotations -->
-  <section id="annotations">
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
       <div class="annotation-item"><strong>light of the world</strong>: The inaugural arrival of Messiah's truth, replacing the localized light of the Jerusalem temple.</div>
@@ -315,13 +269,10 @@
       <div class="annotation-item"><strong>demon</strong>: First-century cultural idiom for madness or severe delusion, used here as a pejorative insult by the crowd against Jesus.</div>
       <div class="annotation-item"><strong>I AM</strong>: Greek <em>egō eimi</em>, echoing Exodus 3:14; the explicit claim to eternal divine identity, transcending Abraham and the Old Covenant.</div>
     </div>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 5. Fulfillment Commentary -->
-  <section id="commentary">
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    
     <h3>1) The Light Invades the Temple</h3>
     <p>
       During the Feast of Booths, the temple courts were brilliantly illuminated by massive golden lampstands, a ritual designed to recall the pillar of fire that guided Israel in the wilderness. Standing within the treasury in the shadow of these extinguishable lamps, Jesus declares, "I am the light of the world." He does not point to the building; He points to Himself. Darkness in the biblical narrative is not a cosmic abstraction; it is the spiritual blindness and curse-bondage of the Old Covenant era. By declaring Himself the true light, Jesus proclaims that the localized, temporary illumination of the Jerusalem temple is officially obsolete. The presence of God has relocated to the Son. Those who follow Him are no longer dependent on an earthly sanctuary to dispel the darkness of the present age, for they already possess the light of life.
@@ -341,77 +292,67 @@
     <p>
       The confrontation reaches its climax when Jesus states that Abraham rejoiced to see His day. The religious leaders measure Jesus against an earthly timeline, mocking His age. Jesus shatters their chronological and theological framework by declaring, "Before Abraham came into existence, I AM." This is the explicit, unmitigated appropriation of the divine name revealed to Moses at the burning bush (Exodus 3:14). It completely overthrows the temporal priority and authority of the Old Covenant system. The old system's response is immediate and liturgical: they take up stones to execute Him. They cannot integrate the New Covenant into their traditions; they can only attempt to destroy it. However, Jesus simply walks through the midst of them, untouched. The stones they lifted would ultimately be turned against them in AD 70, when the physical temple was dismantled stone by stone, fully vindicating the true "I AM" and establishing His eternal Kingdom.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 6. Prophecy Hub Links -->
-  <section id="links">
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/light-of-the-world.html">Light of the World</a></li>
       <li><a href="/Bible/Prophecy/abraham-promise.html">The Abrahamic Promise</a></li>
       <li><a href="/Bible/Prophecy/i-am.html">The Great I AM</a></li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 7. Cross-References -->
-  <section id="crossref">
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
       <li><a href="https://ebible.org/eng-web/EXO03.htm" target="_blank" rel="noopener">Exodus 3:14 (WEB)</a> — The original revelation of the eternal divine name "I AM" to Moses.</li>
       <li><a href="https://ebible.org/eng-web/ISA42.htm" target="_blank" rel="noopener">Isaiah 42:6 (WEB)</a> — Prophecy of Messiah given as a covenant to the people and a light to the nations.</li>
       <li><a href="https://ebible.org/eng-web/GAL04.htm" target="_blank" rel="noopener">Galatians 4:30 (WEB)</a> — The apostolic confirmation that the bondwoman and her son (the Old Covenant system) are cast out.</li>
     </ul>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 8. New Creation Reality -->
-  <section id="newcreation">
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
       You are truly free. Your spiritual standing does not depend on physical pedigree, generational heritage, or your ability to perform under the demands of a religious system. The Son has entirely set you free from the accuser and the bondage of legalistic condemnation. Because the eternal "I AM" dwells within you, you possess the permanent light of life and the unshakeable freedom of a true child in the Father's house.
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 9. Reflection -->
-  <section id="reflection">
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
       How does knowing that the eternal "I AM" has already set you free empower you to live completely without fear of accusation today?
     </p>
-  </section>
-  <hr />
+    <hr />
 
-  <!-- 10. Footer, Share & Navigation Block -->
-  <footer>
-    <div class="page-footer-block">
-      <div class="share-row">
-        <span>Share this study:</span>
-        <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
-        <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+    <!-- 10. Footer, Share & Navigation Block -->
+    <footer>
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
+        </a>
+
+        <div class="bottom-nav">
+          <a href="/Bible/">Bible Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/index.html">Book Index</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john7.html">Previous Chapter</a>
+          <span class="sep">|</span>
+          <a href="/Bible/John/john9.html">Next Chapter</a>
+          <span class="sep">|</span>
+          <a href="#top">Top</a>
+        </div>
       </div>
-
-      <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-        <span>☕ Support on Ko-fi</span>
-      </a>
-
-      <div class="bottom-nav">
-        <a href="/Bible/">Bible Index</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/index.html">John Index</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/john7.html">Previous Chapter</a>
-        <span class="sep">|</span>
-        <a href="/Bible/John/john9.html">Next Chapter</a>
-        <span class="sep">|</span>
-        <a href="#top">Top</a>
-      </div>
-    </div>
-  </footer>
-
-</div>
+    </footer>
+  </div>
 </body>
 </html>
