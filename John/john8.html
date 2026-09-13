@@ -5,61 +5,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 8 — Light of the World, Truth That Frees — Fulfilled Prophecy Bible (WEB)</title>
   <meta name="description" content="Light of the world, truth that sets free, and the hard claim: before Abraham was, I AM. The old fatherhood claim is tested and found wanting." />
+
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 900px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.06);
+      --soft2: rgba(0,0,0,0.04);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 44px;
+    }
+
+    .topnav{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topnav .bar{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 10px var(--pad);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      align-items: center;
+    }
+    .topnav a{
+      text-decoration: underline;
+      font-size: 0.95em;
+      color: #111;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .topnav .sep{ opacity: 0.45; }
+
+    section{ scroll-margin-top: 78px; }
+    #top{ scroll-margin-top: 0; }
+
+    h1,h2,h3{ margin-top: 1.6em; margin-bottom: 0.45em; line-height: 1.2; }
+    h1{ margin-top: 0.9em; font-size: 2.05rem; letter-spacing: -0.2px; }
+    h2{ font-size: 1.32rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.06rem; }
+
+    p{ margin: 0.75em 0; }
+    ul, ol{ margin: 0.6em 0 0.95em 1.15em; padding: 0; }
+    li{ margin: 0.42em 0; }
+
+    a{ color: inherit; text-decoration: underline; font-weight: 600; }
+    a:hover{ opacity: 0.85; }
+
+    hr{ margin: 2.0em 0; border: 0; border-top: 1px solid var(--line); }
+
+    .muted{ color: var(--muted); }
+
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin: 1.5em 0;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+      margin: 1.5em 0;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: #333;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px 10px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: #0056b3;
+    }
+    .bottom-nav a { color: #0056b3; text-decoration: none; }
+    .bottom-nav a:hover { text-decoration: underline; }
+    .bottom-nav .sep { color: #666; font-weight: 400; }
+
+    footer{
+      margin-top: 2.2em;
+      padding-top: 1.2em;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.96em;
+    }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Q22N178LJ8');
-  </script>
 </head>
 <body>
-  <a id="top"></a>
-  <div class="wrap">
-    <nav class="top">
-      <a class="btn" href="/Bible/">Bible Index</a>
-      <a class="btn" href="/Bible/John/index.html">Book Index</a>
-      <a class="btn" href="/Bible/John/john7.html">Previous</a>
-      <a class="btn" href="/Bible/John/john9.html">Next</a>
-      <a class="btn" href="#top">Top</a>
-    </nav>
-    <h1>John 8 — Light of the World, Truth That Frees</h1>
-    <hr />
+
+<a id="top"></a>
+
+<div class="topnav" aria-label="Standard navigation">
+  <div class="bar">
+    <a href="/Bible/">Bible Index</a><span class="sep">|</span>
+    <a href="/Bible/John/index.html">John Index</a><span class="sep">|</span>
+    <a href="/Bible/John/john7.html">Previous</a><span class="sep">|</span>
+    <a href="/Bible/John/john9.html">Next</a><span class="sep">|</span>
+    <a href="#top">Top</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <h1>John 8 — Light of the World, Truth That Frees</h1>
+  <hr />
+
+  <!-- 1. Immediate Context -->
+  <section id="context">
     <h2>Immediate Context</h2>
     <p>
-      After the Feast tension, Jesus speaks in the treasury. He claims to be the light of the world. Truth sets free; the conversation turns to fatherhood — Abraham, God, or the devil. Stones are lifted when He says “before Abraham was born, I AM.” The old identity claim is exposed as insufficient; freedom is defined by remaining in the word of the Son.
+      Following the Feast of Booths, Jesus returns to the temple treasury in Jerusalem to teach openly. In a direct confrontation with the Pharisees and Judean authorities, Jesus completely dismantles their ultimate source of security: physical descent from Abraham. He exposes the ruling establishment as children of the "devil"—the murderous, accusing covenantal adversary—rather than children of God. By appropriating the eternal divine name "I AM," Jesus formally pronounces the end of the Old Covenant shadow system, replacing physical pedigree with spiritual freedom through His living word before the temple's destruction in that first-century generation.
     </p>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 2. Scripture Text (WEB) -->
+  <section id="scripture">
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -78,7 +220,7 @@
       </p>
       <p>
         <span class="v-num">11</span>She said, “No one, Lord.” Jesus said, “Neither do I condemn you. Go your way. From now on, sin no more.”
-        <span class="v-num">12</span>Again, therefore, Jesus spoke to them, saying, “I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.”
+        <span class="v-num">12</span>Again, therefore, Jesus spoke to them, saying, “I am the <strong>light of the world</strong>. He who follows me will not walk in the darkness, but will have the light of life.”
         <span class="v-num">13</span>The Pharisees therefore said to him, “You testify about yourself. Your testimony is not valid.”
         <span class="v-num">14</span>Jesus answered them, “Even if I testify about myself, my testimony is true, for I know where I came from, and where I am going; but you don’t know where I came from, or where I am going.
         <span class="v-num">15</span>You judge according to the flesh. I judge no one.
@@ -106,14 +248,14 @@
       </p>
       <p>
         <span class="v-num">31</span>Jesus therefore said to those Jews who had believed him, “If you remain in my word, then you are truly my disciples.
-        <span class="v-num">32</span>You will know the truth, and the truth will make you free.”
-        <span class="v-num">33</span>They answered him, “We are Abraham’s offspring, and have never been in bondage to anyone. How do you say, ‘You will be made free’?”
+        <span class="v-num">32</span>You will know the truth, and the <strong>truth will make you free</strong>.”
+        <span class="v-num">33</span>They answered him, “We are <strong>Abraham’s offspring</strong>, and have never been in bondage to anyone. How do you say, ‘You will be made free’?”
         <span class="v-num">34</span>Jesus answered them, “Most certainly I tell you, everyone who commits sin is the bondservant of sin.
         <span class="v-num">35</span>A bondservant doesn’t live in the house forever. A son remains forever.
       </p>
       <p>
         <span class="v-num">36</span>If therefore the Son makes you free, you will be free indeed.
-        <span class="v-num">37</span>I know that you are Abraham’s offspring, yet you seek to kill me, because my word finds no place in you.
+        <span class="v-num">37</span>I know that you are <strong>Abraham’s offspring</strong>, yet you seek to kill me, because my word finds no place in you.
         <span class="v-num">38</span>I say the things which I have seen with my Father; and you also do the things which you have seen with your father.”
         <span class="v-num">39</span>They answered him, “Our father is Abraham.” Jesus said to them, “If you were Abraham’s children, you would do the works of Abraham.
         <span class="v-num">40</span>But now you seek to kill me, a man who has told you the truth, which I heard from God. Abraham didn’t do this.
@@ -122,19 +264,19 @@
         <span class="v-num">41</span>You do the works of your father.” They said to him, “We were not born of sexual immorality. We have one Father, God.”
         <span class="v-num">42</span>Therefore Jesus said to them, “If God were your father, you would love me, for I came out and have come from God. For I haven’t come of myself, but he sent me.
         <span class="v-num">43</span>Why don’t you understand my speech? Because you can’t hear my word.
-        <span class="v-num">44</span>You are of your father, the devil, and you want to do the desires of your father. He was a murderer from the beginning, and doesn’t stand in the truth, because there is no truth in him. When he speaks a lie, he speaks on his own; for he is a liar, and the father of lies.
+        <span class="v-num">44</span>You are of your father, the <strong>devil</strong>, and you want to do the desires of your father. He was a murderer from the beginning, and doesn’t stand in the truth, because there is no truth in him. When he speaks a lie, he speaks on his own; for he is a liar, and the father of lies.
         <span class="v-num">45</span>But because I tell the truth, you don’t believe me.
       </p>
       <p>
         <span class="v-num">46</span>Which of you convicts me of sin? If I tell the truth, why do you not believe me?
         <span class="v-num">47</span>He who is of God hears the words of God. For this cause you don’t hear, because you are not of God.”
-        <span class="v-num">48</span>Then the Jews answered him, “Don’t we say well that you are a Samaritan, and have a demon?”
-        <span class="v-num">49</span>Jesus answered, “I don’t have a demon, but I honor my Father, and you dishonor me.
+        <span class="v-num">48</span>Then the Jews answered him, “Don’t we say well that you are a Samaritan, and have a <strong>demon</strong>?”
+        <span class="v-num">49</span>Jesus answered, “I don’t have a <strong>demon</strong>, but I honor my Father, and you dishonor me.
         <span class="v-num">50</span>But I don’t seek my own glory. There is one who seeks and judges.
       </p>
       <p>
         <span class="v-num">51</span>Most certainly, I tell you, if a person keeps my word, he will never see death.”
-        <span class="v-num">52</span>Then the Jews said to him, “Now we know that you have a demon. Abraham died, and the prophets; and you say, ‘If a man keeps my word, he will never taste of death.’
+        <span class="v-num">52</span>Then the Jews said to him, “Now we know that you have a <strong>demon</strong>. Abraham died, and the prophets; and you say, ‘If a man keeps my word, he will never taste of death.’
         <span class="v-num">53</span>Are you greater than our father, Abraham, who died? The prophets died. Who do you make yourself out to be?”
         <span class="v-num">54</span>Jesus answered, “If I glorify myself, my glory is nothing. It is my Father who glorifies me, of whom you say that he is our God.
         <span class="v-num">55</span>You have not known him, but I know him. If I said, ‘I don’t know him,’ I would be like you, a liar. But I know him, and keep his word.
@@ -142,107 +284,134 @@
       <p>
         <span class="v-num">56</span>Your father Abraham rejoiced to see my day. He saw it, and was glad.”
         <span class="v-num">57</span>The Jews therefore said to him, “You are not yet fifty years old, and have you seen Abraham?”
-        <span class="v-num">58</span>Jesus said to them, “Most certainly, I tell you, before Abraham came into existence, I AM.”
+        <span class="v-num">58</span>Jesus said to them, “Most certainly, I tell you, before Abraham came into existence, <strong>I AM</strong>.”
         <span class="v-num">59</span>Therefore they took up stones to throw at him, but Jesus was hidden, and went out of the temple, having gone through the middle of them, and so passed by.
       </p>
     </div>
-    <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) Light of the world ends the claim that Torah and temple alone dispel darkness.</p>
-      <p class="note">2) Freedom is defined by the Son’s word, not by Abrahamic pedigree.</p>
-      <p class="note">3) “I AM” is the divine name claim that forces decision inside that generation.</p>
-      <p class="note">4) Abraham rejoiced to see the day — the day is present, not postponed.</p>
-      <p class="note">5) Stones answer the claim; the old house cannot absorb the identity of the Son.</p>
-    </div>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 3. Fulfillment Notes -->
+  <section id="notes">
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The declaration "light of the world" establishes Messiah as the true illumination, ending the claim that the physical temple alone dispelled darkness.</li>
+      <li>True freedom is granted exclusively by the Son, bypassing the obsolete security of physical Abrahamic descent and legalistic observance.</li>
+      <li>The "devil" identifies the murderous, accusing Judean establishment that persecutes the prophets, not a cosmic fallen archangel.</li>
+      <li>"I AM" is the ultimate divine name claim, forcing the first-century generation to choose between the old shadows and the true Lord.</li>
+      <li>The lifting of stones by the religious leaders physically demonstrates the apostate system's inability to receive the New Covenant reality.</li>
+    </ul>
+  </section>
+  <hr />
+
+  <!-- 4. Annotations -->
+  <section id="annotations">
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>light of the world</strong>: not a local lamp for one nation only; the true light now present.</div>
-      <div class="annotation-item"><strong>remain in my word</strong>: discipleship measured by continuity with the Son’s speech.</div>
-      <div class="annotation-item"><strong>truth will make you free</strong>: freedom from the slavery of the present age’s accusation and death-structure.</div>
-      <div class="annotation-item"><strong>before Abraham… I AM</strong>: eternal identity, not sequential after Abraham.</div>
-      <div class="annotation-item"><strong>took up stones</strong>: the response of the old order to the Name.</div>
+      <div class="annotation-item"><strong>light of the world</strong>: The inaugural arrival of Messiah's truth, replacing the localized light of the Jerusalem temple.</div>
+      <div class="annotation-item"><strong>truth will make you free</strong>: Deliverance from Old Covenant curse-bondage and legalistic condemnation, realized fully in the Son.</div>
+      <div class="annotation-item"><strong>Abraham’s offspring</strong>: Physical Judean lineage, which the authorities falsely believed guaranteed them eternal security and covenant standing.</div>
+      <div class="annotation-item"><strong>devil</strong>: Greek <em>diabolos</em> (accuser/adversary); a covenantal idiom for the apostate, murderous religious system opposing God's plan, not an immortal supernatural entity.</div>
+      <div class="annotation-item"><strong>demon</strong>: First-century cultural idiom for madness or severe delusion, used here as a pejorative insult by the crowd against Jesus.</div>
+      <div class="annotation-item"><strong>I AM</strong>: Greek <em>egō eimi</em>, echoing Exodus 3:14; the explicit claim to eternal divine identity, transcending Abraham and the Old Covenant.</div>
     </div>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 5. Fulfillment Commentary -->
+  <section id="commentary">
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Light Present, Not Deferred</h3>
+    
+    <h3>1) The Light Invades the Temple</h3>
     <p>
-      “I am the light of the world” is spoken in the temple precincts. Darkness is not a cosmic problem waiting for a later age; it is the condition the Son invades now. Those who follow Him already have the light of life.
+      During the Feast of Booths, the temple courts were brilliantly illuminated by massive golden lampstands, a ritual designed to recall the pillar of fire that guided Israel in the wilderness. Standing within the treasury in the shadow of these extinguishable lamps, Jesus declares, "I am the light of the world." He does not point to the building; He points to Himself. Darkness in the biblical narrative is not a cosmic abstraction; it is the spiritual blindness and curse-bondage of the Old Covenant era. By declaring Himself the true light, Jesus proclaims that the localized, temporary illumination of the Jerusalem temple is officially obsolete. The presence of God has relocated to the Son. Those who follow Him are no longer dependent on an earthly sanctuary to dispel the darkness of the present age, for they already possess the light of life.
     </p>
-    <h3>2) Freedom Defined by the Son</h3>
+
+    <h3>2) The Redefinition of Freedom and the Eviction of the Slave</h3>
     <p>
-      Abrahamic descent is claimed as security. Jesus redefines freedom: remaining in His word, knowing the truth, being set free by the Son. Physical death is not abolished; the slavery of the old covenant accusation and the power of the present age’s ruler is broken for those the Son frees.
+      The dialogue violently shifts when Jesus addresses the core foundation of first-century Judean security: sonship. The Judeans defensively claim, "We are Abraham's offspring, and have never been in bondage to anyone." This boast demonstrates complete historical blindness, ignoring their past enslavement in Egypt and Babylon, and their present subjugation under Rome. However, Jesus elevates the discussion from political bondage to covenantal bondage. He redefines slavery as being bound under sin and the condemnation of the Law. Referencing the narrative of Hagar and Ishmael, Jesus warns them that a bondservant does not remain in the house forever; only the true Son remains. The apostate physical descendants of Abraham were functioning as the "slave" woman's children, relying on fleshly pedigree. Christ's declaration signals their imminent eviction from the covenant house. True freedom is found solely by remaining in the word of the Son, a reality permanently established before the old house fell in AD 70.
     </p>
-    <h3>3) The Day Abraham Saw</h3>
+
+    <h3>3) Demystifying the Adversary: The Covenantal Devil</h3>
     <p>
-      Abraham rejoiced to see “my day.” The day is not a distant horizon. It is the presence of the Son in that generation. The claim forces the question of whether the fathers’ hope is being fulfilled or still postponed.
+      When the Judean leadership claims God as their Father, Jesus issues a devastating prophetic indictment: "You are of your father, the devil, and you want to do the desires of your father." Consistent with strict Hebrew monotheism, this is not a reference to a dualistic, immortal fallen archangel waging a cosmic war against the Creator. In first-century covenantal language, the "devil" (Greek <em>diabolos</em>) is the earthly accuser, the adversary, and the prosecuting system of the apostate establishment. Just as Cain murdered Abel over true worship, this apostate system was a murderer from the beginning, routinely slaughtering the prophets sent to Israel. They are the "father of lies" because they continuously twisted the Law of Moses to condemn the innocent and suppress the truth. Jesus identifies the religious authorities themselves as the corporate embodiment of this adversary, actively seeking to murder the Word made flesh.
     </p>
-    <h3>4) I AM and the Stones</h3>
+
+    <h3>4) The Supreme "I AM" and the Judgment of Stones</h3>
     <p>
-      “Before Abraham came into existence, I AM” is the Name. The stones are the liturgical answer of a system that cannot receive its Lord. The transition is not gradual consensus; it is exposure and decision.
+      The confrontation reaches its climax when Jesus states that Abraham rejoiced to see His day. The religious leaders measure Jesus against an earthly timeline, mocking His age. Jesus shatters their chronological and theological framework by declaring, "Before Abraham came into existence, I AM." This is the explicit, unmitigated appropriation of the divine name revealed to Moses at the burning bush (Exodus 3:14). It completely overthrows the temporal priority and authority of the Old Covenant system. The old system's response is immediate and liturgical: they take up stones to execute Him. They cannot integrate the New Covenant into their traditions; they can only attempt to destroy it. However, Jesus simply walks through the midst of them, untouched. The stones they lifted would ultimately be turned against them in AD 70, when the physical temple was dismantled stone by stone, fully vindicating the true "I AM" and establishing His eternal Kingdom.
     </p>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 6. Prophecy Hub Links -->
+  <section id="links">
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/light-of-the-world.html">Light of the World</a></li>
-      <li><a href="/Bible/Prophecy/abraham-promise.html">Abraham Promise</a></li>
-      <li><a href="/Bible/Prophecy/i-am.html">I AM</a></li>
+      <li><a href="/Bible/Prophecy/abraham-promise.html">The Abrahamic Promise</a></li>
+      <li><a href="/Bible/Prophecy/i-am.html">The Great I AM</a></li>
     </ul>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 7. Cross-References -->
+  <section id="crossref">
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/EXO03.htm" target="_blank" rel="noopener">Exodus 3 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA42.htm" target="_blank" rel="noopener">Isaiah 42 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA49.htm" target="_blank" rel="noopener">Isaiah 49 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/GEN22.htm" target="_blank" rel="noopener">Genesis 22 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/EXO03.htm" target="_blank" rel="noopener">Exodus 3:14 (WEB)</a> — The original revelation of the eternal divine name "I AM" to Moses.</li>
+      <li><a href="https://ebible.org/eng-web/ISA42.htm" target="_blank" rel="noopener">Isaiah 42:6 (WEB)</a> — Prophecy of Messiah given as a covenant to the people and a light to the nations.</li>
+      <li><a href="https://ebible.org/eng-web/GAL04.htm" target="_blank" rel="noopener">Galatians 4:30 (WEB)</a> — The apostolic confirmation that the bondwoman and her son (the Old Covenant system) are cast out.</li>
     </ul>
-    <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Light of the world</strong> — present illumination, not deferred dawn.</li>
-      <li><strong>Truth that frees</strong> — Son’s word over pedigree.</li>
-      <li><strong>I AM</strong> — the Name present in flesh.</li>
-    </ul>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 8. New Creation Reality -->
+  <section id="newcreation">
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for another light to be switched on. The light has come. Physical death still claims bodies. What this chapter ends is the claim that Abrahamic status alone secures freedom from the slavery of the present age.
+      You are truly free. Your spiritual standing does not depend on physical pedigree, generational heritage, or your ability to perform under the demands of a religious system. The Son has entirely set you free from the accuser and the bondage of legalistic condemnation. Because the eternal "I AM" dwells within you, you possess the permanent light of life and the unshakeable freedom of a true child in the Father's house.
     </p>
-    <hr />
+  </section>
+  <hr />
+
+  <!-- 9. Reflection -->
+  <section id="reflection">
     <h2>Reflection</h2>
     <p>
-      Where are you still leaning on pedigree or system instead of remaining in the word of the Son who is the I AM?
+      How does knowing that the eternal "I AM" has already set you free empower you to live completely without fear of accusation today?
     </p>
-    <hr />
-    <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john7.html">Previous</a>
-        <a class="btn" href="/Bible/John/john9.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
-        </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+  </section>
+  <hr />
+
+  <!-- 10. Footer, Share & Navigation Block -->
+  <footer>
+    <div class="page-footer-block">
+      <div class="share-row">
+        <span>Share this study:</span>
+        <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+        <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+        <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
-    </footer>
-  </div>
+
+      <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+        <span>☕ Support on Ko-fi</span>
+      </a>
+
+      <div class="bottom-nav">
+        <a href="/Bible/">Bible Index</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/index.html">John Index</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/john7.html">Previous Chapter</a>
+        <span class="sep">|</span>
+        <a href="/Bible/John/john9.html">Next Chapter</a>
+        <span class="sep">|</span>
+        <a href="#top">Top</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
