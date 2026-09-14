@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John 20 — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Speaker: The risen Jesus - Fulfilled Prophecy study edition using the WEB translation." />
+  <title>John 20 — The Resurrection and New Creation Life — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Jesus rises from the dead on the first day of the week, appears to Mary Magdalene and His disciples, breathes the Holy Spirit upon them, and unveils New Creation reality." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,19 +139,22 @@
       <a class="btn" href="/Bible/John/john21.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
-    <h1>John 20</h1>
-    <h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
+
+    <h1>John 20 — The Resurrection and New Creation Life</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
-      <p><strong>Speaker:</strong> The risen Jesus</p>
-      <p><strong>Audience:</strong> Disciples and witnesses of the resurrection</p>
-      <p><strong>Covenant moment:</strong> The public unveiling of New Creation life following covenant death</p>
-      <p><strong>Why it mattered then:</strong> Resurrection confirms the completion of the old age and the arrival of a new mode of life rooted in the Spirit.</p>
+    <p>
+      On the morning of the first day of the week in Jerusalem, the risen Messiah appears first to Mary Magdalene at the garden tomb and subsequently to His assembled disciples behind locked doors. Addressing His terrified and grieving followers, Jesus unveils the physical reality of His resurrection, demonstrating His victory over death and the grave. In this pivotal covenantal moment, Messiah transfers His disciples out of Old Covenant fear and hiding into New Creation authority, breathing upon them the Holy Spirit, commissioning them as apostolic witnesses, and inaugurating the indestructible administration of the Spirit prior to the full historical consummation of the age.
+    </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span>Now on the first day of the week, Mary Magdalene went early, while it was still dark, to the tomb, and saw the stone taken away from the tomb.
+        <span class="v-num">1</span>Now on the <strong>first day of the week</strong>, Mary Magdalene went early, while it was still dark, to the tomb, and saw the stone taken away from the tomb.
         <span class="v-num">2</span>Therefore she ran and came to Simon Peter, and to the other disciple whom Jesus loved, and said to them, “They have taken away the Lord out of the tomb, and we don’t know where they have laid him!”
         <span class="v-num">3</span>Therefore Peter and the other disciple went out, and they went toward the tomb.
         <span class="v-num">4</span>They both ran together. The other disciple outran Peter, and came to the tomb first.
@@ -87,20 +176,20 @@
       </p>
       <p>
         <span class="v-num">16</span>Jesus said to her, “Mary.” She turned and said to him, “Rabboni!” which is to say, “Teacher!”
-        <span class="v-num">17</span>Jesus said to her, “Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers, and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’”
+        <span class="v-num">17</span>Jesus said to her, “Don’t hold me, for I haven’t yet <strong>ascending to my Father</strong>; but go to my brothers, and tell them, ‘I am <strong>ascending to my Father</strong> and your Father, to my God and your God.’”
         <span class="v-num">18</span>Mary Magdalene came and told the disciples that she had seen the Lord, and that he had said these things to her.
-        <span class="v-num">19</span>When therefore it was evening, on that day, the first day of the week, and when the doors were locked where the disciples were assembled, for fear of the Jews, Jesus came and stood in the middle, and said to them, “Peace be to you.”
+        <span class="v-num">19</span>When therefore it was evening, on that day, the <strong>first day of the week</strong>, and when the doors were locked where the disciples were assembled, for fear of the Jews, Jesus came and stood in the middle, and said to them, “<strong>Peace be to you</strong>.”
         <span class="v-num">20</span>When he had said this, he showed them his hands and his side. The disciples therefore were glad when they saw the Lord.
       </p>
       <p>
-        <span class="v-num">21</span>Jesus therefore said to them again, “Peace be to you. As the Father has sent me, even so I send you.”
-        <span class="v-num">22</span>When he had said this, he breathed on them, and said to them, “Receive the Holy Spirit!
+        <span class="v-num">21</span>Jesus therefore said to them again, “<strong>Peace be to you</strong>. As the Father has sent me, even so I send you.”
+        <span class="v-num">22</span>When he had said this, he <strong>breathed on them</strong>, and said to them, “<strong>Receive the Holy Spirit</strong>!
         <span class="v-num">23</span>If you forgive anyone’s sins, they have been forgiven them. If you retain anyone’s sins, they have been retained.”
         <span class="v-num">24</span>But Thomas, one of the twelve, called Didymus, wasn’t with them when Jesus came.
         <span class="v-num">25</span>The other disciples therefore said to him, “We have seen the Lord!” But he said to them, “Unless I see in his hands the print of the nails, put my finger into the print of the nails, and put my hand into his side, I will not believe.”
       </p>
       <p>
-        <span class="v-num">26</span>After eight days again his disciples were inside, and Thomas was with them. Jesus came, the doors being locked, and stood in the middle, and said, “Peace be to you.”
+        <span class="v-num">26</span>After eight days again his disciples were inside, and Thomas was with them. Jesus came, the doors being locked, and stood in the middle, and said, “<strong>Peace be to you</strong>.”
         <span class="v-num">27</span>Then he said to Thomas, “Reach here your finger, and see my hands. Reach here your hand, and put it into my side. Don’t be unbelieving, but believing.”
         <span class="v-num">28</span>Thomas answered him, “My Lord and my God!”
         <span class="v-num">29</span>Jesus said to him, “Because you have seen me, you have believed. Blessed are those who have not seen, and have believed.”
@@ -111,92 +200,106 @@
       </p>
     </div>
     <hr />
-        <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) The first day signals New Creation</h3>
-    <p>The resurrection occurs on the first day of the week, echoing Genesis language. This is not mere chronology — it announces a new beginning.</p>
-    <h3>2) What ended</h3>
-    <p>The reign of death under the Law, temple-based mediation, and fear-driven discipleship.</p>
-    <h3>3) What replaced it</h3>
-    <p>Life through union with the risen Christ, Spirit-empowered mission, and peace replacing fear.</p>
-    <h3>4) “Do not cling to Me”</h3>
-    <p>Jesus signals a shift from physical proximity to relational union through the Spirit. The old way of knowing Him is giving way to a greater one.</p>
-    <h3>5) Breathing the Spirit</h3>
-    <p>This echoes Genesis creation imagery. Humanity is being reconstituted as New Creation people.</p>
-    <h3>6) Authority to forgive</h3>
-    <p>This is covenant authority to announce release from sin and death — not institutional control, but Spirit-led proclamation.</p>
-    <h3>7) First-century fulfillment</h3>
-    <p>The resurrection initiates the New Creation era, publicly confirmed through apostolic witness and completed with the removal of the old covenant world in AD 70.</p>
-    <hr />
-    <h2>Key Idioms & Language Notes</h2>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li><strong>First day</strong> — new creation beginning</li>
-<li><strong>Peace</strong> — wholeness after covenant conflict</li>
-<li><strong>Breathed on them</strong> — new creation life</li>
-<li><strong>Forgive / retain</strong> — covenant release or exposure</li>
-<li><strong>Believe</strong> — trust grounded in revelation</li>
-</ul>
+      <li>The resurrection on the "first day of the week" signals the birth of the New Creation age.</li>
+      <li>Messiah breathing on His disciples fulfills Ezekiel 37, reconstituting true Israel in the Spirit.</li>
+      <li>The declaration "Peace be to you" establishes the end of covenant enmity between God and humanity.</li>
+      <li>Thomas's confession "My Lord and my God" confirms Jesus as the divine fulfillment of Yahweh's covenant promise.</li>
+      <li>The apostolic commission to forgive or retain sins reflects Kingdom authority during the AD 30–70 transition.</li>
+    </ul>
     <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+
+    <!-- 4. Annotations -->
+    <h2>Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>first day of the week</strong>: The inaugural morning of the New Creation (*mian tōn sabbatōn*), signaling the dawning of a new covenant order.</div>
+      <div class="annotation-item"><strong>ascending to my Father</strong>: Messiah's exaltation to divine enthronement, establishing His global high priestly mediation.</div>
+      <div class="annotation-item"><strong>Peace be to you</strong>: The messianic greeting (*Shalom*) certifying that covenant reconciliation and peace have been permanently secured.</div>
+      <div class="annotation-item"><strong>breathed on them</strong>: The prophetic impartation (*enephysēsen*) echoing Genesis 2:7 and Ezekiel 37, reconstituting humanity into Spirit-filled life.</div>
+      <div class="annotation-item"><strong>Receive the Holy Spirit</strong>: The inaugural bestowal of divine life upon the apostolic body prior to the public outpouring at Pentecost.</div>
+    </div>
+    <hr />
+
+    <!-- 5. Fulfillment Commentary -->
+    <h2>Fulfillment Commentary</h2>
+    <h3>1) The First Day of the Week and the Genesis of the New Creation</h3>
+    <p>
+      On the first day of the week (*mian tōn sabbatōn*), Mary Magdalene comes to the tomb while it is still dark and discovers the stone rolled away. In Johannine theology, the timing of the resurrection is rich in prophetic symbolism. Just as God began the original creation on the first day in Genesis 1, Messiah’s resurrection on the first day of the week marks the inauguration of the New Creation. The Old Covenant Sabbath represented the completion of the old physical order; the first day represents the dawning of an unshakeable spiritual epoch. When Mary mistook the risen Jesus for "the gardener," she unwittingly spoke a profound prophetic truth: Messiah is the second Adam, cultivating the garden of the New Creation. By leaving the linen grave clothes neatly folded in the tomb, Jesus demonstrated that death had not merely been postponed, but stripped of its legal power. His resurrection was not an isolated physical anomaly, but the inaugural breakthrough of Kingdom life, breaking the bondage of the grave and guaranteeing the transformation of the covenant world.
+    </p>
+
+    <h3>2) "Do Not Hold Me": The Ascension and Transformed Relational Union</h3>
+    <p>
+      When Jesus reveals Himself to Mary Magdalene by calling her name, her immediate reaction is to cling to Him. Jesus instructs her, "Don’t hold me, for I haven’t yet ascended to my Father; but go to my brothers, and tell them, ‘I am ascending to my Father and your Father, to my God and your God.’" Under the Old Covenant, relational access to God was distant, mediated through physical altars, human priests, and localized sanctuaries. Jesus cautions Mary that His resurrection does not signal a return to physical, earthly companionship as before, but a transition into a far higher, spiritual union. Messiah’s ascension to the Father was necessary to complete His high priestly work, pour out the Holy Spirit, and establish His indwelling presence within believers. By identifying the Father as "my Father and your Father," Jesus announces that His disciples have been brought into the identical relationship of sonship that He enjoys, establishing them as joint-heirs in the New Creation family.
+    </p>
+
+    <h3>3) The New Genesis Breath and the Reconstitution of True Israel</h3>
+    <p>
+      On the evening of that same day, the disciples gather behind locked doors out of fear of the Judean religious authorities. Jesus suddenly appears in their midst, dispelling their terror with the covenant declaration: "Peace be to you." He then performs an act of immense prophetic significance: "He breathed on them, and said to them, ‘Receive the Holy Spirit!’" The Greek verb used here for "breathed" (*enephysēsen*) is identical to the Septuagint rendering of Genesis 2:7, where Yahweh breathed life into Adam's nostrils, and Ezekiel 37:9, where the Spirit breathes life into the dry bones of Israel. In this inaugural moment, Messiah reconstitutes His disciples as the true, living Israel. This in-breathing was the internal impartation of New Creation life that qualified the disciples to receive the external empowerment of Pentecost (Acts 2). Furthermore, Jesus grants them covenantal authority to proclaim forgiveness: announcing that in the New Covenant, sin is permanently remitted through faith in the Son.
+    </p>
+
+    <h3>4) The Confession of Thomas and the Vindication of Unseen Faith</h3>
+    <p>
+      The narrative moves to its climactic confession through Thomas, who initially refused to believe without physical proof. Eight days later, Jesus appears again behind locked doors and invites Thomas to touch His wounds. Overwhelmed by the tangible evidence of Messiah's victory over death, Thomas utters the supreme christological confession of the Gospel: "My Lord and my God!" (*Ho Kyrios mou kai ho Theos mou*). In first-century context, this title directly countered Roman imperial idolatry, which demanded allegiance to Caesar as lord and god. Jesus commends Thomas but highlights the superior blessing reserved for the New Covenant era: "Blessed are those who have not seen, and have believed." During the AD 30–70 transition period, as the physical temple in Jerusalem approached its inevitable destruction, believers were called to walk by faith in the unseen, exalted Messiah. John concludes by stating that these signs were written so that readers across every generation might believe that Jesus is the Christ, receiving eternal life through His name.
+    </p>
+    <hr />
+
+    <!-- 6. Prophecy Hub Links -->
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><strong>New creation imagery</strong> —
-    <a href="https://ebible.org/eng-web/GEN02.htm">Gen 2</a>,
-    <a href="https://ebible.org/eng-web/2CO05.htm">2 Cor 5</a>
-</li>
-<li><strong>Resurrection life</strong> —
-    <a href="https://ebible.org/eng-web/ROM06.htm">Rom 6</a>
-</li>
-<li><strong>Commissioned people</strong> —
-    <a href="https://ebible.org/eng-web/MAT28.htm">Matt 28</a>
-</li>
-</ul>
+      <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
+      <li><a href="/Bible/Prophecy/god-dwelling-with-his-people.html">God Dwelling with His People</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
+    </ul>
     <hr />
-    <h2>Prophecy Fulfilment</h2>
+
+    <!-- 7. Cross-References -->
+    <h2>Cross-References</h2>
     <ul>
-<li>
-<strong>Life after covenant death</strong> —
-    <a href="https://ebible.org/eng-web/PSA16.htm">Ps 16</a> |
-    <a href="/Bible/Prophecy/psalms.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>New creation people</strong> —
-    <a href="https://ebible.org/eng-web/EZK37.htm">Ezek 37</a> |
-    <a href="/Bible/Prophecy/ezekiel.html">Prophecy Hub</a>
-</li>
-</ul>
+      <li><a href="https://ebible.org/eng-web/ISA26.htm" target="_blank" rel="noopener">Isaiah 26:19 (WEB)</a> — Prophecy of the dead living and bodies rising to sing in the dust.</li>
+      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37:9–14 (WEB)</a> — Prophecy of the breath entering dry bones to reconstitute God's people.</li>
+      <li><a href="https://ebible.org/eng-web/2CO05.htm" target="_blank" rel="noopener">2 Corinthians 5:17–18 (WEB)</a> — Apostolic confirmation of the old passing away and all things becoming new in Christ.</li>
+    </ul>
     <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
-    <p>You do not live on the far side of the resurrection — you live in it. Peace, life, and mission flow from a risen Lord who has already overcome death.</p>
+    <p>
+      In the risen Messiah, you live as a resurrected, Spirit-filled participant in the New Creation. The old order of death, fear, and condemnation under the Law has been dismantled forever. You do not relate to God from a distance or strive to earn His favor through performance; Messiah has breathed His very life into your spirit, establishing unbroken peace and divine sonship. Indwelt by the Holy Spirit, secure in His finished work, and joined in eternal union with the Lord, you walk in the freedom, confidence, and indestructible joy of resurrection reality.
+    </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
-    <p>If resurrection life is already present, where might fear still be shaping your decisions?</p>
+    <p>
+      How does knowing that Messiah's resurrection has already placed you in unbroken peace and New Creation life transform the way you rest in Him today?
+    </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john19.html">Previous</a>
-        <a class="btn" href="/Bible/John/john21.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john19.html">Previous</a>
+          <a class="btn" href="/Bible/John/john21.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
