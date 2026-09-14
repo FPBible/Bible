@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John 21 — Feed My Sheep — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="John 21 (WEB) with fulfillment notes and prophecy commentary: Peter restored, shepherding defined, and apostolic witness through the covenant transition (AD 30–70 lens)." />
+  <title>John 21 — The Restoration and Commissioning of Peter — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Jesus appears to His disciples at the Sea of Tiberias, performs the miraculous catch of 153 fish, restores Peter, and defines New Covenant shepherding." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,91 +139,22 @@
       <a class="btn" href="/Bible/John/index.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
-    <h1>John 21 — Feed My Sheep</h1>
+
+    <h1>John 21 — The Restoration and Commissioning of Peter</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
-      <p><strong>Speaker:</strong> The risen Jesus</p>
-      <p><strong>Audience:</strong> The disciples, particularly Peter</p>
-      <p><strong>Covenant moment:</strong> Post-resurrection restoration and commissioning of leadership for the New Covenant community</p>
-      <p><strong>Why it mattered then:</strong> Failure is addressed, calling is restored, and mission continues without reference to the temple or old identity structures.</p>
-      <div class="scripture-text">
-<p>After these things, Jesus revealed himself again to the disciples at the sea of Tiberias. He revealed himself this way.</p>
-<p>
-Simon Peter, Thomas called Didymus, Nathanael of Cana in Galilee, and the sons of Zebedee, and two others of his disciples were together.</p>
-<p>
-Simon Peter said to them, “I’m going fishing.”</p>
-<p>
-They told him, “We are also coming with you.” They immediately went out, and entered into the boat. That night, they caught nothing.</p>
-<p>
-But when day had already come, Jesus stood on the beach, yet the disciples didn’t know that it was Jesus.</p>
-<p>
-Jesus therefore said to them, “Children, have you anything to eat?”</p>
-<p>
-They answered him, “No.”</p>
-<p>
-He said to them, “Cast the net on the right side of the boat, and you will find some.”</p>
-<p>
-They cast it therefore, and now they weren’t able to draw it in for the multitude of fish.</p>
-<p>
-That disciple therefore whom Jesus loved said to Peter, “It’s the Lord!”</p>
-<p>
-So when Simon Peter heard that it was the Lord, he wrapped his coat around himself (for he was naked), and threw himself into the sea.</p>
-<p>
-But the other disciples came in the little boat (for they were not far from the land, but about two hundred cubits away), dragging the net full of fish.</p>
-<p>
-So when they got out on the land, they saw a fire of coals there, with fish and bread laid on it.</p>
-<p>
-Jesus said to them, “Bring some of the fish which you have just caught.”</p>
-<p>
-Simon Peter went up, and drew the net to land, full of one hundred fifty-three great fish. Even though there were so many, the net wasn’t torn.</p>
-<p>
-Jesus said to them, “Come and eat breakfast!”</p>
-<p>
-None of the disciples dared inquire of him, “Who are you?” knowing that it was the Lord.</p>
-<p>
-Then Jesus came and took the bread, gave it to them, and the fish likewise.</p>
-<p>
-This is now the third time that Jesus was revealed to his disciples after he had risen from the dead.</p>
-<p>
-So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?”</p>
-<p>
-He said to him, “Yes, Lord; you know that I have affection for you.”</p>
-<p>
-He said to him, “Feed my lambs.”</p>
-<p>
-He said to him again a second time, “Simon, son of Jonah, do you love me?”</p>
-<p>
-He said to him, “Yes, Lord; you know that I have affection for you.”</p>
-<p>
-He said to him, “Tend my sheep.”</p>
-<p>
-He said to him the third time, “Simon, son of Jonah, do you have affection for me?”</p>
-<p>
-Peter was grieved because he asked him the third time, “Do you have affection for me?” He said to him, “Lord, you know everything. You know that I have affection for you.”</p>
-<p>
-Jesus said to him, “Feed my sheep.</p>
-<p>
-Most certainly I tell you, when you were young, you dressed yourself and walked where you wanted to. But when you are old, you will stretch out your hands, and another will dress you and carry you where you don’t want to go.”</p>
-<p>
-Now he said this, signifying by what kind of death he would glorify God. When he had said this, he said to him, “Follow me.”</p>
-<p>
-Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray you?”</p>
-<p>
-Peter seeing him, said to Jesus, “Lord, what about this man?”</p>
-<p>
-Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.”</p>
-<p>
-This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?”</p>
-<p>
-This is the disciple who testifies about these things, and wrote these things. We know that his witness is true.</p>
-<p>
-There are also many other things which Jesus did, which if they would all be written, I suppose that even the world itself wouldn’t have room for the books that would be written.</p>
-</div>
+    <p>
+      Following His resurrection, Jesus reveals Himself a third time to seven disciples by the Sea of Tiberias in Galilee. Addressing Peter, who had denied Him thrice beside a charcoal fire prior to the crucifixion, Messiah conducts a public restoration beside a new charcoal fire on the shore. In this first-century covenant moment, Jesus transitions apostolic leadership away from self-confident flesh and old identity structures (such as returning to commercial fishing) into a pastoral shepherd care rooted in divine love. He re-establishes Peter’s commission to feed the flock, clarifies the first-century horizon of His coming (*parousia*) concerning the Beloved Disciple, and prepares the apostolic core for the Spirit-empowered mission of the New Covenant age.
+    </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span>After these things, Jesus revealed himself again to the disciples at the sea of Tiberias. He revealed himself this way.
+        <span class="v-num">1</span>After these things, Jesus revealed himself again to the disciples at the <strong>sea of Tiberias</strong>. He revealed himself this way.
         <span class="v-num">2</span>Simon Peter, Thomas called Didymus, Nathanael of Cana in Galilee, and the sons of Zebedee, and two others of his disciples were together.
         <span class="v-num">3</span>Simon Peter said to them, “I’m going fishing.” They told him, “We are also coming with you.” They immediately went out, and entered into the boat. That night, they caught nothing.
         <span class="v-num">4</span>But when day had already come, Jesus stood on the beach, yet the disciples didn’t know that it was Jesus.
@@ -151,113 +168,127 @@ There are also many other things which Jesus did, which if they would all be wri
         <span class="v-num">10</span>Jesus said to them, “Bring some of the fish which you have just caught.”
       </p>
       <p>
-        <span class="v-num">11</span>Simon Peter went up, and drew the net to land, full of great fish, one hundred fifty-three; and even though there were so many, the net wasn’t torn.
+        <span class="v-num">11</span>Simon Peter went up, and drew the net to land, full of great fish, one hundred fifty-three; and even though there were so many, the <strong>net wasn’t torn</strong>.
         <span class="v-num">12</span>Jesus said to them, “Come and eat breakfast.” None of the disciples dared inquire of him, “Who are you?” knowing that it was the Lord.
         <span class="v-num">13</span>Then Jesus came and took the bread, gave it to them, and the fish likewise.
         <span class="v-num">14</span>This is now the third time that Jesus was revealed to his disciples, after he had risen from the dead.
-        <span class="v-num">15</span>So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Feed my lambs.”
+        <span class="v-num">15</span>So when they had eaten their breakfast, Jesus said to Simon Peter, “Simon, son of Jonah, do you love me more than these?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “<strong>Feed my lambs</strong>.”
       </p>
       <p>
         <span class="v-num">16</span>He said to him again a second time, “Simon, son of Jonah, do you love me?” He said to him, “Yes, Lord; you know that I have affection for you.” He said to him, “Tend my sheep.”
-        <span class="v-num">17</span>He said to him the third time, “Simon, son of Jonah, do you have affection for me?” Peter was grieved because he asked him the third time, “Do you have affection for me?” He said to him, “Lord, you know everything. You know that I have affection for you.” Jesus said to him, “Feed my sheep.
+        <span class="v-num">17</span>He said to him the third time, “Simon, son of Jonah, do you have affection for me?” Peter was grieved because he asked him the third time, “Do you have affection for me?” He said to him, “Lord, you know everything. You know that I have affection for you.” Jesus said to him, “<strong>Feed my sheep</strong>.
         <span class="v-num">18</span>Most certainly I tell you, when you were young, you dressed yourself, and walked where you wanted to. But when you are old, you will stretch out your hands, and another will dress you, and carry you where you don’t want to go.”
         <span class="v-num">19</span>Now he said this, signifying by what kind of death he would glorify God. When he had said this, he said to him, “Follow me.”
         <span class="v-num">20</span>Then Peter, turning around, saw a disciple following. This was the disciple whom Jesus loved, the one who had also leaned on Jesus’ breast at the supper and asked, “Lord, who is going to betray You?”
       </p>
       <p>
         <span class="v-num">21</span>Peter seeing him, said to Jesus, “Lord, what about this man?”
-        <span class="v-num">22</span>Jesus said to him, “If I desire that he stay until I come, what is that to you? You follow me.”
-        <span class="v-num">23</span>This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he stay until I come, what is that to you?”
+        <span class="v-num">22</span>Jesus said to him, “If I desire that he <strong>stay until I come</strong>, what is that to you? You follow me.”
+        <span class="v-num">23</span>This saying therefore went out among the brothers, that this disciple wouldn’t die. Yet Jesus didn’t say to him that he wouldn’t die, but, “If I desire that he <strong>stay until I come</strong>, what is that to you?”
         <span class="v-num">24</span>This is the disciple who testifies about these things, and wrote these things. We know that his witness is true.
         <span class="v-num">25</span>There are also many other things which Jesus did, which if they would all be written, I suppose that even the world itself wouldn’t have room for the books that would be written.
       </p>
     </div>
     <hr />
-        <h2 class="hide-element">Fulfillment Notes</h2>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li>Jesus restores Peter publicly and re-anchors leadership in love and shepherding, not flawless performance.</li>
-<li>“Feed/shepherd” defines New Covenant authority as pastoral care, replacing temple/priestly status systems.</li>
-<li>The charcoal fire echoes Peter’s denial scene: restoration meets failure head-on, not around it.</li>
-<li>The beloved disciple’s witness language grounds apostolic testimony through the first-century transition (AD 30–70).</li>
-<li>Mission continues under the risen Christ’s presence; the centre is Him—not old structures.</li>
-</ul>
+      <li>Messiah’s public restoration of Peter beside a charcoal fire replaces former failure with New Covenant pastoral authority.</li>
+      <li>The miraculous catch of 153 fish and the untorn net signify the fullness and preservation of God's New Creation body.</li>
+      <li>"Feed my sheep" redefines covenant leadership as self-giving pastoral care rather than legalistic or levitical dominance.</li>
+      <li>Christ's statement regarding John staying "until I come" highlights the first-century temporal expectation of the AD 70 Parousia.</li>
+      <li>The apostolic testimony of the Beloved Disciple certifies the true witness of the gospel throughout the covenant transition.</li>
+    </ul>
     <hr />
-    <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) Fishing without Christ produces nothing</h3>
-    <p>The empty nets echo fruitlessness apart from the Messiah. The moment Jesus directs the work, abundance follows.</p>
-    <h3>2) What ended</h3>
-    <p>Leadership defined by merit, performance, or flawless loyalty. In the New Covenant community, failure does not become a permanent identity label.</p>
-    <h3>3) What replaced it</h3>
-    <p>Shepherding rooted in love, restoration, and grace rather than self-confidence. Authority is feeding, guarding, and tending—not measuring and controlling.</p>
-    <h3>4) The charcoal fire matters</h3>
-    <p>This mirrors the charcoal fire at Peter’s denial. Restoration happens at the point of collapse; Jesus re-writes what it means.</p>
-    <h3>5) “Feed My sheep” defines apostolic authority</h3>
-    <p>New Covenant authority is pastoral, not political or priestly. It nourishes rather than dominates.</p>
-    <h3>6) "Until I Come" Was a First-Century Expectation</h3>
-    <p>When Peter asks about John's future, Jesus replies, "If it is my will that he remain until I come, what is that to you?" (v. 22). The early church took this to mean John wouldn't die before Jesus returned — and they were almost right.</p>
-    <p>John clarifies that Jesus didn't promise John would never die, only that it was possible for him to remain alive "until I come" (v. 23). This statement only makes sense if Jesus' coming was expected within John's natural lifetime. If "coming" meant a return thousands of years later, why would anyone think John might live to see it?</p>
-    <p>The answer is simple: Jesus consistently taught that His coming would occur within the generation of His hearers. He told the disciples, "There are some standing here who will not taste death until they see the Son of Man coming in his kingdom" (Matt 16:28). He promised the high priest, "From now on you will see the Son of Man seated at the right hand of Power and coming on the clouds of heaven" (Matt 26:64). And He assured them, "This generation will not pass away until all these things take place" (Matt 24:34).</p>
-    <p>John did live to see Christ's coming — not as a bodily descent from the sky, but as the prophetic fulfillment of Daniel 7 when the Son of Man received His kingdom through the judgment of the old covenant order. That judgment climaxed in AD 70 when Jerusalem fell and the temple was destroyed.</p>
-    <p>According to early church tradition, John was the last living apostle and wrote his Gospel in the 80s or 90s AD — after witnessing the very events Jesus had promised. The conversation in John 21 makes perfect sense when we understand that Jesus' "coming" was a first-century event, not a perpetually postponed future.</p>
-    <h3>7) Following, not comparison</h3>
-    <p>Peter wants to compare callings. Jesus shuts it down: “You follow Me.” Each calling unfolds uniquely within the same covenant life.</p>
-    <h3>8) First-century horizon and witness</h3>
-    <p>Peter’s restored leadership and eventual martyrdom, with apostolic witness, stabilised the community through the transition culminating in AD 70.</p>
+
+    <!-- 4. Annotations -->
+    <h2>Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>sea of Tiberias</strong>: The Sea of Galilee, the primary setting of Messiah's early public ministry and His post-resurrection commissioning of the apostles.</div>
+      <div class="annotation-item"><strong>net wasn’t torn</strong>: A covenantal symbol of the New Creation gathering, where all nations brought into Christ are preserved without loss or structural breakdown.</div>
+      <div class="annotation-item"><strong>Feed my sheep</strong>: Messiah's mandate (*boske ta probata mou*) establishing pastoral care, spiritual nourishment, and protection as the supreme mark of leadership.</div>
+      <div class="annotation-item"><strong>stay until I come</strong>: A first-century temporal indicator referring to John remaining alive to witness Christ's Parousia in the AD 70 judgment of Jerusalem.</div>
+    </div>
     <hr />
-    <h2>Key Idioms & Language Notes</h2>
+
+    <!-- 5. Fulfillment Commentary -->
+    <h2>Fulfillment Commentary</h2>
+    <h3>1) The Return to the Sea and the Superabundant Catch of New Creation</h3>
+    <p>
+      In John 21:1–14, seven disciples return to Galilee and go out on the Sea of Tiberias to fish. Their night of labor yields nothing, vividly illustrating the principle Jesus taught in John 15:5—"apart from me you can do nothing." The old, self-directed efforts of human labor cannot produce Kingdom fruit. At daybreak, the risen Messiah stands on the shore and directs them to cast their net on the right side of the boat. The resulting catch of 153 large fish is so immense that they cannot haul it in. Prophetically, the number 153 and the detail that "the net wasn't torn" signify the complete, unbroken gathering of God's elect out of all nations into the New Covenant. Under the Old Covenant, Israel was divided and scattered; under the New Creation, Messiah gathers all His sheep into one fold without losing a single soul or tearing the fabric of grace. By preparing a breakfast of bread and fish upon the shore, Jesus demonstrates that He is the perpetual Provider who nourishes His covenant family.
+    </p>
+
+    <h3>2) The Charcoal Fire and the Triple Restoration of Peter</h3>
+    <p>
+      The scene around the charcoal fire (*anthrakia*) in John 21:15–19 carries deep covenantal symbolism. The word *anthrakia* occurs only twice in the entire New Testament: first in John 18:18, where Peter stood warming himself when he denied Messiah three times, and here on the shore of Galilee. Jesus intentionally sets the stage at a charcoal fire to meet Peter at the exact location of his past failure. Three times Jesus asks, "Simon, son of Jonah, do you love me?"—matching Peter's three denials with a triple opportunity for public restoration. Through this exchange, Messiah dismantles Peter's former self-confidence and legalistic boasting. Jesus does not reinstate Peter based on performance, merit, or flawless loyalty, but on love (*agape* / *philia*) for the Lord. He charges Peter with a new mandate: "Feed my lambs," "Tend my sheep," and "Feed my sheep." New Covenant authority is thereby redefined: true leadership is not levitical domination or institutional control, but humble, sacrificial pastoral care that nourishes God's people.
+    </p>
+
+    <h3>3) The First-Century Horizon of "Until I Come" and the AD 70 Parousia</h3>
+    <p>
+      In John 21:20–23, Peter turns and sees the Beloved Disciple following them and asks, "Lord, what about this man?" Jesus responds with a striking temporal declaration: "If I desire that he stay until I come, what is that to you? You follow me." This passage sparked a rumor among early believers that John would not taste physical death. However, John explicitly clarifies that Jesus did not say he wouldn't die, but rather hypothesized his remaining alive until Messiah's coming (*heōs erchomai*). This exchange only makes sense within the bounded first-century horizon of New Testament prophecy. Jesus repeatedly promised that His coming in Kingdom judgment would occur within the lifetime of His generation (Matthew 16:28; 24:34; 26:64). John did indeed survive as the last living apostle into the late first century, witnessing the literal fulfillment of Christ's Parousia when Roman legions destroyed the Jerusalem temple in AD 70, ending the Old Covenant age forever.
+    </p>
+
+    <h3>4) Individual Commissioning and the Unshakeable Witness of the Son</h3>
+    <p>
+      Jesus firmly corrects Peter's tendency toward comparison: "What is that to you? You follow me." In the New Creation Kingdom, every believer and apostle has a unique, sovereignly appointed calling within the body of Christ. Peter was appointed to glorify God through martyrdom in Rome, while John was appointed to a long ministry of eyewitness testimony and prophetic writing. Neither calling was superior; both served the singular purpose of testifying to the victory of Messiah. John concludes his Gospel by certifying that his eyewitness record is true and noting that the world itself could not contain the books if all of Messiah's works were written down. The finished work of Christ generates an inexhaustible fountain of life, grace, and truth that continually fills the earth, establishing believers in eternal security under the care of the Chief Shepherd.
+    </p>
+    <hr />
+
+    <!-- 6. Prophecy Hub Links -->
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><strong>Net not torn</strong> — unity and preservation of the New Creation people under Christ’s keeping.</li>
-<li><strong>153 fish</strong> — abundance/fullness; avoid numerology rabbit-holes.</li>
-<li><strong>Feed / shepherd</strong> — pastoral covenant authority: nourishment, care, and protection.</li>
-<li><strong>Follow Me</strong> — ongoing participation in Christ’s way, not comparison-based spirituality.</li>
-</ul>
+      <li><a href="/Bible/Prophecy/shepherd-of-israel.html">Shepherd of Israel</a></li>
+      <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
+    </ul>
     <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+
+    <!-- 7. Cross-References -->
+    <h2>Cross-References</h2>
     <ul>
-<li><strong>Fruitful mission</strong> — <a href="https://ebible.org/eng-web/EZK47.htm" rel="noopener noreferrer" target="_blank">Ezekiel 47</a></li>
-<li><strong>Restored leaders</strong> — <a href="https://ebible.org/eng-web/PSA23.htm" rel="noopener noreferrer" target="_blank">Psalm 23</a>, <a href="https://ebible.org/eng-web/1PE05.htm" rel="noopener noreferrer" target="_blank">1 Peter 5</a></li>
-<li><strong>Witness preserved</strong> — <a href="https://ebible.org/eng-web/ACT01.htm" rel="noopener noreferrer" target="_blank">Acts 1</a></li>
-</ul>
+      <li><a href="https://ebible.org/eng-web/EZK34.htm" target="_blank" rel="noopener">Ezekiel 34:11–16 (WEB)</a> — Prophecy of Yahweh Himself searching for His sheep and setting one Shepherd over them.</li>
+      <li><a href="/Bible/John/john21.html">John 21:15–17 (WEB)</a> — Messiah commissioning Peter to feed and tend His sheep in New Covenant love.</li>
+      <li><a href="https://ebible.org/eng-web/1PE05.htm" target="_blank" rel="noopener">1 Peter 5:1–4 (WEB)</a> — Peter’s apostolic exhortation to elders to shepherd the flock of God willingly.</li>
+    </ul>
     <hr />
-    <h2>Prophecy Hub Connections</h2>
-    <ul>
-<li><strong>Shepherding the renewed people</strong> — <a href="https://ebible.org/eng-web/EZK34.htm" rel="noopener noreferrer" target="_blank">Ezekiel 34</a> · <a href="/Bible/Prophecy/ezekiel.html">Prophecy Hub</a></li>
-<li><strong>River of life bringing abundance</strong> — <a href="https://ebible.org/eng-web/EZK47.htm" rel="noopener noreferrer" target="_blank">Ezekiel 47</a></li>
-</ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
-    <p>Failure does not disqualify you. Love restores purpose, and calling flows from relationship, not performance. The risen Christ still feeds His people through restored servants.</p>
+    <p>
+      In Christ, your past failures do not define your identity or disqualify you from God's purpose. Messiah has met you at the point of your weakness, canceled your debt, and restored you through His unshakeable love. You do not labor under the burden of legalistic comparison or self-confident performance; you are sustained by the Chief Shepherd who feeds and protects your soul continuously. Resting in His completed victory, you walk in personal union with Messiah, free to follow Him and serve His people in peace.
+    </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
-    <p>Where might Christ be inviting you to stop replaying failure and start feeding what He has entrusted to you?</p>
+    <p>
+      How does knowing that Messiah's restoration is based on His love rather than your performance free your heart to rest in Him today?
+    </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john20.html">Previous</a>
-        <a class="btn" href="/Bible/John/index.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john20.html">Previous</a>
+          <a class="btn" href="/Bible/John/index.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
