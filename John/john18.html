@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John 18 — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Speaker: Jesus, under arrest and interrogation - Fulfilled Prophecy study edition using the WEB translation." />
+  <title>John 18 — The Trial and Betrayal of Messiah — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Jesus is arrested in Gethsemane, tried before Annas and Caiaphas, and interrogated by Pontius Pilate, declaring that His Kingdom is not of this world." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,15 +139,18 @@
       <a class="btn" href="/Bible/John/john19.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
-    <h1>John 18</h1>
-    <h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
+
+    <h1>John 18 — The Trial and Betrayal of Messiah</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
-      <p><strong>Speaker:</strong> Jesus, under arrest and interrogation</p>
-      <p><strong>Audience:</strong> Temple authorities and Roman governance</p>
-      <p><strong>Covenant moment:</strong> The old covenant leadership aligns with Rome to preserve its power, while the true King submits to the cup that will end the old order</p>
-      <p><strong>Why it mattered then:</strong> John shows the transfer of authority: the temple system becomes the accuser, while Jesus stands as the Truth and the true King.</p>
+    <p>
+      Crossing the Kidron Valley into a garden and continuing through nocturnal trials before Annas, Caiaphas, and Roman Governor Pontius Pilate, Jesus steps forward to undergo His betrayal and arrest. Addressing first-century Jewish authorities, Roman legal representatives, and His disciples, Messiah faces the combined opposition of the apostate Judean leadership and Roman imperial power. As the true High Priest and Passover Lamb, Jesus willingly drinks the cup of covenant judgment, exposing the corruption of the expiring Old Covenant establishment while inaugurating a Kingdom rooted not in carnal revolt, but in divine truth and New Creation reality.
+    </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
@@ -69,17 +158,17 @@
         <span class="v-num">2</span>Now Judas, who betrayed him, also knew the place, for Jesus often met there with his disciples.
         <span class="v-num">3</span>Judas then, having taken a detachment of soldiers and officers from the chief priests and the Pharisees, came there with lanterns, torches, and weapons.
         <span class="v-num">4</span>Jesus therefore, knowing all the things that were happening to him, went out, and said to them, “Who are you looking for?”
-        <span class="v-num">5</span>They answered him, “Jesus of Nazareth.” Jesus said to them, “I am he.” Judas also, who betrayed him, was standing with them.
+        <span class="v-num">5</span>They answered him, “Jesus of Nazareth.” Jesus said to them, “<strong>I am he</strong>.” Judas also, who betrayed him, was standing with them.
       </p>
       <p>
-        <span class="v-num">6</span>When therefore he said to them, “I am he,” they went backward, and fell to the ground.
+        <span class="v-num">6</span>When therefore he said to them, “<strong>I am he</strong>,” they went backward, and fell to the ground.
         <span class="v-num">7</span>Again therefore he asked them, “Who are you looking for?” They said, “Jesus of Nazareth.”
-        <span class="v-num">8</span>Jesus answered, “I told you that I am he. If therefore you seek me, let these go their way,”
+        <span class="v-num">8</span>Jesus answered, “I told you that <strong>I am he</strong>. If therefore you seek me, let these go their way,”
         <span class="v-num">9</span>that the word might be fulfilled which he spoke, “Of those whom you have given me, I have lost none.”
         <span class="v-num">10</span>Simon Peter therefore, having a sword, drew it, and struck the high priest’s servant, and cut off his right ear. The servant’s name was Malchus.
       </p>
       <p>
-        <span class="v-num">11</span>Jesus therefore said to Peter, “Put the sword into its sheath. The cup which the Father has given me, shall I not surely drink it?”
+        <span class="v-num">11</span>Jesus therefore said to Peter, “Put the sword into its sheath. The <strong>cup</strong> which the Father has given me, shall I not surely drink it?”
         <span class="v-num">12</span>So the detachment, the commanding officer, and the officers of the Jews, seized Jesus and bound him,
         <span class="v-num">13</span>and led him to Annas first, for he was father-in-law to Caiaphas, who was high priest that year.
         <span class="v-num">14</span>Now it was Caiaphas who advised the Jews that it was expedient that one man should perish for the people.
@@ -102,117 +191,126 @@
       <p>
         <span class="v-num">26</span>One of the servants of the high priest, being a relative of him whose ear Peter had cut off, said, “Didn’t I see you in the garden with him?”
         <span class="v-num">27</span>Peter therefore denied it again, and immediately the rooster crowed.
-        <span class="v-num">28</span>They led Jesus therefore from Caiaphas into the Praetorium. It was early, and they themselves didn’t enter into the Praetorium, that they might not be defiled, but might eat the Passover.
+        <span class="v-num">28</span>They led Jesus therefore from Caiaphas into the <strong>Praetorium</strong>. It was early, and they themselves didn’t enter into the <strong>Praetorium</strong>, that they might not be defiled, but might eat the Passover.
         <span class="v-num">29</span>Pilate therefore went out to them, and said, “What accusation do you bring against this man?”
         <span class="v-num">30</span>They answered him, “If this man weren’t an evildoer, we wouldn’t have delivered him up to you.”
       </p>
       <p>
         <span class="v-num">31</span>Pilate therefore said to them, “Take him yourselves, and judge him according to your law.” Therefore the Jews said to him, “It is not lawful for us to put anyone to death,”
         <span class="v-num">32</span>that the word of Jesus might be fulfilled, which he spoke, signifying by what kind of death he should die.
-        <span class="v-num">33</span>Pilate therefore entered again into the Praetorium, called Jesus, and said to him, “Are you the King of the Jews?”
+        <span class="v-num">33</span>Pilate therefore entered again into the <strong>Praetorium</strong>, called Jesus, and said to him, “Are you the King of the Jews?”
         <span class="v-num">34</span>Jesus answered him, “Do you say this by yourself, or did others tell you about me?”
         <span class="v-num">35</span>Pilate answered, “I’m not a Jew, am I? Your own nation and the chief priests delivered you to me. What have you done?”
       </p>
       <p>
-        <span class="v-num">36</span>Jesus answered, “My Kingdom is not of this world. If my Kingdom were of this world, then my servants would fight, that I wouldn’t be delivered to the Jews. But now my Kingdom is not from here.”
-        <span class="v-num">37</span>Pilate therefore said to him, “Are you a king then?” Jesus answered, “You say that I am a king. For this reason I have been born, and for this reason I have come into the world, that I should testify to the truth. Everyone who is of the truth listens to my voice.”
+        <span class="v-num">36</span>Jesus answered, “My <strong>Kingdom is not of this world</strong>. If my kingdom were of this world, then my servants would fight, that I wouldn’t be delivered to the Jews. But now my kingdom is not from here.”
+        <span class="v-num">37</span>Pilate therefore said to him, “Are you a king then?” Jesus answered, “You say that I am a king. For this reason I have been born, and for this reason I have come into the world, that I should <strong>testify to the truth</strong>. Everyone who is of the truth listens to my voice.”
         <span class="v-num">38</span>Pilate said to him, “What is truth?” When he had said this, he went out again to the Jews, and said to them, “I find no basis for a charge against him.
         <span class="v-num">39</span>But you have a custom, that I should release someone to you at the Passover. Therefore, do you want me to release to you the King of the Jews?”
         <span class="v-num">40</span>Then they all shouted again, saying, “Not this man, but Barabbas!” Now Barabbas was a robber.
       </p>
     </div>
     <hr />
-        <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) The “I AM” moment reveals authority</h3>
-    <p>Jesus is not overpowered by circumstance. His “I AM” causes the arresting group to fall back. The Lamb submits willingly — He is not taken unwillingly.</p>
-    <h3>2) The cup is covenant judgment</h3>
-    <p>“The cup” is prophetic imagery for judgment. Jesus will drink what the old covenant world has stored up, absorbing it and bringing it to completion.</p>
-    <h3>3) What ended</h3>
-    <p>Temple leadership’s claim to represent God, purity-focused externalism, and covenant identity centered in institutional control.</p>
-    <h3>4) What replaced it</h3>
-    <p>A kingdom defined by truth, non-violent victory, and a covenant community gathered by the Son’s self-giving.</p>
-    <h3>5) Public teaching condemns secret accusation</h3>
-    <p>Jesus openly taught in temple and synagogue. The violence and secrecy belong to the accusers, not the Light.</p>
-    <h3>6) “Not of this world” is not “not in this world”</h3>
-    <p>Jesus’ kingdom does not originate from the old power structures. It does not spread by force. It is covenant rule rooted in truth and Spirit.</p>
-    <h3>7) First-century fulfillment</h3>
-    <p>The alliance between temple and Rome exposes the old covenant world’s corruption. Within that generation, the temple system collapses, and the kingdom of Christ remains.</p>
-    <hr />
-    <h2>Key Idioms & Language Notes</h2>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li><strong>I AM</strong> — divine identity claim and sovereign authority</li>
-<li><strong>Cup</strong> — prophetic judgment imagery</li>
-<li><strong>Defilement</strong> — purity system contradiction exposed</li>
-<li><strong>Kingdom</strong> — covenant rule, not political takeover</li>
-<li><strong>Truth</strong> — reality revealed in the Son</li>
-</ul>
+      <li>Messiah’s divine "I AM" assertion demonstrates His sovereign, voluntary surrender as the true Passover Lamb.</li>
+      <li>Drinking the "cup" fulfills Old Testament prophetic warnings of divine wrath absorbed by Messiah on behalf of His people.</li>
+      <li>The trial before Annas and Caiaphas reveals the moral collapse and hypocrisy of the expiring Old Covenant priesthood.</li>
+      <li>Messiah's declaration that His Kingdom is "not of this world" distinguishes New Covenant spiritual rule from carnal, political revolt.</li>
+      <li>The Judean leaders' preference for Barabbas prefigures their ultimate self-destruction and judgment in the AD 70 collapse.</li>
+    </ul>
     <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+
+    <!-- 4. Annotations -->
+    <h2>Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>I am he</strong>: The divine self-disclosure (*Egō Eimi*) declaring Messiah’s uncreated authority, causing the arresting band to fall backward.</div>
+      <div class="annotation-item"><strong>cup</strong>: Prophetic Old Testament idiom for divine covenant judgment and wrath (Isaiah 51:17; Jeremiah 25:15) absorbed by Christ.</div>
+      <div class="annotation-item"><strong>Praetorium</strong>: The Roman governor's residence; entering it presented ritual uncleanness for Judeans while hiding true moral murder.</div>
+      <div class="annotation-item"><strong>Kingdom is not of this world</strong>: The New Covenant reign originating from heaven, established not by political force or military power.</div>
+      <div class="annotation-item"><strong>testify to the truth</strong>: Messiah’s mission to unveil ultimate divine reality (*alētheia*), breaking the illusions of human legalism and empire.</div>
+    </div>
+    <hr />
+
+    <!-- 5. Fulfillment Commentary -->
+    <h2>Fulfillment Commentary</h2>
+    <h3>1) Sovereign Surrender and the Divine "I AM" in Gethsemane</h3>
+    <p>
+      When Judas leads a cohort of Roman soldiers and temple guards across the Kidron Valley into the garden, Jesus steps forward with absolute divine majesty. Rather than hiding or resisting, Messiah confronts the arresting party with the question, "Who are you looking for?" Upon their reply, Jesus utters the solemn divine name: *Egō Eimi* ("I AM"). The power of this covenantal self-identification strikes the crowd, causing them to draw back and fall to the ground. This physical manifestation demonstrates that Jesus is not a helpless victim trapped by human conspiracy; He is the sovereign Lord laying down His life voluntarily. In protecting His disciples ("let these go their way"), Jesus fulfills His own High Priestly declaration from John 17:12 that none given to Him would be lost. Peter’s impulsive attempt to defend Christ with a sword is immediately rebuked. Jesus commands Peter to sheath his weapon, establishing that the New Covenant Kingdom will not be advanced or defended by physical violence or carnal weapons.
+    </p>
+
+    <h3>2) The Cup of Covenant Wrath and the Hypocrisy of the Levitical Priesthood</h3>
+    <p>
+      Jesus frames His impending crucifixion as drinking "the cup which the Father has given me." Throughout Old Testament prophetic literature (Psalm 75:8; Isaiah 51:17; Jeremiah 25:15), "the cup" is the established idiom for Yahweh’s judicial wrath against covenant unfaithfulness. By drinking this cup to its dregs at Golgotha, Messiah absorbs the full legal curse of the broken Sinai covenant, exhausting its condemnation for all who believe. Conversely, the trial before Annas and Caiaphas exposes the complete corruption of the Old Covenant establishment. The Judean authorities conduct an illegal, nocturnal interrogation, slapping the innocent Messiah while maintaining an outward facade of ritual purity. Their refusal to enter Pilate’s Praetorium lest they be defiled for the Passover highlights their grotesque hypocrisy: they scrupulously avoid ritual uncleanness while actively engineering the judicial murder of their own Messiah.
+    </p>
+
+    <h3>3) A Kingdom Not of This World: Truth versus Political Force</h3>
+    <p>
+      Standing bound before Pontius Pilate, Jesus delivers one of the most foundational covenantal statements in Scripture: "My Kingdom is not of this world." The phrase *ek tou kosmou toutou* specifies origin, character, and method, rather than spatial location. Messiah’s Kingdom does not arise from carnal power structures, military aggression, or geopolitical maneuvering. Had His Kingdom been derived from this world, His followers would have fought to prevent His delivery to the Judean leadership. Instead, Christ’s reign is heavenly in origin, taking root within human hearts and expanding through Spirit-empowered truth. When Pilate cynically asks, "What is truth?", he voices the bankruptcy of pagan imperial power and legalistic religion. Jesus reveals that He came into the world to testify to the truth, gathering a New Creation community of those who hear His voice and abide in His unshakeable reign.
+    </p>
+
+    <h3>4) The Preferring of Barabbas and the Historical Sealing of AD 70 Judgment</h3>
+    <p>
+      The climax of John 18 occurs when Pilate offers to release Jesus in accordance with the Passover custom. The chief priests and the Judean crowd reject their true King and demand the release of Barabbas—a violent insurgent and robber (*lēstēs*). By choosing Barabbas over the Prince of Peace, apostate Judea officially aligned itself with political rebellion and violence against Rome. This tragic choice sealed the historical destiny of the old order. The spirit of violent rebellion represented by Barabbas culminated four decades later in the Roman-Jewish War (AD 66–70). In AD 70, the very Roman armies that Pilate represented besieged Jerusalem, burned the temple to the ground, and terminated the Old Covenant order. Through Messiah's sacrificial death, the old world passed away, establishing the everlasting New Creation Kingdom for all believers.
+    </p>
+    <hr />
+
+    <!-- 6. Prophecy Hub Links -->
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><strong>The cup of judgment</strong> —
-    <a href="https://ebible.org/eng-web/ISA51.htm">Isa 51</a>,
-    <a href="https://ebible.org/eng-web/JER25.htm">Jer 25</a>
-</li>
-<li><strong>Suffering servant</strong> —
-    <a href="https://ebible.org/eng-web/ISA53.htm">Isa 53</a>
-</li>
-<li><strong>Kingdom not by the sword</strong> —
-    <a href="https://ebible.org/eng-web/ZEC04.htm">Zech 4</a>
-</li>
-</ul>
+      <li><a href="/Bible/Prophecy/ruler-cast-out.html">Ruler of This World Cast Out</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
+      <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine, New Covenant</a></li>
+    </ul>
     <hr />
-    <h2>Prophecy Fulfilment</h2>
+
+    <!-- 7. Cross-References -->
+    <h2>Cross-References</h2>
     <ul>
-<li>
-<strong>The cup consumed</strong> —
-    <a href="https://ebible.org/eng-web/ISA51.htm">Isa 51</a> |
-    <a href="/Bible/Prophecy/isaiah.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>Servant bears the judgment</strong> —
-    <a href="https://ebible.org/eng-web/ISA53.htm">Isa 53</a> |
-    <a href="/Bible/Prophecy/isaiah.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>Kingdom established through suffering</strong> —
-    <a href="https://ebible.org/eng-web/DAN07.htm">Dan 7</a> |
-    <a href="/Bible/Prophecy/son-of-man.html">Prophecy Hub</a>
-</li>
-</ul>
+      <li><a href="https://ebible.org/eng-web/ISA51.htm" target="_blank" rel="noopener">Isaiah 51:17–23 (WEB)</a> — Prophecy of Jerusalem drinking the cup of Yahweh's fury, removed and absorbed by Messiah.</li>
+      <li><a href="/Bible/John/john18.html">John 18:36–37 (WEB)</a> — Messiah declaring His Kingdom is not of this world to Pontius Pilate.</li>
+      <li><a href="https://ebible.org/eng-web/2CO10.htm" target="_blank" rel="noopener">2 Corinthians 10:3–5 (WEB)</a> — Apostolic confirmation that the weapons of New Covenant warfare are not carnal.</li>
+    </ul>
     <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
-    <p>Truth does not win by force. The kingdom is carried by faithfulness, not violence. When accusations rise, you stand in the same Light: open, clear, and unthreatened, because your life is held in the hands of the true King.</p>
+    <p>
+      In Christ, you belong to an unshakeable Kingdom that is not derived from or dependent upon the volatile power structures of this world. You do not fight for acceptance through legalistic effort, political dominance, or carnal conflict; Messiah has already drank the cup of condemnation on your behalf, removing every legal charge against you. Standing clean and justified in His truth, you live in absolute security, resting in the peaceful governance of the true King.
+    </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
-    <p>Where are you tempted to fight for control, when Christ is calling you to stand in truth and trust His kingdom way?</p>
+    <p>
+      How does knowing that Messiah willingly drank the entire cup of covenant judgment transform the way you rest in His complete peace today?
+    </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john17.html">Previous</a>
-        <a class="btn" href="/Bible/John/john19.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john17.html">Previous</a>
+          <a class="btn" href="/Bible/John/john19.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
