@@ -4,36 +4,122 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 15 — The True Vine — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="I am the true vine. Abide, bear fruit, love one another. The world hates. The Helper will testify. Covenant life is union, not independent branch." />
+  <meta name="description" content="Jesus reveals Himself as the True Vine, calling His disciples to abide in His love, bear lasting New Creation fruit, and rely on the indwelling Counselor amidst world hostility." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,21 +139,26 @@
       <a class="btn" href="/Bible/John/john16.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 15 — The True Vine</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Still in the upper-room discourse. Jesus is the true vine; the Father is the vinedresser. Branches that do not abide are taken away. Abiding produces fruit. The commandment is love. The world will hate as it hated Him. The Helper will testify, and the disciples will also testify.
+      Continuing the upper-room discourse on the eve of His execution, Jesus presents Himself to His disciples as the "true vine" and the Father as the vinedresser. Addressing a first-century Judean audience steeped in Old Testament imagery where national Israel was Yahweh's vineyard (Isaiah 5; Psalm 80), Jesus redefines covenant identity away from ethnic lineage, temple ritual, and law-keeping. He asserts that true life, spiritual fruitfulness, and kingdom standing exist exclusively through organic, unbroken union with Him. Warning of the imminent cutting-off and fire judgment of fruitless, apostate Old Covenant branches, Messiah prepares His followers to endure the world's hatred and rely on the promised Counselor as they transition into the New Creation age.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
-        <span class="v-num">1</span>“I am the true vine, and my Father is the farmer.
+        <span class="v-num">1</span>“I am the <strong>true vine</strong>, and my Father is the farmer.
         <span class="v-num">2</span>Every branch in me that doesn’t bear fruit, he takes away. Every branch that bears fruit, he prunes, that it may bear more fruit.
         <span class="v-num">3</span>You are already pruned clean because of the word which I have spoken to you.
-        <span class="v-num">4</span>Remain in me, and I in you. As the branch can’t bear fruit by itself, unless it remains in the vine, so neither can you, unless you remain in me.
-        <span class="v-num">5</span>I am the vine. You are the branches. He who remains in me, and I in him, the same bears much fruit, for apart from me you can do nothing.
+        <span class="v-num">4</span><strong>Remain in me</strong>, and I in you. As the branch can’t bear fruit by itself, unless it remains in the vine, so neither can you, unless you <strong>remain in me</strong>.
+        <span class="v-num">5</span>I am the vine. You are the branches. He who remains in me, and I in him, the same bears much fruit, for <strong>apart from me</strong> you can do nothing.
       </p>
       <p>
         <span class="v-num">6</span>If a man doesn’t remain in me, he is thrown out as a branch, and is withered; and they gather them, throw them into the fire, and they are burned.
@@ -78,14 +169,14 @@
       </p>
       <p>
         <span class="v-num">11</span>I have spoken these things to you, that my joy may remain in you, and that your joy may be made full.
-        <span class="v-num">12</span>“This is my commandment, that you love one another, even as I have loved you.
+        <span class="v-num">12</span>“This is my commandment, that you <strong>love one another</strong>, even as I have loved you.
         <span class="v-num">13</span>Greater love has no one than this, that someone lay down his life for his friends.
         <span class="v-num">14</span>You are my friends, if you do whatever I command you.
         <span class="v-num">15</span>No longer do I call you servants, for the servant doesn’t know what his lord does. But I have called you friends, for everything that I heard from my Father, I have made known to you.
       </p>
       <p>
         <span class="v-num">16</span>You didn’t choose me, but I chose you, and appointed you, that you should go and bear fruit, and that your fruit should remain; that whatever you will ask of the Father in my name, he may give it to you.
-        <span class="v-num">17</span>“I command these things to you, that you may love one another.
+        <span class="v-num">17</span>“I command these things to you, that you <strong>love one another</strong>.
         <span class="v-num">18</span>If the world hates you, you know that it has hated me before it hated you.
         <span class="v-num">19</span>If you were of the world, the world would love its own. But because you are not of the world, since I chose you out of the world, therefore the world hates you.
         <span class="v-num">20</span>Remember the word that I said to you: ‘A servant is not greater than his lord.’ If they persecuted me, they will also persecute you. If they kept my word, they will also keep yours.
@@ -98,106 +189,111 @@
         <span class="v-num">25</span>But this happened so that the word may be fulfilled which was written in their law, ‘They hated me without a cause.’
       </p>
       <p>
-        <span class="v-num">26</span>“When the Counselor has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.
+        <span class="v-num">26</span>“When the <strong>Counselor</strong> has come, whom I will send to you from the Father, the Spirit of truth, who proceeds from the Father, he will testify about me.
         <span class="v-num">27</span>You will also testify, because you have been with me from the beginning.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) True vine replaces Israel-as-vine imagery; the Son is the locus of covenant life.</p>
-      <p class="note">2) Abiding is the condition of fruitfulness; independence is barrenness.</p>
-      <p class="note">3) Love is the new commandment’s content, measured by the Son’s own love.</p>
-      <p class="note">4) Hatred from the world is expected; it hated Him first.</p>
-      <p class="note">5) The Spirit’s testimony and the disciples’ testimony run together after His departure.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>Jesus as the "true vine" fulfills and supersedes Old Testament imagery of national Israel as Yahweh's failing vineyard.</li>
+      <li>Abiding in Messiah replaces temple ritualism and Law-keeping as the sole source of genuine spiritual fruitfulness.</li>
+      <li>The pruning and fire judgment of withered branches prefigure the catastrophic cutting off of apostate Judea in AD 70.</li>
+      <li>The New Commandment to love one another serves as the visible, organic proof of abiding in Christ's indestructible life.</li>
+      <li>The promised Counselor and apostolic witness ensure the unstoppable expansion of the Kingdom despite world opposition.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>true vine</strong>: the genuine source; older vine imagery is fulfilled and surpassed.</div>
-      <div class="annotation-item"><strong>remain / abide</strong>: continuous union, not occasional contact.</div>
-      <div class="annotation-item"><strong>apart from me nothing</strong>: total dependence for fruit.</div>
-      <div class="annotation-item"><strong>love one another</strong>: the visible mark of remaining.</div>
-      <div class="annotation-item"><strong>Counselor will testify</strong>: Spirit’s witness to the Son after the cross.</div>
+      <div class="annotation-item"><strong>true vine</strong>: Messiah as the genuine root and sole locus of covenant life, replacing the failing, fruitless vine of national Israel.</div>
+      <div class="annotation-item"><strong>remain in me</strong>: Continuous, unbroken organic union and abiding in Christ's finished work, contrasted with human self-effort.</div>
+      <div class="annotation-item"><strong>apart from me</strong>: Total spiritual helplessness outside union with Messiah, proving the utter futility of Old Covenant legalism.</div>
+      <div class="annotation-item"><strong>love one another</strong>: The supernatural fruit and defining social badge of those participating in the life of the true Vine.</div>
+      <div class="annotation-item"><strong>Counselor</strong>: The indwelling Holy Spirit (*Paraklētos*) sent to testify of Christ and empower the apostolic body.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) The Vine Is the Son</h3>
+    <h3>1) The Transfer of Covenant Identity from Israel to the True Vine</h3>
     <p>
-      Israel was called a vine. Jesus claims the true vine identity. Fruitfulness is no longer a national claim; it is participation in Him. Branches that do not remain are removed. The pruning is real and immediate.
+      In Old Testament prophetic literature, national Israel was repeatedly allegorized as Yahweh's vine or vineyard (Psalm 80:8–16; Isaiah 5:1–7; Jeremiah 2:21; Ezekiel 15:1–8). However, the prophets recorded that this national vine persistently brought forth wild, bitter grapes, lapsing into covenant unfaithfulness, idolatry, and legalistic sterility. When Jesus proclaims in the upper room, "I am the true vine, and my Father is the farmer," He announces a radical covenantal transfer. Jesus does not merely claim to be a branch of Israel; He declares Himself to be the ultimate, true Israel—the genuine root and source of all covenant life. By designating Himself as *hē ampelos hē alēthinē* ("the true vine"), Messiah dismantles the first-century Jewish presumption that physical descent from Abraham or proximity to the Jerusalem temple guaranteed divine favor. Covenant standing is no longer determined by national identity or levitical lineage, but exclusively by organic union with the Son. The Father, as the master vinedresser, shifts His focus entirely to cultivating this christocentric vine, ensuring that all true spiritual fruitfulness flows from Messiah alone.
     </p>
-    <h3>2) Abiding Produces What Independence Cannot</h3>
+
+    <h3>2) Abiding in Union versus the Fire Judgment of Apostate Branches</h3>
     <p>
-      “Apart from me you can do nothing.” The old confidence in pedigree, law-keeping, or temple proximity is exposed. Union with the Son is the only soil in which lasting fruit grows.
+      Jesus establishes the non-negotiable principle of New Covenant vitality: "Remain in me, and I in you. As the branch can't bear fruit by itself, unless it remains in the vine, so neither can you, unless you remain in me." Under the expiring Old Covenant administration, religious leaders sought to produce righteousness through external law-keeping, ceremonial purifications, and human effort—a futile endeavor that Jesus summarizes as doing "nothing." In contrast, fruitfulness in the Kingdom is the natural, effortless byproduct of remaining (*menō*) in Messiah. Conversely, Jesus warns of the fate awaiting branches that do not abide: "If a man doesn't remain in me, he is thrown out as a branch, and is withered; and they gather them, throw them into the fire, and they are burned." In its immediate first-century historical context, this warning pointed directly to the apostate Judean leadership and nation that rejected their Messiah. Having cut themselves off from the true Vine, the non-abiding Old Covenant branches withered spiritually and were gathered into the historical fire judgment of AD 70, when Roman legions burned Jerusalem and its temple to ashes, completely dissolving the old age.
     </p>
-    <h3>3) Love as the Commandment’s Content</h3>
+
+    <h3>3) The New Commandment of Love and Friendship with Messiah</h3>
     <p>
-      The new commandment is not a softer law; it is love measured by the cross-shaped love of the Son. This love becomes the community’s distinguishing mark inside a world that hated the vine first.
+      Within the organic life of the true Vine, Jesus reiterates the foundational law of His Kingdom: "This is my commandment, that you love one another, even as I have loved you." The fruit that the Father seeks from the branches is not ceremonial performance or legalistic zeal, but concrete, self-sacrificial love modeled on Messiah's imminent surrender on the cross. Jesus elevates His disciples from the status of servants to intimate friends (*philoi*), revealing to them the full mystery of the Father's redemptive purpose. This friendship is grounded in divine initiative: "You didn't choose me, but I chose you, and appointed you, that you should go and bear fruit, and that your fruit should remain." The eternal permanence of New Covenant fruit stands in sharp contrast to the perishable, decaying rituals of the Sinai covenant. True discipleship is manifested when believers abide in Christ's love, allowing His divine life to overflow into mutual, transforming affection within the New Creation community.
     </p>
-    <h3>4) Testimony Continues</h3>
+
+    <h3>4) World Hostility and the Unbroken Witness of the Counselor</h3>
     <p>
-      The Helper comes from the Father and testifies. The disciples also testify. The transition does not silence witness; it multiplies it through Spirit and apostolic word.
+      Jesus prepares His disciples for the severe conflict awaiting them as they proclaim the Kingdom: "If the world hates you, you know that it has hated me before it hated you." In Johannine theology, "the world" (*kosmos*) specifically denotes the hostile, unbelieving religious and political order of first-century Judea that sought Messiah's execution. The hatred experienced by the apostles was not accidental; it was the inevitable reaction of an expiring covenant order resisting its sovereign fulfillment. Jesus notes that their irrational hostility fulfilled the Scripture: "They hated me without a cause" (Psalm 35:19; 69:4). To sustain the disciples through this period of intense persecution, Jesus promises the outpouring of the Paraclete: "When the Counselor has come, whom I will send to you from the Father, the Spirit of truth... he will testify about me. You will also testify." Through the joint witness of the indwelling Spirit and the eyewitness apostles, the Gospel of the Kingdom expanded relentlessly throughout the ancient world, establishing the unshakeable reality of the New Creation before the final collapse of the temple in AD 70.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
-      <li><a href="/Bible/Prophecy/true-vine.html">True Vine</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
       <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine, New Covenant</a></li>
       <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/PSA80.htm" target="_blank" rel="noopener">Psalm 80 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA05.htm" target="_blank" rel="noopener">Isaiah 5 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/JER02.htm" target="_blank" rel="noopener">Jeremiah 2 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZK15.htm" target="_blank" rel="noopener">Ezekiel 15 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/ISA05.htm" target="_blank" rel="noopener">Isaiah 5:1–7 (WEB)</a> — The prophetic song of Yahweh's vineyard that brought forth wild grapes.</li>
+      <li><a href="/Bible/John/john15.html">John 15:1–5 (WEB)</a> — Messiah declaring Himself to be the true Vine and sole source of covenant life.</li>
+      <li><a href="https://ebible.org/eng-web/1JN04.htm" target="_blank" rel="noopener">1 John 4:11–13 (WEB)</a> — Apostolic confirmation of abiding in Christ through His Spirit and mutual love.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>True vine</strong> — the Son as the genuine source of covenant life.</li>
-      <li><strong>Abide / remain</strong> — continuous union that produces fruit.</li>
-      <li><strong>Apart from me nothing</strong> — dependence, not self-sufficiency.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not a free-standing branch hoping for seasonal rain. You are joined to the vine. Physical death still claims bodies. What this chapter ends is the illusion that fruit can be manufactured outside of union with the Son.
+      In Christ, you are an organic, living branch permanently joined to the true Vine. You do not labor under the pressure of generating spiritual life, righteousness, or acceptance through self-effort or religious performance; the very life and sap of Messiah flows through you effortlessly. The Father views you as clean, pruned, and fruitful in His Son. Secure in His eternal love and indwelt by the Holy Spirit, you rest in your identity as a chosen friend of Christ, empowered to live in unbroken peace and express His self-giving love to the world.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still trying to produce fruit by effort instead of remaining in the vine who already chose and appointed you?
+      How does realizing that fruitfulness comes from simply abiding in union with Christ—rather than striving in human effort—change your daily experience of His rest?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john14.html">Previous</a>
-        <a class="btn" href="/Bible/John/john16.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john14.html">Previous</a>
+          <a class="btn" href="/Bible/John/john16.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
