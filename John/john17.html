@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John 17 — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Speaker: Jesus - Fulfilled Prophecy study edition using the WEB translation." />
+  <title>John 17 — The High Priestly Prayer — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Jesus prays His High Priestly Prayer before the cross, defining eternal life as knowing God, requesting glory, and securing New Creation unity and protection for His body." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,26 +139,29 @@
       <a class="btn" href="/Bible/John/john18.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
-    <h1>John 17</h1>
-    <h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
+
+    <h1>John 17 — The High Priestly Prayer</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
-      <p><strong>Speaker:</strong> Jesus</p>
-      <p><strong>Audience:</strong> The Father, in the presence of the disciples</p>
-      <p><strong>Covenant moment:</strong> The sealing prayer before the cross, completing the transition from old covenant to New Creation</p>
-      <p><strong>Why it mattered then:</strong> This prayer defines eternal life, unity, glory, and mission in covenant—not institutional—terms.</p>
+    <p>
+      On the night of His betrayal, following the upper-room discourse, Jesus lifts His eyes to heaven in the presence of His disciples to utter His High Priestly prayer. Standing on the threshold of His sacrifice at Calvary, Messiah intercedes for His immediate apostolic core and all who would believe through their word during the AD 30–70 covenant transition. Jesus frames His imminent death, resurrection, and ascension not as a tragic defeat, but as the long-awaited hour of His glorification, transferring divine glory and covenant unity from the expiring temple-centric system of Judea into the indwelling, global New Creation body.
+    </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>Jesus said these things, and lifting up his eyes to heaven, he said, “Father, the time has come. Glorify your Son, that your Son may also glorify you;
-        <span class="v-num">2</span>even as you gave him authority over all flesh, so he will give eternal life to all whom you have given him.
-        <span class="v-num">3</span>This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ.
+        <span class="v-num">2</span>even as you gave him authority over all flesh, so he will give <strong>eternal life</strong> to all whom you have given him.
+        <span class="v-num">3</span>This is <strong>eternal life</strong>, that they should know you, the only true God, and him whom you sent, Jesus Christ.
         <span class="v-num">4</span>I glorified you on the earth. I have accomplished the work which you have given me to do.
         <span class="v-num">5</span>Now, Father, glorify me with your own self with the glory which I had with you before the world existed.
       </p>
       <p>
-        <span class="v-num">6</span>I revealed your name to the people whom you have given me out of the world. They were yours, and you have given them to me. They have kept your word.
+        <span class="v-num">6</span>I <strong>made known your name</strong> to the people whom you have given me out of the world. They were yours, and you have given them to me. They have kept your word.
         <span class="v-num">7</span>Now they have known that all things whatever you have given me are from you,
         <span class="v-num">8</span>for the words which you have given me I have given to them, and they received them, and knew for sure that I came from you, and they have believed that you sent me.
         <span class="v-num">9</span>I pray for them. I don’t pray for the world, but for those whom you have given me, for they are yours.
@@ -80,16 +169,16 @@
       </p>
       <p>
         <span class="v-num">11</span>I am no more in the world, but these are in the world, and I am coming to you. Holy Father, keep them through your name which you have given me, that they may be one, even as we are.
-        <span class="v-num">12</span>While I was with them in the world, I kept them in your name. Those whom you have given me I have kept. None of them is lost, except the son of destruction, that the Scripture might be fulfilled.
+        <span class="v-num">12</span>While I was with them in the world, I kept them in your name. Those whom you have given me I have kept. None of them is lost, except the <strong>son of destruction</strong>, that the Scripture might be fulfilled.
         <span class="v-num">13</span>But now I come to you, and I say these things in the world, that they may have my joy made full in themselves.
         <span class="v-num">14</span>I have given them your word. The world hated them, because they are not of the world, even as I am not of the world.
         <span class="v-num">15</span>I pray not that you would take them from the world, but that you would keep them from the evil one.
       </p>
       <p>
         <span class="v-num">16</span>They are not of the world even as I am not of the world.
-        <span class="v-num">17</span>Sanctify them in your truth. Your word is truth.
+        <span class="v-num">17</span><strong>Sanctify them</strong> in your truth. Your word is truth.
         <span class="v-num">18</span>As you sent me into the world, even so I have sent them into the world.
-        <span class="v-num">19</span>For their sakes I sanctify myself, that they themselves also may be sanctified in truth.
+        <span class="v-num">19</span>For their sakes I <strong>sanctify myself</strong>, that they themselves also may be <strong>sanctified</strong> in truth.
         <span class="v-num">20</span>Not for these only do I pray, but for those also who will believe in me through their word,
       </p>
       <p>
@@ -100,95 +189,109 @@
         <span class="v-num">25</span>Righteous Father, the world hasn’t known you, but I knew you; and these knew that you sent me.
       </p>
       <p>
-        <span class="v-num">26</span>I made known to them your name, and will make it known; that the love with which you loved me may be in them, and I in them.”
+        <span class="v-num">26</span>I <strong>made known to them your name</strong>, and will make it known; that the love with which you loved me may be in them, and I in them.”
       </p>
     </div>
     <hr />
-        <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) Eternal life is knowing God</h3>
-    <p>Eternal life is not endless duration after death. It is covenant relationship — shared life with the Father through the Son.</p>
-    <h3>2) What ended</h3>
-    <p>Glory located in temple, nation, ethnicity, and separation between God and people.</p>
-    <h3>3) What replaced it</h3>
-    <p>Shared glory, shared life, and shared unity rooted in union with Christ.</p>
-    <h3>4) “Before the world existed”</h3>
-    <p>This language reaches behind the old covenant order to God’s eternal purpose now revealed in the Son. It does not require modern cosmology; it expresses covenant priority and origin.</p>
-    <h3>5) Unity is the witness</h3>
-    <p>The oneness Jesus prays for is not organizational agreement but shared participation in divine life. This unity testifies that the mission succeeded.</p>
-    <h3>6) Not taken out of the world</h3>
-    <p>The disciples are not removed from history. They remain present during the covenant collapse, bearing witness as the old order passes away.</p>
-    <h3>7) First-century fulfillment</h3>
-    <p>This prayer is answered through resurrection, Pentecost, apostolic mission, and the public end of the temple system in AD 70. The unity and glory Jesus prayed for stand completed.</p>
-    <hr />
-    <h2>Key Idioms & Language Notes</h2>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li><strong>Glory</strong> — revealed covenant presence</li>
-<li><strong>Eternal life</strong> — shared life with God</li>
-<li><strong>World (kosmos)</strong> — covenant order opposed to Christ</li>
-<li><strong>One</strong> — shared participation, not uniformity</li>
-<li><strong>Sanctified</strong> — set apart into truth</li>
-</ul>
+      <li>Eternal life is redefined from endless duration to direct covenantal knowledge of the Father through the Son.</li>
+      <li>Christ's prayer for unity marks the transition from ethnic Israel to one new man indwelt by divine glory.</li>
+      <li>The "son of destruction" fulfills Old Testament prophecy through Judas' apostasy, clearing the way for apostolic witness.</li>
+      <li>Believers are kept within the world during the AD 30–70 transition to manifest the Kingdom before Jerusalem's fall.</li>
+      <li>The shared glory of the Father and Son is permanently imparted to the New Creation body, superseding temple worship.</li>
+    </ul>
     <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+
+    <!-- 4. Annotations -->
+    <h2>Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>eternal life</strong>: Experiential, covenantal communion with the only true God through Messiah, replacing Mosaic legal standing.</div>
+      <div class="annotation-item"><strong>made known your name</strong>: Fully revealing Yahweh's character, fatherhood, and redemptive nature in the person of Messiah.</div>
+      <div class="annotation-item"><strong>son of destruction</strong>: Judas Iscariot as the first-century covenant apostate whose betrayal fulfilled Old Testament scripture (Psalm 41:9).</div>
+      <div class="annotation-item"><strong>sanctify them</strong>: Consecrating believers into divine truth and setting them apart from the expiring Old Covenant world order.</div>
+    </div>
+    <hr />
+
+    <!-- 5. Fulfillment Commentary -->
+    <h2>Fulfillment Commentary</h2>
+    <h3>1) The Covenantal Redefinition of Eternal Life and Glory</h3>
+    <p>
+      In John 17:1–5, Messiah opens His High Priestly prayer by declaring, "Father, the time has come. Glorify your Son, that your Son may also glorify you." Under the Old Covenant, divine glory (*kavod*) was localized behind the veil of the Jerusalem temple, restricted to physical architecture, levitical ritual, and ethnic Israel. Jesus announces the decisive covenantal shift: authority over all flesh has been granted to the Son so that He may bestow eternal life (*zōē aiōnios*). Crucially, Messiah redefines eternal life not as static post-mortem duration in a distant heaven, but as present-tense covenantal intimacy: "This is eternal life, that they should know you, the only true God, and him whom you sent, Jesus Christ." Having accomplished the redemptive work assigned to Him on earth, Jesus prays to be restored to the pre-existent glory He shared with the Father before the Old Covenant world (*kosmos*) existed. This request signals the immediate inauguration of the New Creation, where divine presence moves from stone structures into human hearts.
+    </p>
+
+    <h3>2) Apostolic Protection and the Son of Destruction</h3>
+    <p>
+      Moving to His intercession for the eleven apostles (John 17:6–19), Jesus highlights their divine election out of the hostile Judean world order. He testifies that He has guarded them in the Father's name, noting that "none of them is lost, except the son of destruction, that the Scripture might be fulfilled." The title "son of destruction" (*ho uios tēs apōleias*) refers directly to Judas Iscariot, whose betrayal fulfilled Old Testament prophetic types (Psalm 41:9; 109:8). Judas embodied the spirit of apostate Old Covenant Judaism, which rejected the Messiah to preserve its earthly temple standing. Jesus specifically requests that the Father keep His followers in the world rather than removing them out of history, sanctifying them in the truth of His word. During the thirty-forty year transition period (AD 30–70), the apostles were preserved amidst intense synagogue persecution to serve as the eyewitness foundation of the New Covenant temple.
+    </p>
+
+    <h3>3) Trinitarian Unity Imparted to the Global Body</h3>
+    <p>
+      In John 17:20–23, Jesus expands His intercession beyond the upper room: "Not for these only do I pray, but for those also who will believe in me through their word, that they may all be one." This prayer for unity (*hen*) is not a call for organizational ecumenism or institutional uniformity; it is the ontological sharing of divine life. Just as the Father is in the Son and the Son in the Father, believers are incorporated into the internal communion of the Godhead. Messiah bestows upon the church the very glory given to Him by the Father. This shared glory serves as the ultimate prophetic sign to the world that Jesus was sent by God and that believers are loved with the identical love wherewith the Father loves the Son. By collapsing the distinction between Jewish and Gentile believers, this divine oneness dismantled the wall of partition (Ephesians 2:14), manifesting the perfected New Creation family before the collapse of the earthly temple system.
+    </p>
+
+    <h3>4) Historical Consummation and the Eternal Dwelling of God</h3>
+    <p>
+      Jesus closes His prayer with the confident declaration: "Father, I desire that they also whom you have given me be with me where I am, that they may see my glory" (John 17:24–26). Inaugurated through His cross, resurrection, and ascension, this vision of glory reached its historical consummation in AD 70. When the earthly Jerusalem temple was dismantled and its levitical shadow ended forever, the veil was completely removed, revealing that God's true dwelling place is His people. The love of the Father and the indwelling presence of Messiah abide permanently in the New Covenant community. Believers do not look backward to Sinai or forward to an earthly millennial reign; they abide in the fulfilled reality of Messiah's High Priestly prayer, living as perfected sons and daughters in the unshakeable Kingdom of God.
+    </p>
+    <hr />
+
+    <!-- 6. Prophecy Hub Links -->
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><strong>Knowing God as life</strong> —
-    <a href="https://ebible.org/eng-web/JER31.htm">Jer 31</a>
-</li>
-<li><strong>Shared glory and sonship</strong> —
-    <a href="https://ebible.org/eng-web/PSA82.htm">Ps 82</a>,
-    <a href="https://ebible.org/eng-web/ROM08.htm">Rom 8</a>
-</li>
-<li><strong>Unity in Christ</strong> —
-    <a href="https://ebible.org/eng-web/EPH02.htm">Eph 2</a>
-</li>
-</ul>
+      <li><a href="/Bible/Prophecy/high-priestly-prayer.html">High Priestly Prayer</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
+      <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
+    </ul>
     <hr />
-    <h2>Prophecy Fulfilment</h2>
+
+    <!-- 7. Cross-References -->
+    <h2>Cross-References</h2>
     <ul>
-<li>
-<strong>God dwelling with His people</strong> —
-    <a href="https://ebible.org/eng-web/EZK37.htm">Ezek 37</a> |
-    <a href="/Bible/Prophecy/ezekiel.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>One people under one Shepherd</strong> —
-    <a href="https://ebible.org/eng-web/EZK37.htm">Ezek 37</a>
-</li>
-</ul>
+      <li><a href="https://ebible.org/eng-web/JER31.htm" target="_blank" rel="noopener">Jeremiah 31:31–34 (WEB)</a> — The Old Testament promise of the New Covenant where all will know Yahweh directly.</li>
+      <li><a href="/Bible/John/john17.html">John 17:1–5 (WEB)</a> — Messiah defining eternal life as covenant knowledge of the Father and Son.</li>
+      <li><a href="https://ebible.org/eng-web/EPH02.htm" target="_blank" rel="noopener">Ephesians 2:14–22 (WEB)</a> — Apostolic confirmation of one new man brought together into God's holy temple.</li>
+    </ul>
     <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
-    <p>You are already included in the prayer Jesus prayed. His unity, glory, and life are not future goals — they are present realities in Christ.</p>
+    <p>
+      In Christ, you are the direct answer to Jesus' High Priestly prayer. You possess eternal life right now as a present reality—not a distant promise—because you live in unbroken, personal communion with the Father through the Son. The very glory, protection, and love that the Father bestowed upon Messiah has been poured into your heart. You are permanently unified with God, secure in His name, and completely free from legalistic condemnation or the threat of rejection.
+    </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
-    <p>If eternal life is knowing God now, where might you still be postponing what is already yours?</p>
+    <p>
+      How does knowing that Jesus explicitly prayed for your security, glory, and complete union with the Father change how you rest in His finished work today?
+    </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john16.html">Previous</a>
-        <a class="btn" href="/Bible/John/john18.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john16.html">Previous</a>
+          <a class="btn" href="/Bible/John/john18.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
