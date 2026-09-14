@@ -3,37 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>John 19 — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Speaker: Jesus, largely silent before accusers - Fulfilled Prophecy study edition using the WEB translation." />
+  <title>John 19 — The Crucifixion and Finished Work of Messiah — Fulfilled Prophecy Bible (WEB)</title>
+  <meta name="description" content="Jesus undergoes His trial before Pilate, is crowned with thorns, crucified at Golgotha, and proclaims 'It is finished'—completing the Old Covenant age and opening New Creation life." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,27 +139,30 @@
       <a class="btn" href="/Bible/John/john20.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
-    <h1>John 19</h1>
-    <h2>Fulfilled Prophecy Bible + Commentary (New Creation Lens)</h2>
+
+    <h1>John 19 — The Crucifixion and Finished Work of Messiah</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
-      <p><strong>Speaker:</strong> Jesus, largely silent before accusers</p>
-      <p><strong>Audience:</strong> Roman authority, temple leadership, and Israel</p>
-      <p><strong>Covenant moment:</strong> The decisive judgment and completion of the old covenant world through the cross</p>
-      <p><strong>Why it mattered then:</strong> Israel publicly rejects its Messiah and declares allegiance to Caesar, sealing the fate of the old order.</p>
+    <p>
+      At the Roman Praetorium and the execution site of Golgotha on the Preparation Day of the Passover, Jesus undergoes His final trial, public humiliation, and crucifixion under Pontius Pilate. Facing the apostate Judean leadership, the Roman military garrison, and a gathered crowd of observers, Messiah stands as the unblemished Passover Lamb and true King of Israel. When the chief priests publicly renounce Yahweh's covenant kingship by declaring "We have no king but Caesar," they seal the fate of the old order. Jesus absorbs the curse of the Law, declares "It is finished" (*Tetelestai*), and surrenders His spirit—executing the judicial demise of the Old Covenant age and opening New Creation life for humanity.
+    </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>So Pilate then took Jesus, and flogged him.
-        <span class="v-num">2</span>The soldiers twisted thorns into a crown, and put it on his head, and dressed him in a purple garment.
+        <span class="v-num">2</span>The soldiers twisted thorns into a <strong>crown of thorns</strong>, and put it on his head, and dressed him in a purple garment.
         <span class="v-num">3</span>They kept saying, “Hail, King of the Jews!” and they kept slapping him.
         <span class="v-num">4</span>Then Pilate went out again, and said to them, “Behold, I bring him out to you, that you may know that I find no basis for a charge against him.”
-        <span class="v-num">5</span>Jesus therefore came out, wearing the crown of thorns and the purple garment. Pilate said to them, “Behold, the man!”
+        <span class="v-num">5</span>Jesus therefore came out, wearing the <strong>crown of thorns</strong> and the purple garment. Pilate said to them, “Behold, the man!”
       </p>
       <p>
         <span class="v-num">6</span>When therefore the chief priests and the officers saw him, they shouted, saying, “Crucify! Crucify!” Pilate said to them, “Take him yourselves, and crucify him, for I find no basis for a charge against him.”
-        <span class="v-num">7</span>The Jews answered him, “We have a law, and by our law he ought to die, because he made himself the Son of God.”
+        <span class="v-num">7</span>The Jews answered him, “We have a law, and by our law he ought to die, because he made himself the <strong>Son of God</strong>.”
         <span class="v-num">8</span>When therefore Pilate heard this saying, he was more afraid.
         <span class="v-num">9</span>He entered into the Praetorium again, and said to Jesus, “Where are you from?” But Jesus gave him no answer.
         <span class="v-num">10</span>Pilate therefore said to him, “Aren’t you speaking to me? Don’t you know that I have power to release you, and have power to crucify you?”
@@ -83,7 +172,7 @@
         <span class="v-num">12</span>At this, Pilate was seeking to release him, but the Jews cried out, saying, “If you release this man, you aren’t Caesar’s friend! Everyone who makes himself a king speaks against Caesar!”
         <span class="v-num">13</span>When Pilate therefore heard these words, he brought Jesus out, and sat down on the judgment seat at a place called “The Pavement”, but in Hebrew, “Gabbatha.”
         <span class="v-num">14</span>Now it was the Preparation Day of the Passover, at about the sixth hour. He said to the Jews, “Behold, your King!”
-        <span class="v-num">15</span>They cried out, “Away with him! Away with him! Crucify him!” Pilate said to them, “Shall I crucify your King?” The chief priests answered, “We have no king but Caesar!”
+        <span class="v-num">15</span>They cried out, “Away with him! Away with him! Crucify him!” Pilate said to them, “Shall I crucify your King?” The chief priests answered, “<strong>We have no king but Caesar</strong>!”
       </p>
       <p>
         <span class="v-num">16</span>So then he delivered him to them to be crucified. So they took Jesus and led him away.
@@ -104,13 +193,13 @@
         <span class="v-num">27</span>Then he said to the disciple, “Behold, your mother!” From that hour, the disciple took her to his own home.
         <span class="v-num">28</span>After this, Jesus, seeing that all things were now finished, that the Scripture might be fulfilled, said, “I am thirsty.”
         <span class="v-num">29</span>Now a vessel full of vinegar was set there; so they put a sponge full of the vinegar on hyssop, and held it at his mouth.
-        <span class="v-num">30</span>When Jesus therefore had received the vinegar, he said, “It is finished.” He bowed his head, and gave up his spirit.
+        <span class="v-num">30</span>When Jesus therefore had received the vinegar, he said, “<strong>It is finished</strong>.” He bowed his head, and gave up his spirit.
       </p>
       <p>
         <span class="v-num">31</span>Therefore the Jews, because it was the Preparation Day, so that the bodies wouldn’t remain on the cross on the Sabbath (for that Sabbath was a special one), asked of Pilate that their legs might be broken, and that they might be taken away.
         <span class="v-num">32</span>Therefore the soldiers came, and broke the legs of the first, and of the other who was crucified with him;
         <span class="v-num">33</span>but when they came to Jesus, and saw that he was already dead, they didn’t break his legs.
-        <span class="v-num">34</span>However one of the soldiers pierced his side with a spear, and immediately blood and water came out.
+        <span class="v-num">34</span>However one of the soldiers pierced his side with a spear, and immediately <strong>blood and water</strong> came out.
         <span class="v-num">35</span>He who has seen has testified, and his testimony is true. He knows that he tells the truth, that you may believe.
       </p>
       <p>
@@ -126,96 +215,106 @@
       </p>
     </div>
     <hr />
-        <h2 class="hide-element">Prophecy Commentary</h2>
-    <h3>1) “We have no king but Caesar” ends the old covenant</h3>
-    <p>This declaration is the climax of covenant rebellion. Israel renounces God’s kingship and transfers loyalty to Rome.</p>
-    <h3>2) What ended</h3>
-    <p>Temple-centered authority, sacrificial mediation, and national covenant identity.</p>
-    <h3>3) What replaced it</h3>
-    <p>A kingdom established through the cross, a people formed by Spirit, and access to God opened through the Son.</p>
-    <h3>4) The cross is enthronement</h3>
-    <p>John presents the crucifixion as the moment Jesus is revealed as King. His title is proclaimed in multiple languages.</p>
-    <h3>5) “It is finished” means completed</h3>
-    <p>The work of the old covenant is brought to completion. Nothing remains unfinished, delayed, or pending.</p>
-    <h3>6) Blood and water</h3>
-    <p>This imagery signals cleansing and life flowing from the crucified Christ — New Covenant reality replacing temple rituals.</p>
-    <h3>7) First-century fulfillment</h3>
-    <p>The cross initiates the irreversible judgment of the old order, culminating in Jerusalem’s fall in AD 70.</p>
-    <hr />
-    <h2>Key Idioms & Language Notes</h2>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
     <ul>
-<li><strong>Crown of thorns</strong> — cursed rule absorbed by the King</li>
-<li><strong>King of the Jews</strong> — true kingship publicly declared</li>
-<li><strong>It is finished</strong> — covenant completion</li>
-<li><strong>Pierced</strong> — judgment and recognition</li>
-<li><strong>Garden tomb</strong> — new creation setting</li>
-</ul>
+      <li>The chief priests' declaration "We have no king but Caesar" represents the ultimate covenant apostasy of first-century Israel.</li>
+      <li>Christ bearing the crown of thorns signifies Messiah absorbing the primordial Genesis curse to liberate the New Creation.</li>
+      <li>The cry "It is finished" (*Tetelestai*) announces the legal completion of the Old Covenant law, sin debt, and sacrificial system.</li>
+      <li>The outflow of blood and water from Messiah's pierced side fulfills prophetic imagery of New Covenant cleansing and life.</li>
+      <li>Unbroken bones and the garden burial confirm Jesus as the true Passover Lamb and inaugural seed of the New Creation temple.</li>
+    </ul>
     <hr />
-    <h2>Cross-References (Scripture — eBible)</h2>
+
+    <!-- 4. Annotations -->
+    <h2>Annotations</h2>
+    <div class="annotation-block">
+      <div class="annotation-item"><strong>crown of thorns</strong>: Messiah wearing the physical symbol of the Genesis 3 creation curse, absorbing condemnation to bring forth New Creation rest.</div>
+      <div class="annotation-item"><strong>Son of God</strong>: The messianic title of divine authority and kingship (Psalm 2:7) used by Judean leaders as a legal charge of blasphemy.</div>
+      <div class="annotation-item"><strong>We have no king but Caesar</strong>: The official renunciation of Yahweh’s kingship by the chief priests, completing first-century apostasy and forfeiting covenant standing.</div>
+      <div class="annotation-item"><strong>It is finished</strong>: The Greek *Tetelestai*—a legal and financial term declaring that the sin debt is paid in full and Old Covenant demands are exhausted.</div>
+      <div class="annotation-item"><strong>blood and water</strong>: The sacrificial evidence of Messiah's physical death, symbolizing New Covenant cleansing (*blood*) and Spirit-imparted life (*water*).</div>
+    </div>
+    <hr />
+
+    <!-- 5. Fulfillment Commentary -->
+    <h2>Fulfillment Commentary</h2>
+    <h3>1) The Apostasy of "No King But Caesar" and the End of Old Covenant Legitimacy</h3>
+    <p>
+      The trial of Messiah before Pontius Pilate reaches its tragic covenantal climax in John 19:15. When Pilate asks the Judean authorities, "Shall I crucify your King?", the chief priests answer with the blasphemous declaration: "We have no king but Caesar!" In Old Testament theology, Yahweh alone was the true King of Israel (1 Samuel 8:7; Isaiah 33:22). By publicly renouncing their Messiah and pledging total allegiance to the Roman emperor, the levitical priesthood committed ultimate covenant apostasy. They officially dismantled their own claim to represent God, trading the spiritual heritage of Abraham for political expediency with Rome. This moment marks the definitive legal rupture between true covenant identity and the apostate Judean leadership. By rejecting Messiah, the temple hierarchy sealed the fate of Jerusalem and its religious infrastructure, setting in motion the divine judgment that culminated in the total destruction of the temple in AD 70.
+    </p>
+
+    <h3>2) The Crown of Thorns and the Cross as Messiah's Royal Coronation</h3>
+    <p>
+      In Johannine theology, the crucifixion is presented not as a defeat, but as Messiah's royal coronation and exaltation. The Roman soldiers mockingly place a crown woven of thorns on His head and array Him in a purple robe. Prophetically, thorns were the primary symbol of the earth's curse resulting from Adam’s fall (Genesis 3:18). By bearing the crown of thorns on His brow, Jesus visibly absorbed the entire curse of human sin and legal condemnation into His sinless body. Furthermore, Pilate inscribes the royal trilingual title above the cross: "JESUS OF NAZARETH, THE KING OF THE JEWS" in Hebrew, Latin, and Greek. Despite the chief priests' protests, Pilate responds, "What I have written, I have written." This divine irony ensured that Messiah’s universal kingship was proclaimed in the sacred, administrative, and cultural languages of the first-century world, announcing to all nations that the King had been enthroned through the cross.
+    </p>
+
+    <h3>3) "It Is Finished": The Total Dissolution of the Law and Sacrificial System</h3>
+    <p>
+      Hanging upon the cross at the exact hour when Passover lambs were being slaughtered in the Jerusalem temple, Jesus receives the vinegar on hyssop and utters His final triumphant declaration: "It is finished" (*Tetelestai*). In first-century secular and judicial contexts, *Tetelestai* was stamped on legal certificates and financial records to declare "paid in full" or "completed." In covenantal context, Messiah’s cry announced the total, irreversible completion of the Mosaic Law, the ceremonial sacrificial system, and the debt of sin. Nothing was left pending, delayed, or incomplete. The temporary guardian of Sinai (Galatians 3:24–25) fulfilled its purpose and was legally retired. The veil of condemnation was torn, and the requirement for repeated animal sacrifices was terminated forever, establishing an unshakeable foundation of grace for the New Creation age.
+    </p>
+
+    <h3>4) Blood, Water, and Unbroken Bones: The Passover Antitype and New Creation Temple</h3>
+    <p>
+      The physical events following Messiah’s death confirm His identity as the true Passover Lamb and the source of New Covenant life. When the Roman soldier pierces Jesus' side with a spear, blood and water immediately flow out (John 19:34). Prophetically, the blood represents the ratifying price of the New Covenant that cleanses from all sin, while the water symbolizes the life-giving Holy Spirit poured out from Messiah’s glorified body (John 7:38–39; Ezekiel 47:1). Furthermore, while the legs of the two thieves were broken to hasten death, Jesus’ legs remained unbroken because He was already dead. This precise detail fulfilled the Old Testament Passover prescription: "A bone of him will not be broken" (Exodus 12:46; Psalm 34:20). Laid in a new garden tomb, Messiah’s body rested on the Sabbath, preparing to break forth in resurrection power as the cornerstone of the true, spiritual temple.
+    </p>
+    <hr />
+
+    <!-- 6. Prophecy Hub Links -->
+    <h2>Prophecy Hub Links</h2>
     <ul>
-<li><strong>Suffering servant</strong> —
-    <a href="https://ebible.org/eng-web/ISA53.htm">Isa 53</a>
-</li>
-<li><strong>King rejected</strong> —
-    <a href="https://ebible.org/eng-web/PSA22.htm">Ps 22</a>
-</li>
-<li><strong>New covenant cleansing</strong> —
-    <a href="https://ebible.org/eng-web/ZEC12.htm">Zech 12</a>
-</li>
-</ul>
+      <li><a href="/Bible/Prophecy/ruler-cast-out.html">Ruler of This World Cast Out</a></li>
+      <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine, New Covenant</a></li>
+      <li><a href="/Bible/Prophecy/true-vine.html">The True Vine</a></li>
+    </ul>
     <hr />
-    <h2>Prophecy Fulfilment</h2>
+
+    <!-- 7. Cross-References -->
+    <h2>Cross-References</h2>
     <ul>
-<li>
-<strong>The pierced one</strong> —
-    <a href="https://ebible.org/eng-web/ZEC12.htm">Zech 12</a> |
-    <a href="/Bible/Prophecy/zechariah.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>The suffering servant completed</strong> —
-    <a href="https://ebible.org/eng-web/ISA53.htm">Isa 53</a> |
-    <a href="/Bible/Prophecy/isaiah.html">Prophecy Hub</a>
-</li>
-<li>
-<strong>King enthroned through suffering</strong> —
-    <a href="https://ebible.org/eng-web/DAN07.htm">Dan 7</a> |
-    <a href="/Bible/Prophecy/son-of-man.html">Prophecy Hub</a>
-</li>
-</ul>
+      <li><a href="https://ebible.org/eng-web/ISA53.htm" target="_blank" rel="noopener">Isaiah 53:4–12 (WEB)</a> — Prophecy of the Suffering Servant bearing transgressions and being pierced for our iniquities.</li>
+      <li><a href="https://ebible.org/eng-web/ZEC12.htm" target="_blank" rel="noopener">Zechariah 12:10 (WEB)</a> — Prophecy of looking upon Him whom they pierced and mourning over Him.</li>
+      <li><a href="https://ebible.org/eng-web/COL02.htm" target="_blank" rel="noopener">Colossians 2:13–15 (WEB)</a> — Apostolic confirmation of the record of debt wiped out and disarmed at the cross.</li>
+    </ul>
     <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
-    <p>The work is finished. Nothing remains to be added, earned, or repeated. You live from completion, not anticipation.</p>
+    <p>
+      In Messiah, your redemption is completely finished. The legal certificate of debt that stood against you under law-condemnation has been wiped out, nailed to the cross, and canceled forever by Messiah's *Tetelestai*. You do not labor to earn God's favor, perform for righteousness, or offer continuous sacrifices; you rest in the completed victory of the true King. Washed in His blood and indwelt by His living water, you live in absolute security as an heir of the New Creation.
+    </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
-    <p>If the work is finished, where might you still be living as if it is not?</p>
+    <p>
+      How does resting in Messiah's final word—"It is finished"—free you from performance-driven religion and fill your heart with unbroken peace today?
+    </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john18.html">Previous</a>
-        <a class="btn" href="/Bible/John/john20.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john18.html">Previous</a>
+          <a class="btn" href="/Bible/John/john20.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
