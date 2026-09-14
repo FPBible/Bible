@@ -4,36 +4,122 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>John 14 — The Way, the Truth, and the Life — Fulfilled Prophecy Bible (WEB)</title>
-  <meta name="description" content="Many rooms in the Father’s house. The way is the Son. The Helper is promised. Peace is given. Covenant dwelling shifts from temple to union." />
+  <meta name="description" content="Jesus promises the indwelling Holy Spirit, reveals Himself as the exclusive way to the Father, and promises to make His home within New Creation believers." />
   <style>
     :root{
-      --maxw: 980px; --pad: 16px; --line: rgba(0,0,0,0.12); --muted: rgba(0,0,0,0.72);
-      --soft: rgba(0,0,0,0.05); --soft2: rgba(0,0,0,0.03); --radius: 14px;
+      --maxw: 980px;
+      --pad: 16px;
+      --line: rgba(0,0,0,0.12);
+      --line2: rgba(0,0,0,0.18);
+      --muted: rgba(0,0,0,0.72);
+      --soft: rgba(0,0,0,0.05);
+      --soft2: rgba(0,0,0,0.03);
+      --radius: 14px;
+      --btn-bg: #ffffff;
+      --bmc-yellow: #ffdd00;
     }
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;margin:0;color:#111;background:#fff;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px var(--pad) 56px;}
-    h1,h2,h3{margin:1.1em 0 0.35em;}
-    h1{font-size:2.05rem;letter-spacing:-0.02em;}
-    h2{font-size:1.35rem;padding-bottom:0.25em;border-bottom:1px solid var(--line);}
-    h3{font-size:1.08rem;}
-    p{margin:0.6em 0;}
-    hr{margin:2em 0;border:0;border-top:1px solid var(--line);}
-    ul{margin:0.6em 0 0.8em 1.2em;}
-    li{margin:0.35em 0;}
-    a{color:#111;text-decoration:underline;}
-    a.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--soft2);}
-    nav.top,nav.bottom{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0 16px;}
-    .card{background:var(--soft2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .scripture-text{font-size:1.08em;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;}
-    .v-num{font-weight:700;font-size:0.75em;vertical-align:super;opacity:0.55;margin-right:4px;}
-    .annotation-block{background:var(--soft);padding:12px 14px;border-left:3px solid var(--line);border-radius:10px;}
-    .annotation-item{font-size:0.98em;margin:0.55em 0;}
-    .note{font-size:0.95em;}
-    .muted{color:var(--muted);}
-    .kofi{margin-top:14px;}
-    .kofi img{height:36px;border:0;}
-    footer{margin-top:18px;}
-    .hide-element{display:none;}
+    body{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 18px var(--pad) 56px;
+    }
+    h1,h2,h3{ margin: 1.1em 0 0.35em; line-height: 1.25; }
+    h1{ font-size: 2.05rem; letter-spacing: -0.02em; }
+    h2{ font-size: 1.35rem; padding-bottom: 0.25em; border-bottom: 1px solid var(--line); }
+    h3{ font-size: 1.08rem; }
+    p{ margin: 0.75em 0; }
+    hr{ margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+    ul{ margin: 0.6em 0 0.8em 1.2em; }
+    li{ margin: 0.35em 0; }
+    a{ color:#111; text-decoration: underline; font-weight: 600; }
+    a.btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--soft2);
+    }
+    nav.top, nav.bottom{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items:center;
+      justify-content:flex-start;
+      margin: 10px 0 16px;
+    }
+    .scripture-text{
+      font-size: 1.08em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .v-num{
+      font-weight: 700;
+      font-size: 0.75em;
+      vertical-align: super;
+      opacity: 0.55;
+      margin-right: 4px;
+    }
+    .annotation-block{
+      background: var(--soft);
+      padding: 14px;
+      border-left: 3px solid var(--line);
+      border-radius: 10px;
+    }
+    .annotation-item{ font-size: 0.98em; margin: 0.55em 0; }
+    .muted{ color: var(--muted); }
+    .page-footer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 2.5em 0 1em;
+      text-align: center;
+    }
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.98rem;
+    }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 22px;
+      border: 1px solid var(--line2);
+      border-radius: 9999px;
+      background: var(--btn-bg);
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+    }
+    .bmc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background-color: var(--bmc-yellow);
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    footer{ margin-top: 2.2em; padding-top: 1.2em; border-top: 1px solid var(--line); }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
@@ -53,24 +139,29 @@
       <a class="btn" href="/Bible/John/john15.html">Next</a>
       <a class="btn" href="#top">Top</a>
     </nav>
+
     <h1>John 14 — The Way, the Truth, and the Life</h1>
     <hr />
+
+    <!-- 1. Immediate Context -->
     <h2>Immediate Context</h2>
     <p>
-      Night of the meal. Hearts are troubled. Jesus speaks of going to prepare a place, of the way, of seeing the Father in Him, of greater works, of the Helper who will be in them forever, of peace not as the world gives. The dwelling of God is about to move from temple stone to Spirit-indwelt people.
+      In the upper room on the night before His execution, Jesus comforts His troubled disciples, who are reeling from the news of His departure and Peter's foretold denial. Addressing their fear of abandonment, Jesus explains that His departure through the cross and resurrection is necessary to prepare permanent covenantal dwelling places within God's household. He reveals Himself as the exclusive way to the Father, promises the indwelling presence of the Holy Spirit (the Paraclete), and assures them that the Father and Son will make their home directly inside believers, permanently replacing the physical Jerusalem temple before its destruction in AD 70.
     </p>
     <hr />
+
+    <!-- 2. Scripture Text (WEB) -->
     <h2>Scripture (WEB)</h2>
     <div class="scripture-text">
       <p>
         <span class="v-num">1</span>“Don’t let your heart be troubled. Believe in God. Believe also in me.
-        <span class="v-num">2</span>In my Father’s house are many homes. If it weren’t so, I would have told you. I am going to prepare a place for you.
+        <span class="v-num">2</span>In my <strong>Father’s house</strong> are many homes. If it weren’t so, I would have told you. I am going to prepare a place for you.
         <span class="v-num">3</span>If I go and prepare a place for you, I will come again, and will receive you to myself; that where I am, you may be there also.
         <span class="v-num">4</span>Where I go, you know, and you know the way.”
         <span class="v-num">5</span>Thomas said to him, “Lord, we don’t know where you are going. How can we know the way?”
       </p>
       <p>
-        <span class="v-num">6</span>Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father, except through me.
+        <span class="v-num">6</span>Jesus said to him, “I am the <strong>way, the truth, and the life</strong>. No one comes to the Father, except through me.
         <span class="v-num">7</span>If you had known me, you would have known my Father also. From now on, you know him, and have seen him.”
         <span class="v-num">8</span>Philip said to him, “Lord, show us the Father, and that will be enough for us.”
         <span class="v-num">9</span>Jesus said to him, “Have I been with you such a long time, and do you not know me, Philip? He who has seen me has seen the Father. How do you say, ‘Show us the Father?’
@@ -84,126 +175,132 @@
         <span class="v-num">15</span>If you love me, keep my commandments.
       </p>
       <p>
-        <span class="v-num">16</span>I will pray to the Father, and he will give you another Counselor, that he may be with you forever,—
+        <span class="v-num">16</span>I will pray to the Father, and he will give you another <strong>Counselor</strong>, that he may be with you forever,—
         <span class="v-num">17</span>the Spirit of truth, whom the world can’t receive; for it doesn’t see him, neither knows him. You know him, for he lives with you, and will be in you.
         <span class="v-num">18</span>I will not leave you orphans. I will come to you.
         <span class="v-num">19</span>Yet a little while, and the world will see me no more; but you will see me. Because I live, you will live also.
-        <span class="v-num">20</span>In that day you will know that I am in my Father, and you in me, and I in you.
+        <span class="v-num">20</span><strong>In that day</strong> you will know that I am in my Father, and you in me, and I in you.
       </p>
       <p>
         <span class="v-num">21</span>One who has my commandments, and keeps them, that person is one who loves me. One who loves me will be loved by my Father, and I will love him, and will reveal myself to him.”
         <span class="v-num">22</span>Judas (not Iscariot) said to him, “Lord, what has happened that you are about to reveal yourself to us, and not to the world?”
-        <span class="v-num">23</span>Jesus answered him, “If a man loves me, he will keep my word. My Father will love him, and we will come to him, and make our home with him.
+        <span class="v-num">23</span>Jesus answered him, “If a man loves me, he will keep my word. My Father will love him, and we will <strong>make our home with him</strong>.
         <span class="v-num">24</span>He who doesn’t love me doesn’t keep my words. The word which you hear isn’t mine, but the Father’s who sent me.
         <span class="v-num">25</span>I have said these things to you, while still living with you.
       </p>
       <p>
-        <span class="v-num">26</span>But the Counselor, the Holy Spirit, whom the Father will send in my name, he will teach you all things, and will remind you of all that I said to you.
+        <span class="v-num">26</span>But the <strong>Counselor</strong>, the Holy Spirit, whom the Father will send in my name, he will teach you all things, and will remind you of all that I said to you.
         <span class="v-num">27</span>Peace I leave with you. My peace I give to you; not as the world gives, give I to you. Don’t let your heart be troubled, neither let it be fearful.
         <span class="v-num">28</span>You heard how I told you, ‘I go away, and I come to you.’ If you loved me, you would have rejoiced, because I said ‘I am going to my Father;’ for the Father is greater than I.
         <span class="v-num">29</span>Now I have told you before it happens so that, when it happens, you may believe.
-        <span class="v-num">30</span>I will no more speak much with you, for the prince of the world comes, and he has nothing in me.
+        <span class="v-num">30</span>I will no more speak much with you, for the <strong>prince of the world</strong> comes, and he has nothing in me.
       </p>
       <p>
         <span class="v-num">31</span>But that the world may know that I love the Father, and as the Father commanded me, even so I do. Arise, let us go from here.
       </p>
     </div>
     <hr />
-    <h2 class="hide-element">Fulfillment Notes</h2>
-    <div class="card">
-      <p class="note">1) “Father’s house” is covenant household, not sky real-estate inventory.</p>
-      <p class="note">2) The way is the Son Himself; access is no longer mediated by temple systems.</p>
-      <p class="note">3) The Helper is permanent indwelling, ending the orphan status of the old order.</p>
-      <p class="note">4) “I will come to you” is post-resurrection presence and Spirit arrival, not a postponed sky event.</p>
-      <p class="note">5) Peace is covenant gift already given, not a future political settlement.</p>
-    </div>
+
+    <!-- 3. Fulfillment Notes -->
+    <h2>Fulfillment Notes</h2>
+    <ul>
+      <li>The "Father's house" refers to God's covenant family, relocated from stone masonry to Spirit-indwelt believers.</li>
+      <li>Jesus establishes Himself as the exclusive way to the Father, rendering temple-mediated access completely obsolete.</li>
+      <li>The promised Counselor introduces permanent Spirit-indwelling, ending the spiritual orphanhood of the Old Covenant age.</li>
+      <li>"I will come to you" describes Christ's post-resurrection return in Spirit-presence within that first-century generation.</li>
+      <li>Covenant peace is a present gift of reconciliation, disarming the legalistic accusations of the world's expiring system.</li>
+    </ul>
     <hr />
+
+    <!-- 4. Annotations -->
     <h2>Annotations</h2>
     <div class="annotation-block">
-      <div class="annotation-item"><strong>Father’s house / many homes</strong>: people brought into permanent union with God.</div>
-      <div class="annotation-item"><strong>I am the way</strong>: exclusive access through the Son, not competing routes.</div>
-      <div class="annotation-item"><strong>Counselor / Helper</strong>: Spirit of truth who remains forever.</div>
-      <div class="annotation-item"><strong>I will come to you</strong>: resurrection presence and Spirit indwelling within the generation’s horizon.</div>
-      <div class="annotation-item"><strong>make our home with him</strong>: mutual indwelling that replaces temple geography.</div>
+      <div class="annotation-item"><strong>Father’s house</strong>: The divine covenant family and spiritual dwelling place of God, contrasting with the expiring physical temple in Jerusalem.</div>
+      <div class="annotation-item"><strong>way, the truth, and the life</strong>: Messiah as the sole, unmediated access to God, replacing the levitical priesthood and Mosaic rituals.</div>
+      <div class="annotation-item"><strong>Counselor</strong>: Greek <em>Paraklētos</em>; the Holy Spirit as advocate, helper, and permanent indwelling guide of the New Covenant body.</div>
+      <div class="annotation-item"><strong>in that day</strong>: The apostolic era inaugurated at Pentecost and consummated in AD 70 when mutual indwelling was fully realized.</div>
+      <div class="annotation-item"><strong>make our home with him</strong>: The ultimate fulfillment of divine tabernacling, where Father and Son abide directly inside New Creation believers.</div>
+      <div class="annotation-item"><strong>prince of the world</strong>: The covenantal Accuser (*satan*) and legalistic power structure of the Old Covenant age, having no legal claim over Messiah.</div>
     </div>
     <hr />
+
+    <!-- 5. Fulfillment Commentary -->
     <h2>Fulfillment Commentary</h2>
-    <h3>1) Dwelling Places, Not Hotels</h3>
+    <h3>1) Covenant Household versus Physical Real Estate</h3>
     <p>
-      The language of rooms and preparation answers troubled hearts facing the loss of visible presence. The place prepared is participation in the Father’s household through the Son. The old house of stone is not the final address.
+      When Jesus tells His disciples, "In my Father’s house are many homes... I am going to prepare a place for you," He is not describing architectural construction projects in a distant sky realm. In biblical and covenantal idiom, the "Father's house" (*oikia tou patros*) refers to God's divine household—His covenantal dwelling among His people (cf. Hebrews 3:6, 1 Timothy 3:15). Under the Mosaic economy, God's dwelling was localized in the stone temple of Jerusalem, where access was heavily restricted by levitical barriers and veil partitions. Jesus announces that He is departing through the cross and resurrection to open up permanent, multi-dwelling access (*monai*) within the Father’s family. By entering into His glory, Messiah prepares a spiritual reality where Jew and Gentile alike reside directly within the divine presence. The preparation of this "place" was fully accomplished through His death, resurrection, and the sending of the Holy Spirit, relocating God's home from physical masonry to the indwelling lives of New Creation believers.
     </p>
-    <h3>2) The Way Is a Person</h3>
+
+    <h3>2) The Exclusive Way and the Passing of Temple Access</h3>
     <p>
-      Thomas asks the practical question. Jesus answers with identity: the way, the truth, and the life. No one comes to the Father except through Him. The temple system’s monopoly on access is ending inside that generation.
+      In response to Thomas’s honest confusion regarding their destination, Jesus issues one of the most monumental declarations in Scripture: "I am the way, the truth, and the life. No one comes to the Father, except through me." In the first-century context, this assertion delivered a direct judicial blow to the Jerusalem temple establishment. For centuries, the high priest and the sacrificial altar claimed an exclusive monopoly on approach to God. Jesus completely bypasses that expiring institutional framework, declaring that access to the Father is mediated solely through union with His own person. He does not merely show a path or teach a set of moral rules; He <em>is</em> the living Way. To see and know Jesus is to see and know the Father directly. This revelation rendered the animal sacrifices and levitical rituals of the Old Covenant obsolete, establishing that true worship and covenant relationship exist exclusively through the Son.
     </p>
-    <h3>3) Helper Forever, Not Temporary Substitute</h3>
+
+    <h3>3) The Indwelling Paraclete and the End of Orphanhood</h3>
     <p>
-      The Spirit of truth will be in them. “I will not leave you orphans. I will come to you.” The coming is the arrival of presence that does not depart. Physical death still returns bodies to dust; what ends is the orphan condition under the old administration.
+      Jesus promises His disciples that He will not leave them as helpless orphans during His physical departure, but will pray to the Father to send "another Counselor" (*allon Paraklēton*)—the Spirit of truth—to abide with them forever. Under the Old Covenant, the Holy Spirit came upon specific individuals temporarily for designated tasks, but did not permanently indwell the corporate body. Jesus announces a permanent covenant shift: "he lives with you, and will be in you." Furthermore, Jesus connects the coming of the Counselor with His own return in Spirit-presence: "I will come to you... In that day you will know that I am in my Father, and you in me, and I in you." This promise was realized in the immediate post-resurrection era and at Pentecost, establishing an unbreakable, mutual indwelling between the Father, the Son, and believers, permanently ending the spiritual orphanhood of the old age.
     </p>
-    <h3>4) Peace Already Given</h3>
+
+    <h3>4) Covenant Peace and the Dethronement of the World's Accuser</h3>
     <p>
-      Not as the world gives. The gift is present. Troubled hearts are addressed with a peace that does not depend on the survival of the old order’s structures.
+      As Jesus concludes this section of the upper-room discourse, He bestows His peace upon the disciples: "Peace I leave with you. My peace I give to you; not as the world gives." This <em>shalom</em> is not a fragile political truce or emotional sentiment, but an objective covenantal reality purchased by Messiah's finished work, granting total reconciliation with God. Jesus contrasts this eternal peace with the impending collapse of the old order, noting that "the prince of the world comes, and he has nothing in me." The "prince of the world" represents the covenantal Accuser (*satan*) operating through the legalistic condemnation of the Law and the hostile Judean authorities. Because Jesus was completely sinless and obedient to the Father, the Accuser possessed no legal claim or jurisdiction over Him. By willingly laying down His life, Jesus disarmed the power of legalistic condemnation, securing eternal peace for His indwelling people before the final dissolution of the temple in AD 70.
     </p>
     <hr />
+
+    <!-- 6. Prophecy Hub Links -->
     <h2>Prophecy Hub Links</h2>
     <ul>
       <li><a href="/Bible/Prophecy/spirit-poured-out.html">Spirit Poured Out</a></li>
-      <li><a href="/Bible/Prophecy/new-wine-new-covenant.html">New Wine, New Covenant</a></li>
       <li><a href="/Bible/Prophecy/god-dwelling-with-his-people.html">God Dwelling with His People</a></li>
+      <li><a href="/Bible/Prophecy/ruler-cast-out.html">Ruler of This World Cast Out</a></li>
     </ul>
     <hr />
+
+    <!-- 7. Cross-References -->
     <h2>Cross-References</h2>
     <ul>
-      <li><a href="https://ebible.org/eng-web/JER31.htm" target="_blank" rel="noopener">Jeremiah 31 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/JOE02.htm" target="_blank" rel="noopener">Joel 2 (WEB)</a></li>
-      <li><a href="https://ebible.org/eng-web/ISA32.htm" target="_blank" rel="noopener">Isaiah 32 (WEB)</a></li>
+      <li><a href="https://ebible.org/eng-web/JER31.htm" target="_blank" rel="noopener">Jeremiah 31:31–34 (WEB)</a> — Prophecy of the New Covenant where God writes His law within their hearts.</li>
+      <li><a href="https://ebible.org/eng-web/EZK37.htm" target="_blank" rel="noopener">Ezekiel 37:26–28 (WEB)</a> — Prophecy of God setting His sanctuary in the midst of His people forevermore.</li>
+      <li><a href="https://ebible.org/eng-web/EPH02.htm" target="_blank" rel="noopener">Ephesians 2:18–22 (WEB)</a> — Apostolic confirmation that believers are built together into a dwelling place of God in the Spirit.</li>
     </ul>
     <hr />
-    <h2>Key Idioms</h2>
-    <ul>
-      <li><strong>Father’s house</strong> — covenant household of union.</li>
-      <li><strong>Way, truth, life</strong> — the Son as exclusive access.</li>
-      <li><strong>Helper forever</strong> — permanent Spirit indwelling.</li>
-    </ul>
-    <hr />
+
+    <!-- 8. New Creation Reality -->
     <h2>New Creation Reality</h2>
     <p>
-      You are not waiting for a room to be finished in the sky. The dwelling has moved. Physical death still ends earthly bodies. What this chapter ends is distance-as-religion — living as if God remains outside until a later relocation.
+      In Christ, you are not an orphan searching for distant spiritual access or waiting for a physical room in the sky. You are the very home of God today. The Father and the Son abide within you by the indwelling Spirit of truth. You possess permanent, unhindered access to God through the Son, who is your Way, Truth, and Life. Resting in His perfect covenant peace, you live completely free from legalistic condemnation and spiritual fear.
     </p>
     <hr />
+
+    <!-- 9. Reflection -->
     <h2>Reflection</h2>
     <p>
-      Where are you still treating the Spirit as a temporary visitor instead of the permanent home God has made with you?
+      How does knowing that the Father and the Son have made their permanent home within you transform your experience of God's presence today?
     </p>
     <hr />
+
+    <!-- 10. Footer, Share & Navigation Block -->
     <footer>
-      <hr />
-      <p>
-        Share this study:
-        <a href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">Twitter</a>
-        <a href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
-        <a href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
-      </p>
-      <hr />
-      <nav class="bottom">
-        <a class="btn" href="/Bible/">Bible Index</a>
-        <a class="btn" href="/Bible/John/index.html">Book Index</a>
-        <a class="btn" href="/Bible/John/john13.html">Previous</a>
-        <a class="btn" href="/Bible/John/john15.html">Next</a>
-        <a class="btn" href="#top">Top</a>
-      </nav>
-      <div class="kofi">
-        <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
-          <img src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Support on Ko-fi" />
+      <div class="page-footer-block">
+        <div class="share-row">
+          <span>Share this study:</span>
+          <a class="share-btn" href="#" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title);return true;" target="_blank" rel="noopener">𝕏 / Twitter</a>
+          <a class="share-btn" href="#" onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href);return true;" target="_blank" rel="noopener">Facebook</a>
+          <a class="share-btn" href="#" onclick="this.href='mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href);return true;">Email</a>
+        </div>
+
+        <a class="bmc-btn" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">
+          <span>☕ Support on Ko-fi</span>
         </a>
-        <p class="muted" style="margin:0.5em 0 0; font-size:0.92em;">
-          If the button doesn't load: <a href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener">ko-fi.com/B0B61QC1BU</a>
-        </p>
+
+        <nav class="bottom">
+          <a class="btn" href="/Bible/">Bible Index</a>
+          <a class="btn" href="/Bible/John/index.html">Book Index</a>
+          <a class="btn" href="/Bible/John/john13.html">Previous</a>
+          <a class="btn" href="/Bible/John/john15.html">Next</a>
+          <a class="btn" href="#top">Top</a>
+        </nav>
       </div>
-      <p class="note" style="margin-top:1em;">
-        Notes are written to honour audience relevance and time statements, and to avoid futurist drift.
-      </p>
     </footer>
   </div>
 </body>
