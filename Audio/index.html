@@ -104,16 +104,6 @@
       font-size:13px;
     }
 
-    .spotify-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 12px;
-    }
-    @media(min-width: 600px) {
-      .spotify-grid { grid-template-columns: 1fr 1fr; }
-    }
-
     footer{
       border-top:1px solid var(--border);
       padding:18px 0 28px 0;
@@ -121,7 +111,6 @@
       color:var(--muted);
     }
   
-    /* Hide specific UI elements */
     .hide-element { display: none; }
   </style>
 
@@ -132,7 +121,7 @@
     gtag('js', new Date());
     gtag('config', 'G-Q22N178LJ8');
   </script>
-  </head>
+</head>
 
 <body>
 <header>
@@ -149,13 +138,8 @@
     <h3>Spotify Music & Teachings</h3>
     <p class="meta">Stream albums, study playlists, and specific doctrinal tracks directly via Spotify</p>
     
-    <div class="spotify-grid">
-      <div>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/YOUR_PLAYLIST_ID_HERE" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
-      <div>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/YOUR_ALBUM_ID_HERE" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
+    <div style="margin-top: 12px;">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/5U8qj2ZpfZKBbNVCCOpI3L?utm_source=generator&si=3b283baa06db4f68" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
 
