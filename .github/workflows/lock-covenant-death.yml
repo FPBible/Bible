@@ -23,10 +23,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Ephesians/eph2.html 1Corinthians/1cor2.html Philippians/phil3.html 2Thessalonians/2thess1.html 1Thessalonians/1thess4.html 1Thessalonians/1thess5.html Thoughts/index.html John/john11.html
+          git add 1Thessalonians/1thess4.html Ephesians/eph2.html Isaiah/isa65-66.html
           if git diff --cached --quiet; then
             echo No content changes
           else
-            git commit -m "Pass 2: lock remaining covenantal-death stock lines in place"
+            git commit -m "Pass 3: recast remaining biological-death commentary in place"
             git push
           fi
