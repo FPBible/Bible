@@ -1,0 +1,130 @@
+name: Lock covenantal death dictionary
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - name: Restore thinned files then apply lock replacements
+        run: |
+          set -e
+          git show 8f20786406a7cc5b9d9ec773025105d62159fac5^:1Corinthians/1cor3.html > 1Corinthians/1cor3.html
+          git show bc5b51d460b929a7a893d20f4c0eda7f4732cf9a^:Isaiah/preface.html > Isaiah/preface.html
+          python3 << 'PY'
+          from pathlib import Path
+
+          def sub(path, pairs):
+              p = Path(path)
+              t = p.read_text(encoding='utf-8')
+              n = 0
+              for old, new in pairs:
+                  c = t.count(old)
+                  if c == 0:
+                      print('MISS', path, old[:80].replace('\n',' / '))
+                  else:
+                      t = t.replace(old, new)
+                      n += c
+                      print('OK', path, c)
+              p.write_text(t, encoding='utf-8')
+              print('done', path, 'replacements', n)
+
+          sub('1Corinthians/1cor3.html', [
+            ('Physical death still returns bodies to dust. What ends is death used as a threat-system of the old age.',
+             'What ends is Death used as a threat-system of the old age — not a still-open Sheol.'),
+            ('Physical death still meets bodies. What this chapter ends is the need to build your name on a human foundation.',
+             'What this chapter ends is the need to build your name on a human foundation.'),
+          ])
+
+          sub('Isaiah/preface.html', [
+            ('This is not a future, delayed utopian planet where physical death ceases to exist. Isaiah explicitly states that people will still age and die within this new creation (Isa 65:20). It is a present, spiritual reality where the condemnation of the Law has been removed, the Servant has made intercession for transgressors (Isa 53), and all flesh can worship God freely through the Spirit.',
+             'This is not a later rebuilt planet. Isaiah\u2019s \u201cnew heavens and new earth\u201d is the New Covenant world. Isa 65:20 uses ordinary aging inside that world because the subject is covenant order, not the last enemy. The covering and the rebuke end (Isa 25:7\u20138). Death as condemnation ends. The Servant has made intercession (Isa 53), and all flesh can worship God freely through the Spirit.'),
+          ])
+
+          sub('Isaiah/isa25.html', [
+            ('This is <strong>not</strong> a promise of biological immortality. Believers still undergo physical death, but physical death has lost its "sting" (separation from God).',
+             'This is <strong>not</strong> a later biology programme. The covering destroyed and Death swallowed (Isa 25:7\u20138) is the covenantal enemy \u2014 Sheol emptied, condemnation ended \u2014 not a forecast that dust stops being dust.'),
+          ])
+
+          sub('Philippians/phil1.html', [
+            ('The chapter\u2019s centre is simple: to live is Christ, and to die is gain. Physical death remains real. It does not get the last word over a man whose life is already located in the Messiah.',
+             'The chapter\u2019s centre is simple: to live is Christ, and to die is gain. Union is not interrupted. The last enemy is not breath stopping; it is the old condemnation \u2014 and that enemy does not hold him.'),
+            ('Paul does not treat physical death as abolished. He treats it as unable to unmake a life that is already Christ. Gain is communion, not escape-from-matter as the meaning of salvation. Remaining in the flesh is fruitful because the assembly still needs him before the Day. New Creation hope holds both: dust returns to dust, and the man in Christ is not at the mercy of that return. Magnified in my body \u2014 life and death are both locations of witness, not two different gospels.',
+             'Paul treats departing as gain because communion is not cancelled. Remaining in the flesh is fruitful because the assembly still needs him before the Day. Life and death are both locations of witness in a man already located in Messiah \u2014 not two gospels, and not a still-reigning Sheol.'),
+          ])
+
+          sub('Resurrection/index.html', [
+            ('You cannot understand the Resurrection until you understand that physical death is merely the shadow of the true enemy: the &ldquo;Ministry of Death&rdquo; (the Law) that kept man separated from God.',
+             'The Death that reigned from Adam was never biology. It was exile and the Ministry of Death (the Law). Grave and Hades were emptied and cast into the lake of fire. You cannot understand resurrection until you use that dictionary.'),
+          ])
+
+          p = Path('Resurrection/index.html')
+          t = p.read_text(encoding='utf-8')
+          needle = 'The Natural Body was the Law-system (flesh-driven). The Spiritual Body is the New Covenant system (Spirit-driven).'
+          insert = '''The Natural Body was the Law-system (flesh-driven). The Spiritual Body is the New Covenant system (Spirit-driven).
+      </p>
+      <h3 style="margin-top: 30px;">Terrestrial and Celestial Bodies (1 Cor 15:40\u201349)</h3>
+      <p>
+        When Paul writes of celestial and terrestrial bodies he is not teaching astronomy. He reaches back to Genesis: kinds of glory, then two Adams
+        (<a href="https://ebible.org/eng-web/1CO15.htm" target="_blank" rel="noopener">1 Cor 15:40\u201349</a>).
+      </p>
+      <ul>
+        <li><strong>Terrestrial / earthy:</strong> the first man from the dust \u2014 the fading Adamic-Mosaic administration: earthly tabernacle, earthly priesthood, earthly Jerusalem, physical genealogy.</li>
+        <li><strong>Celestial / heavenly:</strong> the second Man from heaven \u2014 the New Creation order. Believers bear that image now.</li>
+      </ul>
+      <p>
+        Resurrection is covenantal migration out of the terrestrial age into the celestial reality. That is why the New Jerusalem needs no sun or moon as ruling lights. Full chapter:
+        <a href="/Bible/1Corinthians/1cor15.html">1 Corinthians 15</a>.'''
+          if needle in t and 'Terrestrial and Celestial Bodies' not in t:
+              t = t.replace(needle, insert, 1)
+              print('OK Resurrection/index.html celestial insert')
+          elif 'Terrestrial and Celestial Bodies' in t:
+              print('SKIP celestial already present')
+          else:
+              print('MISS celestial anchor')
+          oldnav = '      <a href="/Bible/NewCreation/manifesto.html">The Manifesto</a> |\n      <a href="/Bible/Life/index.html">Life in the Spirit</a>'
+          newnav = '      <a href="/Bible/NewCreation/manifesto.html">The Manifesto</a> |\n      <a href="/Bible/1Corinthians/1cor15.html">1 Corinthians 15</a> |\n      <a href="/Bible/Prophecy/death.html">Covenant Death</a>'
+          if oldnav in t:
+              t = t.replace(oldnav, newnav)
+              print('OK Resurrection nav')
+          else:
+              print('MISS Resurrection nav')
+          p.write_text(t, encoding='utf-8')
+
+          sub('John/john11.html', [
+            ('fully establishing the New Creation Kingdom where physical death no longer possesses covenantal sting or spiritual condemnation.',
+             'fully establishing the New Creation Kingdom. Sheol and Hades were emptied. The Death that reigned \u2014 covenantal condemnation \u2014 was cast into the fire. \u201cWhoever lives and believes in me will never die.\u201d'),
+            ('rendering physical death incapable of severing covenant life.',
+             'rendering Death incapable of severing covenant life. Sheol does not hold those who live in Him.'),
+          ])
+
+          p = Path('John/john16.html')
+          if p.exists():
+              t = p.read_text(encoding='utf-8')
+              old = 'Physical death, excommunication, and Roman oppression could not overturn the reality of Messiah\'s enthronement.'
+              new = 'Killing, excommunication, and Roman oppression could not overturn the reality of Messiah\'s enthronement.'
+              if old in t:
+                  p.write_text(t.replace(old, new), encoding='utf-8')
+                  print('OK John/john16.html')
+              else:
+                  print('MISS John/john16.html')
+          print('SCRIPT_DONE')
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 1Corinthians/1cor3.html Isaiah/preface.html Isaiah/isa25.html Philippians/phil1.html Resurrection/index.html John/john11.html John/john16.html
+          if git diff --cached --quiet; then
+            echo "No content changes"
+          else
+            git commit -m "Lock covenantal-death dictionary without thinning chapters"
+            git push
+          fi
