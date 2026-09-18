@@ -16,21 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 30
-      - name: Restore thinned chapter files from history
-        run: |
-          git show 8f20786406a7cc5b9d9ec773025105d62159fac5^:1Corinthians/1cor3.html > 1Corinthians/1cor3.html
-          git show bc5b51d460b929a7a893d20f4c0eda7f4732cf9a^:Isaiah/preface.html > Isaiah/preface.html
+          fetch-depth: 10
       - name: Apply lock replacements
         run: python3 scripts/lock_covenant_death.py
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add 1Corinthians/1cor3.html Isaiah/preface.html Isaiah/isa25.html Philippians/phil1.html Resurrection/index.html John/john11.html John/john16.html
+          git add Ephesians/eph2.html 1Corinthians/1cor2.html Philippians/phil3.html 2Thessalonians/2thess1.html 1Thessalonians/1thess4.html 1Thessalonians/1thess5.html Thoughts/index.html John/john11.html
           if git diff --cached --quiet; then
             echo No content changes
           else
-            git commit -m "Lock covenantal-death dictionary without thinning chapters"
+            git commit -m "Pass 2: lock remaining covenantal-death stock lines in place"
             git push
           fi
