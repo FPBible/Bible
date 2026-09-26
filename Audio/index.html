@@ -1,119 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Audio & Video — Fulfilled Prophecy Bible (WEB)</title>
   <meta name="description" content="The Fulfilled Prophecy Bible audio teachings and video studies - Fulfilled Prophecy study edition using the WEB translation." />
 
-  <style>
-    :root{
-      --maxw: 900px;
-      --pad: 18px;
-      --radius: 14px;
-
-      --bg:#ffffff;
-      --ink:#111111;
-      --muted:#555555;
-
-      --card:#f6f7f9;
-      --border:#e6e8ee;
-
-      --link:#0b57d0;
-      --linkHover:#063a8c;
-    }
-
-    *{ box-sizing:border-box; }
-
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--ink);
-      line-height:1.55;
-    }
-
-    a{ color:var(--link); text-decoration:none; }
-    a:hover{ color:var(--linkHover); text-decoration:underline; }
-
-    header{
-      border-bottom:1px solid var(--border);
-      background:#fff;
-    }
-
-    .wrap{
-      max-width:var(--maxw);
-      margin:0 auto;
-      padding:var(--pad);
-    }
-
-    h1{
-      margin:0 0 6px 0;
-      font-size:28px;
-      letter-spacing:-0.2px;
-    }
-
-    .sub{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .back{
-      display:inline-block;
-      margin-bottom:12px;
-      font-size:14px;
-    }
-
-    main{ padding-bottom:24px; }
-
-    section.track{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:16px;
-      margin:18px 0;
-    }
-
-    section.track h3{
-      margin:0 0 6px 0;
-      font-size:18px;
-    }
-
-    .meta{
-      margin:0 0 10px 0;
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    iframe{
-      width:100%;
-      max-width:760px;
-      border:0;
-      border-radius:10px;
-      display:block;
-    }
-
-    audio{
-      width:100%;
-      margin-top:8px;
-    }
-
-    .small-link{
-      margin-top:10px;
-      font-size:13px;
-    }
-
-    footer{
-      border-top:1px solid var(--border);
-      padding:18px 0 28px 0;
-      font-size:13px;
-      color:var(--muted);
-    }
-  
-    .hide-element { display: none; }
-  </style>
-
+  <!-- Google Analytics Script -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -121,93 +14,597 @@
     gtag('js', new Date());
     gtag('config', 'G-Q22N178LJ8');
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f6ff',
+              100: '#e0edff',
+              500: '#0b57d0',
+              600: '#0948b3',
+              700: '#063a8c',
+              800: '#042861',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <style>
+    .card-transition {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .aspect-video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    .aspect-video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
 </head>
 
-<body>
-<header>
-  <div class="wrap">
-    <a class="back" href="../index.html">← Return to The Fulfilled Prophecy Bible</a>
-    <h1>Audio & Video</h1>
-    <p class="sub">The Fulfilled Prophecy Bible audio teachings and video studies.</p>
-  </div>
-</header>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
 
-<main class="wrap">
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+      <div class="flex items-center justify-between gap-4 mb-2">
+        <a href="../index.html" class="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors group">
+          <i class="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1"></i>
+          <span>Return to The Fulfilled Prophecy Bible</span>
+        </a>
 
-  <section class="track" id="spotify-resources">
-    <h3>Spotify Music & Teachings</h3>
-    <p class="meta">Stream albums, study playlists, and specific doctrinal tracks directly via Spotify</p>
-    
-    <div style="margin-top: 12px;">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/5U8qj2ZpfZKBbNVCCOpI3L?utm_source=generator&si=3b283baa06db4f68" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="p-2 rounded-xl text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all focus:outline-none focus:ring-2 focus:ring-brand-500">
+          <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-base hidden"></i>
+          <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-base hidden"></i>
+        </button>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-1">
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
+            <span class="p-2 bg-brand-50 dark:bg-brand-800/30 text-brand-600 dark:text-brand-400 rounded-xl text-xl inline-flex items-center justify-center">
+              <i class="fa-solid fa-photo-film"></i>
+            </span>
+            Audio & Video
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+            The Fulfilled Prophecy Bible audio teachings and video studies.
+          </p>
+        </div>
+
+        <div class="w-full md:w-80 relative">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </div>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search teachings, tracks, topics..." 
+            class="w-full pl-9 pr-9 py-2 text-xs sm:text-sm bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-900 dark:text-white placeholder-slate-400 transition-all"
+            aria-label="Search content"
+          >
+          <button id="clear-search" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 overflow-x-auto pt-4 pb-1 no-scrollbar text-xs sm:text-sm font-medium border-t border-slate-100 dark:border-slate-800/60 mt-4">
+        <button data-category="all" class="filter-tab px-3.5 py-1.5 rounded-lg bg-brand-500 text-white shadow-sm font-semibold whitespace-nowrap transition-all">
+          All Media <span id="count-all" class="ml-1 text-xs opacity-80 px-1.5 py-0.5 bg-white/20 rounded-full">5</span>
+        </button>
+        <button data-category="music" class="filter-tab px-3.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 whitespace-nowrap transition-all">
+          <i class="fa-solid fa-music mr-1.5 text-emerald-500"></i>Music & Songs <span id="count-music" class="ml-1 text-xs opacity-70 px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded-full">3</span>
+        </button>
+        <button data-category="audio" class="filter-tab px-3.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 whitespace-nowrap transition-all">
+          <i class="fa-solid fa-podcast mr-1.5 text-indigo-500"></i>Audio Teachings <span id="count-audio" class="ml-1 text-xs opacity-70 px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded-full">1</span>
+        </button>
+        <button data-category="video" class="filter-tab px-3.5 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 whitespace-nowrap transition-all">
+          <i class="fa-solid fa-circle-play mr-1.5 text-rose-500"></i>Video Studies <span id="count-video" class="ml-1 text-xs opacity-70 px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded-full">1</span>
+        </button>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <section class="track">
-    <h3>New Creation Track #1</h3>
-    <p class="meta">Immersive presence track</p>
+  <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6">
 
-    <iframe src="https://suno.com/embed/1f2c2275-f31d-44ca-b9f6-91adbaf673c4" width="760" height="240" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"><a href="https://suno.com/song/1f2c2275-f31d-44ca-b9f6-91adbaf673c4">Listen on Suno</a></iframe>
-  </section>
+    <!-- Active Filter Banner / Search Stats -->
+    <div id="filter-status" class="hidden flex items-center justify-between text-xs sm:text-sm text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-200/60 dark:border-slate-700/50">
+      <span>Showing <strong id="visible-count" class="text-slate-900 dark:text-white">5</strong> items</span>
+      <button id="reset-filter-btn" class="text-brand-600 dark:text-brand-400 hover:underline font-medium inline-flex items-center gap-1">
+        <i class="fa-solid fa-rotate-left text-xs"></i> Reset Filters
+      </button>
+    </div>
 
-  <section class="track">
-    <h3>New Creation Track #2</h3>
-    <p class="meta">Immersive presence track</p>
+    <section 
+      id="spotify-resources" 
+      data-category="music"
+      data-search-terms="spotify music teachings artist playlist albums doctrinal tracks preterism fulfilled prophecy"
+      class="media-card card-transition bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md p-4 sm:p-6"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300">
+              <i class="fa-brands fa-spotify"></i> Spotify Artist
+            </span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">• Stream Playlist</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Spotify Music & Teachings</h3>
+        </div>
+        <button onclick="copyDeepLink('spotify-resources')" class="self-start sm:self-auto text-xs text-slate-500 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 px-2.5 py-1.5 rounded-lg transition-colors" title="Copy Direct Link">
+          <i class="fa-solid fa-link text-xs"></i> Share Link
+        </button>
+      </div>
 
-    <iframe
-      src="https://suno.com/embed/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf"
-      width="760"
-      height="240"
-      frameborder="0"
-      allow="autoplay; encrypted-media; fullscreen"
-      allowfullscreen
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-      <a href="https://suno.com/song/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf">Listen on Suno</a>
-    </iframe>
-  </section>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+        Stream albums, study playlists, and specific doctrinal tracks directly via Spotify.
+      </p>
 
-  <section class="track" id="parousia-video">
-    <h3>The Parousia — An 1878 Answer</h3>
-    <p class="meta">Video study · J. Stuart Russell · First-century fulfillment (AD 70)</p>
+      <!-- Spotify Responsive Embed -->
+      <div class="w-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/40">
+        <iframe 
+          data-testid="embed-iframe" 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/artist/5U8qj2ZpfZKBbNVCCOpI3L?utm_source=generator&si=3b283baa06db4f68" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
 
-    <iframe
-      src="https://player.vimeo.com/video/1153319588?h=8cd7d049f1&title=0&byline=0&portrait=0"
-      height="360"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+    <section 
+      id="suno-track-1" 
+      data-category="music"
+      data-search-terms="suno new creation track 1 immersive presence track music song"
+      class="media-card card-transition bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md p-4 sm:p-6"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 dark:bg-purple-950/70 text-purple-800 dark:text-purple-300">
+              <i class="fa-solid fa-music"></i> Suno AI Track
+            </span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">• Presence Track</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">New Creation Track #1</h3>
+        </div>
+        <button onclick="copyDeepLink('suno-track-1')" class="self-start sm:self-auto text-xs text-slate-500 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 px-2.5 py-1.5 rounded-lg transition-colors" title="Copy Direct Link">
+          <i class="fa-solid fa-link text-xs"></i> Share Link
+        </button>
+      </div>
 
-    <p class="small-link">
-      <a href="https://vimeo.com/1153319588" target="_blank" rel="noopener">
-        Open on Vimeo →
-      </a>
-    </p>
-  </section>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+        Immersive presence track.
+      </p>
 
-  <section class="track" id="ad70-audio">
-    <h3>All Prophecy Happened in AD 70</h3>
-    <p class="meta">Audio teaching · Covenant fulfilment · First-century horizon</p>
+      <!-- Suno Embed Wrapper -->
+      <div class="w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-200/50 dark:border-slate-800 mb-3">
+        <iframe 
+          src="https://suno.com/embed/56e15f02-fa0d-4321-9075-b8ed1510eedb" 
+          width="100%" 
+          height="240" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media; fullscreen" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full border-0">
+        </iframe>
+      </div>
 
-    <audio controls preload="metadata" playsinline>
-      <source src="Preterism_The_Second_Coming_Already_Happened%20(1).mp3" type="audio/mpeg">
-      <source src="Preterism_The_Second_Coming_Already_Happened.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+      <div class="flex items-center justify-end">
+        <a 
+          href="https://suno.com/song/56e15f02-fa0d-4321-9075-b8ed1510eedb" 
+          target="_blank" 
+          rel="noopener" 
+          class="inline-flex items-center gap-1.5 text-xs font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+        >
+          <span>Listen on Suno</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </section>
 
-    <p class="small-link">
-      <a href="Preterism_The_Second_Coming_Already_Happened%20(1).mp3" target="_blank" rel="noopener">
-        Download audio →
-      </a>
-    </p>
-  </section>
+    <section 
+      id="suno-track-2" 
+      data-category="music"
+      data-search-terms="suno new creation track 2 immersive presence track music song"
+      class="media-card card-transition bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md p-4 sm:p-6"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-100 dark:bg-purple-950/70 text-purple-800 dark:text-purple-300">
+              <i class="fa-solid fa-music"></i> Suno AI Track
+            </span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">• Presence Track</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">New Creation Track #2</h3>
+        </div>
+        <button onclick="copyDeepLink('suno-track-2')" class="self-start sm:self-auto text-xs text-slate-500 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 px-2.5 py-1.5 rounded-lg transition-colors" title="Copy Direct Link">
+          <i class="fa-solid fa-link text-xs"></i> Share Link
+        </button>
+      </div>
 
-</main>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+        Immersive presence track.
+      </p>
 
-<footer>
-  <div class="wrap">
-    <a href="../index.html">Return to The Fulfilled Prophecy Bible Home</a>
+      <!-- Suno Embed Wrapper -->
+      <div class="w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-200/50 dark:border-slate-800 mb-3">
+        <iframe 
+          src="https://suno.com/embed/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf" 
+          width="100%" 
+          height="240" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media; fullscreen" 
+          allowfullscreen 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full border-0">
+        </iframe>
+      </div>
+
+      <div class="flex items-center justify-end">
+        <a 
+          href="https://suno.com/song/59d4f4ef-723e-4a56-8e4c-0fcd04849cdf" 
+          target="_blank" 
+          rel="noopener" 
+          class="inline-flex items-center gap-1.5 text-xs font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+        >
+          <span>Listen on Suno</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </section>
+
+    <section 
+      id="parousia-video" 
+      data-category="video"
+      data-search-terms="parousia an 1878 answer j stuart russell video study first-century fulfillment ad 70 preterism vimeo"
+      class="media-card card-transition bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md p-4 sm:p-6"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-100 dark:bg-rose-950/70 text-rose-800 dark:text-rose-300">
+              <i class="fa-solid fa-film"></i> Video Study
+            </span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">• J. Stuart Russell</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">The Parousia — An 1878 Answer</h3>
+        </div>
+        <button onclick="copyDeepLink('parousia-video')" class="self-start sm:self-auto text-xs text-slate-500 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 px-2.5 py-1.5 rounded-lg transition-colors" title="Copy Direct Link">
+          <i class="fa-solid fa-link text-xs"></i> Share Link
+        </button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+        Video study · J. Stuart Russell · First-century fulfillment (AD 70)
+      </p>
+
+      <!-- Responsive Aspect Ratio 16:9 Video Container -->
+      <div class="aspect-video-wrapper rounded-xl overflow-hidden bg-black border border-slate-200/50 dark:border-slate-800 mb-3 shadow-inner">
+        <iframe 
+          src="https://player.vimeo.com/video/1153319588?h=8cd7d049f1&title=0&byline=0&portrait=0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="flex items-center justify-between pt-1">
+        <span class="text-xs text-slate-400">Vimeo Video Embed</span>
+        <a 
+          href="https://vimeo.com/1153319588" 
+          target="_blank" 
+          rel="noopener" 
+          class="inline-flex items-center gap-1.5 text-xs font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+        >
+          <span>Open on Vimeo</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+    </section>
+
+    <section 
+      id="ad70-audio" 
+      data-category="audio"
+      data-search-terms="all prophecy happened in ad 70 ad70 audio teaching covenant fulfilment first-century horizon preterism second coming"
+      class="media-card card-transition bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md p-4 sm:p-6"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-950/70 text-indigo-800 dark:text-indigo-300">
+              <i class="fa-solid fa-podcast"></i> Audio Teaching
+            </span>
+            <span class="text-xs text-slate-400 dark:text-slate-500">• Covenant Fulfilment</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">All Prophecy Happened in AD 70</h3>
+        </div>
+        <button onclick="copyDeepLink('ad70-audio')" class="self-start sm:self-auto text-xs text-slate-500 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/80 px-2.5 py-1.5 rounded-lg transition-colors" title="Copy Direct Link">
+          <i class="fa-solid fa-link text-xs"></i> Share Link
+        </button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4">
+        Audio teaching · Covenant fulfilment · First-century horizon
+      </p>
+
+      <!-- HTML5 Audio Player Player Container -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/70 dark:border-slate-700/60 mb-3">
+        <audio controls preload="metadata" playsinline class="w-full outline-none focus:ring-2 focus:ring-brand-500 rounded-lg">
+          <source src="Preterism_The_Second_Coming_Already_Happened%20(1).mp3" type="audio/mpeg">
+          <source src="Preterism_The_Second_Coming_Already_Happened.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div class="flex items-center justify-between pt-1">
+        <span class="text-xs text-slate-400">Audio MP3 Format</span>
+        <a 
+          href="Preterism_The_Second_Coming_Already_Happened%20(1).mp3" 
+          target="_blank" 
+          rel="noopener" 
+          download
+          class="inline-flex items-center gap-1.5 text-xs font-medium text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+        >
+          <i class="fa-solid fa-download text-xs"></i>
+          <span>Download audio</span>
+        </a>
+      </div>
+    </section>
+
+    <div id="no-results" class="hidden text-center py-12 px-4 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+      <div class="w-12 h-12 mx-auto mb-3 text-slate-400 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+      </div>
+      <h3 class="text-base font-semibold text-slate-900 dark:text-white">No media resources found</h3>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-sm mx-auto">
+        We couldn't find anything matching your search term or selected category.
+      </p>
+      <button id="clear-search-btn" class="mt-4 px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-semibold transition-colors">
+        Clear search query
+      </button>
+    </div>
+
+  </main>
+
+  <footer class="mt-auto border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900 py-8 text-xs text-slate-500 dark:text-slate-400 transition-colors duration-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-medium text-slate-700 dark:text-slate-300">The Fulfilled Prophecy Bible (WEB)</p>
+        <p class="text-[11px] text-slate-400 mt-0.5">Study edition using the World English Bible translation.</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="../index.html" class="text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1 font-medium">
+          <span>Return to Home</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-12 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-2.5 rounded-xl shadow-lg text-xs font-medium flex items-center gap-2">
+    <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600"></i>
+    <span id="toast-message">Link copied to clipboard!</span>
   </div>
-</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dark mode toggle functionality
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const darkIcon = document.getElementById('theme-toggle-dark-icon');
+      const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+      function updateThemeIcons() {
+        if (document.documentElement.classList.contains('dark')) {
+          darkIcon.classList.add('hidden');
+          lightIcon.classList.remove('hidden');
+        } else {
+          darkIcon.classList.remove('hidden');
+          lightIcon.classList.add('hidden');
+        }
+      }
+      updateThemeIcons();
+
+      themeToggleBtn.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+        updateThemeIcons();
+      });
+
+      // Search & Filter Logic
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search');
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const mediaCards = document.querySelectorAll('.media-card');
+      const visibleCountElem = document.getElementById('visible-count');
+      const filterStatus = document.getElementById('filter-status');
+      const noResultsBlock = document.getElementById('no-results');
+      const resetFilterBtn = document.getElementById('reset-filter-btn');
+      const clearSearchBtnEmpty = document.getElementById('clear-search-btn');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function filterItems() {
+        let visibleCount = 0;
+
+        mediaCards.forEach(card => {
+          const categoryMatch = (currentCategory === 'all') || (card.dataset.category === currentCategory);
+          const searchTerms = (card.dataset.searchTerms || '') + ' ' + card.innerText.toLowerCase();
+          const queryMatch = !currentQuery || searchTerms.toLowerCase().includes(currentQuery.toLowerCase());
+
+          if (categoryMatch && queryMatch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Update counts and status
+        visibleCountElem.textContent = visibleCount;
+        
+        if (currentCategory !== 'all' || currentQuery !== '') {
+          filterStatus.classList.remove('hidden');
+        } else {
+          filterStatus.classList.add('hidden');
+        }
+
+        if (visibleCount === 0) {
+          noResultsBlock.classList.remove('hidden');
+        } else {
+          noResultsBlock.classList.add('hidden');
+        }
+
+        if (currentQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+      }
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => {
+            t.classList.remove('bg-brand-500', 'text-white', 'shadow-sm', 'font-semibold');
+            t.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
+          });
+
+          tab.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
+          tab.classList.add('bg-brand-500', 'text-white', 'shadow-sm', 'font-semibold');
+
+          currentCategory = tab.dataset.category;
+          filterItems();
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        currentQuery = e.target.value.trim();
+        filterItems();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentQuery = '';
+        filterItems();
+        searchInput.focus();
+      });
+
+      function resetAllFilters() {
+        currentCategory = 'all';
+        currentQuery = '';
+        searchInput.value = '';
+        
+        filterTabs.forEach(t => {
+          if (t.dataset.category === 'all') {
+            t.classList.add('bg-brand-500', 'text-white', 'shadow-sm', 'font-semibold');
+            t.classList.remove('text-slate-600', 'dark:text-slate-400');
+          } else {
+            t.classList.remove('bg-brand-500', 'text-white', 'shadow-sm', 'font-semibold');
+            t.classList.add('text-slate-600', 'dark:text-slate-400');
+          }
+        });
+
+        filterItems();
+      }
+
+      if (resetFilterBtn) resetFilterBtn.addEventListener('click', resetAllFilters);
+      if (clearSearchBtnEmpty) clearSearchBtnEmpty.addEventListener('click', resetAllFilters);
+    });
+
+    function copyDeepLink(elementId) {
+      const url = window.location.origin + window.location.pathname + '#' + elementId;
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => showToast('Direct link copied to clipboard!'));
+      } else {
+        const dummy = document.createElement('input');
+        document.body.appendChild(dummy);
+        dummy.value = url;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        showToast('Direct link copied to clipboard!');
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = msg;
+      
+      toast.classList.remove('translate-y-12', 'opacity-0', 'pointer-events-none');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-12', 'opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+  </script>
 </body>
 </html>
