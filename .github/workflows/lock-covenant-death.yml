@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}
   push:
     paths:
-      - scripts/lock_covenant_death.py
+      - scripts/add_parousia_links.py
       - .github/workflows/lock-covenant-death.yml
 
 permissions:
@@ -15,18 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 10
-      - name: Apply lock replacements
-        run: python3 scripts/lock_covenant_death.py
+      - name: Wire Parousia links
+        run: python3 scripts/add_parousia_links.py
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add 1Thessalonians/1thess4.html Ephesians/eph2.html Isaiah/isa65-66.html
+          git add eighth-day-reality.html new-creation-last-adam.html index.html about.html begin.html sitemap.xml
           if git diff --cached --quiet; then
             echo No content changes
           else
-            git commit -m "Pass 3: recast remaining biological-death commentary in place"
+            git commit -m "Add Parousia to book tabs, homepage, and sitemap"
             git push
           fi
