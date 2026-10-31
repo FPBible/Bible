@@ -6,6 +6,11 @@
   <title>FPBible — Scripture Through Fulfillment</title>
   <meta name="description" content="The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — without delay theology." />
   <link rel="icon" href="/Bible/images/og-light.png" type="image/png" />
+  <link rel="manifest" href="/Bible/manifest.json" />
+  <meta name="theme-color" content="#0f1115" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="FPBible" />
   <meta property="og:title" content="FPBible — Scripture Through Fulfillment" />
   <meta property="og:description" content="WEB text with fulfilled commentary: audience relevance, AD 30–70 horizon, New Creation now." />
   <meta property="og:image" content="https://fpbible.github.io/Bible/images/og-light.png" />
@@ -376,7 +381,6 @@
           <div class="book-item" data-title="Psalm 69" data-group="Psalms"><a href="/Bible/Prophecy/psalm-69.html">Psalm 69</a></div>
           <div class="book-item" data-title="Psalm 97" data-group="Psalms"><a href="/Bible/Prophecy/psalm-97-98.html">Psalms 97–98</a></div>
           <div class="book-item" data-title="Psalm 102" data-group="Psalms"><a href="/Bible/Prophecy/psalm-102.html">Psalm 102</a></div>
-          <div class="book-item" data-title="Psalm 110" data-group="Psalms"><a href="/Bible/Prophecy/psalm-110.html">Psalm 110</a></div>
         </div>
       </div>
     </div>
@@ -402,8 +406,7 @@
     </div>
   </section>
   <section id="support">
-    <h2>Support the work</h2>
-    <p>If these pages help you read Scripture with its original horizon intact, you can support the project.</p>
+    <h2>Support</h2>
     <p>
       <a class="kofi" href="https://ko-fi.com/B0B61QC1BU" target="_blank" rel="noopener noreferrer">
         <img height="36" src="https://storage.ko-fi.com/cdn/kofi5.png?v=6" alt="Buy Me a Coffee at ko-fi.com" />
@@ -435,7 +438,7 @@
 (function () {
   const search = document.getElementById("bookSearch");
   const items = Array.from(document.querySelectorAll(".book-item"));
-  const groups = Array.from(document.querySelectorSelectorAll(".book-group"));
+  const groups = Array.from(document.querySelectorAll(".book-group"));
   const empty = document.getElementById("emptyMsg");
   if (!search) return;
   search.addEventListener("input", function () {
@@ -456,5 +459,12 @@
   });
 })();
 </script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/Bible/sw.js").catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
