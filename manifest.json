@@ -10,6 +10,12 @@
   "theme_color": "#0f1115",
   "icons": [
     {
+      "src": "/Bible/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
       "src": "/Bible/images/og-light.png",
       "sizes": "1408x736",
       "type": "image/png",
