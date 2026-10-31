@@ -1,0 +1,31 @@
+{
+  "name": "FPBible — Scripture Through Fulfillment",
+  "short_name": "FPBible",
+  "description": "The World English Bible with study commentary that keeps Scripture inside its original covenant horizon — audience relevance, the AD 30–70 transition, and the New Creation as present reality.",
+  "start_url": "/Bible/",
+  "scope": "/Bible/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f1115",
+  "theme_color": "#0f1115",
+  "icons": [
+    {
+      "src": "/Bible/images/og-light.png",
+      "sizes": "1408x736",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Bible/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/Bible/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
