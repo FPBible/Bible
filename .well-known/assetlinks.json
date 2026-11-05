@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.fpbible.bible",
+    "sha256_cert_fingerprints": [
+      "2D:FE:38:13:60:30:9E:4C:7D:D2:C9:B6:D8:BD:7E:77:65:8A:52:4C:68:BE:A4:81:74:D7:5E:46:0D:D4:55:36"
+    ]
+  }
+}]
