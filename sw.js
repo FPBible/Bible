@@ -1,12 +1,16 @@
 // FPBible Service Worker
 // Caches the app shell and visited pages for offline use.
 
-const CACHE_NAME = 'fpbible-v1';
+const CACHE_NAME = 'fpbible-v2';
 const PRECACHE = [
   '/Bible/',
   '/Bible/index.html',
   '/Bible/manifest.json',
   '/Bible/style.css',
+  '/Bible/icon-192.png',
+  '/Bible/icon-512.png',
+  '/Bible/icon-maskable-512.png',
+  '/Bible/icon.svg',
   '/Bible/images/og-light.png'
 ];
 
