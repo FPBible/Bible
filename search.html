@@ -1,1 +1,205 @@
-PLACEHOLDER_HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search — FPBible</title>
+  <meta name="description" content="Search the Fulfilled Prophecy Bible site — books, studies, companion pages, and key resources." />
+  <link rel="icon" href="/Bible/images/og-light.png" type="image/png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg-soft:#f7f8fa;
+      --text:#111111;
+      --muted:rgba(0,0,0,0.62);
+      --line:rgba(0,0,0,0.10);
+      --accent:#0066cc;
+      --accent-soft:#e8f1fb;
+      --radius:12px;
+      --maxw:820px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0f1115;
+        --bg-soft:#171a21;
+        --text:#eef1f6;
+        --muted:rgba(238,241,246,0.62);
+        --line:rgba(255,255,255,0.10);
+        --accent:#5aa2ff;
+        --accent-soft:#1a2740;
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      line-height:1.65;
+      color:var(--text);
+      background:var(--bg);
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      border-bottom:1px solid var(--line);
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter:blur(10px);
+    }
+    .topbar .inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;gap:12px;flex-wrap:wrap;
+    }
+    .brand{font-weight:700;font-size:1.08rem;color:var(--text);letter-spacing:-0.02em}
+    .brand:hover{text-decoration:none}
+    .nav{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+    .nav a{color:var(--muted);font-size:0.94rem}
+    .nav a:hover{color:var(--text)}
+    .hero{text-align:center;padding:2.2em 0 1.2em}
+    .hero h1{margin:0.2em 0 0.35em;font-size:clamp(1.7rem,3.5vw,2.2rem);letter-spacing:-0.03em}
+    .tagline{color:var(--muted);max-width:55ch;margin:0 auto}
+    .search-wrap{margin:1.6em 0 1.2em;position:relative}
+    .search-input{
+      width:100%;padding:14px 16px;
+      border:1px solid var(--line);border-radius:10px;
+      font-size:1.05rem;background:var(--bg);color:var(--text);
+    }
+    .search-input:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0.8em 0 1.4em;justify-content:center}
+    .filter-btn{
+      padding:6px 12px;border:1px solid var(--line);border-radius:999px;
+      background:var(--bg);color:var(--muted);font-size:0.85rem;cursor:pointer;
+    }
+    .filter-btn.active,.filter-btn:hover{background:var(--accent-soft);color:var(--text);border-color:var(--accent)}
+    .results{min-height:200px}
+    .result{
+      border:1px solid var(--line);border-radius:var(--radius);
+      padding:1em 1.1em;margin-bottom:0.9em;background:var(--bg);
+    }
+    .result h3{margin:0 0 0.3em;font-size:1.05rem}
+    .result h3 a{color:var(--text)}
+    .result .meta{font-size:0.8rem;color:var(--muted);margin-bottom:0.35em}
+    .result p{margin:0;color:var(--muted);font-size:0.95rem}
+    .empty,.status{color:var(--muted);text-align:center;padding:1.5em 0}
+    footer{
+      margin-top:3em;padding:2em 0 2.4em;
+      border-top:1px solid var(--line);
+      color:var(--muted);font-size:0.92rem;text-align:center;
+    }
+    footer p{margin:0.4em 0}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap inner">
+    <a class="brand" href="/Bible/">FPBible</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/Bible/">Home</a>
+      <a href="/Bible/NewCreation/manifesto.html">Manifesto</a>
+      <a href="/Bible/Prophecy/index.html">Prophecy Hub</a>
+      <a href="/Bible/Studies/">Studies</a>
+      <a href="/Bible/eighth-day-reality.html">Eighth Day</a>
+      <a href="/Bible/about.html">About</a>
+    </nav>
+  </div>
+</div>
+<div class="wrap">
+  <section class="hero">
+    <h1>Search FPBible</h1>
+    <p class="tagline">Books, studies, companion pages, and key resources — audience relevance, AD 30–70, New Creation now.</p>
+  </section>
+
+  <div class="search-wrap">
+    <input type="search" id="q" class="search-input" placeholder="Search (e.g. Parousia, one new man, Matthew 24, Eighth Day)…" autocomplete="off" autofocus />
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="Books">Books</button>
+    <button class="filter-btn" data-cat="Studies">Studies</button>
+    <button class="filter-btn" data-cat="Prophecy">Prophecy</button>
+    <button class="filter-btn" data-cat="Foundation">Foundation</button>
+    <button class="filter-btn" data-cat="Chapters">Chapters</button>
+  </div>
+
+  <div id="status" class="status"></div>
+  <div id="results" class="results"></div>
+
+  <footer>
+    <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and first-century fulfillment.</p>
+    <p><a href="/Bible/">Home</a> · <a href="/Bible/Studies/">Studies</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> · <a href="/Bible/about.html">About</a></p>
+  </footer>
+</div>
+
+<script>
+const INDEX_URL = '/Bible/search-index.json';
+let allItems = [];
+let currentCat = 'all';
+
+async function loadIndex() {
+  const status = document.getElementById('status');
+  status.textContent = 'Loading index…';
+  try {
+    const res = await fetch(INDEX_URL);
+    allItems = await res.json();
+    status.textContent = allItems.length + ' pages indexed.';
+    doSearch();
+  } catch (e) {
+    status.textContent = 'Could not load search index.';
+  }
+}
+
+function score(item, q) {
+  if (!q) return 1;
+  const t = (item.title + ' ' + item.snippet + ' ' + item.category).toLowerCase();
+  const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+  let s = 0;
+  for (const term of terms) {
+    if (item.title.toLowerCase().includes(term)) s += 5;
+    if (item.snippet.toLowerCase().includes(term)) s += 2;
+    if (item.category.toLowerCase().includes(term)) s += 1;
+    if (t.includes(term)) s += 1;
+  }
+  return s;
+}
+
+function doSearch() {
+  const q = document.getElementById('q').value.trim();
+  const resultsEl = document.getElementById('results');
+  const status = document.getElementById('status');
+  let list = allItems.filter(it => currentCat === 'all' || it.category === currentCat);
+  if (q) {
+    list = list.map(it => ({...it, _s: score(it, q)})).filter(it => it._s > 0).sort((a,b) => b._s - a._s);
+  }
+  if (!list.length) {
+    resultsEl.innerHTML = '<p class="empty">No matches.</p>';
+    status.textContent = q ? 'No results for “' + q + '”.' : 'No pages in this category.';
+    return;
+  }
+  status.textContent = list.length + (q ? ' result' + (list.length===1?'':'s') + ' for “' + q + '”.' : ' pages.');
+  resultsEl.innerHTML = list.map(it => `
+    <div class="result">
+      <div class="meta">${it.category}</div>
+      <h3><a href="${it.url}">${it.title}</a></h3>
+      <p>${it.snippet}</p>
+    </div>
+  `).join('');
+}
+
+document.getElementById('q').addEventListener('input', doSearch);
+document.getElementById('filters').addEventListener('click', e => {
+  if (!e.target.classList.contains('filter-btn')) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  currentCat = e.target.dataset.cat;
+  doSearch();
+});
+
+const params = new URLSearchParams(location.search);
+if (params.get('q')) document.getElementById('q').value = params.get('q');
+
+loadIndex();
+</script>
+</body>
+</html>
