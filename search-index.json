@@ -1,71 +1,492 @@
 [
-  {"title": "Home", "url": "/Bible/", "category": "Site", "snippet": "Scripture Through Fulfillment. WEB text with fulfilled commentary: audience relevance, AD 30\u201370 horizon, New Creation now."},
-  {"title": "New Creation Manifesto", "url": "/Bible/NewCreation/manifesto.html", "category": "Foundation", "snippet": "Christ present, prophecy fulfilled, and New Covenant life lived now. The site\u2019s foundation document."},
-  {"title": "Prophecy Hub", "url": "/Bible/Prophecy/index.html", "category": "Foundation", "snippet": "Time statements, cosmic language, judgment, and the end of the age \u2014 inside the first-century horizon."},
-  {"title": "Studies", "url": "/Bible/Studies/", "category": "Studies", "snippet": "Longer essays on covenant, judgment, and the New Creation."},
-  {"title": "About FPBible", "url": "/Bible/about.html", "category": "Site", "snippet": "The project, the standard, and how the pages are built."},
-  {"title": "The Eighth Day Reality", "url": "/Bible/eighth-day-reality.html", "category": "Books", "snippet": "From Slavery to Sonship. Map the shift from the seven-day loop of performance into the Eighth Day of inheritance."},
-  {"title": "New Creation in the Last Adam", "url": "/Bible/new-creation-last-adam.html", "category": "Books", "snippet": "A covenantal fulfillment reading of redemptive history \u2014 first Adam to Last Adam, old house closed, one new man standing."},
-  {"title": "The Parousia", "url": "/Bible/the-parousia.html", "category": "Books", "snippet": "The day the old age closed and the new creation opened. One crisis, not a leftover future."},
-  {"title": "Across the Jordan", "url": "/Bible/across-the-jordan.html", "category": "Books", "snippet": "Leaving the wilderness of fear and living in the Promised Land of the New Creation."},
-  {"title": "Syria Palaestina", "url": "/Bible/syria-palaestina.html", "category": "Books", "snippet": "The Covenant, the Curse and the Land. The name is nearly 2,000 years old; the decisive close was AD 70."},
-  {"title": "Living in the Unshakable Kingdom", "url": "/Bible/living-in-the-unshakable-kingdom.html", "category": "Books", "snippet": "The shaking is finished. What cannot be shaken remains. Live now in the Kingdom already received."},
-  {"title": "Ninety-Five Theses Against the Unfinished Reformation", "url": "/Bible/ninety-five-theses.html", "category": "Studies", "snippet": "The Reformation recovered much, yet it remains unfinished. Alignment with the Eighth Day reality in 2026: Old Covenant ended in 70 AD, one new man, all believers priests."},
-  {"title": "The Law Never Applied to You", "url": "/Bible/Studies/the-law-never-applied.html", "category": "Studies", "snippet": "The Mosaic Law never applied to Gentiles before AD 70 and does not apply to the New Creation after AD 70. You live in the Last Adam."},
-  {"title": "Jesus and the Great Day: Fulfillment of the Eighth Day", "url": "/Bible/Studies/jesus-great-day-eighth-day.html", "category": "Studies", "snippet": "How the Last Adam fulfills the Eighth Day of Tabernacles as true Tabernacle, living water, and light."},
-  {"title": "Deuteronomy 28 and the Judgment of Jerusalem", "url": "/Bible/Studies/deuteronomy-28-and-ad70.html", "category": "Studies", "snippet": "The AD 70 siege as the historical execution of the covenant curses \u2014 days of vengeance."},
-  {"title": "Crossing the Jordan (Wilderness Exodus)", "url": "/Bible/Prophecy/wilderness-exodus.html", "category": "Studies", "snippet": "The AD 30\u201370 generation as sea, wilderness, and river \u2014 the map, not the crossing."},
-  {"title": "The Harvest Pattern of Resurrection", "url": "/Bible/Resurrection/harvest-pattern.html", "category": "Studies", "snippet": "1 Corinthians 15 read through Israel\u2019s harvest calendar: firstfruits, Pentecost, and the ingathering at the close of the Old Covenant age."},
-  {"title": "Syria Palaestina Is Nearly 2,000 Years Old", "url": "/Bible/Studies/syria-palaestina-and-the-land.html", "category": "Studies", "snippet": "The Old Covenant ended in AD 70. There is no Jew or Gentile in the Kingdom, and the land was never a bloodline prize."},
-  {"title": "The Eighth Day Reality Curriculum", "url": "/Bible/Studies/eighth-day-reality.html", "category": "Studies", "snippet": "A twelve-module curriculum walking from the seven-day loop of performance into the Eighth Day of inheritance."},
-  {"title": "The Great Covenantal Exchange", "url": "/Bible/Studies/covenantal-exchange.html", "category": "Studies", "snippet": "Christ as our all: the exchange of identity, status, and inheritance from the old order into the New Creation."},
-  {"title": "Transfer of the Kingdom", "url": "/Bible/Studies/transfer-of-the-kingdom.html", "category": "Studies", "snippet": "Matthew 21:43 \u2014 the kingdom taken from that generation and given to a nation producing its fruit."},
-  {"title": "Outside the Camp", "url": "/Bible/Studies/outside-the-camp.html", "category": "Studies", "snippet": "Hebrews 13 and the call to go outside the camp of the old order into the New Creation reality."},
-  {"title": "Pentecost Transition", "url": "/Bible/Studies/pentecost-transition.html", "category": "Studies", "snippet": "The giving of the Spirit and the transition from the old order into the New Creation age."},
-  {"title": "The Second Coming", "url": "/Bible/Studies/second-coming.html", "category": "Studies", "snippet": "The Parousia as the first-century arrival of the King in judgment and the public confirmation of the New Covenant."},
-  {"title": "Cisterns vs. Fountains", "url": "/Bible/Studies/spirit-fullness.html", "category": "Studies", "snippet": "The Spirit as the permanent fountain of living water in the New Creation."},
-  {"title": "Sin, Judgment, and Consequences in the New Creation", "url": "/Bible/Studies/sin-and-consequences-fulfilled-perspective.html", "category": "Studies", "snippet": "Distinguishing corporate covenantal condemnation from individual moral mechanics on the other side of AD 70."},
-  {"title": "1 Peter: A Fulfilled Perspective", "url": "/Bible/Studies/1peter-fulfilled-perspective.html", "category": "Studies", "snippet": "Suffering, hope, and renewal in light of the AD 70 close of the old order."},
-  {"title": "Out of the Void", "url": "/Bible/Studies/out-of-the-void.html", "category": "Studies", "snippet": "After the legal demolition of the Old Covenant in AD 70, the New Birth functions as creation ex nihilo."},
-  {"title": "The Serpent, the Dust, and the New Creation", "url": "/Bible/Studies/serpent-dust-new-creation.html", "category": "Studies", "snippet": "Genesis 3 through the lens of fulfilled eschatology \u2014 dust, the serpent, and the triumph of the New Creation in Christ."},
-  {"title": "Unmasking the Devil", "url": "/Bible/Studies/unmasking-the-devil.html", "category": "Studies", "snippet": "The devil as the slanderer and accuser within the old order, not a dualistic cosmic being."},
-  {"title": "Matthew", "url": "/Bible/Matthew/index.html", "category": "Books", "snippet": "Gospel of Matthew with fulfillment notes and New Creation commentary."},
-  {"title": "Mark", "url": "/Bible/Mark/index.html", "category": "Books", "snippet": "Gospel of Mark with fulfillment notes and New Creation commentary."},
-  {"title": "Luke", "url": "/Bible/Luke/index.html", "category": "Books", "snippet": "Gospel of Luke with fulfillment notes and New Creation commentary."},
-  {"title": "John", "url": "/Bible/John/index.html", "category": "Books", "snippet": "Gospel of John with fulfillment notes and New Creation commentary."},
-  {"title": "Acts", "url": "/Bible/Acts/index.html", "category": "Books", "snippet": "Acts \u2014 the history of the covenant transition."},
-  {"title": "Romans", "url": "/Bible/Romans/index.html", "category": "Books", "snippet": "Romans with fulfilled covenant commentary."},
-  {"title": "1 Corinthians", "url": "/Bible/1Corinthians/index.html", "category": "Books", "snippet": "1 Corinthians with fulfilled covenant commentary."},
-  {"title": "2 Corinthians", "url": "/Bible/2Corinthians/index.html", "category": "Books", "snippet": "2 Corinthians with fulfilled covenant commentary."},
-  {"title": "Galatians", "url": "/Bible/Galatians/index.html", "category": "Books", "snippet": "Galatians with fulfilled covenant commentary."},
-  {"title": "Ephesians", "url": "/Bible/Ephesians/index.html", "category": "Books", "snippet": "Ephesians with fulfilled covenant commentary."},
-  {"title": "Philippians", "url": "/Bible/Philippians/index.html", "category": "Books", "snippet": "Philippians with fulfilled covenant commentary."},
-  {"title": "Colossians", "url": "/Bible/Colossians/index.html", "category": "Books", "snippet": "Colossians with fulfilled covenant commentary."},
-  {"title": "1 Thessalonians", "url": "/Bible/1Thessalonians/index.html", "category": "Books", "snippet": "1 Thessalonians with fulfilled covenant commentary."},
-  {"title": "2 Thessalonians", "url": "/Bible/2Thessalonians/index.html", "category": "Books", "snippet": "2 Thessalonians with fulfilled covenant commentary."},
-  {"title": "1 Timothy", "url": "/Bible/1Timothy/index.html", "category": "Books", "snippet": "1 Timothy with fulfilled covenant commentary."},
-  {"title": "2 Timothy", "url": "/Bible/2Timothy/index.html", "category": "Books", "snippet": "2 Timothy with fulfilled covenant commentary."},
-  {"title": "Titus", "url": "/Bible/Titus/index.html", "category": "Books", "snippet": "Titus with fulfilled covenant commentary."},
-  {"title": "Philemon", "url": "/Bible/Philemon/index.html", "category": "Books", "snippet": "Philemon with fulfilled covenant commentary."},
-  {"title": "Hebrews", "url": "/Bible/Hebrews/index.html", "category": "Books", "snippet": "Hebrews with fulfilled covenant commentary."},
-  {"title": "James", "url": "/Bible/James/index.html", "category": "Books", "snippet": "James with fulfilled covenant commentary."},
-  {"title": "1 Peter", "url": "/Bible/1Peter/index.html", "category": "Books", "snippet": "1 Peter with fulfilled covenant commentary."},
-  {"title": "2 Peter", "url": "/Bible/2Peter/index.html", "category": "Books", "snippet": "2 Peter with fulfilled covenant commentary."},
-  {"title": "1 John", "url": "/Bible/1John/index.html", "category": "Books", "snippet": "1 John with fulfilled covenant commentary."},
-  {"title": "2 John", "url": "/Bible/2John/index.html", "category": "Books", "snippet": "2 John with fulfilled covenant commentary."},
-  {"title": "3 John", "url": "/Bible/3John/index.html", "category": "Books", "snippet": "3 John with fulfilled covenant commentary."},
-  {"title": "Jude", "url": "/Bible/Jude/index.html", "category": "Books", "snippet": "Jude with fulfilled covenant commentary."},
-  {"title": "Revelation", "url": "/Bible/Revelation/index.html", "category": "Books", "snippet": "Revelation with fulfilled covenant commentary \u2014 first-century horizon."},
-  {"title": "Isaiah (selected)", "url": "/Bible/Isaiah/index.html", "category": "Books", "snippet": "Selected Isaiah chapters with fulfillment notes."},
-  {"title": "Daniel", "url": "/Bible/Daniel/index.html", "category": "Books", "snippet": "Daniel with fulfillment notes."},
-  {"title": "Zechariah", "url": "/Bible/Zechariah/index.html", "category": "Books", "snippet": "Zechariah with fulfillment notes."},
-  {"title": "Psalms Hub", "url": "/Bible/Prophecy/psalms.html", "category": "Books", "snippet": "Psalms through the fulfilled covenant horizon."},
-  {"title": "What is the Good News?", "url": "/Bible/Prophecy/good-news.html", "category": "Prophecy", "snippet": "The good news of the New Creation reality."},
-  {"title": "The New Covenant", "url": "/Bible/Prophecy/new-covenant.html", "category": "Prophecy", "snippet": "The New Covenant established in Christ."},
-  {"title": "The New Creation", "url": "/Bible/Prophecy/new-creation.html", "category": "Prophecy", "snippet": "The New Creation as present reality."},
-  {"title": "Parousia", "url": "/Bible/Prophecy/parousia.html", "category": "Prophecy", "snippet": "Parousia \u2014 Presence, Authority, and Covenant Fulfillment."},
-  {"title": "Matthew 24", "url": "/Bible/Matthew/matt24.html", "category": "Chapters", "snippet": "Temple Judgment and the End of the Age \u2014 this generation, AD 70."},
-  {"title": "John 1", "url": "/Bible/John/john1.html", "category": "Chapters", "snippet": "The Word tabernacled among us \u2014 the close of Israel\u2019s old covenant era."},
-  {"title": "John 11", "url": "/Bible/John/john11.html", "category": "Chapters", "snippet": "I am the resurrection and the life \u2014 inaugural sign of Kingdom resurrection power."},
-  {"title": "Search", "url": "/Bible/search.html", "category": "Site", "snippet": "Search the Fulfilled Prophecy Bible site."}
+  {
+    "title": "Home",
+    "url": "/Bible/",
+    "category": "Site",
+    "snippet": "Scripture Through Fulfillment. WEB text with fulfilled commentary: audience relevance, AD 30–70 horizon, New Creation now.",
+    "keywords": ""
+  },
+  {
+    "title": "New Creation Manifesto",
+    "url": "/Bible/NewCreation/manifesto.html",
+    "category": "Foundation",
+    "snippet": "Christ present, prophecy fulfilled, New Covenant life now. Holiness is not confined to rituals. God is all in all. The old things have passed away.",
+    "keywords": "sanctification holiness New Creation manifesto fulfillment 70 AD"
+  },
+  {
+    "title": "Prophecy Hub",
+    "url": "/Bible/Prophecy/index.html",
+    "category": "Foundation",
+    "snippet": "Time statements, cosmic language, judgment, and the end of the age — inside the first-century horizon.",
+    "keywords": ""
+  },
+  {
+    "title": "Studies",
+    "url": "/Bible/Studies/",
+    "category": "Studies",
+    "snippet": "Longer essays on covenant, judgment, and the New Creation.",
+    "keywords": ""
+  },
+  {
+    "title": "About FPBible",
+    "url": "/Bible/about.html",
+    "category": "Site",
+    "snippet": "The project, the standard, and how the pages are built.",
+    "keywords": ""
+  },
+  {
+    "title": "The Eighth Day Reality",
+    "url": "/Bible/eighth-day-reality.html",
+    "category": "Books",
+    "snippet": "From Slavery to Sonship. Map the shift from the seven-day loop of performance into the Eighth Day of inheritance.",
+    "keywords": ""
+  },
+  {
+    "title": "New Creation in the Last Adam",
+    "url": "/Bible/new-creation-last-adam.html",
+    "category": "Books",
+    "snippet": "A covenantal fulfillment reading of redemptive history — first Adam to Last Adam, old house closed, one new man standing.",
+    "keywords": ""
+  },
+  {
+    "title": "The Parousia",
+    "url": "/Bible/the-parousia.html",
+    "category": "Books",
+    "snippet": "The day the old age closed and the new creation opened. One crisis, not a leftover future.",
+    "keywords": ""
+  },
+  {
+    "title": "Across the Jordan",
+    "url": "/Bible/across-the-jordan.html",
+    "category": "Books",
+    "snippet": "Leaving the wilderness of fear and living in the Promised Land of the New Creation.",
+    "keywords": ""
+  },
+  {
+    "title": "Syria Palaestina",
+    "url": "/Bible/syria-palaestina.html",
+    "category": "Books",
+    "snippet": "The Covenant, the Curse and the Land. The name is nearly 2,000 years old; the decisive close was AD 70.",
+    "keywords": ""
+  },
+  {
+    "title": "Living in the Unshakable Kingdom",
+    "url": "/Bible/living-in-the-unshakable-kingdom.html",
+    "category": "Books",
+    "snippet": "The shaking is finished. What cannot be shaken remains. Live now in the Kingdom already received.",
+    "keywords": ""
+  },
+  {
+    "title": "Ninety-Five Theses Against the Unfinished Reformation",
+    "url": "/Bible/ninety-five-theses.html",
+    "category": "Studies",
+    "snippet": "The Reformation recovered much, yet it remains unfinished. Alignment with the Eighth Day reality in 2026: Old Covenant ended in 70 AD, one new man, all believers priests.",
+    "keywords": ""
+  },
+  {
+    "title": "The Law Never Applied to You",
+    "url": "/Bible/Studies/the-law-never-applied.html",
+    "category": "Studies",
+    "snippet": "The Mosaic Law never applied to Gentiles before AD 70 and does not apply to the New Creation after AD 70. You live in the Last Adam.",
+    "keywords": ""
+  },
+  {
+    "title": "Jesus and the Great Day: Fulfillment of the Eighth Day",
+    "url": "/Bible/Studies/jesus-great-day-eighth-day.html",
+    "category": "Studies",
+    "snippet": "How the Last Adam fulfills the Eighth Day of Tabernacles as true Tabernacle, living water, and light.",
+    "keywords": ""
+  },
+  {
+    "title": "Deuteronomy 28 and the Judgment of Jerusalem",
+    "url": "/Bible/Studies/deuteronomy-28-and-ad70.html",
+    "category": "Studies",
+    "snippet": "The AD 70 siege as the historical execution of the covenant curses — days of vengeance.",
+    "keywords": ""
+  },
+  {
+    "title": "Crossing the Jordan (Wilderness Exodus)",
+    "url": "/Bible/Prophecy/wilderness-exodus.html",
+    "category": "Studies",
+    "snippet": "The AD 30–70 generation as sea, wilderness, and river — the map, not the crossing.",
+    "keywords": ""
+  },
+  {
+    "title": "The Harvest Pattern of Resurrection",
+    "url": "/Bible/Resurrection/harvest-pattern.html",
+    "category": "Studies",
+    "snippet": "1 Corinthians 15 read through Israel’s harvest calendar: firstfruits, Pentecost, and the ingathering at the close of the Old Covenant age.",
+    "keywords": ""
+  },
+  {
+    "title": "Syria Palaestina Is Nearly 2,000 Years Old",
+    "url": "/Bible/Studies/syria-palaestina-and-the-land.html",
+    "category": "Studies",
+    "snippet": "The Old Covenant ended in AD 70. There is no Jew or Gentile in the Kingdom, and the land was never a bloodline prize.",
+    "keywords": ""
+  },
+  {
+    "title": "The Eighth Day Reality Curriculum",
+    "url": "/Bible/Studies/eighth-day-reality.html",
+    "category": "Studies",
+    "snippet": "A twelve-module curriculum walking from the seven-day loop of performance into the Eighth Day of inheritance.",
+    "keywords": ""
+  },
+  {
+    "title": "The Great Covenantal Exchange",
+    "url": "/Bible/Studies/covenantal-exchange.html",
+    "category": "Studies",
+    "snippet": "Christ became for us Wisdom, Righteousness, Sanctification, and Redemption (1 Cor 1:30). In the Eighth Day these are not abstract concepts but the finished reality of the New Covenant. Sanctification is not earned by ritual; it is the structural reality of being set apart in Christ.",
+    "keywords": "sanctification holiness set apart righteousness redemption wisdom 1 Corinthians 1:30 Eighth Day New Covenant finished work"
+  },
+  {
+    "title": "Transfer of the Kingdom",
+    "url": "/Bible/Studies/transfer-of-the-kingdom.html",
+    "category": "Studies",
+    "snippet": "Matthew 21:43 — the kingdom taken from that generation and given to a nation producing its fruit.",
+    "keywords": ""
+  },
+  {
+    "title": "Outside the Camp",
+    "url": "/Bible/Studies/outside-the-camp.html",
+    "category": "Studies",
+    "snippet": "Hebrews 13 and the call to go outside the camp of the old order into the New Creation reality.",
+    "keywords": ""
+  },
+  {
+    "title": "Pentecost Transition",
+    "url": "/Bible/Studies/pentecost-transition.html",
+    "category": "Studies",
+    "snippet": "The giving of the Spirit and the transition from the old order into the New Creation age.",
+    "keywords": ""
+  },
+  {
+    "title": "The Second Coming",
+    "url": "/Bible/Studies/second-coming.html",
+    "category": "Studies",
+    "snippet": "The Parousia as the first-century arrival of the King in judgment and the public confirmation of the New Covenant.",
+    "keywords": ""
+  },
+  {
+    "title": "Cisterns vs. Fountains",
+    "url": "/Bible/Studies/spirit-fullness.html",
+    "category": "Studies",
+    "snippet": "The Spirit as the permanent fountain of living water. Holiness and sanctification are the fruit of the indwelling Spirit, not external ritual.",
+    "keywords": "sanctification Spirit holiness fountain living water"
+  },
+  {
+    "title": "Sin, Judgment, and Consequences in the New Creation",
+    "url": "/Bible/Studies/sin-and-consequences-fulfilled-perspective.html",
+    "category": "Studies",
+    "snippet": "Distinguishing corporate covenantal condemnation from individual moral mechanics on the other side of AD 70.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Peter: A Fulfilled Perspective",
+    "url": "/Bible/Studies/1peter-fulfilled-perspective.html",
+    "category": "Studies",
+    "snippet": "Suffering, hope, and renewal in light of the AD 70 close of the old order.",
+    "keywords": ""
+  },
+  {
+    "title": "Out of the Void",
+    "url": "/Bible/Studies/out-of-the-void.html",
+    "category": "Studies",
+    "snippet": "After the legal demolition of the Old Covenant in AD 70, the New Birth functions as creation ex nihilo.",
+    "keywords": ""
+  },
+  {
+    "title": "The Serpent, the Dust, and the New Creation",
+    "url": "/Bible/Studies/serpent-dust-new-creation.html",
+    "category": "Studies",
+    "snippet": "Genesis 3 through the lens of fulfilled eschatology — dust, the serpent, and the triumph of the New Creation in Christ.",
+    "keywords": ""
+  },
+  {
+    "title": "Unmasking the Devil",
+    "url": "/Bible/Studies/unmasking-the-devil.html",
+    "category": "Studies",
+    "snippet": "The devil as the slanderer and accuser within the old order, not a dualistic cosmic being.",
+    "keywords": ""
+  },
+  {
+    "title": "Matthew",
+    "url": "/Bible/Matthew/index.html",
+    "category": "Books",
+    "snippet": "Gospel of Matthew with fulfillment notes and New Creation commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Mark",
+    "url": "/Bible/Mark/index.html",
+    "category": "Books",
+    "snippet": "Gospel of Mark with fulfillment notes and New Creation commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Luke",
+    "url": "/Bible/Luke/index.html",
+    "category": "Books",
+    "snippet": "Gospel of Luke with fulfillment notes and New Creation commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "John",
+    "url": "/Bible/John/index.html",
+    "category": "Books",
+    "snippet": "Gospel of John with fulfillment notes and New Creation commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Acts",
+    "url": "/Bible/Acts/index.html",
+    "category": "Books",
+    "snippet": "Acts — the history of the covenant transition.",
+    "keywords": ""
+  },
+  {
+    "title": "Romans",
+    "url": "/Bible/Romans/index.html",
+    "category": "Books",
+    "snippet": "Romans with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Corinthians",
+    "url": "/Bible/1Corinthians/index.html",
+    "category": "Books",
+    "snippet": "1 Corinthians with fulfilled covenant commentary. Includes 1 Cor 1:30 — Christ is our wisdom, righteousness, sanctification, and redemption.",
+    "keywords": "sanctification righteousness redemption wisdom 1 Corinthians 1:30"
+  },
+  {
+    "title": "2 Corinthians",
+    "url": "/Bible/2Corinthians/index.html",
+    "category": "Books",
+    "snippet": "2 Corinthians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Galatians",
+    "url": "/Bible/Galatians/index.html",
+    "category": "Books",
+    "snippet": "Galatians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Ephesians",
+    "url": "/Bible/Ephesians/index.html",
+    "category": "Books",
+    "snippet": "Ephesians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Philippians",
+    "url": "/Bible/Philippians/index.html",
+    "category": "Books",
+    "snippet": "Philippians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Colossians",
+    "url": "/Bible/Colossians/index.html",
+    "category": "Books",
+    "snippet": "Colossians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Thessalonians",
+    "url": "/Bible/1Thessalonians/index.html",
+    "category": "Books",
+    "snippet": "1 Thessalonians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "2 Thessalonians",
+    "url": "/Bible/2Thessalonians/index.html",
+    "category": "Books",
+    "snippet": "2 Thessalonians with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Timothy",
+    "url": "/Bible/1Timothy/index.html",
+    "category": "Books",
+    "snippet": "1 Timothy with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "2 Timothy",
+    "url": "/Bible/2Timothy/index.html",
+    "category": "Books",
+    "snippet": "2 Timothy with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Titus",
+    "url": "/Bible/Titus/index.html",
+    "category": "Books",
+    "snippet": "Titus with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Philemon",
+    "url": "/Bible/Philemon/index.html",
+    "category": "Books",
+    "snippet": "Philemon with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Hebrews",
+    "url": "/Bible/Hebrews/index.html",
+    "category": "Books",
+    "snippet": "Hebrews with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "James",
+    "url": "/Bible/James/index.html",
+    "category": "Books",
+    "snippet": "James with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Peter",
+    "url": "/Bible/1Peter/index.html",
+    "category": "Books",
+    "snippet": "1 Peter with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "2 Peter",
+    "url": "/Bible/2Peter/index.html",
+    "category": "Books",
+    "snippet": "2 Peter with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "1 John",
+    "url": "/Bible/1John/index.html",
+    "category": "Books",
+    "snippet": "1 John with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "2 John",
+    "url": "/Bible/2John/index.html",
+    "category": "Books",
+    "snippet": "2 John with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "3 John",
+    "url": "/Bible/3John/index.html",
+    "category": "Books",
+    "snippet": "3 John with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Jude",
+    "url": "/Bible/Jude/index.html",
+    "category": "Books",
+    "snippet": "Jude with fulfilled covenant commentary.",
+    "keywords": ""
+  },
+  {
+    "title": "Revelation",
+    "url": "/Bible/Revelation/index.html",
+    "category": "Books",
+    "snippet": "Revelation with fulfilled covenant commentary — first-century horizon.",
+    "keywords": ""
+  },
+  {
+    "title": "Isaiah (selected)",
+    "url": "/Bible/Isaiah/index.html",
+    "category": "Books",
+    "snippet": "Selected Isaiah chapters with fulfillment notes.",
+    "keywords": ""
+  },
+  {
+    "title": "Daniel",
+    "url": "/Bible/Daniel/index.html",
+    "category": "Books",
+    "snippet": "Daniel with fulfillment notes.",
+    "keywords": ""
+  },
+  {
+    "title": "Zechariah",
+    "url": "/Bible/Zechariah/index.html",
+    "category": "Books",
+    "snippet": "Zechariah with fulfillment notes.",
+    "keywords": ""
+  },
+  {
+    "title": "Psalms Hub",
+    "url": "/Bible/Prophecy/psalms.html",
+    "category": "Books",
+    "snippet": "Psalms through the fulfilled covenant horizon.",
+    "keywords": ""
+  },
+  {
+    "title": "What is the Good News?",
+    "url": "/Bible/Prophecy/good-news.html",
+    "category": "Prophecy",
+    "snippet": "The good news of the New Creation reality.",
+    "keywords": ""
+  },
+  {
+    "title": "The New Covenant",
+    "url": "/Bible/Prophecy/new-covenant.html",
+    "category": "Prophecy",
+    "snippet": "The New Covenant established in Christ.",
+    "keywords": ""
+  },
+  {
+    "title": "The New Creation",
+    "url": "/Bible/Prophecy/new-creation.html",
+    "category": "Prophecy",
+    "snippet": "The New Creation as present reality.",
+    "keywords": ""
+  },
+  {
+    "title": "Parousia",
+    "url": "/Bible/Prophecy/parousia.html",
+    "category": "Prophecy",
+    "snippet": "Parousia — Presence, Authority, and Covenant Fulfillment.",
+    "keywords": ""
+  },
+  {
+    "title": "Matthew 24",
+    "url": "/Bible/Matthew/matt24.html",
+    "category": "Chapters",
+    "snippet": "Temple Judgment and the End of the Age — this generation, AD 70.",
+    "keywords": ""
+  },
+  {
+    "title": "John 1",
+    "url": "/Bible/John/john1.html",
+    "category": "Chapters",
+    "snippet": "The Word tabernacled among us — the close of Israel’s old covenant era.",
+    "keywords": ""
+  },
+  {
+    "title": "John 11",
+    "url": "/Bible/John/john11.html",
+    "category": "Chapters",
+    "snippet": "I am the resurrection and the life — inaugural sign of Kingdom resurrection power.",
+    "keywords": ""
+  },
+  {
+    "title": "Search",
+    "url": "/Bible/search.html",
+    "category": "Site",
+    "snippet": "Search the Fulfilled Prophecy Bible site.",
+    "keywords": ""
+  },
+  {
+    "title": "1 Corinthians 1",
+    "url": "/Bible/1Corinthians/1cor1.html",
+    "category": "Chapters",
+    "snippet": "The cross ends boasting. Christ has become for us wisdom from God — righteousness, sanctification, and redemption — so that no one may boast.",
+    "keywords": "sanctification righteousness redemption wisdom boasting cross 1 Corinthians 1:30"
+  }
 ]
