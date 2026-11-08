@@ -136,6 +136,7 @@
 const INDEX_URL = '/Bible/search-index.json';
 let allItems = [];
 let currentCat = 'all';
+let fuse = null;
 
 async function loadIndex() {
   const status = document.getElementById('status');
@@ -144,22 +145,50 @@ async function loadIndex() {
     const res = await fetch(INDEX_URL);
     allItems = await res.json();
     status.textContent = allItems.length + ' pages indexed.';
+    // Simple client-side search (no external lib required)
     doSearch();
   } catch (e) {
     status.textContent = 'Could not load search index.';
   }
 }
 
+function levenshtein(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i-1) === a.charAt(j-1)) matrix[i][j] = matrix[i-1][j-1];
+      else matrix[i][j] = Math.min(matrix[i-1][j-1]+1, matrix[i][j-1]+1, matrix[i-1][j]+1);
+    }
+  }
+  return matrix[b.length][a.length];
+}
+
 function score(item, q) {
   if (!q) return 1;
-  const t = (item.title + ' ' + item.snippet + ' ' + item.category).toLowerCase();
+  const title = (item.title || '').toLowerCase();
+  const snippet = (item.snippet || '').toLowerCase();
+  const keywords = (item.keywords || '').toLowerCase();
+  const cat = (item.category || '').toLowerCase();
+  const all = title + ' ' + snippet + ' ' + keywords + ' ' + cat;
   const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
   let s = 0;
   for (const term of terms) {
-    if (item.title.toLowerCase().includes(term)) s += 5;
-    if (item.snippet.toLowerCase().includes(term)) s += 2;
-    if (item.category.toLowerCase().includes(term)) s += 1;
-    if (t.includes(term)) s += 1;
+    if (title.includes(term)) s += 6;
+    if (snippet.includes(term)) s += 3;
+    if (keywords.includes(term)) s += 4;
+    if (cat.includes(term)) s += 1;
+    // Simple typo tolerance: if term is close to a word in keywords/title
+    const words = all.split(/\W+/);
+    for (const w of words) {
+      if (w.length > 4 && Math.abs(w.length - term.length) <= 2 && levenshtein(w, term) <= 2) {
+        s += 2;
+        break;
+      }
+    }
   }
   return s;
 }
@@ -196,6 +225,7 @@ document.getElementById('filters').addEventListener('click', e => {
   doSearch();
 });
 
+// Support ?q= in URL
 const params = new URLSearchParams(location.search);
 if (params.get('q')) document.getElementById('q').value = params.get('q');
 
