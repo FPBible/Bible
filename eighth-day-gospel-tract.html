@@ -25,6 +25,8 @@
     .light-scene .scene-bg { filter: brightness(0.65); }
     .light-scene { color: #111; }
     .light-scene p, .light-scene h1, .light-scene h2 { text-shadow: 0 1px 6px rgba(255,255,255,0.4); }
+    /* Better crop for the portrait garden tomb image */
+    #last-adam .scene-bg { background-position: center 30%; }
     .cta { display: inline-block; margin-top: 1.6em; background: var(--accent); color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 1.05rem; }
     .cta:hover { background: #1e4d78; }
     .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0%; z-index: 200; transition: width 0.1s; }
@@ -68,7 +70,7 @@
 </section>
 
 <!-- Scene 3: Last Adam -->
-<section class="scene light-scene">
+<section class="scene light-scene" id="last-adam">
   <div class="scene-bg" style="background-image: url('/Bible/images/tract-last-adam.jpg');"></div>
   <div class="scene-content">
     <h2>The Last Adam</h2>
