@@ -7,61 +7,82 @@
   <meta name="description" content="A short, experience-led tract on connection and loneliness. The most connected generation in history is also one of the loneliest. The Gospel's own theme is breath, connection, cut off, reconnected." />
   <link rel="stylesheet" href="/Bible/style.css" />
   <style>
-    :root { --tract-max: 720px; }
-    body { background: var(--bg); color: var(--ink); }
-    .tract-wrap { max-width: var(--tract-max); margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
-    .tract-wrap h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0.4em 0 0.2em; line-height: 1.15; }
-    .tract-wrap .subtitle { font-style: italic; color: var(--muted); margin: 0 0 1.8em; font-size: 1.05rem; }
-    .tract-wrap h2 { font-size: 1.25rem; margin: 2em 0 0.6em; color: var(--accent); }
-    .tract-wrap p { margin: 0.6em 0 1em; }
-    .tract-wrap a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
-    .tract-wrap a:hover { text-decoration-thickness: 2px; }
-    .go-deeper { margin: 0.8em 0 1.4em; }
+    body { background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 1.25rem 1.1rem 3.5rem; }
+    .hero { margin: 0 0 1.8em; border-radius: 12px; overflow: hidden; }
+    .hero img { width: 100%; height: auto; display: block; }
+    h1 { font-size: clamp(1.9rem, 4.5vw, 2.5rem); margin: 0.3em 0 0.15em; line-height: 1.12; letter-spacing: -0.015em; }
+    .subtitle { font-style: italic; color: var(--muted); margin: 0 0 1.6em; font-size: 1.05rem; }
+    h2 { font-size: 1.28rem; margin: 2.1em 0 0.55em; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.25em; }
+    p { margin: 0.65em 0 1em; line-height: 1.65; }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .section-img { margin: 1.4em 0 0.2em; border-radius: 10px; overflow: hidden; }
+    .section-img img { width: 100%; height: auto; display: block; }
+    .go-deeper { margin: 0.7em 0 1.5em; }
     .go-deeper summary {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--accent);
       font-weight: 600;
       list-style: none;
       display: flex;
       align-items: center;
-      gap: 0.4em;
+      gap: 0.35em;
     }
     .go-deeper summary::-webkit-details-marker { display: none; }
-    .go-deeper summary::before { content: "▸ "; font-size: 0.8em; }
+    .go-deeper summary::before { content: "▸ "; font-size: 0.75em; }
     .go-deeper[open] summary::before { content: "▾ "; }
     .go-deeper .refs {
       background: var(--scripture-bg);
       border-left: 3px solid var(--accent);
-      padding: 0.75em 1em;
-      margin: 0.5em 0 0;
-      font-size: 0.92rem;
-      line-height: 1.55;
+      padding: 0.7em 1em;
+      margin: 0.45em 0 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
       border-radius: 0 6px 6px 0;
     }
-    .go-deeper .refs a { white-space: nowrap; }
     .invitation {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.2em 1.3em;
-      margin: 2em 0;
+      border-radius: 12px;
+      padding: 1.15em 1.25em;
+      margin: 2.2em 0 1.5em;
     }
     .invitation blockquote {
-      margin: 0.6em 0 0;
+      margin: 0.55em 0 0;
       font-style: italic;
       border-left: 3px solid var(--accent);
-      padding-left: 0.9em;
+      padding-left: 0.85em;
     }
-    .next-step { margin-top: 1.4em; font-weight: 600; }
+    .next-step { margin-top: 1.2em; font-weight: 600; }
+    nav.topnav {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 0.7rem 1rem;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav.topnav a { color: var(--accent); text-decoration: none; padding: 0 0.4rem; }
+    nav.topnav a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
     @media print {
-      .topnav, footer, .go-deeper summary { display: none !important; }
-      .go-deeper { display: block !important; page-break-inside: avoid; }
-      .go-deeper .refs { display: block !important; border: none; background: none; padding: 0.15em 0; font-size: 10pt; }
+      nav.topnav, footer, .go-deeper summary, .hero, .section-img { display: none !important; }
+      .go-deeper { display: block !important; }
+      .go-deeper .refs { display: block !important; border: none; background: none; padding: 0.1em 0; }
       body { font-size: 11pt; }
-      .tract-wrap { max-width: none; padding: 0.5in 0.4in; }
+      .wrap { max-width: none; padding: 0.4in; }
       a { color: #000 !important; text-decoration: none; }
-      a[href]::after { content: none; }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
@@ -69,15 +90,19 @@
 </head>
 <body>
 <nav class="topnav">
-  <a href="/Bible/index.html">Home</a> |
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-  <a href="/Bible/Studies/index.html">Studies</a> |
-  <a href="/Bible/eighth-day-reality.html">Eighth Day</a> |
-  <a href="/Bible/new-creation-last-adam.html">Last Adam</a> |
+  <a href="/Bible/index.html">Home</a> ·
+  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> ·
+  <a href="/Bible/Studies/index.html">Studies</a> ·
+  <a href="/Bible/eighth-day-reality.html">Eighth Day</a> ·
+  <a href="/Bible/new-creation-last-adam.html">Last Adam</a> ·
   <a href="#top">Top</a>
 </nav>
 
-<main class="tract-wrap" id="top">
+<main class="wrap" id="top">
+  <div class="hero">
+    <img src="/Bible/images/connected-header.jpg" alt="Dawn light over a quiet landscape with threads of connection" />
+  </div>
+
   <h1>Connected</h1>
   <p class="subtitle">Why we’re linked to everyone and still feel alone</p>
 
@@ -103,6 +128,9 @@
   </details>
 
   <h2>3. An old explanation</h2>
+  <div class="section-img">
+    <img src="/Bible/images/connected-breath.jpg" alt="Soft light connecting two forms, suggesting breath and life" />
+  </div>
   <p>The oldest story we have says people were made from dust and given breath. Life wasn’t something we generated. It flowed from God, in connection. And we were made in his image — you were never worthless.</p>
   <p>Then a voice suggested God couldn’t be trusted, and life would go better on our own terms. The connection broke. Since then, every one of us is born running on our own: capable, brilliant, and cut off.</p>
   <p>Dust, running without breath.</p>
@@ -149,6 +177,10 @@
     </div>
   </details>
 
+  <div class="section-img">
+    <img src="/Bible/images/connected-invitation.jpg" alt="Still water at dawn, open and restful" />
+  </div>
+
   <div class="invitation">
     <h2>An invitation</h2>
     <p>You don’t need special words. It might sound like this:</p>
@@ -156,10 +188,10 @@
   </div>
 
   <p class="next-step">Next step: <a href="/Bible/John/">read the Gospel of John</a>, and talk to someone who knows the way.</p>
-  <p style="margin-top:1.6em; font-size:0.95rem;">Further reading on the site: <a href="/Bible/NewCreation/manifesto.html">New Creation Manifesto</a> · <a href="/Bible/eighth-day-reality.html">The Eighth Day Reality</a> · <a href="/Bible/Prophecy/good-news.html">What Is the Good News?</a></p>
+  <p style="margin-top:1.5em; font-size:0.95rem;">Further reading on the site: <a href="/Bible/NewCreation/manifesto.html">New Creation Manifesto</a> · <a href="/Bible/eighth-day-reality.html">The Eighth Day Reality</a> · <a href="/Bible/Prophecy/good-news.html">What Is the Good News?</a></p>
 </main>
 
-<footer style="text-align:center; padding:2rem 1rem; color:var(--muted); font-size:0.9rem; border-top:1px solid var(--border);">
+<footer>
   <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and the AD 30–70 horizon.</p>
   <p><a href="/Bible/index.html">Home</a> · <a href="/Bible/eighth-day-reality.html">The Eighth Day Reality</a> · <a href="/Bible/new-creation-last-adam.html">New Creation in the Last Adam</a></p>
 </footer>
