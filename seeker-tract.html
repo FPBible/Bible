@@ -1,189 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Something Is Off — Seeker Tract — Fulfilled Prophecy Bible</title>
-  <meta name="description" content="A clear starting point for those with no Christian background. The old order of distance is finished. One new humanity. The door is open." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Old World Ended · Welcome to the New Creation</title>
+  <meta name="description" content="Most people think the Gospel is a ticket to escape a doomed planet. The Bible says it’s an invitation to live in a reality that has already begun." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FAF9F6',
+            charcoal: '#1C1917',
+            sage: '#3A5A40',
+            terracotta: '#B5651D',
+            soft: '#F5F3EF',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
   <style>
-    :root { --accent: #2a6496; --bg: #0a0a0a; --text: #f0f0f0; --muted: #bbb; }
-    *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      color: var(--text);
-      background: var(--bg);
-      font-size: 1.05rem;
-    }
-    .topnav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(10,10,10,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
-      font-size: 0.875rem;
-      padding: 10px 16px;
-      color: #aaa;
-    }
-    .topnav a { color: #8bb4e0; text-decoration: none; padding: 0 6px; }
-    .topnav a:hover { text-decoration: underline; }
+    body { background-color: #FAF9F6; color: #1C1917; }
 
-    .scene {
-      max-width: 900px;
-      margin: 0 auto 48px;
-      padding: 0 18px;
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.8s ease forwards;
     }
-    .scene img, .scene video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      background: #111;
-    }
-    .scene-content {
-      padding: 8px 4px 24px;
-      text-align: center;
-    }
-    .scene h1, .scene h2 {
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0 0 0.5em;
-      color: #fff;
-    }
-    .scene h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
-    .scene h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
-    .scene p {
-      font-size: clamp(1.02rem, 2vw, 1.18rem);
-      max-width: 720px;
-      margin: 0.7em auto 1em;
-      color: var(--text);
-    }
-    .label {
-      display: inline-block;
-      background: rgba(42,100,150,0.9);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 1em;
-    }
-    .highlight {
-      font-size: clamp(1.15rem, 2.8vw, 1.45rem);
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      color: #fff;
-      margin: 1em auto 0.5em;
-      max-width: 640px;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 1.4em;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
-    .cta:hover { background: #1e4d78; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
 
-    footer {
-      background: #111;
-      color: #888;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      margin-top: 20px;
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
     }
-    footer a { color: #8bb4e0; }
 
-    @media (max-width: 600px) {
-      .scene { margin-bottom: 32px; padding: 0 14px; }
-      .scene img, .scene video { border-radius: 8px; }
+    .pull-quote {
+      border-left: 3px solid #3A5A40;
+    }
+
+    /* Print styles for clean pamphlet */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white; color: black; font-size: 11pt; }
+      .print-break { page-break-before: always; }
+      a { text-decoration: none; color: black; }
+      .hero, .interactive { break-inside: avoid; }
+      section { margin-bottom: 1.5rem; }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
 </head>
-<body>
-<nav class="topnav">
-  <a href="/Bible/index.html">Home</a> |
-  <a href="/Bible/Prophecy/index.html">Prophecy Hub</a> |
-  <a href="/Bible/Studies/index.html">Studies</a> |
-  <a href="/Bible/eighth-day-reality.html">Eighth Day</a> |
-  <a href="/Bible/new-creation-last-adam.html">Last Adam</a> |
-  <a href="#top">Top</a>
-</nav>
+<body class="font-sans antialiased">
 
-<section class="scene" id="top">
-  <img src="/Bible/images/seeker-feeling.jpg" alt="The common human experience of distance and striving" />
-  <div class="scene-content">
-    <span class="label">The Feeling</span>
-    <h1>Something Is Off</h1>
-    <p>Most people feel it. A distance that never quite closes. The sense that we are always striving and never quite arriving. Divisions that keep reappearing no matter how hard we try to fix them.</p>
-    <p>Religion tries to manage it with rules and rituals. Irreligion tries to manage it by ignoring it. Neither ends the problem.</p>
-    <div class="highlight">Something deeper is unfinished.</div>
-  </div>
-</section>
+  <!-- Minimal top bar -->
+  <header class="no-print fixed top-0 left-0 right-0 z-50 bg-alabaster/90 backdrop-blur-sm border-b border-stone-200/70">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
+      <a href="/Bible/index.html" class="font-serif text-lg tracking-tight hover:opacity-70">New Creation</a>
+      <div class="flex gap-4">
+        <a href="/Bible/NewCreation/manifesto.html" class="text-sage hover:text-charcoal transition">Manifesto</a>
+        <a href="#step" class="text-sage hover:text-charcoal transition">Begin →</a>
+      </div>
+    </div>
+  </header>
 
-<section class="scene">
-  <img src="/Bible/images/seeker-jesus.jpg" alt="Jesus — the historical claim" />
-  <div class="scene-content">
-    <h2>One Man</h2>
-    <p>In the first century a man named Jesus appeared. He taught, healed, and was executed. His followers claimed he was raised.</p>
-    <p>He did not offer a better set of rules. He claimed the old way of relating to God was ending, and a new way was beginning.</p>
-    <div class="highlight">Not by human effort. By something he himself would finish.</div>
-  </div>
-</section>
+  <main class="pt-16">
 
-<section class="scene">
-  <img src="/Bible/images/seeker-old-system.jpg" alt="The old system of distance by design" />
-  <div class="scene-content">
-    <h2>Distance by Design</h2>
-    <p>Jesus lived inside a system built on ancestry and performance. Who you were born as decided your standing. A temple stood as the center, and most people were kept at a distance from it.</p>
-    <p>The system was not accidental. It was the old order. Jesus said that order would end in the lifetime of the people listening to him.</p>
-    <div class="highlight">The dividing categories would not last.</div>
-  </div>
-</section>
+    <!-- Hero -->
+    <section class="hero max-w-3xl mx-auto px-6 py-20 md:py-28 text-center">
+      <p class="text-sage text-sm uppercase tracking-[0.2em] mb-6 fade-up">A 2-minute message</p>
+      <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-8 fade-up delay-1">
+        The Old World Ended.<br />
+        <span class="italic font-medium">Welcome to the New Creation.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-stone-700 max-w-2xl mx-auto leading-relaxed mb-10 fade-up delay-2">
+        Most people think the Gospel is a ticket to escape a doomed planet. The Bible says it’s an invitation to live in a reality that has already begun.
+      </p>
+      <a href="#shadow" class="no-print inline-flex items-center gap-2 bg-charcoal text-alabaster px-6 py-3.5 rounded-full text-sm font-medium hover:bg-stone-800 transition fade-up delay-3">
+        Read the 2-Minute Message
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </section>
 
-<section class="scene">
-  <img src="/Bible/images/seeker-ad70.jpg" alt="AD 70 — the end of the old order" />
-  <div class="scene-content">
-    <h2>The End of the Old Order</h2>
-    <p>In the year 70 the temple was destroyed. The entire system collapsed. The wall that separated people by birth and status came down.</p>
-    <p>What many still treat as future had already occurred. The age of shadows closed. The old way of distance and striving ended.</p>
-  </div>
-</section>
+    <!-- 1. The Shadow -->
+    <section id="shadow" class="max-w-3xl mx-auto px-6 py-16 md:py-20">
+      <div class="mb-4 text-sage text-sm uppercase tracking-widest">01 — The Problem</div>
+      <h2 class="font-serif text-3xl md:text-4xl mb-6">Living in a Shadow</h2>
+      <div class="space-y-6 text-lg leading-relaxed text-stone-800">
+        <p>You don’t need a theology degree to know something feels off. Anxiety, alienation, and the exhausting treadmill of trying to “earn” your worth are symptoms of living under an expired operating system.</p>
+        <p>In Scripture, this is called the “Old Creation”—a way of living defined by separation from God, law, fear, and spiritual death.</p>
+      </div>
+    </section>
 
-<section class="scene">
-  <img src="/Bible/images/seeker-one-humanity.jpg" alt="One new humanity" />
-  <div class="scene-content">
-    <h2>One New Humanity</h2>
-    <p>There is now one new humanity. Identity is no longer genealogy or effort. It is trust in the one who finished the old order.</p>
-    <p>Access that was once restricted is open. The dividing categories are gone. You do not become acceptable by becoming better. You enter by faith into what has already been accomplished.</p>
-  </div>
-</section>
+    <!-- 2. The Turning Point -->
+    <section class="bg-soft border-y border-stone-200/60">
+      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20">
+        <div class="mb-4 text-terracotta text-sm uppercase tracking-widest">02 — The Turning Point</div>
+        <h2 class="font-serif text-3xl md:text-4xl mb-6">It Is Finished</h2>
+        <div class="space-y-6 text-lg leading-relaxed text-stone-800">
+          <p>Two thousand years ago, Jesus didn’t just offer a self-help program; He ended an entire covenantal age. Through His death, resurrection, and the passing away of the Old Covenant order, the barrier between God and humanity was permanently removed.</p>
+          <p>The debt is paid. The temple curtain is gone. The “last days” of the old world are behind us—we are living in the age of the New Covenant, where God’s presence is no longer locked behind a ritual, but freely available right now.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="scene">
-  <img src="/Bible/images/seeker-invitation.jpg" alt="The door is open" />
-  <div class="scene-content">
-    <h2>The Door Is Open</h2>
-    <p>The old system of distance is finished. The work is done. You are invited to leave the old identity—whatever it was—and take your place in the new humanity by simple trust.</p>
-    <div class="highlight">The presence that was once closed is open.<br>The Eighth Day has dawned.</div>
-    <a href="/Bible/NewCreation/manifesto.html" class="cta">Read the New Creation Manifesto →</a>
-  </div>
-</section>
+    <!-- 3. The Reality -->
+    <section class="max-w-3xl mx-auto px-6 py-16 md:py-20">
+      <div class="mb-4 text-sage text-sm uppercase tracking-widest">03 — The Reality</div>
+      <h2 class="font-serif text-3xl md:text-4xl mb-8">What “New Creation” Means for You Today</h2>
 
-<footer>
-  <p><strong>The Fulfilled Prophecy Bible</strong> — WEB text. Commentary honours audience relevance and the AD 30–70 horizon.</p>
-  <p><a href="/Bible/index.html">Home</a> · <a href="/Bible/eighth-day-reality.html">The Eighth Day Reality</a> · <a href="/Bible/new-creation-last-adam.html">New Creation in the Last Adam</a></p>
-</footer>
+      <blockquote class="pull-quote pl-6 py-2 my-8 font-serif text-xl md:text-2xl italic leading-snug text-charcoal">
+        “If anyone is in Christ, there is a new creation: the old has gone, the new is here!”
+        <footer class="mt-3 text-sm not-italic font-sans text-stone-500">— 2 Corinthians 5:17</footer>
+      </blockquote>
+
+      <div class="space-y-6 text-lg leading-relaxed text-stone-800">
+        <p>Salvation isn’t just fire insurance for the afterlife; it is a present-tense transformation of your identity and your relationship with your Creator:</p>
+        <ul class="space-y-4">
+          <li><strong class="text-charcoal">Reconciliation, Not Fear.</strong> God isn’t angry at you waiting to settle a score. In Christ, God reconciled the world to Himself, no longer counting people’s sins against them (2 Corinthians 5:19).</li>
+          <li><strong class="text-charcoal">Life Right Now.</strong> Eternal life isn’t a future clock that starts when you die; Jesus defined it as knowing God intimately today (John 17:3).</li>
+          <li><strong class="text-charcoal">A Present Kingdom.</strong> You don’t have to wait for heaven to experience peace, purpose, and belonging. The Kingdom of God is active, unshakeable, and open to you here and now.</li>
+        </ul>
+      </div>
+
+      <blockquote class="pull-quote pl-6 py-2 my-8 font-serif text-xl md:text-2xl italic leading-snug text-charcoal">
+        “This is eternal life: that they may know you, the only true God, and Jesus Christ, whom you have sent.”
+        <footer class="mt-3 text-sm not-italic font-sans text-stone-500">— John 17:3</footer>
+      </blockquote>
+    </section>
+
+    <!-- Interactive Step Into the New -->
+    <section id="step" class="interactive bg-soft border-t border-stone-200/60">
+      <div class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center mb-10">
+          <div class="mb-3 text-sage text-sm uppercase tracking-widest">04 — Step Into the New</div>
+          <h2 class="font-serif text-3xl md:text-4xl mb-4">The door is already open</h2>
+          <p class="text-lg text-stone-700">You don’t need to clean yourself up first, perform religious rituals, or wait for a future apocalypse to get right with God.</p>
+        </div>
+
+        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 shadow-sm">
+          <ol class="space-y-4 text-stone-800 mb-8">
+            <li class="flex gap-3"><span class="text-sage font-medium">1.</span> Acknowledge that trying to be your own source of life isn’t working.</li>
+            <li class="flex gap-3"><span class="text-sage font-medium">2.</span> Trust in the finished work of Jesus—that He has already removed the barrier between you and God.</li>
+            <li class="flex gap-3"><span class="text-sage font-medium">3.</span> Receive your new identity as a forgiven, reconciled child of God.</li>
+          </ol>
+
+          <div class="border-t border-stone-200 pt-8">
+            <p class="font-serif italic text-lg leading-relaxed text-charcoal mb-6">
+              “Jesus, I stop trying to earn my way to You. I trust that Your work is finished, the old way of separation is over, and You have made a way for me to know God right now. I step into Your New Creation today. Make me new from the inside out. Amen.”
+            </p>
+
+            <button id="prayed-btn" class="no-print w-full md:w-auto bg-sage hover:bg-[#2f4a35] text-white px-8 py-3.5 rounded-full font-medium transition">
+              I prayed this today
+            </button>
+
+            <!-- Next steps (hidden by default) -->
+            <div id="next-steps" class="hidden mt-8 pt-8 border-t border-stone-200 space-y-5">
+              <p class="font-serif text-xl">Welcome. You’re not starting over. You’re stepping into what is already finished.</p>
+              <div class="space-y-3 text-stone-700">
+                <p><strong class="text-charcoal">Next steps:</strong></p>
+                <ul class="space-y-2 list-disc list-inside">
+                  <li>Read the Gospel of John — start with chapters 1, 3, and 17.</li>
+                  <li>Find one other person who lives in this same present reality and talk.</li>
+                  <li><a href="/Bible/NewCreation/manifesto.html" class="text-sage underline">Read the New Creation Manifesto</a>.</li>
+                  <li>Print this page (Ctrl/Cmd + P) as a simple keepsake or to share.</li>
+                </ul>
+              </div>
+              <p class="text-sm text-stone-500">The presence that was once closed is open. The Eighth Day has dawned.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="no-print max-w-3xl mx-auto px-6 py-12 text-center text-sm text-stone-500">
+      <p>The old system of distance is finished. The work is done.</p>
+      <p class="mt-2 font-serif italic">Welcome to the New Creation.</p>
+      <p class="mt-4"><a href="/Bible/index.html" class="text-sage">Home</a> · <a href="/Bible/eighth-day-reality.html" class="text-sage">Eighth Day Reality</a> · <a href="/Bible/new-creation-last-adam.html" class="text-sage">Last Adam</a></p>
+    </footer>
+
+  </main>
+
+  <script>
+    const btn = document.getElementById('prayed-btn');
+    const steps = document.getElementById('next-steps');
+
+    btn.addEventListener('click', () => {
+      btn.textContent = 'Thank you';
+      btn.disabled = true;
+      btn.classList.add('opacity-70', 'cursor-default');
+      steps.classList.remove('hidden');
+      steps.classList.add('fade-up');
+      setTimeout(() => {
+        steps.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section h2, section blockquote').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
