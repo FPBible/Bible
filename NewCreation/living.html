@@ -35,18 +35,19 @@
     html { scroll-behavior: smooth; }
     body { background-color: #FAF9F6; color: #1C1917; }
     .pull-quote { border-left: 3px solid #3A5A40; }
-    .fade-up {
+    .animate {
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.7s ease forwards;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
+    .animate.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     @media print {
       .no-print { display: none !important; }
       body { background: white; color: black; }
-      .fade-up { opacity: 1; transform: none; }
+      .animate { opacity: 1; transform: none; }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
@@ -67,7 +68,7 @@
   <main class="pt-16">
 
     <!-- Hero -->
-    <section class="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center fade-up">
+    <section class="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <p class="text-sage text-sm uppercase tracking-[0.2em] mb-6">Living It</p>
       <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight mb-6">
         Living as a New Creation
@@ -81,7 +82,7 @@
     </section>
 
     <!-- Intro -->
-    <section class="max-w-3xl mx-auto px-6 py-8 md:py-12 fade-up">
+    <section class="max-w-3xl mx-auto px-6 py-8 md:py-12">
       <div class="space-y-6 text-lg leading-relaxed text-stone-800">
         <p>To live as a <strong>New Creation</strong> (<em>Kainē Ktisis</em>) is to inhabit the fully realized reality of the New Covenant age. From a Covenantal Fulfillment perspective, the “New Creation” is not a reformed physical universe created after the destruction of the earth, but the <strong>new covenantal world order</strong> inaugurated by Christ and fully established when the Old Covenant temple system passed away in AD 70.</p>
         <p>Where the Old Covenant was defined by distance, physical rituals, legalistic striving, and spiritual death in Adam, New Creation living is defined by <strong>unbroken union, finished righteousness, and the active reign of the Spirit within.</strong></p>
@@ -90,7 +91,7 @@
 
     <!-- Covenantal Shift -->
     <section class="bg-soft border-y border-stone-200/60">
-      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20 fade-up">
+      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20">
         <div class="text-sage text-sm uppercase tracking-widest mb-3">01</div>
         <h2 class="font-serif text-3xl md:text-4xl mb-8">The Covenantal Shift</h2>
         <p class="text-lg mb-6">To understand New Creation living, we must understand what “passed away” and what “became new.”</p>
@@ -107,14 +108,14 @@
 
     <!-- Pillars -->
     <section class="max-w-3xl mx-auto px-6 py-16 md:py-24">
-      <div class="text-terracotta text-sm uppercase tracking-widest mb-3 fade-up">02</div>
-      <h2 class="font-serif text-3xl md:text-4xl mb-6 fade-up">Key Pillars of New Creation Living</h2>
-      <p class="text-lg mb-12 fade-up">Living in this fulfilled reality radically transforms how a believer views God, identity, and daily life.</p>
+      <div class="text-terracotta text-sm uppercase tracking-widest mb-3">02</div>
+      <h2 class="font-serif text-3xl md:text-4xl mb-6">Key Pillars of New Creation Living</h2>
+      <p class="text-lg mb-12">Living in this fulfilled reality radically transforms how a believer views God, identity, and daily life.</p>
 
       <div class="space-y-10">
 
         <!-- Pillar I -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 fade-up">
+        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
           <h3 class="font-serif text-2xl md:text-3xl mb-6">I. Identity Rooted in Finished Work</h3>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div class="bg-soft p-5 rounded-xl">
@@ -130,7 +131,7 @@
         </div>
 
         <!-- Pillar II -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 fade-up">
+        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
           <h3 class="font-serif text-2xl md:text-3xl mb-6">II. Walking as the Living Temple</h3>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div class="bg-soft p-5 rounded-xl">
@@ -146,7 +147,7 @@
         </div>
 
         <!-- Pillar III -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 fade-up">
+        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
           <h3 class="font-serif text-2xl md:text-3xl mb-6">III. Kingdom Dominion in the Present</h3>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div class="bg-soft p-5 rounded-xl">
@@ -162,7 +163,7 @@
         </div>
 
         <!-- Pillar IV -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 fade-up">
+        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
           <h3 class="font-serif text-2xl md:text-3xl mb-6">IV. The Ministry of Reconciliation</h3>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div class="bg-soft p-5 rounded-xl">
@@ -182,7 +183,7 @@
 
     <!-- Comparison Table -->
     <section class="bg-soft border-y border-stone-200/60">
-      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20 fade-up">
+      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20">
         <div class="text-sage text-sm uppercase tracking-widest mb-3">03</div>
         <h2 class="font-serif text-3xl md:text-4xl mb-10">Old Age vs. New Creation Reality</h2>
         <div class="overflow-x-auto">
@@ -228,14 +229,14 @@
 
     <!-- Summary -->
     <section class="max-w-3xl mx-auto px-6 py-16 md:py-24">
-      <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 text-center fade-up">
+      <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 text-center">
         <h2 class="font-serif text-3xl md:text-4xl mb-6">Summary</h2>
         <p class="text-lg leading-relaxed">New Creation living means waking up every day to the reality that <strong>the veil has been torn forever.</strong> You are not living in the “last days” of an old covenant age, waiting for a delayed redemption; you are living in the <strong>unending age of the New Covenant</strong>, fully united with God in Christ, empowered to reflect His nature, peace, and reign to the world around you.</p>
       </div>
     </section>
 
     <!-- Next -->
-    <section class="max-w-3xl mx-auto px-6 pb-16 text-center fade-up">
+    <section class="max-w-3xl mx-auto px-6 pb-16 text-center">
       <div class="flex flex-wrap justify-center gap-3">
         <a href="/Bible/NewCreation/manifesto.html" class="border border-stone-300 px-6 py-3.5 rounded-full text-sm font-medium hover:bg-soft transition">← Manifesto</a>
         <a href="/Bible/new-creation.html" class="bg-sage text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-[#2f4a35] transition">2-Minute Message</a>
@@ -251,19 +252,19 @@
   </main>
 
   <script>
+    // Optional subtle animation — content is always visible without JS
+    document.querySelectorAll('section').forEach(el => {
+      el.classList.add('animate');
+    });
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('fade-up');
+          entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.fade-up').forEach(el => {
-      el.style.animation = 'none';
-      observer.observe(el);
-    });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
