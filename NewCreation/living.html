@@ -5,266 +5,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Living as a New Creation</title>
   <meta name="description" content="To live as a New Creation is to inhabit the fully realized reality of the New Covenant age." />
-
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            alabaster: '#FAF9F6',
-            charcoal: '#1C1917',
-            sage: '#3A5A40',
-            terracotta: '#B5651D',
-            soft: '#F5F3EF',
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
   <style>
+    :root {
+      --alabaster: #FAF9F6;
+      --charcoal: #1C1917;
+      --sage: #3A5A40;
+      --terracotta: #B5651D;
+      --soft: #F5F3EF;
+      --stone: #78716c;
+    }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { background-color: #FAF9F6; color: #1C1917; }
-    .pull-quote { border-left: 3px solid #3A5A40; }
-    .animate {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+    body {
+      margin: 0;
+      background: var(--alabaster);
+      color: var(--charcoal);
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
     }
-    .animate.visible {
-      opacity: 1;
-      transform: translateY(0);
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(250,249,246,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      z-index: 50;
     }
+    header .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    header a { color: var(--sage); text-decoration: none; margin-left: 16px; }
+    header a:hover { color: var(--charcoal); }
+    .brand { font-family: "Playfair Display", Georgia, serif; font-size: 1.15rem; color: var(--charcoal) !important; margin: 0; }
+    main { padding-top: 70px; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; line-height: 1.15; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); margin: 0 0 16px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 24px; }
+    h3 { font-size: 1.6rem; margin: 0 0 16px; }
+    .kicker { color: var(--sage); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px; }
+    .subtitle { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: 1.35rem; color: #44403c; }
+    .section { padding: 64px 0; }
+    .soft { background: var(--soft); border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .card {
+      background: var(--alabaster);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 28px;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 20px; }
+    @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+    .box { background: var(--soft); padding: 16px 18px; border-radius: 12px; }
+    .box.new { border: 1px solid rgba(58,90,64,0.2); }
+    .label { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; color: var(--stone); }
+    .box.new .label { color: var(--sage); }
+    blockquote {
+      border-left: 3px solid var(--sage);
+      margin: 24px 0;
+      padding: 8px 0 8px 20px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+      font-size: 1.25rem;
+    }
+    blockquote footer { font-family: Inter, sans-serif; font-style: normal; font-size: 0.85rem; color: var(--stone); margin-top: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 14px 12px 14px 0; border-bottom: 1px solid rgba(0,0,0,0.08); vertical-align: top; }
+    th { font-family: "Playfair Display", Georgia, serif; font-size: 1.05rem; }
+    .old { color: #57534e; }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 4px;
+      border: 1px solid rgba(0,0,0,0.12);
+      color: var(--charcoal);
+    }
+    .btn.primary { background: var(--sage); color: white; border-color: var(--sage); }
+    .btn:hover { opacity: 0.9; }
+    footer { text-align: center; padding: 48px 24px; color: var(--stone); font-size: 0.9rem; }
+    footer a { color: var(--sage); text-decoration: none; }
     @media print {
-      .no-print { display: none !important; }
-      body { background: white; color: black; }
-      .animate { opacity: 1; transform: none; }
+      header { display: none; }
+      body { background: white; }
     }
   </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q22N178LJ8"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q22N178LJ8');</script>
 </head>
-<body class="font-sans antialiased">
+<body>
 
-  <header class="no-print fixed top-0 left-0 right-0 z-50 bg-alabaster/90 backdrop-blur-sm border-b border-stone-200/70">
-    <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between text-sm">
-      <a href="/Bible/index.html" class="font-serif text-lg tracking-tight hover:opacity-70">New Creation</a>
-      <div class="flex gap-4">
-        <a href="/Bible/new-creation.html" class="text-sage hover:text-charcoal transition">2-Minute Message</a>
-        <a href="/Bible/NewCreation/manifesto.html" class="text-sage hover:text-charcoal transition">Manifesto</a>
-      </div>
+<header>
+  <div class="inner">
+    <a class="brand" href="/Bible/index.html">New Creation</a>
+    <div>
+      <a href="/Bible/new-creation.html">2-Minute Message</a>
+      <a href="/Bible/NewCreation/manifesto.html">Manifesto</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="pt-16">
+<main>
+  <section class="section wrap" style="text-align:center; padding-top:48px;">
+    <div class="kicker">Living It</div>
+    <h1>Living as a New Creation</h1>
+    <p class="subtitle">Kainē Ktisis — Inhabiting the Fully Realized New Covenant Age</p>
+    <p style="margin-top:20px; font-size:0.9rem; color:#78716c;">
+      Also available in <a href="/Bible/NewCreation/living-zh.html" style="color:var(--sage);">Traditional Chinese (繁體中文)</a>
+    </p>
+  </section>
 
-    <!-- Hero -->
-    <section class="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
-      <p class="text-sage text-sm uppercase tracking-[0.2em] mb-6">Living It</p>
-      <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight mb-6">
-        Living as a New Creation
-      </h1>
-      <p class="text-xl md:text-2xl text-stone-700 max-w-2xl mx-auto leading-relaxed font-serif italic">
-        Kainē Ktisis — Inhabiting the Fully Realized New Covenant Age
-      </p>
-      <p class="mt-6 text-sm text-stone-500">
-        Also available in <a href="/Bible/NewCreation/living-zh.html" class="text-sage underline">Traditional Chinese (繁體中文)</a>
-      </p>
-    </section>
+  <section class="section wrap">
+    <p>To live as a <strong>New Creation</strong> (<em>Kainē Ktisis</em>) is to inhabit the fully realized reality of the New Covenant age. From a Covenantal Fulfillment perspective, the “New Creation” is not a reformed physical universe created after the destruction of the earth, but the <strong>new covenantal world order</strong> inaugurated by Christ and fully established when the Old Covenant temple system passed away in AD 70.</p>
+    <p>Where the Old Covenant was defined by distance, physical rituals, legalistic striving, and spiritual death in Adam, New Creation living is defined by <strong>unbroken union, finished righteousness, and the active reign of the Spirit within.</strong></p>
+  </section>
 
-    <!-- Intro -->
-    <section class="max-w-3xl mx-auto px-6 py-8 md:py-12">
-      <div class="space-y-6 text-lg leading-relaxed text-stone-800">
-        <p>To live as a <strong>New Creation</strong> (<em>Kainē Ktisis</em>) is to inhabit the fully realized reality of the New Covenant age. From a Covenantal Fulfillment perspective, the “New Creation” is not a reformed physical universe created after the destruction of the earth, but the <strong>new covenantal world order</strong> inaugurated by Christ and fully established when the Old Covenant temple system passed away in AD 70.</p>
-        <p>Where the Old Covenant was defined by distance, physical rituals, legalistic striving, and spiritual death in Adam, New Creation living is defined by <strong>unbroken union, finished righteousness, and the active reign of the Spirit within.</strong></p>
-      </div>
-    </section>
+  <section class="soft">
+    <div class="section wrap">
+      <div class="kicker">01</div>
+      <h2>The Covenantal Shift</h2>
+      <p>To understand New Creation living, we must understand what “passed away” and what “became new.”</p>
+      <blockquote>
+        “Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new.”
+        <footer>— 2 Corinthians 5:17</footer>
+      </blockquote>
+      <p><strong>The Old Things Passed Away:</strong> The “old things” refer to the Old Covenant order—the age of the Law, physical temple sacrifices, legalistic condemnation, and the barrier of separation between Jew and Gentile (and between God and humanity).</p>
+      <p><strong>All Things Made New:</strong> The “new creation” is the New Covenant age prophesied in Isaiah 65–66. Through Christ’s resurrection and the destruction of the physical Jerusalem temple in AD 70, the old age came to its absolute end, leaving the New Creation as the abiding, permanent reality for all who are in Christ.</p>
+    </div>
+  </section>
 
-    <!-- Covenantal Shift -->
-    <section class="bg-soft border-y border-stone-200/60">
-      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20">
-        <div class="text-sage text-sm uppercase tracking-widest mb-3">01</div>
-        <h2 class="font-serif text-3xl md:text-4xl mb-8">The Covenantal Shift</h2>
-        <p class="text-lg mb-6">To understand New Creation living, we must understand what “passed away” and what “became new.”</p>
-        <blockquote class="pull-quote pl-6 py-3 font-serif text-xl italic mb-8">
-          “Therefore, if anyone is in Christ, he is a new creation; old things have passed away; behold, all things have become new.”
-          <footer class="mt-3 text-sm not-italic font-sans text-stone-500">— 2 Corinthians 5:17</footer>
-        </blockquote>
-        <div class="space-y-4 text-lg">
-          <p><strong>The Old Things Passed Away:</strong> The “old things” refer to the Old Covenant order—the age of the Law, physical temple sacrifices, legalistic condemnation, and the barrier of separation between Jew and Gentile (and between God and humanity).</p>
-          <p><strong>All Things Made New:</strong> The “new creation” is the New Covenant age prophesied in Isaiah 65–66. Through Christ’s resurrection and the destruction of the physical Jerusalem temple in AD 70, the old age came to its absolute end, leaving the New Creation as the abiding, permanent reality for all who are in Christ.</p>
+  <section class="section wrap">
+    <div class="kicker" style="color:var(--terracotta);">02</div>
+    <h2>Key Pillars of New Creation Living</h2>
+    <p>Living in this fulfilled reality radically transforms how a believer views God, identity, and daily life.</p>
+
+    <div class="card">
+      <h3>I. Identity Rooted in Finished Work</h3>
+      <div class="grid-2">
+        <div class="box">
+          <div class="label">Old Age Mindset</div>
+          <p>Trying to achieve God’s favor through moral performance, rituals, or constant self-recrimination.</p>
+        </div>
+        <div class="box new">
+          <div class="label">New Creation Mindset</div>
+          <p>Resting in Christ’s finished work (Hebrews 10:14). Righteousness is not something earned; it is an intrinsic part of the believer’s identity in Christ.</p>
         </div>
       </div>
-    </section>
+      <p><strong>Living It Out:</strong> Operating from a place of <em>rest</em> rather than <em>anxiety</em>. You do not work <em>toward</em> acceptance; you live <em>from</em> a state of complete acceptance and oneness with God.</p>
+    </div>
 
-    <!-- Pillars -->
-    <section class="max-w-3xl mx-auto px-6 py-16 md:py-24">
-      <div class="text-terracotta text-sm uppercase tracking-widest mb-3">02</div>
-      <h2 class="font-serif text-3xl md:text-4xl mb-6">Key Pillars of New Creation Living</h2>
-      <p class="text-lg mb-12">Living in this fulfilled reality radically transforms how a believer views God, identity, and daily life.</p>
-
-      <div class="space-y-10">
-
-        <!-- Pillar I -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
-          <h3 class="font-serif text-2xl md:text-3xl mb-6">I. Identity Rooted in Finished Work</h3>
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div class="bg-soft p-5 rounded-xl">
-              <div class="text-xs uppercase tracking-wider text-stone-500 mb-2">Old Age Mindset</div>
-              <p class="text-stone-700">Trying to achieve God’s favor through moral performance, rituals, or constant self-recrimination.</p>
-            </div>
-            <div class="bg-soft p-5 rounded-xl border border-sage/20">
-              <div class="text-xs uppercase tracking-wider text-sage mb-2">New Creation Mindset</div>
-              <p>Resting in Christ’s finished work (Hebrews 10:14). Righteousness is not something earned; it is an intrinsic part of the believer’s identity in Christ.</p>
-            </div>
-          </div>
-          <p><strong class="text-charcoal">Living It Out:</strong> Operating from a place of <em>rest</em> rather than <em>anxiety</em>. You do not work <em>toward</em> acceptance; you live <em>from</em> a state of complete acceptance and oneness with God.</p>
+    <div class="card">
+      <h3>II. Walking as the Living Temple</h3>
+      <div class="grid-2">
+        <div class="box">
+          <div class="label">Old Age Mindset</div>
+          <p>God’s presence is localized in a physical building or accessible only through special mediators and holy sites.</p>
         </div>
-
-        <!-- Pillar II -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
-          <h3 class="font-serif text-2xl md:text-3xl mb-6">II. Walking as the Living Temple</h3>
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div class="bg-soft p-5 rounded-xl">
-              <div class="text-xs uppercase tracking-wider text-stone-500 mb-2">Old Age Mindset</div>
-              <p class="text-stone-700">God’s presence is localized in a physical building or accessible only through special mediators and holy sites.</p>
-            </div>
-            <div class="bg-soft p-5 rounded-xl border border-sage/20">
-              <div class="text-xs uppercase tracking-wider text-sage mb-2">New Creation Mindset</div>
-              <p>The physical temple was a shadowy type; the church—the body of believers—is the true, eternal temple of God (1 Corinthians 3:16; 1 Peter 2:5).</p>
-            </div>
-          </div>
-          <p><strong class="text-charcoal">Living It Out:</strong> Practicing continual awareness of the Divine Indwelling. Every interaction, place, and daily task becomes sacred space because you carry the presence of the Holy Spirit wherever you go.</p>
-        </div>
-
-        <!-- Pillar III -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
-          <h3 class="font-serif text-2xl md:text-3xl mb-6">III. Kingdom Dominion in the Present</h3>
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div class="bg-soft p-5 rounded-xl">
-              <div class="text-xs uppercase tracking-wider text-stone-500 mb-2">Old Age Mindset</div>
-              <p class="text-stone-700">Waiting for a future, far-off political reign while viewing the present world as entirely abandoned to darkness.</p>
-            </div>
-            <div class="bg-soft p-5 rounded-xl border border-sage/20">
-              <div class="text-xs uppercase tracking-wider text-sage mb-2">New Creation Mindset</div>
-              <p>Recognizing that the Kingdom of God is a present, spiritual reality reigning now (Luke 17:21; Romans 14:17). Christ is currently seated on the throne, having defeated sin and death (spiritually and covenantally).</p>
-            </div>
-          </div>
-          <p><strong class="text-charcoal">Living It Out:</strong> Exercising kingdom authority—bringing peace, healing, reconciliation, and light into culture, families, and communities today rather than adopting a posture of defeatism.</p>
-        </div>
-
-        <!-- Pillar IV -->
-        <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10">
-          <h3 class="font-serif text-2xl md:text-3xl mb-6">IV. The Ministry of Reconciliation</h3>
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div class="bg-soft p-5 rounded-xl">
-              <div class="text-xs uppercase tracking-wider text-stone-500 mb-2">Old Age Mindset</div>
-              <p class="text-stone-700">Division, nationalism, and legalistic boundaries separating people into clean and unclean.</p>
-            </div>
-            <div class="bg-soft p-5 rounded-xl border border-sage/20">
-              <div class="text-xs uppercase tracking-wider text-sage mb-2">New Creation Mindset</div>
-              <p>As Paul writes in 2 Corinthians 5:18–19, God was in Christ reconciling the world to Himself, not counting their trespasses against them, and giving us the message of reconciliation.</p>
-            </div>
-          </div>
-          <p><strong class="text-charcoal">Living It Out:</strong> Viewing humanity through the lens of Christ’s victory rather than covenantal alienation. New Creation believers actively bridge divides, show radical love, and invite others to step into the realized light of the New Covenant.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Comparison Table -->
-    <section class="bg-soft border-y border-stone-200/60">
-      <div class="max-w-3xl mx-auto px-6 py-16 md:py-20">
-        <div class="text-sage text-sm uppercase tracking-widest mb-3">03</div>
-        <h2 class="font-serif text-3xl md:text-4xl mb-10">Old Age vs. New Creation Reality</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm md:text-base">
-            <thead>
-              <tr class="border-b border-stone-300">
-                <th class="py-3 pr-4 font-serif text-lg">Aspect</th>
-                <th class="py-3 pr-4 font-medium text-stone-500">Old Covenant Age<br><span class="text-xs font-normal">(Passing Away)</span></th>
-                <th class="py-3 font-medium text-sage">New Creation Age<br><span class="text-xs font-normal">(Fulfilled & Present)</span></th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-stone-200">
-              <tr>
-                <td class="py-4 pr-4 font-medium">Locus of God’s Presence</td>
-                <td class="py-4 pr-4 text-stone-600">Physical Temple in Jerusalem</td>
-                <td class="py-4">The Believer / The Spirit-filled Body</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-medium">Status Before God</td>
-                <td class="py-4 pr-4 text-stone-600">Distance, veil, guilt, physical sacrifices</td>
-                <td class="py-4">Unbroken Oneness, open access, complete forgiveness</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-medium">The “Law”</td>
-                <td class="py-4 pr-4 text-stone-600">Written on tablets of stone (external requirement)</td>
-                <td class="py-4">Written on the heart (internal divine nature)</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-medium">Primary Lens</td>
-                <td class="py-4 pr-4 text-stone-600">Looking forward to the promised Messiah</td>
-                <td class="py-4">Living out of Christ’s accomplished victory</td>
-              </tr>
-              <tr>
-                <td class="py-4 pr-4 font-medium">Atmosphere</td>
-                <td class="py-4 pr-4 text-stone-600">Fear of judgment, bondage to law</td>
-                <td class="py-4">Peace, joy, and freedom in the Holy Spirit</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="box new">
+          <div class="label">New Creation Mindset</div>
+          <p>The physical temple was a shadowy type; the church—the body of believers—is the true, eternal temple of God (1 Corinthians 3:16; 1 Peter 2:5).</p>
         </div>
       </div>
-    </section>
+      <p><strong>Living It Out:</strong> Practicing continual awareness of the Divine Indwelling. Every interaction, place, and daily task becomes sacred space because you carry the presence of the Holy Spirit wherever you go.</p>
+    </div>
 
-    <!-- Summary -->
-    <section class="max-w-3xl mx-auto px-6 py-16 md:py-24">
-      <div class="bg-alabaster border border-stone-200 rounded-2xl p-8 md:p-10 text-center">
-        <h2 class="font-serif text-3xl md:text-4xl mb-6">Summary</h2>
-        <p class="text-lg leading-relaxed">New Creation living means waking up every day to the reality that <strong>the veil has been torn forever.</strong> You are not living in the “last days” of an old covenant age, waiting for a delayed redemption; you are living in the <strong>unending age of the New Covenant</strong>, fully united with God in Christ, empowered to reflect His nature, peace, and reign to the world around you.</p>
+    <div class="card">
+      <h3>III. Kingdom Dominion in the Present</h3>
+      <div class="grid-2">
+        <div class="box">
+          <div class="label">Old Age Mindset</div>
+          <p>Waiting for a future, far-off political reign while viewing the present world as entirely abandoned to darkness.</p>
+        </div>
+        <div class="box new">
+          <div class="label">New Creation Mindset</div>
+          <p>Recognizing that the Kingdom of God is a present, spiritual reality reigning now (Luke 17:21; Romans 14:17). Christ is currently seated on the throne, having defeated sin and death (spiritually and covenantally).</p>
+        </div>
       </div>
-    </section>
+      <p><strong>Living It Out:</strong> Exercising kingdom authority—bringing peace, healing, reconciliation, and light into culture, families, and communities today rather than adopting a posture of defeatism.</p>
+    </div>
 
-    <!-- Next -->
-    <section class="max-w-3xl mx-auto px-6 pb-16 text-center">
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="/Bible/NewCreation/manifesto.html" class="border border-stone-300 px-6 py-3.5 rounded-full text-sm font-medium hover:bg-soft transition">← Manifesto</a>
-        <a href="/Bible/new-creation.html" class="bg-sage text-white px-6 py-3.5 rounded-full text-sm font-medium hover:bg-[#2f4a35] transition">2-Minute Message</a>
-        <a href="/Bible/index.html" class="border border-stone-300 px-6 py-3.5 rounded-full text-sm font-medium hover:bg-soft transition">Home</a>
+    <div class="card">
+      <h3>IV. The Ministry of Reconciliation</h3>
+      <div class="grid-2">
+        <div class="box">
+          <div class="label">Old Age Mindset</div>
+          <p>Division, nationalism, and legalistic boundaries separating people into clean and unclean.</p>
+        </div>
+        <div class="box new">
+          <div class="label">New Creation Mindset</div>
+          <p>As Paul writes in 2 Corinthians 5:18–19, God was in Christ reconciling the world to Himself, not counting their trespasses against them, and giving us the message of reconciliation.</p>
+        </div>
       </div>
-    </section>
+      <p><strong>Living It Out:</strong> Viewing humanity through the lens of Christ’s victory rather than covenantal alienation. New Creation believers actively bridge divides, show radical love, and invite others to step into the realized light of the New Covenant.</p>
+    </div>
+  </section>
 
-    <footer class="no-print max-w-3xl mx-auto px-6 py-12 text-center text-sm text-stone-500">
-      <p>Part of the Fulfilled Prophecy Bible — Scripture read through completion, not postponement.</p>
-      <p class="mt-2"><a href="/Bible/NewCreation/living-zh.html" class="text-sage">中文 (繁體)</a> · <a href="/Bible/Prophecy/index.html" class="text-sage">Prophecy Hub</a></p>
-    </footer>
+  <section class="soft">
+    <div class="section wrap">
+      <div class="kicker">03</div>
+      <h2>Old Age vs. New Creation Reality</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Old Covenant Age<br><span style="font-weight:400;font-size:0.8em;color:#78716c;">(Passing Away)</span></th>
+            <th>New Creation Age<br><span style="font-weight:400;font-size:0.8em;color:var(--sage);">(Fulfilled & Present)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Locus of God’s Presence</strong></td>
+            <td class="old">Physical Temple in Jerusalem</td>
+            <td>The Believer / The Spirit-filled Body</td>
+          </tr>
+          <tr>
+            <td><strong>Status Before God</strong></td>
+            <td class="old">Distance, veil, guilt, physical sacrifices</td>
+            <td>Unbroken Oneness, open access, complete forgiveness</td>
+          </tr>
+          <tr>
+            <td><strong>The “Law”</strong></td>
+            <td class="old">Written on tablets of stone (external requirement)</td>
+            <td>Written on the heart (internal divine nature)</td>
+          </tr>
+          <tr>
+            <td><strong>Primary Lens</strong></td>
+            <td class="old">Looking forward to the promised Messiah</td>
+            <td>Living out of Christ’s accomplished victory</td>
+          </tr>
+          <tr>
+            <td><strong>Atmosphere</strong></td>
+            <td class="old">Fear of judgment, bondage to law</td>
+            <td>Peace, joy, and freedom in the Holy Spirit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  </main>
+  <section class="section wrap">
+    <div class="card" style="text-align:center;">
+      <h2>Summary</h2>
+      <p>New Creation living means waking up every day to the reality that <strong>the veil has been torn forever.</strong> You are not living in the “last days” of an old covenant age, waiting for a delayed redemption; you are living in the <strong>unending age of the New Covenant</strong>, fully united with God in Christ, empowered to reflect His nature, peace, and reign to the world around you.</p>
+    </div>
+  </section>
 
-  <script>
-    // Optional subtle animation — content is always visible without JS
-    document.querySelectorAll('section').forEach(el => {
-      el.classList.add('animate');
-    });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-  </script>
+  <section class="section wrap" style="text-align:center; padding-top:0;">
+    <a class="btn" href="/Bible/NewCreation/manifesto.html">← Manifesto</a>
+    <a class="btn primary" href="/Bible/new-creation.html">2-Minute Message</a>
+    <a class="btn" href="/Bible/index.html">Home</a>
+  </section>
+</main>
+
+<footer>
+  <p>Part of the Fulfilled Prophecy Bible — Scripture read through completion, not postponement.</p>
+  <p style="margin-top:8px;"><a href="/Bible/NewCreation/living-zh.html">中文 (繁體)</a> · <a href="/Bible/Prophecy/index.html">Prophecy Hub</a></p>
+</footer>
+
 </body>
 </html>
